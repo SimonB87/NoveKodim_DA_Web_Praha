@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="cz"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>kodim.cz</title>
+  <style data-vue-ssr-id="499c037c:0">@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700,900|Roboto+Mono:400,700&display=fallback&subset=latin-ext);</style><style data-vue-ssr-id="499c037c:1">*{box-sizing:border-box}html{font-family:"Montserrat", sans-serif;font-size:15px}body{margin:0;color:#444;background-color:#f9f9f9}.container{width:100%;margin-left:auto;margin-right:auto}@media only screen and (min-width: 576px){.container{width:540px}}@media only screen and (min-width: 768px){.container{width:720px}}@media only screen and (min-width: 992px){.container{width:960px}}.btn{border:none;outline:none;border-radius:1rem;padding:0.5rem 1rem;text-align:center;text-decoration:none;color:black;box-shadow:0 0 10px #ddd;transition:400ms}.btn:hover{transform:scale(1.1)}.btn-open{background-color:#ffec88}
+</style><style data-vue-ssr-id="54541dba:0">.hljs{display:block;overflow-x:auto;padding:0.5em;background:#222222;color:#C0C0C0}.hljs-keyword{color:#FFB871;font-weight:bold}.hljs-built_in{color:#FFB871}.hljs-literal{color:#FF8080}.hljs-symbol{color:#58E55A}.hljs-comment{color:#5B995B}.hljs-string{color:#FFFF00}.hljs-number{color:#FF8080}.hljs-attribute,.hljs-selector-tag,.hljs-doctag,.hljs-name,.hljs-bullet,.hljs-code,.hljs-addition,.hljs-regexp,.hljs-variable,.hljs-template-variable,.hljs-link,.hljs-selector-attr,.hljs-selector-pseudo,.hljs-type,.hljs-selector-id,.hljs-selector-class,.hljs-quote,.hljs-template-tag,.hljs-deletion,.hljs-title,.hljs-section,.hljs-function,.hljs-meta-keyword,.hljs-meta,.hljs-subst{color:#C0C0C0}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:bold}.article-outline{margin:2rem 3rem 0 0}.arrow-left{background-color:#ffec88;background-size:contain;width:2.5rem;height:2.5rem;border-radius:1.25rem;box-shadow:0 0 10px #ddd;background-image:url(/assets/img/arrow-left-5d2511.svg)}.arrow-right{background-color:#ffec88;background-size:contain;width:2.5rem;height:2.5rem;border-radius:1.25rem;box-shadow:0 0 10px #ddd;background-image:url(/assets/img/arrow-right-b02d21.svg)}.chapter-link{padding-left:1rem}.chapter-link a{text-decoration:none;color:black;font-size:1.2rem;font-weight:bold}.chapter-link a:hover{text-decoration:underline}.article-links{display:flex;margin-top:1rem}.article-links-filler{flex:1}.article-link{display:flex;align-items:center}.article-link a{text-decoration:none;color:black}.article-link a:hover{text-decoration:underline}.article-link--backward{margin-left:-1.25rem}.article-link--backward a{margin-left:2.75rem}.article-link--forward{margin-right:-1.25rem}.article-link--forward a{margin-right:2.75rem}.toc-link{display:block;width:100%;text-decoration:none;color:black;padding:0.5rem 1rem}.toc-link:hover{background-color:#f6f6f6}.exrc-section-title{margin-top:1rem !important;margin-bottom:0rem !important}.exrc-bonuses{padding:2rem 4rem;color:white;background-color:orange;margin-bottom:1rem}.exrc-bonuses__head{font-size:1.2rem;font-weight:bold;margin-bottom:1rem}.article-section{padding:2rem 0}.warn-section{background-color:#e2252b;color:white}.text-section table tr:nth-child(even){background-color:#e8e8e8}.exercises-section{background-color:#ffec88}.block-image{margin:3rem 0}.block-image img{display:block;width:100%;height:auto}.fig{display:block;margin:2rem auto;height:auto}li>.fig{margin:1rem auto}.fig-100{width:100%}.fig-90{width:90%}.fig-80{width:80%}.fig-70{width:70%}.fig-60{width:60%}.fig-50{width:50%}table{margin:2rem auto}table thead{border-bottom:2px solid #333}table td{padding:0.5rem}
+</style><style data-vue-ssr-id="34f8141e:0">.article-head{padding:0 4rem}.article-head__title{display:flex;align-items:baseline;font-size:1.8rem;font-weight:bold;margin-left:-6rem}.article-head__title h1{font-size:100%}.article-head__num{width:4rem;height:4rem;line-height:4rem;text-align:center;background-color:#ffec88;box-shadow:0 0 10px #ddd;border-radius:2rem;margin-right:2rem}.aside{display:none;width:320px;position:fixed;z-index:1;overflow-x:hidden;padding-top:20px}@media only screen and (min-width: 992px){.aside{display:block}}.article{margin:0rem 0 6rem 0;background-color:white;padding-top:2rem;box-shadow:0 0 10px #ddd;line-height:150%;border-radius:1rem}@media only screen and (min-width: 992px){.article{margin:0rem 0 6rem 320px}}.article .text-section>p,.article .text-section>ul,.article .text-section>ol,.article .text-section>dl{margin-left:4rem;margin-right:4rem}.article dt,.article dd{margin-bottom:0.5rem}.article h2,.article h3,.article h4{padding:1rem 4rem}.article .anchor{opacity:0;transition:250ms;text-decoration:none;color:#869af5;margin-left:-1.7rem}.article h2{margin-top:3rem;margin-bottom:1rem;font-size:1.6rem;font-weight:900}.article h2 .anchor{margin-left:-1.7rem}.article h3{margin-top:1rem;margin-bottom:0rem}.article h3 .anchor{margin-left:-1.2rem}.article h2:hover .anchor,.article h3:hover .anchor{opacity:1;margin-left:0}.article p{margin-top:0;margin-bottom:1rem;hyphens:manual}.article li{margin-bottom:0.5rem}.article .text-section:first-child p:first-child:first-letter{float:left;font-size:5rem;line-height:4rem;padding-top:0.3rem;padding-right:0.5rem}.article em{background-color:#d1ebf1;padding:0rem 0.5rem;border-radius:10px}.article pre,.article code,.article var{font-family:"Roboto Mono"}.article pre{background-color:#555;color:white;padding:1rem 4rem;margin:2rem 0;overflow-x:auto}.article var{font-style:normal;color:blue}.article kbd{font-family:"Montserrat";background-color:#fff;border:1px solid #888;border-radius:4px;padding:0rem 0.5rem}.term{display:inline;position:relative;font-style:italic;overflow:visible}.term__icon{display:inline-block;vertical-align:middle;width:15px;height:15px;margin-left:0.5rem;margin-bottom:2px;margin-right:0;background-image:url(/assets/img/english-9a71e2.png);background-size:contain;background-repeat:no-repeat}.term__cs{background-color:#d1ebf1;padding:0rem 0rem 0rem 0.5rem;border-radius:10px;white-space:pre;cursor:default}.term__en{position:absolute;top:-2rem;left:0rem;background-color:#444;color:white;padding:0rem 0.5rem;border-radius:5px;opacity:0;visibility:hidden;z-index:1;white-space:pre;transition:500ms}.term:hover .term__en{visibility:visible;opacity:1}
+</style><style data-vue-ssr-id="3c9796f4:0">.page{display:grid;grid-template-columns:auto;grid-template-rows:auto 1fr auto;min-height:100vh}.footer{padding:2rem 0;background-color:#dce7f4}
+</style><style data-vue-ssr-id="2fdd37c8:0">.page-logo{display:flex;align-items:center;text-decoration:none;color:black}.page-logo__icon{width:2rem;height:2rem;background-image:url(/assets/img/kodim-icon-d3361c.svg);background-size:contain}.page-logo__title{font-size:1.2rem;font-weight:bold;margin-left:0.5rem}.navbar{padding:1rem 0}
+</style><style data-vue-ssr-id="6f27289b:0">.exercise__head{display:flex;margin-left:-1.5rem}.exercise__num{width:3rem;height:3rem;line-height:3rem;background-color:white;box-shadow:0 0 10px #ddd;border-radius:1.5rem;text-align:center}.exercise__title{display:flex;align-items:baseline;flex:1;font-size:1.2rem;font-weight:bold;margin-left:0rem}.exercise__title h3{font-size:100%;padding-left:2.5rem;margin-bottom:0.5rem}.exercise__demand{margin-top:2rem;padding-right:4rem;text-align:right}.exercise__body>p,.exercise__body>ul,.exercise__body>ol,.exercise__body>dl{margin-left:4rem;margin-right:4rem}.exercise table tr:nth-child(even){background-color:#ffe664}.demand{min-width:70px;height:14px;background-size:contain;background-position-x:right;background-repeat:no-repeat;background-size:70px 14px}.demand--1{background-image:url(/assets/img/demand1-32b0be.svg)}.demand--2{background-image:url(/assets/img/demand2-3d6156.svg)}.demand--3{background-image:url(/assets/img/demand3-6ddf4a.svg)}.demand--4{background-image:url(/assets/img/demand4-377dc5.svg)}.demand--5{background-image:url(/assets/img/demand5-9e0206.svg)}.demand-text{font-size:0.8rem;font-weight:bold}
+</style></head>
+  <body data-gr-c-s-loaded="true">
+    <div data-server-rendered="true" class="page"><header><div class="navbar container"><a href="http://nove.kodim.cz/" class="page-logo router-link-active"><div class="page-logo__icon"></div> <div class="page-logo__title">Kódím.cz</div></a></div> </header> <main class="main"><div class="container"><aside class="aside"><div class="chapter-link"><a href="http://nove.kodim.cz/czechitas/daweb" class="router-link-active">Pokročilý JavaScript</a></div> <nav class="article-outline"><a href="#objekty-jako-data" class="toc-link">Objekty jako data</a><a href="#cviceni-objekty-jako-data" class="toc-link">Cvičení - objekty jako data</a><a href="#vlastni-dom-elementy" class="toc-link">Vlastní DOM elementy</a><a href="#cviceni-vlastni-dom-elementy" class="toc-link">Cvičení - vlastní DOM elementy</a></nav></aside> <article class="article"><div class="article-head"><div class="article-head__title"><div class="article-head__num">2</div> <h1>Objekty jako data, vlastní DOM elementy</h1></div> <div class="article-head__brief">Ukážeme si jak použít objekty pro reprezentoci strukturovaných data a jak vytvářet vlastní DOM elementy.</div></div> <div class="article-links"><div class="article-link article-link--backward"><div class="arrow-left"></div> <a href="http://nove.kodim.cz/czechitas/daweb/pokrocily-js/inner-html">
+        Práce s innerHTML a dvouvrstvá architektura
+      </a></div> <div class="article-links-filler"></div> <div class="article-link article-link--forward"><a href="http://nove.kodim.cz/czechitas/daweb/pokrocily-js/volani-api">
+        JSON a volání API
+      </a> <div class="arrow-right"></div></div></div> <div class="article-body"><!-- base href="http://nove.kodim.cz/czechitas/daweb/pokrocily-js/objekty-data/" --> <section class="article-section text-section"><p>Čím
+ jsou naše programy větší a užitečnější v reálném životě, tím větší je 
+objem a složitost informací, se kterými potřebují pracovat. Informacím, 
+se kterými program pracuje říkáme data. Jednoduchá data v naších 
+programech reprezentujeme pomocí hodnot jako čísla, řetězce, 
+pravdivostní hodnoty apod. Brzy ale narazíme na komplexnější data, která
+ mají nějakou složitější vnitřní strukturu. K reprezentaci takových dat 
+používáme různé 
+          <span class="term">
+            <span class="term__cs">datové struktury<span class="term__icon"></span></span>
+            <span class="term__en">data structures</span>
+          </span>
+        . V tomto kurzu jsme zatím viděli pouze jednu takovou strukturu a tou je pole. Dnes si ukážeme další strukturu zvanou 
+          <span class="term">
+            <span class="term__cs">objekt<span class="term__icon"></span></span>
+            <span class="term__en">object</span>
+          </span>
+        , která na začátku vypadá zcela nevinně, nakonec však navždy 
+změní naše životy a programování už nikdy nebude to, co bývalo dříve.</p>
+<h2 id="objekty-jako-data"><a class="anchor" href="#objekty-jako-data">¶</a> Objekty jako data</h2>
+<p>Pokud chceme reprezentovat složitější data, i obyčejná pole nám 
+nabízejí dostatak prostoru. Vzpomeňte si například na naši tabulku 
+útrat.</p>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> expenses = [
+  [<span class="hljs-string">'Petr'</span>, <span class="hljs-string">'Prací prášek'</span>, <span class="hljs-number">240</span>],
+  [<span class="hljs-string">'Ondra'</span>, <span class="hljs-string">'Savo'</span>, <span class="hljs-number">80</span>],
+  [<span class="hljs-string">'Pavla'</span>, <span class="hljs-string">'Toaleťák'</span>, <span class="hljs-number">65</span>],
+  [<span class="hljs-string">'Zuzka'</span>, <span class="hljs-string">'Mýdlo'</span>, <span class="hljs-number">50</span>],
+  [<span class="hljs-string">'Pavla'</span>, <span class="hljs-string">'Závěs do koupelny'</span>, <span class="hljs-number">350</span>],
+  [<span class="hljs-string">'Libor'</span>, <span class="hljs-string">'Pivka na kolaudačku'</span>, <span class="hljs-number">124</span>],
+  [<span class="hljs-string">'Petr'</span>, <span class="hljs-string">'Pytle na odpadky'</span>, <span class="hljs-number">75</span>],
+  [<span class="hljs-string">'Míša'</span>, <span class="hljs-string">'Utěrky na nádobí'</span>, <span class="hljs-number">130</span>],
+  [<span class="hljs-string">'Ondra'</span>, <span class="hljs-string">'Toaleťák'</span>, <span class="hljs-number">120</span>],
+  [<span class="hljs-string">'Míša'</span>, <span class="hljs-string">'Pečící papír'</span>, <span class="hljs-number">30</span>],
+  [<span class="hljs-string">'Zuzka'</span>, <span class="hljs-string">'Savo'</span>, <span class="hljs-number">80</span>],
+  [<span class="hljs-string">'Petr'</span>, <span class="hljs-string">'Tapeta na záchod'</span>, <span class="hljs-number">315</span>],
+  [<span class="hljs-string">'Ondra'</span>, <span class="hljs-string">'Toaleťák'</span>, <span class="hljs-number">64</span>],
+];
+</code></pre>
+<p>Představme si však, že strukturovanost těchto dat ještě naroste. 
+Každý člověk v tabulce bude mít nejen jméno, ale i příjmení, u zakoupené
+ věci budeme zaznamenávat také množství a jednotky. Pole můžeme 
+libovolně vnořovat, není tedy problém naší strukturu předělat takto.</p>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> expenses = [
+  [[<span class="hljs-string">'Petr'</span>, <span class="hljs-string">'Bílek'</span>], [<span class="hljs-string">'Prací prášek'</span>, <span class="hljs-number">1.5</span>, <span class="hljs-string">'kg'</span>], <span class="hljs-number">240</span>],
+  [[<span class="hljs-string">'Ondřej'</span>, <span class="hljs-string">'Zvěřina'</span>], [<span class="hljs-string">'Savo'</span>, <span class="hljs-number">1</span>, <span class="hljs-string">'ks'</span>], <span class="hljs-number">80</span>],
+  [[<span class="hljs-string">'Pavla'</span>, <span class="hljs-string">'Durdíková'</span>], [<span class="hljs-string">'Toaleťák'</span>, <span class="hljs-number">1</span>, <span class="hljs-string">'balení'</span>], <span class="hljs-number">65</span>],
+  [[<span class="hljs-string">'Zuzana'</span>, <span class="hljs-string">'Kaczynská'</span>], [<span class="hljs-string">'Mýdlo'</span>, <span class="hljs-number">200</span>, <span class="hljs-string">'ml'</span>], <span class="hljs-number">50</span>],
+  [[<span class="hljs-string">'Pavla'</span>, <span class="hljs-string">'Durdíková'</span>], [<span class="hljs-string">'Závěs do koupelny'</span>, <span class="hljs-number">1</span>, <span class="hljs-string">'ks'</span>], <span class="hljs-number">350</span>],
+  [[<span class="hljs-string">'Libor'</span>, <span class="hljs-string">'Krejčí'</span>], [<span class="hljs-string">'Pivka na kolaudačku'</span>, <span class="hljs-number">40</span>, <span class="hljs-string">'ks'</span>], <span class="hljs-number">124</span>],
+  [[<span class="hljs-string">'Petr'</span>, <span class="hljs-string">'Bílek'</span>], [<span class="hljs-string">'Pytle na odpadky'</span>, <span class="hljs-number">3</span>, <span class="hljs-string">'balení'</span>], <span class="hljs-number">75</span>],
+  [[<span class="hljs-string">'Michaela'</span>, <span class="hljs-string">'Reischlová'</span>], [<span class="hljs-string">'Utěrky na nádobí'</span>, <span class="hljs-number">1</span>, <span class="hljs-string">'balení'</span>], <span class="hljs-number">130</span>],
+  [[<span class="hljs-string">'Ondřej'</span>, <span class="hljs-string">'Zvěřina'</span>], [<span class="hljs-string">'Toaleťák'</span>, <span class="hljs-number">2</span>, <span class="hljs-string">'balení'</span>], <span class="hljs-number">120</span>],
+  [[<span class="hljs-string">'Michaela'</span>, <span class="hljs-string">'Reischlová'</span>], [<span class="hljs-string">'Pečící papír'</span>, <span class="hljs-number">1</span>, <span class="hljs-string">'balení'</span>], <span class="hljs-number">30</span>],
+  [[<span class="hljs-string">'Zuzana'</span>, <span class="hljs-string">'Kaczynská'</span>], [<span class="hljs-string">'Savo'</span>, <span class="hljs-number">1</span>, <span class="hljs-string">'ks'</span>], <span class="hljs-number">80</span>],
+  [[<span class="hljs-string">'Petr'</span>, <span class="hljs-string">'Bílek'</span>], [<span class="hljs-string">'Tapeta na záchod'</span>, <span class="hljs-number">1</span>, <span class="hljs-string">'ks'</span>], <span class="hljs-number">315</span>],
+  [[<span class="hljs-string">'Ondřej'</span>, <span class="hljs-string">'Zvěřina'</span>], [<span class="hljs-string">'Toaleťák'</span>, <span class="hljs-number">1</span>, <span class="hljs-string">'balení'</span>], <span class="hljs-number">64</span>],
+];
+</code></pre>
+<p>Taková struktura už ale pomalu začíná být malinko nepřehledná. Pokud 
+se chceme dostat k názvu zakoupené věci, musíme napsat například.</p>
+<pre><code class="language-jscon"><span class="hljs-meta">&gt;</span><span class="javascript"> expenses[<span class="hljs-number">3</span>][<span class="hljs-number">1</span>][<span class="hljs-number">0</span>]</span>
+'Mýdlo'
+</code></pre>
+<p>Z tohoto výrazu už je dost těžké vyčíst, co vlastně z tabulky 
+vytahujeme, musíme počítat indexy na prstech ruky a je velmi snadné se 
+splést. Musíme si totiž pamatovat, že jméno produktu je na indexu 0, že 
+produkt samotný je na indexu 1 a tak dále.</p>
+<p>Abychom měli život o kus jednodušší, použijeme k reprezentaci řádku v
+ tabulce místo pole objekt. Objekty ukládají data ve formátu klíč - 
+hodnota. Jeden řádek naší tabulky (jednoduchá verze) pak bude vypadat 
+takto.</p>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> row = {
+  <span class="hljs-attr">name</span>: <span class="hljs-string">'Petr'</span>,
+  <span class="hljs-attr">product</span>: <span class="hljs-string">'Prací prášek'</span>,
+  <span class="hljs-attr">price</span>: <span class="hljs-number">240</span>,
+};
+</code></pre>
+<p>Výhoda objektů spočívá v tom, že ke každé hodnotě se nyní dostaneme pomocí klíče a nemusíme řešit indexy.</p>
+<pre><code class="language-jscon"><span class="hljs-meta">&gt;</span><span class="javascript"> row.name</span>
+'Petr'
+<span class="hljs-meta">&gt;</span><span class="javascript"> row.product</span>
+'Prací prášek'
+<span class="hljs-meta">&gt;</span><span class="javascript"> row.price</span>
+240
+</code></pre>
+<p>Objekt je nový typ hodnoty. Můžeme s ním tedy jako vždy provádět 
+cokoliv, co děláme s ostatními hodnotami - ukládat do proměnné, používat
+ ve výrazech, předávat jako vstupy funkcím apod. Díky tomu mohou objekty
+ být součástí polí. Celá naše tabulka pak bude vypadat takto.</p>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> expenses = [
+  {<span class="hljs-attr">name</span>: <span class="hljs-string">'Petr'</span>, <span class="hljs-attr">product</span>: <span class="hljs-string">'Prací prášek'</span>, <span class="hljs-attr">price</span>: <span class="hljs-number">240</span>},
+  {<span class="hljs-attr">name</span>: <span class="hljs-string">'Ondra'</span>, <span class="hljs-attr">product</span>: <span class="hljs-string">'Savo'</span>, <span class="hljs-attr">price</span>: <span class="hljs-number">80</span>},
+  {<span class="hljs-attr">name</span>: <span class="hljs-string">'Pavla'</span>, <span class="hljs-attr">product</span>: <span class="hljs-string">'Toaleťák'</span>, <span class="hljs-attr">price</span>: <span class="hljs-number">65</span>},
+  {<span class="hljs-attr">name</span>: <span class="hljs-string">'Zuzka'</span>, <span class="hljs-attr">product</span>: <span class="hljs-string">'Mýdlo'</span>, <span class="hljs-attr">price</span>: <span class="hljs-number">50</span>},
+  {<span class="hljs-attr">name</span>: <span class="hljs-string">'Pavla'</span>, <span class="hljs-attr">product</span>: <span class="hljs-string">'Závěs do koupelny'</span>, <span class="hljs-attr">price</span>: <span class="hljs-number">350</span>},
+  {<span class="hljs-attr">name</span>: <span class="hljs-string">'Libor'</span>, <span class="hljs-attr">product</span>: <span class="hljs-string">'Pivka na kolaudačku'</span>, <span class="hljs-attr">price</span>: <span class="hljs-number">124</span>},
+  {<span class="hljs-attr">name</span>: <span class="hljs-string">'Petr'</span>, <span class="hljs-attr">product</span>: <span class="hljs-string">'Pytle na odpadky'</span>, <span class="hljs-attr">price</span>: <span class="hljs-number">75</span>},
+  {<span class="hljs-attr">name</span>: <span class="hljs-string">'Míša'</span>, <span class="hljs-attr">product</span>: <span class="hljs-string">'Utěrky na nádobí'</span>, <span class="hljs-attr">price</span>: <span class="hljs-number">130</span>},
+  {<span class="hljs-attr">name</span>: <span class="hljs-string">'Ondra'</span>, <span class="hljs-attr">product</span>: <span class="hljs-string">'Toaleťák'</span>, <span class="hljs-attr">price</span>: <span class="hljs-number">120</span>},
+  {<span class="hljs-attr">name</span>: <span class="hljs-string">'Míša'</span>, <span class="hljs-attr">product</span>: <span class="hljs-string">'Pečící papír'</span>, <span class="hljs-attr">price</span>: <span class="hljs-number">30</span>},
+  {<span class="hljs-attr">name</span>: <span class="hljs-string">'Zuzka'</span>, <span class="hljs-attr">product</span>: <span class="hljs-string">'Savo'</span>, <span class="hljs-attr">price</span>: <span class="hljs-number">80</span>},
+  {<span class="hljs-attr">name</span>: <span class="hljs-string">'Petr'</span>, <span class="hljs-attr">product</span>: <span class="hljs-string">'Tapeta na záchod'</span>, <span class="hljs-attr">price</span>: <span class="hljs-number">315</span>},
+  {<span class="hljs-attr">name</span>: <span class="hljs-string">'Ondra'</span>, <span class="hljs-attr">product</span>: <span class="hljs-string">'Toaleťák'</span>, <span class="hljs-attr">price</span>: <span class="hljs-number">6</span>}]
+];
+</code></pre>
+<p>Navíc, každý klíč v objektu může odkazovat na libovolnou hodnotu. V 
+řádku tabulky zatím máme jen řetězce a číslo. Není však problém použít 
+pole nebo rovnou další objekt. Můžeme tak vytvářen zanořené struktury 
+jako například tuto.</p>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> row = {
+  <span class="hljs-attr">name</span>: {
+    <span class="hljs-attr">first</span>: <span class="hljs-string">'Petr'</span>,
+    <span class="hljs-attr">last</span>: <span class="hljs-string">'Bílek'</span>,
+  },
+  <span class="hljs-attr">product</span>: {
+    <span class="hljs-attr">name</span>: <span class="hljs-string">'Prací prášek'</span>,
+    <span class="hljs-attr">amount</span>: <span class="hljs-number">1.5</span>,
+    <span class="hljs-attr">unit</span>: <span class="hljs-string">'kg'</span>,
+  },
+  <span class="hljs-attr">price</span>: <span class="hljs-number">240</span>,
+};
+</code></pre>
+<p>K názvu produktu se pak snadno dostaneme takto.</p>
+<pre><code class="language-jscon"><span class="hljs-meta">&gt;</span><span class="javascript"> row.product.name</span>
+'Prací prášek'
+</code></pre>
+<p>To je jistě mnohem srozumitelnější, než používat indexu u polí. Díky 
+objektům a polím můžeme vytvářet mnohonásobně složitější a 
+komplikovanější struktury, které mohou reprezentovat téměř jakákoliv 
+strukturovaná data.</p>
+<p><strong>Tajemství</strong>: Pokud může být pod klíčem v objektu 
+livobolná hodnota, zvídavého člověka možná napade co by se tak stalo, 
+kdybychom jako hodnotu v objektu použitli funkci. Funkce jsou přece také
+ právoplatní hodnoty. Toto je ale právě ta věc, která navždy změní naše 
+programátorské životy a na takovou změnu je třeba se duševně připravit. 
+Odložíme ji proto zatím do některé z dalších lekci.</p>
+<h3 id="teckova-notace"><a class="anchor" href="#teckova-notace">¶</a> Tečková notace</h3>
+<p>Pokud objekty zapisujeme způsobem jako výše, názvy klíčů se musí 
+řídit stejnými pravidly jako názvy proměnných. Nemůžeme tak mít uvnitř 
+názvu klíče mezeru nebo třeba pomlčku. Většinou se nám podaří takovým 
+znakům vyhnout. Ne vždy je to ale možné. Pokud potřebujeme klíč s 
+názvem, který porušuje pravidla JavaScriptových proměnných, stačí jej 
+uzavřít do uvozovek.</p>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> person = {
+  <span class="hljs-string">'first-name'</span>: <span class="hljs-string">'Petr'</span>,
+  <span class="hljs-string">'last-name'</span>: <span class="hljs-string">'Bílek'</span>,
+};
+</code></pre>
+<p>V takovémto případě ale nemůžeme k hodnotám v objektu přistupovat jako obvykle.</p>
+<pre><code class="language-jscon"><span class="hljs-meta">&gt;</span><span class="javascript"> person.first-name;</span>
+</code></pre>
+<p>JavaScript by si myslel, že od hodnoty <code>person.first</code> odečítáme hodnotu <code>name</code>. Musíme tedy použít alternativní způsob přistupu ke klíčům.</p>
+<pre><code class="language-jscon"><span class="hljs-meta">&gt;</span><span class="javascript"> person[<span class="hljs-string">'first-name'</span>];</span>
+'Petr'
+</code></pre>
+<p>Tento způsob zdaleka není tak elegantní jako tečková notace. Proto se
+ snažíme v názvech klíčů vyhýbat znakům, které nepatří do názvů 
+proměnných a můžeme tak používat tečkovou notaci.</p>
+<h3 id="slozitejsi-struktury"><a class="anchor" href="#slozitejsi-struktury">¶</a> Složitější struktury</h3>
+<p>Díky objektům a polím můžeme nyní v našich programech reprezentovat 
+mnohem složitější data než dříve. Takto bychom mohli reprezentovat 
+například kurz Czechitas jménem <i>Úvod do programování</i>.</p>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> course = {
+  <span class="hljs-attr">nazev</span>: <span class="hljs-string">'Úvod do programování'</span>,
+  <span class="hljs-attr">lektor</span>: <span class="hljs-string">'Martin Podloucký'</span>,
+  <span class="hljs-attr">konani</span>: [
+    {
+      <span class="hljs-attr">misto</span>: <span class="hljs-string">'T-Mobile'</span>,
+      <span class="hljs-attr">koucove</span>: [<span class="hljs-string">'Dan Vrátil'</span>, <span class="hljs-string">'Filip Kopecký'</span>, <span class="hljs-string">'Martina Nemčoková'</span>],
+      <span class="hljs-attr">ucastnic</span>: <span class="hljs-number">30</span>,
+    },
+    {
+      <span class="hljs-attr">misto</span>: <span class="hljs-string">'MSD IT'</span>,
+      <span class="hljs-attr">koucove</span>: [<span class="hljs-string">'Dan Vrátil'</span>, <span class="hljs-string">'Zuzana Tučková'</span>, <span class="hljs-string">'Martina Nemčoková'</span>],
+      <span class="hljs-attr">ucastnic</span>: <span class="hljs-number">25</span>,
+    },
+    {
+      <span class="hljs-attr">misto</span>: <span class="hljs-string">'Škoda DigiLab'</span>,
+      <span class="hljs-attr">koucove</span>: [<span class="hljs-string">'Dan Vrátil'</span>, <span class="hljs-string">'Filip Kopecký'</span>, <span class="hljs-string">'Kateřina Kalášková'</span>],
+      <span class="hljs-attr">ucastnic</span>: <span class="hljs-number">41</span>,
+    },
+  ],
+};
+</code></pre>
+<p>Všimněte si, jak objekt představující jeden kurz obsahuje pod klíčem <code>konani</code>
+ pole dalších objektů. Každý z těchto objektů reprezentuje jedno konání 
+kurzu a dále obsahuje například pole koučů, místo atp. Kdybychom tedy 
+například chtěli seznam všech koučů na druhém konání kurzu, napsali 
+bychom</p>
+<pre><code class="language-jscon"><span class="hljs-meta">&gt;</span><span class="javascript"> course.konani[<span class="hljs-number">1</span>].koucove</span>
+[ 'Dan Vrátil', 'Zuzana Tučková', 'Martina Nemčoková' ]
+</code></pre>
+</section> <!----><!----> <section class="article-section exercises-section"><h2 id="cviceni-objekty-jako-data" class="exrc-section-title"><a href="#cviceni-objekty-jako-data" class="anchor">¶</a>
+          Cvičení - objekty jako data
+        </h2> <!----> <div class="exercise"><div class="exercise__head"><div class="exercise__title"><div class="exercise__num">1</div> <h3 id="cvi-prace-s-objekty-zaklady"><a href="#cvi-prace-s-objekty-zaklady" class="anchor">¶</a>
+        Práce s objekty - základy
+      </h3></div> <div class="exercise__demand"><div class="demand demand--1"></div> <div class="demand-text">pohodička</div></div></div> <div class="exercise__body">
+<p>Zkopírujte si do konzole následující datovou strukturu.</p>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> person = {
+    <span class="hljs-attr">name</span>: <span class="hljs-string">"Karel"</span>,
+    <span class="hljs-attr">age</span>: <span class="hljs-number">27</span>,
+    <span class="hljs-string">"favorite color"</span>: <span class="hljs-string">"yellow"</span>
+};
+</code></pre>
+<ol>
+<li>Vypište do konzole jméno osoby z objektu.</li>
+<li>Změňte věk dané osoby na 28 a pak ho vypište do konzole.</li>
+<li>Vypište do konzole oblíbenou barvu osoby popsané objektem.</li>
+</ol>
+</div></div><div class="exercise"><div class="exercise__head"><div class="exercise__title"><div class="exercise__num">2</div> <h3 id="cvi-kurz"><a href="#cvi-kurz" class="anchor">¶</a>
+        Kurz
+      </h3></div> <div class="exercise__demand"><div class="demand demand--2"></div> <div class="demand-text">to dáš</div></div></div> <div class="exercise__body">
+<p>Založte si JavaScriptový program a zkopírujte si do něj datovou strukturu kurzu <i>Úvod do programování</i> z textu výše.</p>
+<ol>
+<li>Vypište do konzole počet účastnic na posledním konání kurzu.</li>
+<li>Vypište do konzole jméno posledního kouče na prvním konání kurzu.</li>
+<li>Vypište do konzole celkový počet konání kurzu.</li>
+<li>Pomocí cyklu vypište na výstup všechna místa, na kterých se kurz konal.</li>
+</ol>
+</div></div><div class="exercise"><div class="exercise__head"><div class="exercise__title"><div class="exercise__num">3</div> <h3 id="cvi-knihovna"><a href="#cvi-knihovna" class="anchor">¶</a>
+        Knihovna
+      </h3></div> <div class="exercise__demand"><div class="demand demand--2"></div> <div class="demand-text">to dáš</div></div></div> <div class="exercise__body">
+<p>Uvažte, jak byste pomocí objektu reprezentovali údaje o knize v 
+knihovně. Jaké klíče a hodnoty bude objekt obsahovat? Zcela jistě bude 
+každá kniha obsahovat například název. Chtěli bychom však také, aby 
+kniha umožňovala mít vícero autorů a vícero vydání.</p>
+<ol>
+<li>Ve JavaScriptovém programu vytvořte proměnnou obsahující pole, které bude obsahovat několik vašich oblíbených knih.</li>
+<li>Vytvořte jednoduchou HTML stránku se <code>ol</code> seznamem. Použijte vlastnost <code>innerHTML</code> a pomocí cyklu naplňte tento seznam názvy vašech knih.</li>
+</ol>
+</div></div></section><section class="article-section text-section"><h2 id="vlastni-dom-elementy"><a class="anchor" href="#vlastni-dom-elementy">¶</a> Vlastní DOM elementy</h2>
+<p>Vraťme se na chvíli k našemu příkladu s nákupním seznamem z předchozí lekce.</p>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> shoppingList = [
+  <span class="hljs-string">'mrkev'</span>,
+  <span class="hljs-string">'paprika'</span>,
+  <span class="hljs-string">'cibule'</span>,
+  <span class="hljs-string">'čínské zelí'</span>,
+  <span class="hljs-string">'arašídy'</span>,
+  <span class="hljs-string">'sojová omáčka'</span>,
+];
+
+<span class="hljs-keyword">const</span> updateShoppingList = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+  <span class="hljs-keyword">const</span> listElm = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'#shopping-list'</span>);
+  listElm.innerHTML = <span class="hljs-string">''</span>;
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; shoppingList.length; i += <span class="hljs-number">1</span>) {
+    listElm.innerHTML += <span class="hljs-string">`&lt;li&gt;<span class="hljs-subst">${shoppingList[i]}</span>&lt;/li&gt;`</span>;
+  }
+};
+</code></pre>
+<p>Dejme tomu, že bychom chtěli uživateli umožnit nějakou položku ze 
+seznamu odstranit, aby tak mohl sledovat, co už koupil a co ještě zbývá.
+ Pro jednoduchost řekněme, že položku odstraníme prostě tak, že na ni 
+klikneme. To znamená, že musíme na každou položku seznamu pověsit 
+posluchač událost <code>click</code>. Otázka zní, jak to udělat? Zkuste se nad ní na chvíli zamyslet, než budete pokračovat dál.</p>
+<p>Možností existuje jístě vícero. Jedna z nich je například vytvořit celý seznam tak, jako výše, a pak vybrat všechny <code>li</code> elementy a pomocí cyklu na každý z nich pověsit posluchač.</p>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> updateShoppingList = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+  <span class="hljs-keyword">const</span> listElm = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'#shopping-list'</span>);
+  listElm.innerHTML = <span class="hljs-string">''</span>;
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; shoppingList.length; i += <span class="hljs-number">1</span>) {
+    listElm.innerHTML += <span class="hljs-string">`&lt;li&gt;<span class="hljs-subst">${shoppingList[i]}</span>&lt;/li&gt;`</span>;
+  }
+
+  <span class="hljs-keyword">const</span> listItems = <span class="hljs-built_in">document</span>.querySelectorAll(<span class="hljs-string">'#shopping-list li'</span>);
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; listItems.length; i += <span class="hljs-number">1</span>) {
+    listItems[i].addEventListener(<span class="hljs-string">'click'</span>, () =&gt; {
+      <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'item click'</span>);
+    }
+  }
+};
+</code></pre>
+<p>Pro větši programy však takovýto přístup začne být lehce neohrabaný a
+ těžko čitelný. Problém v podstatě spočívá v tom, že necháváme 
+prohlížeč, aby vytvářel DOM element za nás tím, že nastavujeme <code>innerHTML</code>. Velmi se nám však uvolní ruce, pokud budeme schopni si DOM elementy tvořit sami.</p>
+<h3 id="jak-vytvorit-vlastni-dom-element"><a class="anchor" href="#jak-vytvorit-vlastni-dom-element">¶</a> Jak vytvořit vlastní DOM element</h3>
+<p>Do této chvíle naše programy vždy fungovaly tak, že všechny DOM 
+elementy, se kterými jsme pracovali, byly vybrány ze stránky pomocí <code>document.querySelector</code>. Nyní si ukážeme, jak vytvořit DOM element tak říkajíc na zelené louce <strong>mimo</strong> naši stránku. Takto vytvořený element pak můžeme různě opracovávat a zpojit jej do stránky až ve chvíli, kdy je hotový.</p>
+<p>Nový DOM element vytvoříme pomocí funkce <code>document.createElement</code>. Takto například vytvoříme prázdný <code>li</code> element.</p>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> liElm = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">'li'</span>);
+</code></pre>
+<p>V tuto chvíli máme vytvořený zcela plnoprávný DOM element, se kterým 
+můžeme dělat všechno, co jsme s DOM elementy byli zvyklí dělali doposud:
+ nastavovat <code>textContent</code>, měnit styly, měnit CSS třídy apod.
+ Vytvořme tedy element pro naši položku nákupního seznamu, který bud 
+obsahovat i tlačíko na smazání položky.</p>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> shopItemElm = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">'li'</span>);
+shopItemElm.className = <span class="hljs-string">'shop-item'</span>;
+shopItemElm.innerHTML = <span class="hljs-string">'&lt;span&gt;Jablka&lt;/span&gt;&lt;button&gt;koupeno&lt;/button&gt;'</span>;
+</code></pre>
+<p>Pozor na to, že tento element zatím existuje zcela mimo naši stránku. Máme jej uložen pouze v proměnné <code>shopItemElm</code>.
+ Pokud jej chcene do naší stránky zapojit, musíme nejdříve vybrat 
+rodičovský element, dovnitř kterého náš nový element zapojíme. Na rodiči
+ pak zavoláme metodu <code>appendChild</code>, která náš nový element zapojí jako poslední dítě tohoto rodiče.</p>
+<p>V našem případě chceme naši nákupní položku přidat dovnitř seznamu s id <code>shopping-list</code>.</p>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> shopItemElm = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">'li'</span>);
+shopItemElm.className = <span class="hljs-string">'shop-item'</span>;
+shopItemElm.innerHTML = <span class="hljs-string">'&lt;span&gt;Jablka&lt;/span&gt;&lt;button&gt;koupeno&lt;/button&gt;'</span>;
+
+<span class="hljs-keyword">const</span> listElm = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'#shopping-list'</span>);
+listElm.appendChild(shopItemElm);
+</code></pre>
+<p>Výhoda tohoto přístupu spočívá v tom, že můžeme na tlačítko v nášem 
+elementu snadno připojit posluchače. Zde můžeme využít toho, že metodu <code>querySelector</code>
+ nemusíme volat jen na celém dokumentu. Pokud ji zavoláme na DOM 
+elementu, vybíráme pouze zevnitř něj a nikoliv z celého dokumentu. 
+Snadno tak vyberme naše tlačíkto a pověsíme na něj posluchače.</p>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> shopItemElm = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">'li'</span>);
+shopItemElm.className = <span class="hljs-string">'shop-item'</span>;
+shopItemElm.innerHTML = <span class="hljs-string">'&lt;span&gt;Jablka&lt;/span&gt;&lt;button&gt;koupeno&lt;/button&gt;'</span>;
+<span class="hljs-keyword">const</span> btnElm = shopItemElm.querySelector(<span class="hljs-string">'button'</span>);
+btnElm.addEventListener(<span class="hljs-string">'click'</span>, () =&gt; {
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'klik'</span>);
+});
+
+<span class="hljs-keyword">const</span> listElm = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'#shopping-list'</span>);
+listElm.appendChild(shopItemElm);
+</code></pre>
+<h3 id="funkce-render"><a class="anchor" href="#funkce-render">¶</a> Funkce render</h3>
+<p>Vidíte sami, že příprava elementu pro položku nákupu zabere už notný 
+kus kódu. Zde by bylo vhodné si jej zabalit do funkce. Funkce, které 
+vytvářejí nějaký DOM element, je zvykem pojmenovávat slovíčkem <code>render</code>.</p>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> renderShopItem = <span class="hljs-function">(<span class="hljs-params">item</span>) =&gt;</span> {
+  <span class="hljs-keyword">const</span> shopItemElm = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">'li'</span>);
+  shopItemElm.className = <span class="hljs-string">'shop-item'</span>;
+  shopItemElm.innerHTML = <span class="hljs-string">`&lt;span&gt;<span class="hljs-subst">${item}</span>&lt;/span&gt;&lt;button&gt;koupeno&lt;/button&gt;`</span>;
+
+  <span class="hljs-keyword">const</span> btnElm = shopItemElm.querySelector(<span class="hljs-string">'button'</span>);
+  btnElm.addEventListener(<span class="hljs-string">'click'</span>, () =&gt; {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'klik'</span>);
+  });
+
+  <span class="hljs-keyword">return</span> shopItemElm;
+};
+</code></pre>
+<p>Pokaždé, když zavoláme funkci <code>renderShopItem</code> s nějakým 
+názvem položky, obdržíme nový DOM element představující naši nákupní 
+položku. Ten pak můžeme zapojit do našeho nákupního seznamu. Celý 
+program pak bude vypadat takto.</p>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> renderShopItem = <span class="hljs-function">(<span class="hljs-params">item</span>) =&gt;</span> {
+  <span class="hljs-keyword">const</span> shopItemElm = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">'li'</span>);
+  shopItemElm.className = <span class="hljs-string">'shop-item'</span>;
+  shopItemElm.innerHTML = <span class="hljs-string">`&lt;span&gt;<span class="hljs-subst">${item}</span>&lt;/span&gt;&lt;button&gt;koupeno&lt;/button&gt;`</span>;
+
+  <span class="hljs-keyword">const</span> btnElm = shopItemElm.querySelector(<span class="hljs-string">'button'</span>);
+  btnElm.addEventListener(<span class="hljs-string">'click'</span>, () =&gt; {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'klik'</span>);
+  });
+
+  <span class="hljs-keyword">return</span> shopItemElm;
+};
+
+<span class="hljs-keyword">const</span> updateShoppingList = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+  <span class="hljs-keyword">const</span> listElm = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'#shopping-list'</span>);
+  listElm.innerHTML = <span class="hljs-string">''</span>;
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; shoppingList.length; i += <span class="hljs-number">1</span>) {
+    <span class="hljs-keyword">const</span> itemElm = renderShopElm(shoppingList[i]);
+    listElm.appendChild(itemElm);
+  }
+};
+</code></pre>
+<h3 id="implementace-klikani"><a class="anchor" href="#implementace-klikani">¶</a> Implementace klikání</h3>
+<p>Zatím jsme se nezabývali tím, jak implementovat kliknutí na položku 
+seznamu tak, aby se nám ji povedlo vymazat. V podstatě jediný problém 
+zde je, že posluchač události musí znát index položky, kterou chceme z 
+pole smazat. Tento si však můžeme šikovně uložit do datového atributu 
+například s názvem <code>data-index</code>. Pak už nám stačí pouze si tento index přečíst a smazat prvek pole pomocí metody <code>splice</code>. Pozor na to, že pak musíme zase zavolat funkci <code>updateShoppingList</code>, neboť jsme změnili obsah pole.</p>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> renderShopItem = <span class="hljs-function">(<span class="hljs-params">item, index</span>) =&gt;</span> {
+  <span class="hljs-keyword">const</span> shopItemElm = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">'li'</span>);
+  shopItemElm.className = <span class="hljs-string">'shop-item'</span>;
+  shopItemElm.dataset.index = index;
+  shopItemElm.innerHTML = <span class="hljs-string">`&lt;span&gt;<span class="hljs-subst">${item}</span>&lt;/span&gt;&lt;button&gt;koupeno&lt;/button&gt;`</span>;
+
+  <span class="hljs-keyword">const</span> btnElm = shopItemElm.querySelector(<span class="hljs-string">'button'</span>);
+  btnElm.addEventListener(<span class="hljs-string">'click'</span>, (e) =&gt; {
+    <span class="hljs-keyword">const</span> index = e.target.dataset.index;
+    shoppingList.splice(index, <span class="hljs-number">1</span>);
+    updateShoppingList();
+  });
+
+  <span class="hljs-keyword">return</span> shopItemElm;
+};
+</code></pre>
+<p>Funkce <code>renderShopItem</code> začiná být malinko dlouhá a trošku
+ nepřehledná především kvůli tomu, že uvnitř ní vytváříme další funkci 
+pro kliknutí na tlačítko. Nejlepší bude si tuto funkci pojmenovat a 
+vytáhnout ven. Kód celé aplikace pak bude vypadat takto.</p>
+<pre><code class="language-js"><span class="hljs-meta">'use strict'</span>;
+
+<span class="hljs-keyword">const</span> shoppingList = [
+  <span class="hljs-string">'mrkev'</span>,
+  <span class="hljs-string">'paprika'</span>,
+  <span class="hljs-string">'cibule'</span>,
+  <span class="hljs-string">'čínské zelí'</span>,
+  <span class="hljs-string">'arašídy'</span>,
+  <span class="hljs-string">'sojová omáčka'</span>,
+];
+
+<span class="hljs-keyword">const</span> deleteClick = <span class="hljs-function">(<span class="hljs-params">e</span>) =&gt;</span> {
+  <span class="hljs-keyword">const</span> index = e.target.dataset.index;
+  shoppingList.splice(index, <span class="hljs-number">1</span>);
+  updateShoppingList();
+};
+
+<span class="hljs-keyword">const</span> renderShopItem = <span class="hljs-function">(<span class="hljs-params">item, index</span>) =&gt;</span> {
+  <span class="hljs-keyword">const</span> shopItemElm = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">'li'</span>);
+  shopItemElm.className = <span class="hljs-string">'shop-item'</span>;
+  shopItemElm.dataset.index = index;
+  shopItemElm.innerHTML = <span class="hljs-string">`&lt;span&gt;<span class="hljs-subst">${item}</span>&lt;/span&gt;&lt;button&gt;koupeno&lt;/button&gt;`</span>;
+
+  <span class="hljs-keyword">const</span> btnElm = shopItemElm.querySelector(<span class="hljs-string">'button'</span>);
+  btnElm.addEventListener(<span class="hljs-string">'click'</span>, deleteClick);
+
+  <span class="hljs-keyword">return</span> shopItemElm;
+};
+
+<span class="hljs-keyword">const</span> updateShoppingList = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+  <span class="hljs-keyword">const</span> listElm = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'#shopping-list'</span>);
+  listElm.innerHTML = <span class="hljs-string">''</span>;
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; shoppingList.length; i += <span class="hljs-number">1</span>) {
+    <span class="hljs-keyword">const</span> itemElm = renderShopElm(shoppingList[i], i);
+    listElm.appendChild(itemElm);
+  }
+};
+</code></pre>
+</section> <!----><!----> <section class="article-section exercises-section"><h2 id="cviceni-vlastni-dom-elementy" class="exrc-section-title"><a href="#cviceni-vlastni-dom-elementy" class="anchor">¶</a>
+          Cvičení - vlastní DOM elementy
+        </h2> <!----> <div class="exercise"><div class="exercise__head"><div class="exercise__title"><div class="exercise__num">4</div> <h3 id="cvi-podcasty-2"><a href="#cvi-podcasty-2" class="anchor">¶</a>
+        Podcasty 2
+      </h3></div> <div class="exercise__demand"><div class="demand demand--3"></div> <div class="demand-text">zapni hlavu</div></div></div> <div class="exercise__body">
+<p>Stáhněte si <a href="http://nove.kodim.cz/czechitas/daweb/pokrocily-js/objekty-data/assets/podcasty-reseni.zip">vzorové řešení</a>
+ aplikace podcasty z předchozí lekce. Otevřete si aplikaci v prohlížeči a
+ přesuňte se do JavaScriptové konzole. Zkuste ručně vyrobit DOM element 
+jedné epizody.</p>
+<ol>
+<li>Pomocí funkce <code>document.createElement</code> vytvořte prázdný <code>div</code> a uložte si jej do proměnné <code>episodeElm</code>. Vyzkoušejte v konzoli, že se element povedlo vytvořit.</li>
+<li>Nastavte elementu třídu <code>episode</code> a opět zkontrolujte, že se změna podařila.</li>
+<li>Nastavte elementu <code>innerHTML</code>. Obsah je docela dlouhý řetězec, který se v konzoli píše nepohodlně. Vložte tedy do <code>innerHTML</code> zatím jen <code>div</code> s číslem episody. Opět otestujte, že se operace povedla.</li>
+<li>Vyberte v konzoli element <code>episodes-list</code> a vložte do něj váš nový DOM element pomocí metody <code>appendChild</code>.</li>
+</ol>
+<p>Nyní přesuneme náš kód z konzole do funkce.</p>
+<ol>
+<li>Ve vašem programu vytvořte funkci <code>renderEpisode</code>, která bude mít tři parametry: <code>num</code>, <code>title</code> a <code>guest</code>. Funkce vrátí nový DOM element sestavený stejným způsobem jako jsme prve použili v konzoli. Atribut <code>innerHTML</code> už nastavte na plný obsah elementu a zakompounujte do něj údaje z parametrů funkce.</li>
+<li>V programu najdete cyklus, který vytváři strukturu podcastu. Upravte tento cyklus tak, aby používal funkci <code>renderEpisode</code> a metodu <code>appendChild</code>.</li>
+</ol>
+</div></div></section></div></article></div></main> <footer class="footer"><div class="container">Martin Podloucký</div></footer></div>
+  
+
+</body></html>

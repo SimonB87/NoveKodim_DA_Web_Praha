@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="cz"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>kodim.cz</title>
+  <style data-vue-ssr-id="499c037c:0">@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700,900|Roboto+Mono:400,700&display=fallback&subset=latin-ext);</style><style data-vue-ssr-id="499c037c:1">*{box-sizing:border-box}html{font-family:"Montserrat", sans-serif;font-size:15px}body{margin:0;color:#444;background-color:#f9f9f9}.container{width:100%;margin-left:auto;margin-right:auto}@media only screen and (min-width: 576px){.container{width:540px}}@media only screen and (min-width: 768px){.container{width:720px}}@media only screen and (min-width: 992px){.container{width:960px}}.btn{border:none;outline:none;border-radius:1rem;padding:0.5rem 1rem;text-align:center;text-decoration:none;color:black;box-shadow:0 0 10px #ddd;transition:400ms}.btn:hover{transform:scale(1.1)}.btn-open{background-color:#ffec88}
+</style><style data-vue-ssr-id="54541dba:0">.hljs{display:block;overflow-x:auto;padding:0.5em;background:#222222;color:#C0C0C0}.hljs-keyword{color:#FFB871;font-weight:bold}.hljs-built_in{color:#FFB871}.hljs-literal{color:#FF8080}.hljs-symbol{color:#58E55A}.hljs-comment{color:#5B995B}.hljs-string{color:#FFFF00}.hljs-number{color:#FF8080}.hljs-attribute,.hljs-selector-tag,.hljs-doctag,.hljs-name,.hljs-bullet,.hljs-code,.hljs-addition,.hljs-regexp,.hljs-variable,.hljs-template-variable,.hljs-link,.hljs-selector-attr,.hljs-selector-pseudo,.hljs-type,.hljs-selector-id,.hljs-selector-class,.hljs-quote,.hljs-template-tag,.hljs-deletion,.hljs-title,.hljs-section,.hljs-function,.hljs-meta-keyword,.hljs-meta,.hljs-subst{color:#C0C0C0}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:bold}.article-outline{margin:2rem 3rem 0 0}.arrow-left{background-color:#ffec88;background-size:contain;width:2.5rem;height:2.5rem;border-radius:1.25rem;box-shadow:0 0 10px #ddd;background-image:url(/assets/img/arrow-left-5d2511.svg)}.arrow-right{background-color:#ffec88;background-size:contain;width:2.5rem;height:2.5rem;border-radius:1.25rem;box-shadow:0 0 10px #ddd;background-image:url(/assets/img/arrow-right-b02d21.svg)}.chapter-link{padding-left:1rem}.chapter-link a{text-decoration:none;color:black;font-size:1.2rem;font-weight:bold}.chapter-link a:hover{text-decoration:underline}.article-links{display:flex;margin-top:1rem}.article-links-filler{flex:1}.article-link{display:flex;align-items:center}.article-link a{text-decoration:none;color:black}.article-link a:hover{text-decoration:underline}.article-link--backward{margin-left:-1.25rem}.article-link--backward a{margin-left:2.75rem}.article-link--forward{margin-right:-1.25rem}.article-link--forward a{margin-right:2.75rem}.toc-link{display:block;width:100%;text-decoration:none;color:black;padding:0.5rem 1rem}.toc-link:hover{background-color:#f6f6f6}.exrc-section-title{margin-top:1rem !important;margin-bottom:0rem !important}.exrc-bonuses{padding:2rem 4rem;color:white;background-color:orange;margin-bottom:1rem}.exrc-bonuses__head{font-size:1.2rem;font-weight:bold;margin-bottom:1rem}.article-section{padding:2rem 0}.warn-section{background-color:#e2252b;color:white}.text-section table tr:nth-child(even){background-color:#e8e8e8}.exercises-section{background-color:#ffec88}.block-image{margin:3rem 0}.block-image img{display:block;width:100%;height:auto}.fig{display:block;margin:2rem auto;height:auto}li>.fig{margin:1rem auto}.fig-100{width:100%}.fig-90{width:90%}.fig-80{width:80%}.fig-70{width:70%}.fig-60{width:60%}.fig-50{width:50%}table{margin:2rem auto}table thead{border-bottom:2px solid #333}table td{padding:0.5rem}
+</style><style data-vue-ssr-id="34f8141e:0">.article-head{padding:0 4rem}.article-head__title{display:flex;align-items:baseline;font-size:1.8rem;font-weight:bold;margin-left:-6rem}.article-head__title h1{font-size:100%}.article-head__num{width:4rem;height:4rem;line-height:4rem;text-align:center;background-color:#ffec88;box-shadow:0 0 10px #ddd;border-radius:2rem;margin-right:2rem}.aside{display:none;width:320px;position:fixed;z-index:1;overflow-x:hidden;padding-top:20px}@media only screen and (min-width: 992px){.aside{display:block}}.article{margin:0rem 0 6rem 0;background-color:white;padding-top:2rem;box-shadow:0 0 10px #ddd;line-height:150%;border-radius:1rem}@media only screen and (min-width: 992px){.article{margin:0rem 0 6rem 320px}}.article .text-section>p,.article .text-section>ul,.article .text-section>ol,.article .text-section>dl{margin-left:4rem;margin-right:4rem}.article dt,.article dd{margin-bottom:0.5rem}.article h2,.article h3,.article h4{padding:1rem 4rem}.article .anchor{opacity:0;transition:250ms;text-decoration:none;color:#869af5;margin-left:-1.7rem}.article h2{margin-top:3rem;margin-bottom:1rem;font-size:1.6rem;font-weight:900}.article h2 .anchor{margin-left:-1.7rem}.article h3{margin-top:1rem;margin-bottom:0rem}.article h3 .anchor{margin-left:-1.2rem}.article h2:hover .anchor,.article h3:hover .anchor{opacity:1;margin-left:0}.article p{margin-top:0;margin-bottom:1rem;hyphens:manual}.article li{margin-bottom:0.5rem}.article .text-section:first-child p:first-child:first-letter{float:left;font-size:5rem;line-height:4rem;padding-top:0.3rem;padding-right:0.5rem}.article em{background-color:#d1ebf1;padding:0rem 0.5rem;border-radius:10px}.article pre,.article code,.article var{font-family:"Roboto Mono"}.article pre{background-color:#555;color:white;padding:1rem 4rem;margin:2rem 0;overflow-x:auto}.article var{font-style:normal;color:blue}.article kbd{font-family:"Montserrat";background-color:#fff;border:1px solid #888;border-radius:4px;padding:0rem 0.5rem}.term{display:inline;position:relative;font-style:italic;overflow:visible}.term__icon{display:inline-block;vertical-align:middle;width:15px;height:15px;margin-left:0.5rem;margin-bottom:2px;margin-right:0;background-image:url(/assets/img/english-9a71e2.png);background-size:contain;background-repeat:no-repeat}.term__cs{background-color:#d1ebf1;padding:0rem 0rem 0rem 0.5rem;border-radius:10px;white-space:pre;cursor:default}.term__en{position:absolute;top:-2rem;left:0rem;background-color:#444;color:white;padding:0rem 0.5rem;border-radius:5px;opacity:0;visibility:hidden;z-index:1;white-space:pre;transition:500ms}.term:hover .term__en{visibility:visible;opacity:1}
+</style><style data-vue-ssr-id="3c9796f4:0">.page{display:grid;grid-template-columns:auto;grid-template-rows:auto 1fr auto;min-height:100vh}.footer{padding:2rem 0;background-color:#dce7f4}
+</style><style data-vue-ssr-id="2fdd37c8:0">.page-logo{display:flex;align-items:center;text-decoration:none;color:black}.page-logo__icon{width:2rem;height:2rem;background-image:url(/assets/img/kodim-icon-d3361c.svg);background-size:contain}.page-logo__title{font-size:1.2rem;font-weight:bold;margin-left:0.5rem}.navbar{padding:1rem 0}
+</style><style data-vue-ssr-id="6f27289b:0">.exercise__head{display:flex;margin-left:-1.5rem}.exercise__num{width:3rem;height:3rem;line-height:3rem;background-color:white;box-shadow:0 0 10px #ddd;border-radius:1.5rem;text-align:center}.exercise__title{display:flex;align-items:baseline;flex:1;font-size:1.2rem;font-weight:bold;margin-left:0rem}.exercise__title h3{font-size:100%;padding-left:2.5rem;margin-bottom:0.5rem}.exercise__demand{margin-top:2rem;padding-right:4rem;text-align:right}.exercise__body>p,.exercise__body>ul,.exercise__body>ol,.exercise__body>dl{margin-left:4rem;margin-right:4rem}.exercise table tr:nth-child(even){background-color:#ffe664}.demand{min-width:70px;height:14px;background-size:contain;background-position-x:right;background-repeat:no-repeat;background-size:70px 14px}.demand--1{background-image:url(/assets/img/demand1-32b0be.svg)}.demand--2{background-image:url(/assets/img/demand2-3d6156.svg)}.demand--3{background-image:url(/assets/img/demand3-6ddf4a.svg)}.demand--4{background-image:url(/assets/img/demand4-377dc5.svg)}.demand--5{background-image:url(/assets/img/demand5-9e0206.svg)}.demand-text{font-size:0.8rem;font-weight:bold}
+</style></head>
+  <body data-gr-c-s-loaded="true">
+    <div data-server-rendered="true" class="page"><header><div class="navbar container"><a href="http://nove.kodim.cz/" class="page-logo router-link-active"><div class="page-logo__icon"></div> <div class="page-logo__title">Kódím.cz</div></a></div> </header> <main class="main"><div class="container"><aside class="aside"><div class="chapter-link"><a href="http://nove.kodim.cz/czechitas/daweb" class="router-link-active">Pokročilý JavaScript</a></div> <nav class="article-outline"><a href="#format-json" class="toc-link">Formát JSON</a><a href="#volani-api" class="toc-link">Volání API</a><a href="#cviceni-volani-api" class="toc-link">Cvičení - volání API</a><a href="#google-sheets-api" class="toc-link">Google Sheets API</a><a href="#zapis-pomoci-api" class="toc-link">Zápis pomocí API</a><a href="#cviceni-zapis-pomoci-api" class="toc-link">Cvičení - zápis pomocí API</a><a href="#dobrovolne-ulozky-na-doma" class="toc-link">Dobrovolné úložky na doma</a></nav></aside> <article class="article"><div class="article-head"><div class="article-head__title"><div class="article-head__num">3</div> <h1>JSON a volání API</h1></div> <div class="article-head__brief">Naučíme se, jak využívat veřejná API k tomu, abychom získali strukturované data pro naše aplikace.</div></div> <div class="article-links"><div class="article-link article-link--backward"><div class="arrow-left"></div> <a href="http://nove.kodim.cz/czechitas/daweb/pokrocily-js/objekty-data">
+        Objekty jako data, vlastní DOM elementy
+      </a></div> <div class="article-links-filler"></div> <div class="article-link article-link--forward"><a href="http://nove.kodim.cz/czechitas/daweb/pokrocily-js/zaklady-oop">
+        Základy objektového programování
+      </a> <div class="arrow-right"></div></div></div> <div class="article-body"><!-- base href="http://nove.kodim.cz/czechitas/daweb/pokrocily-js/volani-api/" --> <section class="article-section text-section"><p>Většina
+ webových aplikací pracuje s daty, která jsou uložena na nějakém 
+vzdáleném serveru. Pokud chceme s daty na nějakém serveru pracovat, 
+server musí poskytovat takzvané API (<i>Application Programming Interface</i>).
+ Většina API poskytuje data ve formátu JSON. Nejprve si tedy povíme o 
+tomto formátu a pak se naučíme si data stahovat pomocí JavaScriptu.</p>
+<h2 id="format-json"><a class="anchor" href="#format-json">¶</a> Formát JSON</h2>
+<p>Podle většiny moderních doporučení je lepší v JavaScriptu používat v 
+řetězcích jednoduché uvozovky. V počátcích JavaScriptu však bylo běžné 
+používat spíše dvojité. Pokud v našich objektech schválně uzavřeme 
+všechny klíče a řetězce do dvojitých uvozovek i tam, kde by to jinak 
+nebylo potřeba, dostaneme reprezentaci zapsanou takto.</p>
+<!-- prettier-ignore-start -->
+<pre><code class="language-js"><span class="hljs-keyword">const</span> row = {
+  <span class="hljs-string">"name"</span>: {
+    <span class="hljs-string">"first"</span>: <span class="hljs-string">"Petr"</span>,
+    <span class="hljs-string">"last"</span>: <span class="hljs-string">"Bílek"</span>
+  },
+  <span class="hljs-string">"product"</span>: {
+    <span class="hljs-string">"name"</span>: <span class="hljs-string">"Prací prášek"</span>,
+    <span class="hljs-string">"amount"</span>: <span class="hljs-number">1.5</span>,
+    <span class="hljs-string">"unit"</span>: <span class="hljs-string">"kg"</span>
+  },
+  <span class="hljs-string">"price"</span>: <span class="hljs-number">240</span>
+};
+</code></pre>
+<!-- prettier-ignore-end -->
+<p>Toto je z hlediska JavaSriptu naprosto korektní zápis. Vznikne tak 
+zcela stejný objekt, jak ten, který by vznikl bez použití uvozovek kolem
+ klíčů. Tento způsob zápisu má své speciální jméno - <i>JavaScript Object Notation</i>, nebo-li <i>JSON</i>.
+ Za dobu existence JavaScriptu se tento zápis rozšířil po celém 
+internetu a dnes jde o nejpoužívanější formát pro výměnu dat. Pokud si 
+tedy budeme chtít stáhnout data z nějakého API, dostaneme je většinou 
+právě ve formátu JSON.</p>
+<h2 id="volani-api"><a class="anchor" href="#volani-api">¶</a> Volání API</h2>
+<p>K tomu, abychom mohli pracovat s API je potřeba si detailněji popsat,
+ jak funguje komunikace s webovým serverem. Pokud po webovém serveru 
+něco chceme, například HTML stránku nebo nějaká data, musíme odeslat 
+takzvaný 
+          <span class="term">
+            <span class="term__cs">HTTP požadavek<span class="term__icon"></span></span>
+            <span class="term__en">HTTP request</span>
+          </span>
+        . Každý požadavek musí být zacílený na nějakou URL adresu. Adresy URL mají následující formát.</p>
+<pre><code>protokol://adresa_serveru/cesta?parametr1=hodnota1&amp;parametr2=hodnota2
+</code></pre>
+<p>Protokol je většinou <code>http</code> nebo <code>https</code>. Adresa serveru může být například <code>www.google.com</code>.
+ Za adresou serveru následuje cesta, která specifikuje kam v rámci 
+serveru se má požadavek odeslat. Za otazníkem se píšou takzvané 
+parametry, které dále upřesňují požadavek.</p>
+<p>Takto například vypadá adresa požadavku na server <code>www.google.com</code>, který spustí vyhledávání.</p>
+<pre><code>https://www.google.com/search?q=praha&amp;sourceid=chrome
+</code></pre>
+<p>Cesta v požadavku je tedy <code>/search</code>, parametr <code>q</code> udává, že se má vyhledat slovo <code>praha</code> a parametr <code>sourceid</code> říká, že se ptáme z prohlížeče <code>chrome</code>. Tuto adresu můžete normálně zadat do prohlížeče a uvidíte výsledky vyhledávání.</p>
+<h3 id="dotazy-na-api"><a class="anchor" href="#dotazy-na-api">¶</a> Dotazy na API</h3>
+<p>Dotazy na API fungují naprosto stejně jako jsme popsali výše. Jedno z
+ nejjednodušších API, které si můžete sami vyzkoušet, poskytuje 
+informace o tom, kdo má který den v jaké zemi svátek. Pokud chcete 
+vědět, kdo má zrovna dneska svátek v České republice, vložte do 
+prohlížeče následující adresu.</p>
+<pre><code>https://api.abalin.net/today?country=cz
+</code></pre>
+<p>Zkuste si pro sebe určit, co je zde adresa serveru, cesta a 
+parametry. Podle toho, jaký je zrovna den, dostanete odpověď podobnou 
+této.</p>
+<!-- prettier-ignore -->
+<pre><code class="language-json">{<span class="hljs-attr">"data"</span>:{<span class="hljs-attr">"dates"</span>:{<span class="hljs-attr">"day"</span>:<span class="hljs-number">9</span>,<span class="hljs-attr">"month"</span>:<span class="hljs-number">5</span>},<span class="hljs-attr">"namedays"</span>:{<span class="hljs-attr">"cz"</span>:<span class="hljs-string">"Ctibor"</span>}}}
+</code></pre>
+<p>Server se snaží posílat data co nejúsporněji a vynechává v JSONu pro 
+počítače zbytečné mezery. Naštěstí dat není mnoho, takže jsou čitelná i v
+ této formě.</p>
+<p>Většina API poskytuje více různých cest. Pro vyhledání jména pro dnešní den jsme použili cestu <code>/today</code>. Můžeme však položit i obrácený dotaz a zeptat se, kdy má v Americe svátek Suzanne. K to mu použijeme cestu <code>/getdate</code> s parametry <code>name</code> a <code>country</code>.</p>
+<pre><code>https://api.abalin.net/getdate?name=suzanne&amp;country=us
+</code></pre>
+<p>Pokud server poskytuje API, cestám v rámci jednoho serveru se říká <em>endpointy</em>.
+ Z našeho API pro získání jsme zatím viděli dva různé endpointy. Toto 
+API jich má však ještě více. Vrátíme se k nim v příkladech na 
+procvičení.</p>
+<h3 id="volani-api-z-javascriptu"><a class="anchor" href="#volani-api-z-javascriptu">¶</a> Volání API z JavaScriptu</h3>
+<p>Většina API funguje velmi přímočaře. Odešlete správně zformulovaný 
+požadavek na nějaký endpont a server vám pošle odpověď s kýženými daty 
+nejčastěji ve formátu JSON.</p>
+<p>Pokud chceme tento proces provést v JavaScriptu, máme k dispozici velmi šikovnou metodu <code>fetch</code>. Můžeme si tedy založit nový program a rovnou napsat toto.</p>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> promise = fetch(<span class="hljs-string">'https://api.abalin.net/today?country=cz'</span>);
+</code></pre>
+<p>Je zde však drobný zádrhel. Servery jsou různě rychlé podle toho, jak
+ jsou vytížené nebo jak jsou od nás geograficky daleko. Dat ke stažené 
+také může být poměrně hodně. Všechny tyto faktory přispívají k tomu, že 
+stahování dat může trvat nějakou chvíli, a my dopředu nevím, jak dlouhá 
+tato chvíle bude. Dokonce se může stát, že server data nakonec nepošle 
+vůbec, protože je přetížený požadavky jiných klientů, nebo dokonce úplně
+ spadnul a už není dostupný.</p>
+<p>Kdybychom tedy v našem programu na prvním řádku čekali, až funkce <code>fetch</code> skončí, mohli bychom si taky počkat notnou chvíli. Mezi tím by náš program zcela zamrznul a uživatel by neměl radost. Funkce <code>fetch</code> proto nevrací data, nýbrž takzvaný <em>promise</em>.
+ Promise je speciální konstrukce podobná časovači, u kterého však 
+dopředu nevím, kdy skončí. Promise v podstatě říká “až to bude, tak to 
+bude”. Na promise můžeme pověsit funkci, která se má zavolat ve chvíli, 
+kdy dorazí odpověď od serveru. To se provede pomocí metody <code>then</code>.</p>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> promise = fetch(<span class="hljs-string">'https://api.abalin.net/today?country=cz'</span>);
+promise.then(<span class="hljs-function">(<span class="hljs-params">resp</span>) =&gt;</span> {
+  <span class="hljs-built_in">console</span>.log(resp);
+});
+</code></pre>
+<p>V parametru <code>resp</code> máme uloženu odpověd ze serveru. Pokud z této odpovědi chceme získat JSON, stačí zavolat metodu <code>json</code>. Čeká nás však podraz. Tado metoda opět nevrací samotný JSON nýbrž pouze promise. Musíme tedy znova použít metodu <code>then</code> a vznikne nám trochu zamotaný kód.</p>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> respPromise = fetch(<span class="hljs-string">'https://api.abalin.net/today?country=cz'</span>);
+<span class="hljs-keyword">const</span> jsonPromise = respPromise.then(<span class="hljs-function">(<span class="hljs-params">resp</span>) =&gt;</span> resp.json());
+jsonPromise = jsonPromise.then(<span class="hljs-function">(<span class="hljs-params">json</span>) =&gt;</span> <span class="hljs-built_in">console</span>.log(json));
+</code></pre>
+<p>Po spuštění tohoto programu už se nám v konzoli objeví naše data. Kǒd
+ výše však začiná být nepřehledný. Naštěstí se však můžeme snadno 
+vyhnout ukládání promisů do proměnných, které jsou v tomto případě 
+stejně zbytečné. Výsledný kód se pak o kus zpřehlední.</p>
+<pre><code class="language-js">fetch(<span class="hljs-string">'https://api.abalin.net/today?country=cz'</span>)
+  .then(<span class="hljs-function">(<span class="hljs-params">resp</span>) =&gt;</span> resp.json())
+  .then(<span class="hljs-function">(<span class="hljs-params">json</span>) =&gt;</span> <span class="hljs-built_in">console</span>.log(json));
+</code></pre>
+<p>Tento zápis na první pohled může pořád vypadat složitě. Jeho použití 
+je však pořád stejné. Stačí si jej tedy prostě zapamatovat a zvyknout si
+ na to, že “takto se to prostě dělá.” Promisy jsou relativně 
+komplikované a hluboké téma. Nebudeme proto do nich zabíhat hluběji než 
+je v tuto chvíli nezbytně nutné.</p>
+<h3 id="zpracovani-dat"><a class="anchor" href="#zpracovani-dat">¶</a> Zpracování dat</h3>
+<p>Naše funkce pro zpracování získaných dat je zatím pouze vypisovala do
+ konzole. Můžeme si však napsat funkci, která dělá cokoliv chceme. Takto
+ například můžeme zobrazím jméno mající dnes svátek v elementu s třídou <code>name</code>.</p>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> displayName = <span class="hljs-function">(<span class="hljs-params">json</span>) =&gt;</span> {
+  <span class="hljs-keyword">const</span> nameElm = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'.name'</span>);
+  nameElm.textContent = json.data.namedays.cz;
+};
+
+fetch(<span class="hljs-string">'https://api.abalin.net/today?country=cz'</span>)
+  .then(<span class="hljs-function">(<span class="hljs-params">resp</span>) =&gt;</span> resp.json())
+  .then(displayName);
+</code></pre>
+<p>Funkce <code>fetch</code> tedy funguje podobně jak událost. Naše funkce <code>displayName</code> se zavolá až ve chvíli, kdy skutečně dorazí data ze serveru.</p>
+</section> <!----><!----> <section class="article-section exercises-section"><h2 id="cviceni-volani-api" class="exrc-section-title"><a href="#cviceni-volani-api" class="anchor">¶</a>
+          Cvičení - volání API
+        </h2> <!----> <div class="exercise"><div class="exercise__head"><div class="exercise__title"><div class="exercise__num">1</div> <h3 id="cvi-svatek-zitra"><a href="#cvi-svatek-zitra" class="anchor">¶</a>
+        Svátek zítra
+      </h3></div> <div class="exercise__demand"><div class="demand demand--2"></div> <div class="demand-text">to dáš</div></div></div> <div class="exercise__body">
+<p>Zatím jsme z API pro získávání svátků viděli endpointy <code>/today</code> a <code>/getdate</code>. Existují však ještě další.</p>
+<p>Napište aplikaci, která uživateli zobrazí, kdo má svátek zítra. K tomu použíjte endpoint <code>/tomorrow</code>, který funguje podobně jako endpoint <code>/today</code>.</p>
+</div></div><div class="exercise"><div class="exercise__head"><div class="exercise__title"><div class="exercise__num">2</div> <h3 id="cvi-svatek-v-den"><a href="#cvi-svatek-v-den" class="anchor">¶</a>
+        Svátek v den
+      </h3></div> <div class="exercise__demand"><div class="demand demand--2"></div> <div class="demand-text">to dáš</div></div></div> <div class="exercise__body">
+<p>Dalším užitečným endpointem API pro svátky je <code>/namedays</code>. Ten nám umožňuje zjistit, kdo má svátek v přesně určený den. Tento endpoint má tři povinné parametry: <code>country</code>, <code>month</code> a <code>day</code>. Takto například zjistíme, kdo má v Česku svátek 13. února.</p>
+<pre><code>https://api.abalin.net/namedays?country=cz&amp;month=2&amp;day=13
+</code></pre>
+<p>Vytvořte aplikaci, které bude obsahovat dvě textová políčka a 
+tlačítko. Uživatel do políček zadá číslo dne a číslo měsíce a po 
+stisknutí tlačítka se mu na stránce zobrazí, kdo má tento den svátek.</p>
+</div></div></section><section class="article-section text-section"><h2 id="google-sheets-api"><a class="anchor" href="#google-sheets-api">¶</a> Google Sheets API</h2>
+<p>Většina webových aplikací potřebuje kromě frontendu také backend. 
+Moderní aplikace často fungují tak, že backend poskytuje API, skrze 
+které může frontend přistupovat k datům aplikace. Backendové API se dá 
+napsat přímo v JavaScriptu. Bohužel je to však obsáhlé téma, které se 
+nám už do tohoto kurzu nevejde. Vlastní API si tedy v JavaScriptu 
+bohužel nenapíšeme. Jednoduchá data pro naši aplikaci si však můžeme 
+uložit například do Google Sheets. Ty poskytují vlastní API, pomocí 
+kterého můžete číst i zapisovat obsah tabulek a vytvořit si tak 
+jednoduchý datový zdroj pro váš frontend.</p>
+<p>K nastavení Google Sheets API následujte kroky níže.</p>
+<ol>
+<li>Pokud nemáte účet na Googlu, založte si jej na <a href="https://accounts.google.com/signup">této stránce</a>;</li>
+<li>Otevřete <a href="https://developers.google.com/sheets/api/quickstart/js">konfiguraci</a> pro Google Sheets API. V části <i>Step 1</i> klikněte na tlačítko <i>Enable the Google Sheets API</i>. Pokud nejste přihlášení na svůj účet, stránka vás vyzve k přihlášení. Pokud vše proběhlo v pořádku, objeví se dialog s údaji <i>Client ID</i> a <i>Client Secret</i>. Pro tuto chvíli můžeme dialog zavřít.</li>
+<li>V části <i>Step 1</i> dále klikněte na tlačítko <i>Create API Key</i>.
+ Objeví se dlouhatánský řetězec písmenek a čísel, pomocí kterého budete 
+moci komunikovat s Google Sheets. Tento řetězec si uložte, abyste jej 
+měli po ruce, až budete psát váš první program.</li>
+</ol>
+<h3 id="cteni-z-tabulky"><a class="anchor" href="#cteni-z-tabulky">¶</a> Čtení z tabulky</h3>
+<p>Připomeňme si naši tabulku výdajů z první lekce.</p>
+<table>
+  <thead>
+    <tr><th>Jméno</th><th>Věc</th><th>Částka</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Petr</td><td>Prací prášek</td><td>240 kč</td></tr>
+    <tr><td>Ondra</td><td>Savo</td><td>80 kč</td></tr>
+    <tr><td>Pavla</td><td>Toaleťák</td><td>65 kč</td></tr>
+    <tr><td>Zuzka</td><td>Mýdlo</td><td>50 kč</td></tr>
+    <tr><td>Pavla</td><td>Závěs do koupelny</td><td>350 kč</td></tr>
+    <tr><td>Libor</td><td>Pivka na kolaudačku</td><td>124 kč</td></tr>
+    <tr><td>Petr</td><td>Pytle na odpadky</td><td>75 kč</td></tr>
+    <tr><td>Míša</td><td>Utěrky na nádobí</td><td>130 kč</td></tr>
+    <tr><td>Ondra</td><td>Toaleťák</td><td>120 kč</td></tr>
+    <tr><td>Míša</td><td>Pečící papír</td><td>30 kč</td></tr>
+    <tr><td>Zuzka</td><td>Savo</td><td>80 kč</td></tr>
+    <tr><td>Petr</td><td>Tapeta na záchod</td><td>315 kč</td></tr>
+    <tr><td>Ondra</td><td>Toaleťák</td><td>64 kč</td></tr>
+  </tbody>
+</table>
+<ol>
+<li>Zamiřte na adresu <a href="http://sheets.google.com/">http://sheets.google.com</a> a vytvořte novou Google Sheets tabulku. Dajte jí název <i>Výdaje</i>
+ a zkopírujte do ní tabulku výdajů z této stránky. Stačí vybrat všechny 
+řádky (kromě hlavičky) zde na stránce a pak je vložit do Google tabulky 
+pomocí <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>V</kbd>.</li>
+<li>Aby byla tabulka přístupná pro váš program, musíte ji nastavit jako veřejnou. V pravém horním rohu klikněte na tlačíko <i>Sdílet</i>, vyberte <i>Získat odkaz</i> a z nabídky vyberte <i>Všichni uživatelé, kteří mají odkaz</i>. Nyní si můžete odkaz zkopírovat do schránky a kliknout na <i>Hotovo</i>.</li>
+<li>V levé dolní části uvidíte název listu tabulky, který pravděpodobně zní <i>List 1</i>. Šipkou vedle názvu listu rozbalte menu a vyberte <i>Přejmenovat</i>. Jméno nastavte na <i>List1</i>. Mezery v názvech listů jsou nešikovné a je lepší se jich zbavit.</li>
+</ol>
+<p>Nyní můžeme zkusit načíst naši tabulku z JavaScriptového programu. 
+Nejdříve musíme znát identifikátor tabulky. Ten najdete v odkazu pro 
+sdílení, který jste si zkopírovali do schránky. Odkaz bude vypadat nějak
+ takto.</p>
+<pre><code>https://docs.google.com/spreadsheets/d/1_GQOBk3o7il-ZHam-yj1gFCZvoZdMe2kv8guk061tK8/edit?usp=sharing
+</code></pre>
+<p>Identifikátor ja pak tento řetězec.</p>
+<pre><code>1_GQOBk3o7il-ZHam-yj1gFCZvoZdMe2kv8guk061tK8
+</code></pre>
+<p>Dále potřebujete znát váš API klíč. Z těchto informací už můžeme sestavit adresu našeho API endpointu pro funkci <code>fetch</code>.</p>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> API_KEY = <span class="hljs-string">'ALzaSyBfd-ebCiXVE-iwss6S4ZBj15WN651ynQU'</span>;
+<span class="hljs-keyword">const</span> spreadsheetId = <span class="hljs-string">'1_GQOBk3o7il-ZHam-yj1gFCZvoZdMe2kv8guk061tK8'</span>;
+<span class="hljs-keyword">const</span> url = <span class="hljs-string">`https://sheets.googleapis.com/v4/spreadsheets/<span class="hljs-subst">${spreadsheetId}</span>/values/List1?key=<span class="hljs-subst">${API_KEY}</span>`</span>;
+
+fetch(url)
+  .then(<span class="hljs-function">(<span class="hljs-params">resp</span>) =&gt;</span> resp.json())
+  .then(<span class="hljs-function">(<span class="hljs-params">json</span>) =&gt;</span> <span class="hljs-built_in">console</span>.log(json));
+</code></pre>
+<p>Pokud v tomto programu nahradíte první dvě proměnné za vaše údaje a 
+pokud jste tabulku vytvořili správně, uvidíte v konzoli takovouto 
+odpověď.</p>
+<pre><code class="language-json">{
+  <span class="hljs-attr">"range"</span>: <span class="hljs-string">"List1!A1:Z1000"</span>,
+  <span class="hljs-attr">"majorDimension"</span>: <span class="hljs-string">"ROWS"</span>,
+  <span class="hljs-attr">"values"</span>: [
+    [<span class="hljs-string">"Petr"</span>, <span class="hljs-string">"Prací prášek"</span>, <span class="hljs-string">"240 kč"</span>],
+    [<span class="hljs-string">"Ondra"</span>, <span class="hljs-string">"Savo"</span>, <span class="hljs-string">"80 kč"</span>],
+    [<span class="hljs-string">"Pavla"</span>, <span class="hljs-string">"Toaleťák"</span>, <span class="hljs-string">"65 kč"</span>],
+    [<span class="hljs-string">"Zuzka"</span>, <span class="hljs-string">"Mýdlo"</span>, <span class="hljs-string">"50 kč"</span>],
+    [<span class="hljs-string">"Pavla"</span>, <span class="hljs-string">"Závěs do koupelny"</span>, <span class="hljs-string">"350 kč"</span>],
+    [<span class="hljs-string">"Libor"</span>, <span class="hljs-string">"Pivka na kolaudačku"</span>, <span class="hljs-string">"124 kč"</span>],
+    [<span class="hljs-string">"Petr"</span>, <span class="hljs-string">"Pytle na odpadky"</span>, <span class="hljs-string">"75 kč"</span>],
+    [<span class="hljs-string">"Míša"</span>, <span class="hljs-string">"Utěrky na nádobí"</span>, <span class="hljs-string">"130 kč"</span>],
+    [<span class="hljs-string">"Ondra"</span>, <span class="hljs-string">"Toaleťák"</span>, <span class="hljs-string">"120 kč"</span>],
+    [<span class="hljs-string">"Míša"</span>, <span class="hljs-string">"Pečící papír"</span>, <span class="hljs-string">"30 kč"</span>],
+    [<span class="hljs-string">"Zuzka"</span>, <span class="hljs-string">"Savo"</span>, <span class="hljs-string">"80 kč"</span>],
+    [<span class="hljs-string">"Petr"</span>, <span class="hljs-string">"Tapeta na záchod"</span>, <span class="hljs-string">"315 kč"</span>],
+    [<span class="hljs-string">"Ondra"</span>, <span class="hljs-string">"Toaleťák"</span>, <span class="hljs-string">"64 kč"</span>]
+  ]
+}
+</code></pre>
+<p>Tímto způsobem můžete snadno vytvořit zdroj dat pro vaši frontendovou aplikaci.</p>
+<h3 id="zapis-do-tabulky"><a class="anchor" href="#zapis-do-tabulky">¶</a> Zápis do tabulky</h3>
+<p>Z Google Sheets lze pomocí API data nejen číst ale i zapisovat. Zde 
+náš však čeká zklamání. Google Sheets pro zápis do tabulek vyžadují 
+vyšší úroveň zabezpečení. Práce s takto zabezpečenou tabulkou však 
+znamená provést mnoho technických kroků navíc, na což v této lekci 
+nemáme prostor.</p>
+<p>Napsat aplikaci, která někam posílá data se nám tedy pomocí Google 
+Sheets napsat nepodaří. K tomu bychom už potřebovali skutečné vlastní 
+API. Pokud však naše aplikace data pouze zobrazuje, jsou Google Sheets 
+velmi šikovná volba.</p>
+<h2 id="zapis-pomoci-api"><a class="anchor" href="#zapis-pomoci-api">¶</a> Zápis pomocí API</h2>
+<p>Google Sheets API je sice pro zapisování příliš náročné, avšak 
+používat nějaké API k zapisování dat je běžná věc. Zatím jsme na všechna
+ naše API posílali požadavek, aby nám server nějaká dat poslal. Těmto 
+požadavkům se ve webové hantýrce říká GET, tedy něco jako “získat”. 
+Pokud chce naopak něco my odeslat na server, použijeme požadavek POST.</p>
+</section> <!----><!----> <section class="article-section exercises-section"><h2 id="cviceni-zapis-pomoci-api" class="exrc-section-title"><a href="#cviceni-zapis-pomoci-api" class="anchor">¶</a>
+          Cvičení - zápis pomocí API
+        </h2> <!----> <div class="exercise"><div class="exercise__head"><div class="exercise__title"><div class="exercise__num">3</div> <h3 id="cvi-chat"><a href="#cvi-chat" class="anchor">¶</a>
+        Chat
+      </h3></div> <div class="exercise__demand"><div class="demand demand--3"></div> <div class="demand-text">zapni hlavu</div></div></div> <div class="exercise__body">
+<ol>
+<li>Vytvořte si repozitář ze šablony stejně jako to děláme s úkoly. Odkaz na přijetí zadání najdete na <a href="https://classroom.github.com/a/dKpD9cWy">classroom.github.com/a/dKpD9cWy</a>.</li>
+<li>Prohlédněte si soubor <code>index.html</code>. Stránka je nastylovaná pomocí <a href="https://getbootstrap.com/">Bootstrapu</a>. Nejsou potřeba žádné další CSS. Všimněte si formulářových inputů <code>#name-input</code> a <code>#message-input</code>, elementu <code>#messages</code>, se kterými budete později pracovat. Pro splnění zadání stačí upravovat pouze soubor <code>index.js</code>.</li>
+<li>Upravte soubor <code>index.js</code> tak, aby stránka zobrazovala nejnovější zprávy z api.
+<ol>
+<li>Doplňte tělo funkce <code>renderMessage</code>. Jejím úkolem bude vracet HTML jedné zprávy podle předlohy, kterou najdete v <code>index.html</code>. Správné chování můžete vyzkoušet například výpisem do konzole pomocí <code>console.log(renderMessage('Pavel', 'Ahoj 👋', '11. 5. 2020 17:30:00'))</code>.</li>
+<li>Dopište funkci <code>renderMessages</code>, ať pomocí for smyčky zavolá pro každou zprávu <code>renderMessage</code> a přidá ji do elementu s id <code>messages</code>. Nezapomeňte obsah <code>#messages</code> nejdříve vyčistit, jinak se vám zprávy budou časem opakovat.</li>
+<li>Vyzkoušejte, že volání přidává zprávy do stránky.<pre><code class="language-js">renderMessages([
+  { <span class="hljs-attr">name</span>: <span class="hljs-string">'Pavel'</span>, <span class="hljs-attr">message</span>: <span class="hljs-string">'Ahoj 👋'</span>, <span class="hljs-attr">date</span>: <span class="hljs-string">'11. 5. 2020 17:30:00'</span> },
+  { <span class="hljs-attr">name</span>: <span class="hljs-string">'Martina'</span>, <span class="hljs-attr">message</span>: <span class="hljs-string">'Ja se máte?'</span>, <span class="hljs-attr">date</span>: <span class="hljs-string">'11. 5. 2020 17:29:54'</span> },
+  { <span class="hljs-attr">name</span>: <span class="hljs-string">'Michal'</span>, <span class="hljs-attr">message</span>: <span class="hljs-string">'Nazdar'</span>, <span class="hljs-attr">date</span>: <span class="hljs-string">'12. 5. 2020 12:17:21'</span> },
+  { <span class="hljs-attr">name</span>: <span class="hljs-string">'Ivana'</span>, <span class="hljs-attr">message</span>: <span class="hljs-string">'Ahoj'</span>, <span class="hljs-attr">date</span>: <span class="hljs-string">'12. 5. 2020 11:02:15'</span> },
+]);
+</code></pre>
+</li>
+<li>Pomocí zabudované funkce <code>fetch</code> stáhněte uvnitř <code>updateMessages</code> zprávy z api. Ukázkový kód najdete v <a href="https://czechichat.herokuapp.com/documentation/">dokumentaci</a>. Zprávy přes <code>renderMessages(data.messages)</code> zobrazte na stránce. Měly by se vám ukázat minimálně dvě.</li>
+</ol>
+</li>
+<li>Upravte soubor <code>index.js</code> tak, aby formulář pomocí api odesílal nové zprávy na server.
+<ol>
+<li>Doplňte funkci <code>onSubmit</code>, která při uložení formuláře odešle jméno a text z inputů.</li>
+<li>Pozdravte ostatní v chatu. Vyplňte na stránce políčko pro vaše jméno a zprávu textem „Ahoj“. Odešlete.</li>
+</ol>
+</li>
+</ol>
+</div></div></section><!----> <section class="article-section exercises-section"><h2 id="dobrovolne-ulozky-na-doma" class="exrc-section-title"><a href="#dobrovolne-ulozky-na-doma" class="anchor">¶</a>
+          Dobrovolné úložky na doma
+        </h2> <!----> <div class="exercise"><div class="exercise__head"><div class="exercise__title"><div class="exercise__num">4</div> <h3 id="cvi-lepsi-chat"><a href="#cvi-lepsi-chat" class="anchor">¶</a>
+        Lepší chat
+      </h3></div> <div class="exercise__demand"><div class="demand demand--3"></div> <div class="demand-text">zapni hlavu</div></div></div> <div class="exercise__body">
+<ol>
+<li>Vycházejte z předchozí <a href="#cvi-chat">úlohy</a>.</li>
+<li>Vymažte políčko na zadávání textu zprávy po jeho odeslání.</li>
+<li>Zabraňte dvojímu odeslání formuláře, pokud uživatel omylem dvakrát za sebou rychle klikne na <code>Odeslat</code>.</li>
+<li>Přidejte do stránky CSS, které problikne žlutě všemi zprávami při každém renderu. Vyžaduje úpravu <code>index.html</code>.<pre><code class="language-css">&lt;style&gt;
+    @keyframes new-message {
+        0% {
+            background-color: #ffffd3;
+        }
+    }
+    .card {
+        animation: new-message 1s;
+    }
+&lt;/style&gt;
+</code></pre>
+</li>
+<li>Při přijímání zpráv sledujte hodnotu <code>lastUpdate</code>, kterou posílá server společně s <code>messages</code>. Volejte <code>renderMessages</code> jen při změně <code>lastUpdate</code>. Server mění tuto hodnotu pouze při přijetí nové zprávy.</li>
+</ol>
+</div></div></section></div></article></div></main> <footer class="footer"><div class="container">Martin Podloucký</div></footer></div>
+  
+
+</body></html>

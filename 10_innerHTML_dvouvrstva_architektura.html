@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="cz"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>kodim.cz</title>
+  <style data-vue-ssr-id="499c037c:0">@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700,900|Roboto+Mono:400,700&display=fallback&subset=latin-ext);</style><style data-vue-ssr-id="499c037c:1">*{box-sizing:border-box}html{font-family:"Montserrat", sans-serif;font-size:15px}body{margin:0;color:#444;background-color:#f9f9f9}.container{width:100%;margin-left:auto;margin-right:auto}@media only screen and (min-width: 576px){.container{width:540px}}@media only screen and (min-width: 768px){.container{width:720px}}@media only screen and (min-width: 992px){.container{width:960px}}.btn{border:none;outline:none;border-radius:1rem;padding:0.5rem 1rem;text-align:center;text-decoration:none;color:black;box-shadow:0 0 10px #ddd;transition:400ms}.btn:hover{transform:scale(1.1)}.btn-open{background-color:#ffec88}
+</style><style data-vue-ssr-id="54541dba:0">.hljs{display:block;overflow-x:auto;padding:0.5em;background:#222222;color:#C0C0C0}.hljs-keyword{color:#FFB871;font-weight:bold}.hljs-built_in{color:#FFB871}.hljs-literal{color:#FF8080}.hljs-symbol{color:#58E55A}.hljs-comment{color:#5B995B}.hljs-string{color:#FFFF00}.hljs-number{color:#FF8080}.hljs-attribute,.hljs-selector-tag,.hljs-doctag,.hljs-name,.hljs-bullet,.hljs-code,.hljs-addition,.hljs-regexp,.hljs-variable,.hljs-template-variable,.hljs-link,.hljs-selector-attr,.hljs-selector-pseudo,.hljs-type,.hljs-selector-id,.hljs-selector-class,.hljs-quote,.hljs-template-tag,.hljs-deletion,.hljs-title,.hljs-section,.hljs-function,.hljs-meta-keyword,.hljs-meta,.hljs-subst{color:#C0C0C0}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:bold}.article-outline{margin:2rem 3rem 0 0}.arrow-left{background-color:#ffec88;background-size:contain;width:2.5rem;height:2.5rem;border-radius:1.25rem;box-shadow:0 0 10px #ddd;background-image:url(/assets/img/arrow-left-5d2511.svg)}.arrow-right{background-color:#ffec88;background-size:contain;width:2.5rem;height:2.5rem;border-radius:1.25rem;box-shadow:0 0 10px #ddd;background-image:url(/assets/img/arrow-right-b02d21.svg)}.chapter-link{padding-left:1rem}.chapter-link a{text-decoration:none;color:black;font-size:1.2rem;font-weight:bold}.chapter-link a:hover{text-decoration:underline}.article-links{display:flex;margin-top:1rem}.article-links-filler{flex:1}.article-link{display:flex;align-items:center}.article-link a{text-decoration:none;color:black}.article-link a:hover{text-decoration:underline}.article-link--backward{margin-left:-1.25rem}.article-link--backward a{margin-left:2.75rem}.article-link--forward{margin-right:-1.25rem}.article-link--forward a{margin-right:2.75rem}.toc-link{display:block;width:100%;text-decoration:none;color:black;padding:0.5rem 1rem}.toc-link:hover{background-color:#f6f6f6}.exrc-section-title{margin-top:1rem !important;margin-bottom:0rem !important}.exrc-bonuses{padding:2rem 4rem;color:white;background-color:orange;margin-bottom:1rem}.exrc-bonuses__head{font-size:1.2rem;font-weight:bold;margin-bottom:1rem}.article-section{padding:2rem 0}.warn-section{background-color:#e2252b;color:white}.text-section table tr:nth-child(even){background-color:#e8e8e8}.exercises-section{background-color:#ffec88}.block-image{margin:3rem 0}.block-image img{display:block;width:100%;height:auto}.fig{display:block;margin:2rem auto;height:auto}li>.fig{margin:1rem auto}.fig-100{width:100%}.fig-90{width:90%}.fig-80{width:80%}.fig-70{width:70%}.fig-60{width:60%}.fig-50{width:50%}table{margin:2rem auto}table thead{border-bottom:2px solid #333}table td{padding:0.5rem}
+</style><style data-vue-ssr-id="34f8141e:0">.article-head{padding:0 4rem}.article-head__title{display:flex;align-items:baseline;font-size:1.8rem;font-weight:bold;margin-left:-6rem}.article-head__title h1{font-size:100%}.article-head__num{width:4rem;height:4rem;line-height:4rem;text-align:center;background-color:#ffec88;box-shadow:0 0 10px #ddd;border-radius:2rem;margin-right:2rem}.aside{display:none;width:320px;position:fixed;z-index:1;overflow-x:hidden;padding-top:20px}@media only screen and (min-width: 992px){.aside{display:block}}.article{margin:0rem 0 6rem 0;background-color:white;padding-top:2rem;box-shadow:0 0 10px #ddd;line-height:150%;border-radius:1rem}@media only screen and (min-width: 992px){.article{margin:0rem 0 6rem 320px}}.article .text-section>p,.article .text-section>ul,.article .text-section>ol,.article .text-section>dl{margin-left:4rem;margin-right:4rem}.article dt,.article dd{margin-bottom:0.5rem}.article h2,.article h3,.article h4{padding:1rem 4rem}.article .anchor{opacity:0;transition:250ms;text-decoration:none;color:#869af5;margin-left:-1.7rem}.article h2{margin-top:3rem;margin-bottom:1rem;font-size:1.6rem;font-weight:900}.article h2 .anchor{margin-left:-1.7rem}.article h3{margin-top:1rem;margin-bottom:0rem}.article h3 .anchor{margin-left:-1.2rem}.article h2:hover .anchor,.article h3:hover .anchor{opacity:1;margin-left:0}.article p{margin-top:0;margin-bottom:1rem;hyphens:manual}.article li{margin-bottom:0.5rem}.article .text-section:first-child p:first-child:first-letter{float:left;font-size:5rem;line-height:4rem;padding-top:0.3rem;padding-right:0.5rem}.article em{background-color:#d1ebf1;padding:0rem 0.5rem;border-radius:10px}.article pre,.article code,.article var{font-family:"Roboto Mono"}.article pre{background-color:#555;color:white;padding:1rem 4rem;margin:2rem 0;overflow-x:auto}.article var{font-style:normal;color:blue}.article kbd{font-family:"Montserrat";background-color:#fff;border:1px solid #888;border-radius:4px;padding:0rem 0.5rem}.term{display:inline;position:relative;font-style:italic;overflow:visible}.term__icon{display:inline-block;vertical-align:middle;width:15px;height:15px;margin-left:0.5rem;margin-bottom:2px;margin-right:0;background-image:url(/assets/img/english-9a71e2.png);background-size:contain;background-repeat:no-repeat}.term__cs{background-color:#d1ebf1;padding:0rem 0rem 0rem 0.5rem;border-radius:10px;white-space:pre;cursor:default}.term__en{position:absolute;top:-2rem;left:0rem;background-color:#444;color:white;padding:0rem 0.5rem;border-radius:5px;opacity:0;visibility:hidden;z-index:1;white-space:pre;transition:500ms}.term:hover .term__en{visibility:visible;opacity:1}
+</style><style data-vue-ssr-id="3c9796f4:0">.page{display:grid;grid-template-columns:auto;grid-template-rows:auto 1fr auto;min-height:100vh}.footer{padding:2rem 0;background-color:#dce7f4}
+</style><style data-vue-ssr-id="2fdd37c8:0">.page-logo{display:flex;align-items:center;text-decoration:none;color:black}.page-logo__icon{width:2rem;height:2rem;background-image:url(/assets/img/kodim-icon-d3361c.svg);background-size:contain}.page-logo__title{font-size:1.2rem;font-weight:bold;margin-left:0.5rem}.navbar{padding:1rem 0}
+</style><style data-vue-ssr-id="6f27289b:0">.exercise__head{display:flex;margin-left:-1.5rem}.exercise__num{width:3rem;height:3rem;line-height:3rem;background-color:white;box-shadow:0 0 10px #ddd;border-radius:1.5rem;text-align:center}.exercise__title{display:flex;align-items:baseline;flex:1;font-size:1.2rem;font-weight:bold;margin-left:0rem}.exercise__title h3{font-size:100%;padding-left:2.5rem;margin-bottom:0.5rem}.exercise__demand{margin-top:2rem;padding-right:4rem;text-align:right}.exercise__body>p,.exercise__body>ul,.exercise__body>ol,.exercise__body>dl{margin-left:4rem;margin-right:4rem}.exercise table tr:nth-child(even){background-color:#ffe664}.demand{min-width:70px;height:14px;background-size:contain;background-position-x:right;background-repeat:no-repeat;background-size:70px 14px}.demand--1{background-image:url(/assets/img/demand1-32b0be.svg)}.demand--2{background-image:url(/assets/img/demand2-3d6156.svg)}.demand--3{background-image:url(/assets/img/demand3-6ddf4a.svg)}.demand--4{background-image:url(/assets/img/demand4-377dc5.svg)}.demand--5{background-image:url(/assets/img/demand5-9e0206.svg)}.demand-text{font-size:0.8rem;font-weight:bold}
+</style></head>
+  <body data-gr-c-s-loaded="true">
+    <div data-server-rendered="true" class="page"><header><div class="navbar container"><a href="http://nove.kodim.cz/" class="page-logo router-link-active"><div class="page-logo__icon"></div> <div class="page-logo__title">Kódím.cz</div></a></div> </header> <main class="main"><div class="container"><aside class="aside"><div class="chapter-link"><a href="http://nove.kodim.cz/czechitas/daweb" class="router-link-active">Pokročilý JavaScript</a></div> <nav class="article-outline"><a href="#interpolace-retezcu" class="toc-link">Interpolace řetězců</a><a href="#tvorba-html-pomoci-javascriptu" class="toc-link">Tvorba HTML pomocí JavaScriptu</a><a href="#cviceni-innerhtml" class="toc-link">Cvičení - innerHTML</a><a href="#aktualizovani-stranky" class="toc-link">Aktualizování stránky</a><a href="#dvouvrstva-architektura" class="toc-link">Dvouvrstvá architektura</a><a href="#cviceni-dvouvrstva-architektura" class="toc-link">Cvičení - dvouvrstvá architektura</a><a href="#mandatory-home-reading" class="toc-link">Mandatory home reading</a><a href="#povinny-domaci-ukol" class="toc-link">Povinný domácí úkol</a></nav></aside> <article class="article"><div class="article-head"><div class="article-head__title"><div class="article-head__num">1</div> <h1>Práce s innerHTML a dvouvrstvá architektura</h1></div> <div class="article-head__brief">Naučíme si, jak v JavaScriptu vytvářet složitější HTML struktury a jak organizovat větší aplikace.</div></div> <div class="article-links"><!----> <div class="article-links-filler"></div> <div class="article-link article-link--forward"><a href="http://nove.kodim.cz/czechitas/daweb/pokrocily-js/objekty-data">
+        Objekty jako data, vlastní DOM elementy
+      </a> <div class="arrow-right"></div></div></div> <div class="article-body"><!-- base href="http://nove.kodim.cz/czechitas/daweb/pokrocily-js/inner-html/" --> <section class="article-section text-section"><p>Díky
+ JavaScriptu a práci s DOMem už dokážete vašim stránkám vdechnout hodně 
+života a zprostředkovat tak uživateli interaktivní zážitek. Zatím jsme 
+však pracovali pouze s elementy, které už na stránce existují. Dnes si 
+ukážeme, jak zapojit do stránky elementy vytvořené celé přímo v 
+JavaScriptu. Tímto postupně nastupujeme cestu, která skončí až u toho, 
+kdy budeme vytvářet v JavaScriptu úplně celou stránku a žádné HTML 
+soubory už vytvářet nebudeme. To však až za několik lekcí.</p>
+<h2 id="interpolace-retezcu"><a class="anchor" href="#interpolace-retezcu">¶</a> Interpolace řetězců</h2>
+<p>Chceme se vyhnout nepřehledným konstrukcím typu</p>
+<pre><code class="language-js"><span class="hljs-string">'Spolubydlící '</span> + name + <span class="hljs-string">' utratil '</span> + amount + <span class="hljs-string">' kč za '</span> + product + <span class="hljs-string">'.'</span>;
+</code></pre>
+<p>Proto napíšeme řaději</p>
+<pre><code class="language-js"><span class="hljs-string">`Spolubydlící <span class="hljs-subst">${name}</span> utratil <span class="hljs-subst">${amount}</span> kč za <span class="hljs-subst">${product}</span>.`</span>;
+</code></pre>
+<p>Ve složených závorkách máme jakési JavaScriptové okno uvnitř řetězce,
+ do kterého můžeme vepsat nejen proměnnou, ale zcela libovolný výraz, 
+jehož výsledek bude automaticky zkonvertován na řetězec.</p>
+<h3 id="viceradkove-retezce"><a class="anchor" href="#viceradkove-retezce">¶</a> Víceřádkové řetězce</h3>
+<p>Dále v tomto kurzu budeme chtít pracovat s delšími řetězci, které se 
+nám často nevejdou na jeden řádek. V JavaScriptu bohužel nelze udělat 
+běžný řetězec na více řádků. Následující kód by bohužel nefungoval.</p>
+<pre><code class="language-js">const name = '
+  petr
+';
+</code></pre>
+<p>Abychom takový řetězec sestavili, musíme si pomoct sčítáním řetězců.</p>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> may = (
+  <span class="hljs-string">'Late evening, on the first of May—\n'</span> +
+  <span class="hljs-string">'The twilit May—the time of love.\n'</span> +
+  <span class="hljs-string">'Meltingly called the turtle-dove,\n'</span> +
+  <span class="hljs-string">'Where rich and sweet pinewoods lay.\n'</span> +
+  <span class="hljs-string">'Whispered of love the mosses frail,\n'</span> +
+  <span class="hljs-string">'The flowering tree as sweetly lied,\n'</span> +
+  <span class="hljs-string">'The rose\'s fragrant sigh replied\n'</span> +
+  <span class="hljs-string">'To love-songs of the nightingale'</span> +
+);
+</code></pre>
+<p>Všimněte si použití zpětného lomítka u sybmolů jako <code>\n</code> a <code>\'</code>. Toto jsou takzvané <em>escape sekvence</em>, které nám umožní vložit dovnitř řetězce znak, který by jinak nešel napsat. Sekvence <code>\n</code> znamená nový řádek, sekvence <code>\'</code> vloží apostrof. Ten bychom to řetězce napsat nemohli, protože by si JavaScript myslel, že tím chceme řetězec ukončit.</p>
+<p>Naustálé sčítání a vkládání escape sekvencí nás ovšem brzy začne dost
+ zdržovat. Nyní však můžeme použí nové cool řetězce se zpětnými 
+apostrofy a zapsat náš řetězec takto.</p>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> may = <span class="hljs-string">`
+  Late evening, on the first of May—
+  The twilit May—the time of love.
+  Meltingly called the turtle-dove,
+  Where rich and sweet pinewoods lay.
+  Whispered of love the mosses frail,
+  The flowering tree as sweetly lied,
+  The rose's fragrant sigh replied
+  To love-songs of the nightingale
+`</span>;
+</code></pre>
+<p>Zde už apostrof i nový řádek můžeme napsat rovnou bez escape sekvencí.</p>
+<h2 id="tvorba-html-pomoci-javascriptu"><a class="anchor" href="#tvorba-html-pomoci-javascriptu">¶</a> Tvorba HTML pomocí JavaScriptu</h2>
+<p>Z předchozích lekcí už dávno umíme změnit obsah nějakého DOM elementu pomocí vlastnosti <code>textContent</code>.
+ U složitějších aplikací však narazíme na situace, kdy nechceme měnit 
+jen text už existujícího elementu, ale chceme vytvořit úplně nový 
+element. Na začátku nám k tomu poslouží vlastnost <code>innerHTML</code>.
+ Pomocí této vlastnosti můžeme nějakému elementu nastavit obsah jako 
+HTML. Můžeme tak uvnitř elementu vyrobit úplně novou HTML strukturu.</p>
+<p>Mějme následující jednoduchou HTML strukturu.</p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card"</span>&gt;</span>Produkt<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+</code></pre>
+<p>Nyní vybereme element s třídou <code>card</code> a vložíme do něj další HTML kód.</p>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> cardElm = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'.card'</span>);
+cardElm.innerHTML =
+  <span class="hljs-string">'&lt;div class="card__title"&gt;Lednička&lt;/div&gt;'</span> +
+  <span class="hljs-string">'&lt;div class="card__body"&gt;Cena: 12 000 kč&lt;/div&gt;'</span>;
+</code></pre>
+<p>Můžeme si ověřit, že se nám na stránce skutečně objeví tato nově 
+vytvořené struktura. Takto můžeme dovnitř libovolného elementu vložit 
+libovolně komplikované HTML. Všimněte si, že jsme zatím pro náš HTML kód
+ použili sčítání řetězců. Už však známe i lepší způsob pomocí zpětných 
+apostrofů. Navíc můžeme do takovýchto řetězců vkládat proměnné. Není 
+tedy problém sestavit naše HTML s použitím nějakých dat.</p>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> product = [<span class="hljs-string">'Lednička'</span>, <span class="hljs-number">12000</span>];
+<span class="hljs-keyword">const</span> cardElm = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'.card'</span>);
+cardElm.innerHTML = <span class="hljs-string">`
+  &lt;div class="card__title"&gt;<span class="hljs-subst">${product[<span class="hljs-number">0</span>]}</span>&lt;/div&gt;
+  &lt;div class="card__body"&gt;<span class="hljs-subst">${product[<span class="hljs-number">1</span>]}</span>&lt;/div&gt;
+`</span>;
+</code></pre>
+<p>Pomocí <code>innerHTML</code> získáváme mnohem větší kontrolu nad obsahem stránky než jsme měli pouze s použitím <code>textContent</code>.</p>
+<h3 id="ukazkovy-priklad-nakupni-seznam"><a class="anchor" href="#ukazkovy-priklad-nakupni-seznam">¶</a> Ukázkový příklad - nákupní seznam</h3>
+<p>Mějme následující pole obsahující položky, které zítra nechceme zapomenout koupit při návštěvě supermarketu.</p>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> shoppingList = [
+  <span class="hljs-string">'mrkev'</span>,
+  <span class="hljs-string">'paprika'</span>,
+  <span class="hljs-string">'cibule'</span>,
+  <span class="hljs-string">'čínské zelí'</span>,
+  <span class="hljs-string">'arašídy'</span>,
+  <span class="hljs-string">'sojová omáčka'</span>,
+];
+</code></pre>
+<p>Díky použití <code>innerHTML</code> můžeme snadno naše pole převést na hezký HTML seznam.</p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"shopping-list"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+</code></pre>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> listElm = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'#shopping-list'</span>);
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; shoppingList.length; i += <span class="hljs-number">1</span>) {
+  listElm.innerHTML += <span class="hljs-string">`&lt;li&gt;<span class="hljs-subst">${shoppingList[i]}</span>&lt;/li&gt;`</span>;
+}
+</code></pre>
+<p>Každá obrátka tohoto cyklu nám tak přidá do HTML seznamu jeden další <code>li</code> element.</p>
+</section> <!----><!----> <section class="article-section exercises-section"><h2 id="cviceni-innerhtml" class="exrc-section-title"><a href="#cviceni-innerhtml" class="anchor">¶</a>
+          Cvičení - innerHTML
+        </h2> <!----> <div class="exercise"><div class="exercise__head"><div class="exercise__title"><div class="exercise__num">1</div> <h3 id="cvi-interpolace-retezcu"><a href="#cvi-interpolace-retezcu" class="anchor">¶</a>
+        Interpolace řetězců
+      </h3></div> <div class="exercise__demand"><div class="demand demand--1"></div> <div class="demand-text">pohodička</div></div></div> <div class="exercise__body">
+<p>Všechna sčítání řetězců v následujícím programu převeďte na interpolaci řetězců.</p>
+<!-- prettier-ignore -->
+<pre><code class="language-js"><span class="hljs-keyword">const</span> age = <span class="hljs-number">17</span>;
+
+<span class="hljs-keyword">const</span> msg1 = <span class="hljs-string">'Věk '</span> + age + <span class="hljs-string">' let je málo pro vstup na naše stránky'</span>;
+<span class="hljs-keyword">const</span> msg2 = <span class="hljs-string">'Ještě vám zbývá '</span> + (<span class="hljs-number">18</span> - age) + <span class="hljs-string">' let.'</span>;
+
+<span class="hljs-keyword">const</span> user = [<span class="hljs-string">'robert17'</span>, <span class="hljs-number">34</span>];
+<span class="hljs-keyword">const</span> msg3 = (
+  <span class="hljs-string">'&lt;div class="msg"&gt;\n'</span> + 
+  <span class="hljs-string">'  &lt;div class="username"&gt;'</span> + user[<span class="hljs-number">0</span>] + <span class="hljs-string">'&lt;/div&gt;\n'</span> + 
+  <span class="hljs-string">'  &lt;div class="age"&gt;'</span> + user[<span class="hljs-number">1</span>] + <span class="hljs-string">'&lt;/div&gt;\n'</span> + 
+  <span class="hljs-string">'&lt;/div&gt;'</span>
+);
+</code></pre>
+</div></div><div class="exercise"><div class="exercise__head"><div class="exercise__title"><div class="exercise__num">2</div> <h3 id="cvi-podcasty"><a href="#cvi-podcasty" class="anchor">¶</a>
+        Podcasty
+      </h3></div> <div class="exercise__demand"><div class="demand demand--3"></div> <div class="demand-text">zapni hlavu</div></div></div> <div class="exercise__body">
+<p>Stáhněte si <a href="http://nove.kodim.cz/czechitas/daweb/pokrocily-js/inner-html/assets/podcasty-zadani.zip">základ stránky</a>
+ zobrazující seznam epizod nějakého podcastu. Prohlédněte si HTML 
+stránky. Všimněte si, že jedna epizoda podcastu se zobrazí pomocí tohoto
+ HTML.</p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"episode"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"episode__num"</span>&gt;</span>127<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"episode__body"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"episode__title"</span>&gt;</span>Hledání plyšového Yettiho<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"episode__guest"</span>&gt;</span>host: Vojtěch Ryba<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
+<ol>
+<li>V souboru <code>index.html</code> smažte obsah elementu <code>episode-list</code>. V JavaScriptu vyberte tento element a s použitím vlastnosti <code>innerHTML</code> v něm vytvořte jednu epizodu podcastu dle hodnot uložených v proměnných <code>number</code>, <code>title</code> a <code>guest</code>.</li>
+<li>Mějme následující pole obsahující několik epizod našeho podcastu.<pre><code class="language-js"><span class="hljs-keyword">const</span> episodes = [
+  [<span class="hljs-number">127</span>, <span class="hljs-string">'Hledání plyšového Yettiho'</span>, <span class="hljs-string">'Vojtěch Ryba'</span>],
+  [<span class="hljs-number">128</span>, <span class="hljs-string">'Moderní hrachová polévka'</span>, <span class="hljs-string">'Kamila Štancová'</span>],
+  [<span class="hljs-number">129</span>, <span class="hljs-string">'Poloautomatické zrcadlo'</span>, <span class="hljs-string">'Janka Janovská'</span>],
+  [<span class="hljs-number">130</span>, <span class="hljs-string">'Máčené hlavy parlamentu'</span>, <span class="hljs-string">'Jonáš Daněk'</span>],
+  [<span class="hljs-number">131</span>, <span class="hljs-string">'Služby na hraně přívěsu'</span>, <span class="hljs-string">'Tereza Křivánková'</span>],
+  [<span class="hljs-number">132</span>, <span class="hljs-string">'Klasifikace sněžných klokanů'</span>, <span class="hljs-string">'Josef Stix'</span>],
+  [<span class="hljs-number">133</span>, <span class="hljs-string">'Rybolov v Oceánu bouří'</span>, <span class="hljs-string">'Ludmila Gajová'</span>],
+];
+</code></pre>
+Napište cyklus, který projde toto pole a pro každou položku vytvoří novou epizodu uvnitř elementu <code>episodes-list</code>.</li>
+</ol>
+</div></div></section><section class="article-section text-section"><h2 id="aktualizovani-stranky"><a class="anchor" href="#aktualizovani-stranky">¶</a> Aktualizování stránky</h2>
+<p>Pohlédněme na celý kód naší stránky s nákupním seznamem.</p>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> shoppingList = [
+  <span class="hljs-string">'mrkev'</span>,
+  <span class="hljs-string">'paprika'</span>,
+  <span class="hljs-string">'cibule'</span>,
+  <span class="hljs-string">'čínské zelí'</span>,
+  <span class="hljs-string">'arašídy'</span>,
+  <span class="hljs-string">'sojová omáčka'</span>,
+];
+
+<span class="hljs-keyword">const</span> listElm = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'#shopping-list'</span>);
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; shoppingList.length; i += <span class="hljs-number">1</span>) {
+  listElm.innerHTML += <span class="hljs-string">`&lt;li&gt;<span class="hljs-subst">${shoppingList[i]}</span>&lt;/li&gt;`</span>;
+}
+</code></pre>
+<p>Stránka je zatím poměrně statícká. Zobrazuje pořád tentýž seznam. 
+Určitě bychom chtěli uživateli umožnit přidat do seznamu nějakou 
+položku. Naše pole je globální, můžeme to tedy zatím zkusit udělat 
+programátorsky přímo z konzole.</p>
+<pre><code class="language-js">&gt; shoppingList.push(<span class="hljs-string">'koriandr'</span>);
+<span class="hljs-number">7</span>
+</code></pre>
+<p>Naše pole se tedy rozrostlo o jeden prvek. K našemu zklamání však 
+obsah stránky zůstává pořád stejný. Je to logické, protože obsah seznamu
+ <code>ul</code> jsme v JavaScriptu vytvořili hned po načtení stránky. 
+Změna našeho pole tento kód znovu magicky nespustí. Musíme jej spustit 
+sami ve chvíli, kdy chceme říct, že se má obsah seznamu <code>ul</code> vytvořit znova podle nového obsahu pole <code>shoppingList</code>. Abychom mohli náš kód spouštět opakovaně, bude šikovné si jej zabalit do funkce.</p>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> updateShoppingList = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+  <span class="hljs-keyword">const</span> listElm = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'#shopping-list'</span>);
+  listElm.innerHTML = <span class="hljs-string">''</span>;
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; shoppingList.length; i += <span class="hljs-number">1</span>) {
+    listElm.innerHTML += <span class="hljs-string">`&lt;li&gt;<span class="hljs-subst">${shoppingList[i]}</span>&lt;/li&gt;`</span>;
+  }
+};
+</code></pre>
+<p>Všimněte si, že na začátku funkce vymažeme <code>innerHTML</code> našeho <code>ul</code>
+ seznamu, abychom celou HTML strukturu vytvořili úplně znova. Máme tak k
+ dispozici funkci, kterou můžeme zavolat pokaždé, když chceme, aby naše 
+stránka zobrazila aktuální obsah našeho pole <code>shoppingList</code>. 
+To nám dává svobodu si s polem dělat co chceme, přidávat položky, měnit 
+položky, mazat položky a tak dále. Vždy jen pak musíme zavolat funkci <code>updateShoppingList</code>, aby se změny projevily i v našem HTML. Můžete si to vyzkoušet rovnou z konzole a sledovat, jak stránka reaguje.</p>
+<pre><code class="language-js">&gt; shoppingList.push(<span class="hljs-string">'zázvor'</span>);
+<span class="hljs-number">8</span>
+&gt; updateShoppingList()
+<span class="hljs-literal">undefined</span>
+&gt; shoppingList.shift();
+<span class="hljs-string">'mrkev'</span>,
+&gt; updateShoppingList()
+<span class="hljs-literal">undefined</span>
+&gt; shoppingList[<span class="hljs-number">0</span>] = <span class="hljs-string">'klíčky'</span>;
+<span class="hljs-string">'klíčky'</span>,
+&gt; updateShoppingList()
+<span class="hljs-literal">undefined</span>
+</code></pre>
+<p>V tomto příkladu jsme poprvé narazili na velice důležitý postup při 
+tvorbě větších aplikací. V následující části si o něm řeknemě něco více,
+ abychom jej dokázali rozpoznat a použít i v dalších našich programech.</p>
+<h2 id="dvouvrstva-architektura"><a class="anchor" href="#dvouvrstva-architektura">¶</a> Dvouvrstvá architektura</h2>
+<p>Čím zkušenější a mocnější se v JavaScriptu stáváme, tím větší a 
+složitější budou naše programy. Tím, jak skládat dohromady větší 
+aplikace a udržet jejich komplikovanost na uzdě, se zabývá celý velký 
+obor, kterému se říká <i>softwarový návrh a architektura</i>. Podobně 
+jako když stavíme most nebo budovu, nemůžeme rovnou začít skládat cihlu k
+ cihle. Musíme si nejdříve dopředu navrhnout strukturu celé stavby, aby 
+se nám nestalo, že začneme stavět střechu aniž bychom si rozmysleli, kde
+ budou stát nosné zdi.</p>
+<p>Vývoj aplikací už má za dobu existence počítačů dlouhou historii. 
+Tisíce a tisíce programátorů před námi postupně ze svých zkušeností 
+vydestilovali mnoho různých postupů jak zajistit, aby se nám větší 
+programy nerozpadly pod rukama. Těmto postupům se řiká návrhové a 
+architektonické vzory. My si zde představíme vzor, na který jsme před 
+chvíli narazili v naší aplikaci s nákupním seznamem. Tomuto zvoru se 
+odborně říká 
+          <span class="term">
+            <span class="term__cs">dvouvrstvá architektura<span class="term__icon"></span></span>
+            <span class="term__en">two tier architecture</span>
+          </span>
+        .</p>
+<p>V principu nejde o nic zvlášť komplikovaného. Podstatou celé věci je 
+si uvědomit, že téměř každá aplikace obsahuje dvě zcela základních 
+části: data a prezentaci. Data jsou naše JavaScriptové hodnoty jako 
+čísla, řetězce, pole a podobně. Prezentace je způsob, jakým tato data 
+zobrazujeme uživateli. V našem případě jako prezentaci používáme HTML a 
+CSS.</p>
+<p>Důležité je, že data a prezentace jsou na sobě zcela nezávislé. Pokud
+ nějakým zůsobem změníme data, naše prezentace se sama od sebe 
+neaktualizuje. Musíme to provést explicitně. Vždy proto potřebujeme 
+nějakou funkci, která prezentaci aktualizuje podle toho, co zrovna data 
+obsahují. Abychom takovou funkci v kódu jasně poznali, dáváme do jejího 
+názvu slovo <code>update</code>. Naše funkce <code>updateShoppingList</code> je příkladem takové funkce.</p>
+</section> <!----><!----> <section class="article-section exercises-section"><h2 id="cviceni-dvouvrstva-architektura" class="exrc-section-title"><a href="#cviceni-dvouvrstva-architektura" class="anchor">¶</a>
+          Cvičení - dvouvrstvá architektura
+        </h2> <!----> <div class="exercise"><div class="exercise__head"><div class="exercise__title"><div class="exercise__num">3</div> <h3 id="cvi-hodiny"><a href="#cvi-hodiny" class="anchor">¶</a>
+        Hodiny
+      </h3></div> <div class="exercise__demand"><div class="demand demand--2"></div> <div class="demand-text">to dáš</div></div></div> <div class="exercise__body">
+<p>Stáhněte si <a href="http://nove.kodim.cz/czechitas/daweb/pokrocily-js/inner-html/assets/hodiny-zadani.zip">základ stránky</a> zobrazující digitální hodiny. Následujte instrukce níže.</p>
+<ol>
+<li>Vytvořte proměnné <code>hours</code> a <code>minutes</code>. Tyto proměnné budou představovat data vaší aplikace. Nastavte tyto proměnné na nějaký čas, například 12:35.</li>
+<li>Vytvořte funkci <code>updateClock</code>, která zařídí, že na naší stránce se zobrazí čas, který je uložen v těchto proměnných.</li>
+<li>V konzoli prohlížeče zkuste několikrát změnit hodnoty v proměnných <code>hours</code> a <code>minutes</code>. Po každé změně zavolejte funkci <code>updateClock</code> a sledujte, jestli se stránka správně aktualizuje.</li>
+<li>Ve funkci <code>updateClock</code> nezapomeňte zařídit, aby hodiny správně zobrazovaly nulu na začátku jednociferných čísel.</li>
+</ol>
+</div></div><div class="exercise"><div class="exercise__head"><div class="exercise__title"><div class="exercise__num">4</div> <h3 id="cvi-kostky"><a href="#cvi-kostky" class="anchor">¶</a>
+        Kostky
+      </h3></div> <div class="exercise__demand"><div class="demand demand--3"></div> <div class="demand-text">zapni hlavu</div></div></div> <div class="exercise__body">
+<p>Stáhněte si <a href="http://nove.kodim.cz/czechitas/daweb/pokrocily-js/inner-html/assets/kostky-zadani.zip">základ stránky</a> zobrazující několik hracích kostek.</p>
+<ol>
+<li>Prohlédněte si HTML kód a zapamatujte si, jak se vytváří kostka s danou hodnotou. Poté v HTML ručně vymažte obsah elementu <code>dice-row</code>. Jeho obsah totiž budeme tvořit pomocí JavaScriptu.</li>
+<li>Vytvořte pole <code>dice</code>, které bude obsahovat číselné hodnoty několika kostek, například 5, 1 a 3.</li>
+<li>Napište funkci <code>updateDice</code>, která zobrazí kostky ve vašem poli. To provedete tak, že vyberete element <code>dice-row</code> a pomocí cyklu projdete celé pole kostek. Pro každou hodnotu v cyklu přidáte do <code>innerHTML</code> tohoto elementu jeden obrázek kostky.</li>
+<li>Vyzkoušejte si v konzoli, že vaše funkce funguje. Přidejte do pole 
+kostek novou hodnotu a vyzkoušejte, že po zavolání této funkce se 
+stránka správně aktualizuje.</li>
+<li>Upravte váš program tak, aby se po stisknutí tlačíka <i>Přidat</i> na stránce objevila nová kostka s nějakou hodnotou. Můžete ji zkusit rovnou vylosovat náhodně.</li>
+<li>Upravte váš program tak, aby se po stisknutí tlačíka <i>Zamíchat</i> náhodně změnily hodnoty na všech kostkách, které jsou právě na stránce zobrazené.</li>
+</ol>
+</div></div></section><section class="article-section text-section"><h2 id="mandatory-home-reading"><a class="anchor" href="#mandatory-home-reading">¶</a> Mandatory home reading</h2>
+<p>To better prepare you for the life of a badass professional 
+programmer, from this lesson onwards we are going to write the mandatory
+ home readings in English. Even if you do not aspire for a professional 
+career in programming and just want to be a hobbyist, you will not be 
+able to avoid English for long. It slowly sneaks in with your variable 
+names but the road continues much further.</p>
+<ul>
+<li>Most of good courses, articles and video tutorials are in English.</li>
+<li>Most helpful books about programming are written in English.</li>
+<li>All the documentation for HTML, CSS, JavaScript and other tools and technologies is in English.</li>
+<li>If you have a problem and decide to take it to Stack Overflow, guess what? Your communication will be in English.</li>
+</ul>
+<p>Switching to English may seem daunting at first. But in a while you 
+will find that technical English is rather straightforward. Reading 
+technical manuals and articles is not like reading a novel or, God 
+forbid, reading the newspapers. The vocabulary in this particular area 
+is quite limited and most of the time the hardest part is understanding 
+the technical terms. If at first you feel a bit frightened by English, 
+do not hesitate to chuck this paragraph into <a href="https://translate.google.com/?sl=en&amp;tl=cs">Google Translator</a>. It is quite capable these days. In fact, with these simple texts, most of the time the translation is almost 100% acurate.</p>
+<p>Once you get the hang of it, reading IT English will be a breeze. 
+Actually, reading IT articles and books is a good way to get better in 
+English in general. When at last you are smoothly reading through all 
+the discussions on Stack Overflow, you might even get excited to read 
+some real English literature.</p>
+</section> <!----><!----> <section class="article-section exercises-section"><h2 id="povinny-domaci-ukol" class="exrc-section-title"><a href="#povinny-domaci-ukol" class="anchor">¶</a>
+          Povinný domácí úkol
+        </h2> <!----> <div class="exercise"><div class="exercise__head"><div class="exercise__title"><div class="exercise__num">5</div> <h3 id="cvi-ukolnicek"><a href="#cvi-ukolnicek" class="anchor">¶</a>
+        Úkolníček
+      </h3></div> <div class="exercise__demand"><div class="demand demand--2"></div> <div class="demand-text">to dáš</div></div></div> <div class="exercise__body">
+<p>Stáhněte si <a href="http://nove.kodim.cz/czechitas/daweb/pokrocily-js/inner-html/assets/ukolnicek-zadani.zip">základ stránky</a> zobrazující jednoduchý úkolníček.</p>
+<ol>
+<li>Smažte obsah elementu <code>todo__tasks</code> uvnitř souboru <code>index.html</code>.</li>
+<li>V JavaScriptu vytvořte pole řetězců <code>tasks</code>, které bude reprezentovat seznam úkolů.</li>
+<li>Vytvořte funkci <code>updateTasks</code>, která zobrazí na stránce seznam úkolů dle toho, co je obsaženo v poli <code>tasks</code>.</li>
+<li>Umožněte uživateli přidat nový úkol pomocí textového políčka. Vždy, když uživatel klikne tlačítko <i>přidat</i>, vložte do pole <code>tasks</code> obsah textového políčka a zavolejte funkci <code>updateTasks</code>, která aktualizuje vaši stránku.</li>
+</ol>
+</div></div></section></div></article></div></main> <footer class="footer"><div class="container">Martin Podloucký</div></footer></div>
+  
+
+</body></html>

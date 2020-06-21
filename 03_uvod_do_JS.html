@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="cz"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>kodim.cz</title>
+  <style data-vue-ssr-id="499c037c:0">@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700,900|Roboto+Mono:400,700&display=fallback&subset=latin-ext);</style><style data-vue-ssr-id="499c037c:1">*{box-sizing:border-box}html{font-family:"Montserrat", sans-serif;font-size:15px}body{margin:0;color:#444;background-color:#f9f9f9}.container{width:100%;margin-left:auto;margin-right:auto}@media only screen and (min-width: 576px){.container{width:540px}}@media only screen and (min-width: 768px){.container{width:720px}}@media only screen and (min-width: 992px){.container{width:960px}}.btn{border:none;outline:none;border-radius:1rem;padding:0.5rem 1rem;text-align:center;text-decoration:none;color:black;box-shadow:0 0 10px #ddd;transition:400ms}.btn:hover{transform:scale(1.1)}.btn-open{background-color:#ffec88}
+</style><style data-vue-ssr-id="54541dba:0">.hljs{display:block;overflow-x:auto;padding:0.5em;background:#222222;color:#C0C0C0}.hljs-keyword{color:#FFB871;font-weight:bold}.hljs-built_in{color:#FFB871}.hljs-literal{color:#FF8080}.hljs-symbol{color:#58E55A}.hljs-comment{color:#5B995B}.hljs-string{color:#FFFF00}.hljs-number{color:#FF8080}.hljs-attribute,.hljs-selector-tag,.hljs-doctag,.hljs-name,.hljs-bullet,.hljs-code,.hljs-addition,.hljs-regexp,.hljs-variable,.hljs-template-variable,.hljs-link,.hljs-selector-attr,.hljs-selector-pseudo,.hljs-type,.hljs-selector-id,.hljs-selector-class,.hljs-quote,.hljs-template-tag,.hljs-deletion,.hljs-title,.hljs-section,.hljs-function,.hljs-meta-keyword,.hljs-meta,.hljs-subst{color:#C0C0C0}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:bold}.article-outline{margin:2rem 3rem 0 0}.arrow-left{background-color:#ffec88;background-size:contain;width:2.5rem;height:2.5rem;border-radius:1.25rem;box-shadow:0 0 10px #ddd;background-image:url(/assets/img/arrow-left-5d2511.svg)}.arrow-right{background-color:#ffec88;background-size:contain;width:2.5rem;height:2.5rem;border-radius:1.25rem;box-shadow:0 0 10px #ddd;background-image:url(/assets/img/arrow-right-b02d21.svg)}.chapter-link{padding-left:1rem}.chapter-link a{text-decoration:none;color:black;font-size:1.2rem;font-weight:bold}.chapter-link a:hover{text-decoration:underline}.article-links{display:flex;margin-top:1rem}.article-links-filler{flex:1}.article-link{display:flex;align-items:center}.article-link a{text-decoration:none;color:black}.article-link a:hover{text-decoration:underline}.article-link--backward{margin-left:-1.25rem}.article-link--backward a{margin-left:2.75rem}.article-link--forward{margin-right:-1.25rem}.article-link--forward a{margin-right:2.75rem}.toc-link{display:block;width:100%;text-decoration:none;color:black;padding:0.5rem 1rem}.toc-link:hover{background-color:#f6f6f6}.exrc-section-title{margin-top:1rem !important;margin-bottom:0rem !important}.exrc-bonuses{padding:2rem 4rem;color:white;background-color:orange;margin-bottom:1rem}.exrc-bonuses__head{font-size:1.2rem;font-weight:bold;margin-bottom:1rem}.article-section{padding:2rem 0}.warn-section{background-color:#e2252b;color:white}.text-section table tr:nth-child(even){background-color:#e8e8e8}.exercises-section{background-color:#ffec88}.block-image{margin:3rem 0}.block-image img{display:block;width:100%;height:auto}.fig{display:block;margin:2rem auto;height:auto}li>.fig{margin:1rem auto}.fig-100{width:100%}.fig-90{width:90%}.fig-80{width:80%}.fig-70{width:70%}.fig-60{width:60%}.fig-50{width:50%}table{margin:2rem auto}table thead{border-bottom:2px solid #333}table td{padding:0.5rem}
+</style><style data-vue-ssr-id="34f8141e:0">.article-head{padding:0 4rem}.article-head__title{display:flex;align-items:baseline;font-size:1.8rem;font-weight:bold;margin-left:-6rem}.article-head__title h1{font-size:100%}.article-head__num{width:4rem;height:4rem;line-height:4rem;text-align:center;background-color:#ffec88;box-shadow:0 0 10px #ddd;border-radius:2rem;margin-right:2rem}.aside{display:none;width:320px;position:fixed;z-index:1;overflow-x:hidden;padding-top:20px}@media only screen and (min-width: 992px){.aside{display:block}}.article{margin:0rem 0 6rem 0;background-color:white;padding-top:2rem;box-shadow:0 0 10px #ddd;line-height:150%;border-radius:1rem}@media only screen and (min-width: 992px){.article{margin:0rem 0 6rem 320px}}.article .text-section>p,.article .text-section>ul,.article .text-section>ol,.article .text-section>dl{margin-left:4rem;margin-right:4rem}.article dt,.article dd{margin-bottom:0.5rem}.article h2,.article h3,.article h4{padding:1rem 4rem}.article .anchor{opacity:0;transition:250ms;text-decoration:none;color:#869af5;margin-left:-1.7rem}.article h2{margin-top:3rem;margin-bottom:1rem;font-size:1.6rem;font-weight:900}.article h2 .anchor{margin-left:-1.7rem}.article h3{margin-top:1rem;margin-bottom:0rem}.article h3 .anchor{margin-left:-1.2rem}.article h2:hover .anchor,.article h3:hover .anchor{opacity:1;margin-left:0}.article p{margin-top:0;margin-bottom:1rem;hyphens:manual}.article li{margin-bottom:0.5rem}.article .text-section:first-child p:first-child:first-letter{float:left;font-size:5rem;line-height:4rem;padding-top:0.3rem;padding-right:0.5rem}.article em{background-color:#d1ebf1;padding:0rem 0.5rem;border-radius:10px}.article pre,.article code,.article var{font-family:"Roboto Mono"}.article pre{background-color:#555;color:white;padding:1rem 4rem;margin:2rem 0;overflow-x:auto}.article var{font-style:normal;color:blue}.article kbd{font-family:"Montserrat";background-color:#fff;border:1px solid #888;border-radius:4px;padding:0rem 0.5rem}.term{display:inline;position:relative;font-style:italic;overflow:visible}.term__icon{display:inline-block;vertical-align:middle;width:15px;height:15px;margin-left:0.5rem;margin-bottom:2px;margin-right:0;background-image:url(/assets/img/english-9a71e2.png);background-size:contain;background-repeat:no-repeat}.term__cs{background-color:#d1ebf1;padding:0rem 0rem 0rem 0.5rem;border-radius:10px;white-space:pre;cursor:default}.term__en{position:absolute;top:-2rem;left:0rem;background-color:#444;color:white;padding:0rem 0.5rem;border-radius:5px;opacity:0;visibility:hidden;z-index:1;white-space:pre;transition:500ms}.term:hover .term__en{visibility:visible;opacity:1}
+</style><style data-vue-ssr-id="3c9796f4:0">.page{display:grid;grid-template-columns:auto;grid-template-rows:auto 1fr auto;min-height:100vh}.footer{padding:2rem 0;background-color:#dce7f4}
+</style><style data-vue-ssr-id="2fdd37c8:0">.page-logo{display:flex;align-items:center;text-decoration:none;color:black}.page-logo__icon{width:2rem;height:2rem;background-image:url(/assets/img/kodim-icon-d3361c.svg);background-size:contain}.page-logo__title{font-size:1.2rem;font-weight:bold;margin-left:0.5rem}.navbar{padding:1rem 0}
+</style><style data-vue-ssr-id="6f27289b:0">.exercise__head{display:flex;margin-left:-1.5rem}.exercise__num{width:3rem;height:3rem;line-height:3rem;background-color:white;box-shadow:0 0 10px #ddd;border-radius:1.5rem;text-align:center}.exercise__title{display:flex;align-items:baseline;flex:1;font-size:1.2rem;font-weight:bold;margin-left:0rem}.exercise__title h3{font-size:100%;padding-left:2.5rem;margin-bottom:0.5rem}.exercise__demand{margin-top:2rem;padding-right:4rem;text-align:right}.exercise__body>p,.exercise__body>ul,.exercise__body>ol,.exercise__body>dl{margin-left:4rem;margin-right:4rem}.exercise table tr:nth-child(even){background-color:#ffe664}.demand{min-width:70px;height:14px;background-size:contain;background-position-x:right;background-repeat:no-repeat;background-size:70px 14px}.demand--1{background-image:url(/assets/img/demand1-32b0be.svg)}.demand--2{background-image:url(/assets/img/demand2-3d6156.svg)}.demand--3{background-image:url(/assets/img/demand3-6ddf4a.svg)}.demand--4{background-image:url(/assets/img/demand4-377dc5.svg)}.demand--5{background-image:url(/assets/img/demand5-9e0206.svg)}.demand-text{font-size:0.8rem;font-weight:bold}
+</style></head>
+  <body data-gr-c-s-loaded="true">
+    <div data-server-rendered="true" class="page"><header><div class="navbar container"><a href="http://nove.kodim.cz/" class="page-logo router-link-active"><div class="page-logo__icon"></div> <div class="page-logo__title">Kódím.cz</div></a></div> </header> <main class="main"><div class="container"><aside class="aside"><div class="chapter-link"><a href="http://nove.kodim.cz/czechitas/daweb" class="router-link-active">Základy JavaScriptu</a></div> <nav class="article-outline"><a href="#co-je-to-programovani" class="toc-link">Co je to programování</a><a href="#prvni-javascript-prikazy" class="toc-link">První JavaScript příkazy</a><a href="#promenne" class="toc-link">Proměnné</a><a href="#cviceni-hodnoty-a-promenne" class="toc-link">Cvičení - hodnoty a proměnné</a><a href="#volani-funkci" class="toc-link">Volání funkcí</a><a href="#doporucene-ulozky-na-doma" class="toc-link">Doporučené úložky na doma</a><a href="#povinne-cteni-na-doma" class="toc-link">Povinné čtení na doma</a><a href="#volitelne-ulozky-na-doma" class="toc-link">Volitelné úložky na doma</a></nav></aside> <article class="article"><div class="article-head"><div class="article-head__title"><div class="article-head__num">1</div> <h1>Úvod do JavaScriptu</h1></div> <div class="article-head__brief">Nahlédneme pod pokličku toho jak programátoři přemýšlejí a vyzkoušíme si první příkazy v jazyce JavaScript.</div></div> <div class="article-links"><!----> <div class="article-links-filler"></div> <div class="article-link article-link--forward"><a href="http://nove.kodim.cz/czechitas/daweb/zaklady-js/programy-podminky">
+        První programy a podmínky
+      </a> <div class="arrow-right"></div></div></div> <div class="article-body"><!-- base href="http://nove.kodim.cz/czechitas/daweb/zaklady-js/uvod-do-js/" --> <section class="article-section text-section"><p>Milí
+ účastníci webové akademie, v tomto kurzu si možná úplně poprvé v životě
+ vyzkoušíte co je to programování a osaháte si svůj první programovací 
+jazyk. Programování ze začátku může působit jako velmi tajemný svět plný
+ zlých nástrah a neproniknutelných složitostí. Nutnost zapojovat možná 
+trochu zaprášená zákoutí vašeho mozku může ze začátku být velká výzva. 
+Proto společně vykročíme zvolna a krůček po krůčku. Budeme věnovat péči 
+každému jednotlivému tématu tak, abyste do něj dokázali skutečně 
+proniknout a nepřipadali si jako na jiné planetě. Vězte, že po chvíli se
+ možná trochu zrezivělá mozkové kolečka začnou točit lehčeji a 
+programování vám bude přinášet velkou radost z tvoření.</p>
+<p>Na začátku počítáme s tím, že jste programováním zcela nepolíbeni. 
+Není tedy od věci trochu si přiblížit, jak programátorský svět vlastně 
+funguje, abyste si dokázali představit do jakých vod se chystáte 
+vrhnout. Ještě před tím, než spustíte svůj první JavaScriptový příkaz, 
+si společně osaháme jak programátoři přemýšlejí a jaké problémy v praxi 
+doopravdy řeší.</p>
+<h2 id="co-je-to-programovani"><a class="anchor" href="#co-je-to-programovani">¶</a> Co je to programování</h2>
+<p>Programátora si možná představujete jako týpka či týpčici, 
+který/která sedí před počítačem ve ztemnělém sklepení nebo hipsterské 
+kavárně a do klávesnice buší nesrozumitelné tajemné kódy.</p>
+<div class="block-image"><img src="03_uvod_do_JS_soubory/programmer.jpg" alt="Programátor"></div>
+<p>Je pravda, že psaní kódu je velkou částí programátorské práce. 
+Podstata programování ovšem tkví v něčem jiném. Například takový 
+spisovatel jistě tráví hodně času psaním textu, zvládat dobře česky psát
+ však není jádro jeho umění. Dobrý spisovatel či spisovatelka především 
+umějí vybudovat poutavý příběh, který čtenáře zaujme a vtáhne. Podobně 
+programátorům také zdaleka nestačí umět kódit. Musí především umět 
+přemýšlet a řešit problémy, což znamená mít dobré logické a analytické 
+myšlení.</p>
+<h3 id="problem-spolubydleni"><a class="anchor" href="#problem-spolubydleni">¶</a> Problém spolubydlení</h3>
+<p>Logické a analytické myšlení rozhodně není spojeno jen s 
+programo­váním, matematikou apod. Spousta problémů přímo ze života 
+vyžaduje, abychom se dokázali nad řešením opravdu zamyslet. Na 
+následujícím příkladu si názorně ukážeme, jak takové zamyšlení vypadá z 
+programá­torského hlediska.</p>
+<p>Mějme následujících šest studentů, kteří společně bydlí v jednom bytě.</p>
+<div class="block-image"><img src="03_uvod_do_JS_soubory/roommates.jpg" alt="Studenti"></div>
+<p>Jak často bývá zvykem, tito spolubydlící se dohodli, že některé 
+spotřební věci budou nakupovat vždy pro všechny, aby si každý nemusal 
+kupovat vlastní mouku, vlastní toaleťák a podobně. Po čase tedy vznikne 
+tabulka nákupů podobné této.</p>
+<table>
+  <thead>
+    <tr><th>Jméno</th><th>Věc</th><th>Částka</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Petr</td><td>Prací prášek</td><td>240 kč</td></tr>
+    <tr><td>Ondra</td><td>Savo</td><td>80 kč</td></tr>
+    <tr><td>Pavla</td><td>Toaleťák</td><td>65 kč</td></tr>
+    <tr><td>Zuzka</td><td>Mýdlo</td><td>50 kč</td></tr>
+    <tr><td>Pavla</td><td>Závěs do koupelny</td><td>350 kč</td></tr>
+    <tr><td>Libor</td><td>Pivka na kolaudačku</td><td>124 kč</td></tr>
+    <tr><td>Petr</td><td>Pytle na odpadky</td><td>75 kč</td></tr>
+    <tr><td>Míša</td><td>Utěrky na nádobí</td><td>130 kč</td></tr>
+    <tr><td>Ondra</td><td>Toaleťák</td><td>120 kč</td></tr>
+    <tr><td>Míša</td><td>Pečící papír</td><td>30 kč</td></tr>
+    <tr><td>Zuzka</td><td>Savo</td><td>80 kč</td></tr>
+    <tr><td>Petr</td><td>Tapeta na záchod</td><td>315 kč</td></tr>
+    <tr><td>Ondra</td><td>Toaleťák</td><td>64 kč</td></tr>
+  </tbody>
+</table>
+<p>Představme si, že naši studenti se chtějí rozestěhovat a potřebují se
+ finančně vyrovnat. Někteří totiž přirozaně utratili za společné věci o 
+něco víc než jiní. Váš úkol je zamyslet se nad tím, jakým postupem 
+takového vyrovnání dosáhnout. Je zde však několik důležitých pravidel a 
+omezení.</p>
+<p>Samotné zpracování tabulky nebudete dělat vy, nýbrž člověk, o kterém 
+bychom mohli říct, že je to pečlivý blbec. To znamená, že není vůbec 
+schopen přemýšlet sám za sebe. Je pouze schopen do puntíku plnit vaše 
+pokyny jsou-li dostatečně detailní a přímočaré. Tento náš úřednický 
+blbec má navíc k dispozici pouze tužku, papír a kalkulačku. Kalkulačku k
+ tomu, aby mohl spolehlivě provádět jednoduché výpočty a tužku a papír, 
+aby si mohl poznamenávat mezivýsledky.</p>
+<div class="block-image"><img src="03_uvod_do_JS_soubory/dummy.jpg" alt="Tužka, papír, kalkulačka a blbec"></div>
+<p>Počítač ve svojí nejzákladnější podstatě funguje přesně jako náš 
+blbec. Nic za vás nevymyslí, pouze slepě vykonává postup řešení, který 
+musíte do detailu popsat vy. Papír pak pro nás představuje pamět 
+počítače a kalkulačka procesor.</p>
+</section> <!----><!----> <section class="article-section exercises-section"><!----> <!----> <div class="exercise"><div class="exercise__head"><div class="exercise__title"><div class="exercise__num">1</div> <h3 id="cvi-problem-spolubydleni"><a href="#cvi-problem-spolubydleni" class="anchor">¶</a>
+        Problém spolubydlení
+      </h3></div> <div class="exercise__demand"><div class="demand demand--3"></div> <div class="demand-text">zapni hlavu</div></div></div> <div class="exercise__body">
+<p>Sestavte přesný postup práce pro našeho hloupého úředníka tak, aby 
+dokázal zpracovat tabulku výdajů libovolné velikosti s libovolným počtem
+ účastníků. Výsledkem zpracování tabulky by měl být postup jak zajistit 
+finanční vyrovnání všech účastníků. Mějte na paměti následující body.</p>
+<ol>
+<li>Abychom se přiblížili komunikaci s počítačem, váš popis řešení musí 
+sestávat pouze z jednoduchých kroků s tužkou, papírem a kalkulačkou. 
+Pokud například blbci řeknete, aby zjistil kolik různých jmen se v 
+tabulce nachází, nebude vůbec vědět, co má dělat. Neřekli jste mu totiž,
+ jak má použít tužku, papír a kalkulačku k tomu, aby splnil váš příkaz.</li>
+<li>Finančního vyrovnání se účastní všichni účastníci, tabulka však 
+nemusí vždy obsahovat všechna jména. Může se stát, že některý účastník 
+nekoupil nikdy nic, takže v tabulce vůbec není uveden.</li>
+</ol>
+</div></div></section><section class="article-section text-section"><h2 id="prvni-javascript-prikazy"><a class="anchor" href="#prvni-javascript-prikazy">¶</a> První JavaScript příkazy</h2>
+<p>Po dlouhých povídáních konečně přichází ten čas, kdy si začneme 
+ušpiníme ruce skutečným JavaScriptem. Nejdříve si ovšem pořádně ujasníme
+ terminologii. JavaScript je programovací jazyk, tedy sada nějakých 
+pravidel jak sestavovat textové příkazy pro počítač. Pokud chceme, aby 
+náš stoj tyto příkazy vykonal, protřebujeme takzvaný <em>JavaScript runtime</em>. To je program, který čte naše JavaScriptové příkazy a jeden za druhým je provádí.</p>
+<p>Každý webový prohlížeč má v sobě JavaScript runtime, můžeme tedy naše
+ první JavaScriptové příkazy psát rovnou v prohlížeči. Stačí otevřít 
+takzvané <em>Developer Tools</em>.</p>
+<h3 id="hodnoty-a-operatory"><a class="anchor" href="#hodnoty-a-operatory">¶</a> Hodnoty a operátory</h3>
+<p>Každý počítač je ve svojí nejniternější podstatě jen hrozně rychlá 
+kalkulačka. Proto je přirozené, že si v JavaScriptu nejdříve vyzkoušíme 
+počítání. Do žádné tvrdé matematiky se však pouštět nebudeme. Zcela vám 
+postačí znalosti nabyté ve školce. Můžete to JS konzole rovnou zkusit 
+napsat následující příkazy</p>
+<pre><code class="language-jscon"><span class="hljs-meta">&gt;</span><span class="javascript"> <span class="hljs-number">12</span> + <span class="hljs-number">5</span></span>
+17
+<span class="hljs-meta">&gt;</span><span class="javascript"> <span class="hljs-number">12</span> - <span class="hljs-number">5</span></span>
+7
+<span class="hljs-meta">&gt;</span><span class="javascript"> <span class="hljs-number">12</span> * <span class="hljs-number">5</span></span>
+60
+<span class="hljs-meta">&gt;</span><span class="javascript"> <span class="hljs-number">12</span> / <span class="hljs-number">5</span></span>
+2.4
+</code></pre>
+<p>Všimněte si, že vždy, když v konzoli napíšete příkaz a stisknete klávesu <kbd>Enter</kbd>,
+ pošlete tím JavaScriptu příkaz a ten vám ihned odpoví výsledek. Zatím 
+jsme sice nic závratného nespočítali, použili jsme ovšem dva zcela 
+základní stavební bloky všech programů: 
+          <span class="term">
+            <span class="term__cs">hodnoty<span class="term__icon"></span></span>
+            <span class="term__en">values</span>
+          </span>
+         a 
+          <span class="term">
+            <span class="term__cs">operátory<span class="term__icon"></span></span>
+            <span class="term__en">operators</span>
+          </span>
+        . Hodnoty jsou v našem případě čísla, později však uvidíme ještě další druhy hodnot, které už na kalkulačce nepotkáte.</p>
+<p>:::warn
+Pozor na to, že ve všech programovacích jazycích (s výjimkou MS Excel) se destinná čísla píší s tečkou, nikoliv s čárkou.
+:::</p>
+<p>Operátory jsou v našem případě sčítání, odčítání, násobení a dělení. 
+Je potřeba si zvyknout na to, jakými symboly se JavaScriptu zapisují. 
+Možná budete muset malinko prohledat klávesnici, než najdete například 
+dopředné lomítko nebo hvězdičku.</p>
+<p>Kromě výše zmíněných nabízí JavaScript dva další zajímavé operátory: mocnění a zbytek po dělení, tzv. <em>modulo</em>.</p>
+<pre><code class="language-jscon"><span class="hljs-meta">&gt;</span><span class="javascript"> <span class="hljs-number">2</span> ** <span class="hljs-number">4</span></span>
+16
+<span class="hljs-meta">&gt;</span><span class="javascript"> <span class="hljs-number">12</span> % <span class="hljs-number">5</span></span>
+2
+</code></pre>
+<p>Mocnění si nejspíš pamatujete ještě ze základní školy. Modulo však 
+může být překvapení obzvlášť proto, že se zapisuje symbolem procenta. 
+Výsledek této operace je zbytek po celočíselném dělení. Tento operátor 
+se hodí v různých situacích. Můžeme pomocí něj například zjistit, zda je
+ číslo sudé, tedy zbytek po dělení dvěma je roven nule.</p>
+<p>Z operátorů a hodnot můžete samozřejmě stavět mnohem složitější konstrukce třeba i s použitím závorek.</p>
+<pre><code class="language-jscon"><span class="hljs-meta">&gt;</span><span class="javascript"> <span class="hljs-number">5</span> * (<span class="hljs-number">9</span> + <span class="hljs-number">7</span>) ** (<span class="hljs-number">1</span>/<span class="hljs-number">2</span>)</span>
+20
+</code></pre>
+<p>Konstrukcím vytvořeným z hodnot a operátorů se odborně říká 
+          <span class="term">
+            <span class="term__cs">výrazy<span class="term__icon"></span></span>
+            <span class="term__en">expressions</span>
+          </span>
+        . Pokud necháme JavaScript spočítat výsledek výrazu, získáme tak
+ jeho hodnotu. Každý výraz tedy má svoji hodnotu a JavaScript runtime 
+nám ji rád sdělí, když mu výraz pošleme v konzoli. Je dobré zde zmínit, 
+že ne všechny konstrukce v JavaScriptu jsou výrazy. To se však ukáže 
+jako důležité až později.</p>
+<h3 id="retezce"><a class="anchor" href="#retezce">¶</a> Řetězce</h3>
+<p>Pokud chceme v JavaScriptu pracovat s textem, použijeme hodnotu, které se říká 
+          <span class="term">
+            <span class="term__cs">řetězec<span class="term__icon"></span></span>
+            <span class="term__en">string</span>
+          </span>
+        . Můžeme pak psát například</p>
+<pre><code class="language-jscon"><span class="hljs-meta">&gt;</span><span class="javascript"> <span class="hljs-string">'Pavel'</span></span>
+"Pavel"
+<span class="hljs-meta">&gt;</span><span class="javascript"> <span class="hljs-string">'Prací prášek'</span></span>
+"Prací prášek"
+<span class="hljs-meta">&gt;</span><span class="javascript"> <span class="hljs-string">"I'am awesome"</span></span>
+"I'am awesome"
+<span class="hljs-meta">&gt;</span><span class="javascript"> <span class="hljs-string">'Řekl: "ahoj"'</span></span>
+"Řekl: "ahoj""
+</code></pre>
+<p>Textové řetězce vždy uzavíráme do uvozovek. V JavaScriptu můžete 
+používat jak apostrofy (jednoduché uvozovky), tak dvojité uvozovky, z 
+hlediska funkčnosti programu je to jedno. Můžete si tak pomaličku začít 
+budovat svůj programátorský styl a používat ty uvozovky, které se vám 
+líbí. Občas se dvojité uvozovky hodí pokud chceme mít uvnitř řetězce 
+například apostrof. Pro tento případ si však později ukážeme obecnější 
+techniku.</p>
+<p>Textové řetězce jdou sčítat podobně jako čísla, můžete tedy psát například</p>
+<pre><code class="language-jscon"><span class="hljs-meta">&gt;</span><span class="javascript"> <span class="hljs-string">'Digitální akademie'</span> + <span class="hljs-string">' Web'</span></span>
+'Digitální akademie Web'
+<span class="hljs-meta">&gt;</span><span class="javascript"> <span class="hljs-string">'Digitální akademie'</span> + <span class="hljs-string">' '</span> + <span class="hljs-string">'Web'</span></span>
+'Digitální akademie Web'
+<span class="hljs-meta">&gt;</span><span class="javascript"> <span class="hljs-string">'Digitální akademie'</span> + <span class="hljs-string">''</span></span>
+'Digitální akademie'
+</code></pre>
+<p>Všimněte si v druhém příkladu řetězce, který obsahuje pouze mezeru. V
+ třetím případě dokonce vidíme řetězec, který neobsahuje vůbec nic. To 
+je takzvaný 
+          <span class="term">
+            <span class="term__cs">prázdný řetězec<span class="term__icon"></span></span>
+            <span class="term__en">empty string</span>
+          </span>
+        . Chová se podobně jako nula při sčítání čísel a bude se nám pozdějí hodit v různých situacích.</p>
+<h2 id="promenne"><a class="anchor" href="#promenne">¶</a> Proměnné</h2>
+<p>Při složitějších operacích a výpočtech často vyvstane potřeba si 
+nějaký mezivýpočet uložit pro pozdější použití. K tomu nám slouží 
+takzvané 
+          <span class="term">
+            <span class="term__cs">proměnné<span class="term__icon"></span></span>
+            <span class="term__en">variables</span>
+          </span>
+        . Proměnná je jakási pojmenovaná krabička nebo šuplík, do 
+kterého si můžeme uložit nějakou hodnotu, abychom ji neztratili a mohli 
+ji používat v dalších výpočtech.</p>
+<p>Abychom si procvičili zajímavé operátory, zkusíme vyřešit následující
+ úlohu. Mějme čas v hodinách zadaný ve 24-hodinovém formátu. Tři hodiny 
+odpoledne tedy píšeme jako 15h. Nyní chceme spočítat, kolik hodin bude 
+po uplynutí doby zadané také v hodinách. Například jaký bude čas po 
+uplynutí 15 hodin?</p>
+<pre><code class="language-jscon"><span class="hljs-meta">&gt;</span><span class="javascript"> <span class="hljs-keyword">const</span> cas = <span class="hljs-number">13</span></span>
+<span class="hljs-meta">&gt;</span><span class="javascript"> <span class="hljs-keyword">const</span> novyCas = (cas + <span class="hljs-number">15</span>)</span>
+</code></pre>
+<p>Každá proměnné v JavaScriptu musí mít své jméno. To by mělo 
+vystihovat, co je v ní uloženo. Pokud chceme používat nějakou promennou,
+ musíme ji nejdříve vytvořit, což se dělá pomocí klíčového slova <code>const</code>. Takovou proměnnou pak můžeme použít v libovolném výrazu tak, že prostě uvedeme její jméno.</p>
+<p>Většinu proměnných budeme používat tak, že jim při vytvoření 
+přiřadíme nějakou hodnotu a tato hodnota už v proměnná zůstane až do 
+konce jejího života. Občas se však stane, že potřebujeme hodnotu 
+uloženou v nějako proměnné změnit. V takovém případě musíme proměnnou 
+vytvořit pomocí slovíčka <code>let</code>.</p>
+<pre><code class="language-jscon"><span class="hljs-meta">&gt;</span><span class="javascript"> <span class="hljs-keyword">let</span> sazba = <span class="hljs-number">500</span></span>
+<span class="hljs-meta">&gt;</span><span class="javascript"> <span class="hljs-keyword">let</span> vyplata = <span class="hljs-number">8</span> * <span class="hljs-number">21</span> * sazba</span>
+<span class="hljs-meta">&gt;</span><span class="javascript"> sazba = <span class="hljs-number">600</span></span>
+</code></pre>
+<p>Pokud měníme hodnotu v proměnné, už <strong>nepoužíváme</strong> <code>const</code> ani <code>let</code>. Zde je dobré si zapamatovat několik důležitých věcí.</p>
+<h3 id="preferujte-const"><a class="anchor" href="#preferujte-const">¶</a> Preferujte const</h3>
+<p>Proměnné vytvořené pomocí <code>const</code> měnit nelze. U dobrých programátorů je zvykem vytvářet proměnné téměř výhradně pomocí <code>const</code> a používat <code>let</code>
+ pouze v případě, že k tomu máme dobrý důvod. Čím méně proměnných lze 
+měnit, tím menší je totiž riziku vzniku nežádoucích chyb v programu.</p>
+<h3 id="javascript-neni-excel"><a class="anchor" href="#javascript-neni-excel">¶</a> JavaScript není Excel</h3>
+<p>Dejte pozor na to, že do proměnné se jako do šuplíku ukládá pouze 
+hodnota a nikoliv celý výraz. Všimněte si, že v příkladu výše jsem 
+změnili hodnotu proměnné <var>sazba</var>. Po této změně bude v proměnné <var>vyplata</var> pořád původní hodnota. Pokud chceme obsah této proměnné aktualizovat, musíme příkaz spustit znova.</p>
+<pre><code class="language-jscon"><span class="hljs-meta">&gt;</span><span class="javascript"> vyplata = <span class="hljs-number">8</span> * <span class="hljs-number">21</span> * <span class="hljs-number">500</span></span>
+</code></pre>
+<h3 id="pojmenovani-promennych"><a class="anchor" href="#pojmenovani-promennych">¶</a> Pojmenování proměnných</h3>
+<p>Už od úplných začátků s programováním je dobré učit se dobrým 
+návykům, které budou později prospěšné nejen vám, ale hlavně lidem ve 
+vašem okolí. Jedním z takových návyků je správné pojmenovávání 
+proměnných.</p>
+<ol>
+<li>Název proměnné by neměl začínat velkým písmenem, např. <s><var>Pocet</var></s>. Takové názvy jsou rezervované pro speciální typy proměnných, ke kterým se v tomto kurzu dostaneme až téměř na konci.</li>
+<li>Název proměnné by neměl obsahovat diakritiku, např. <s><var>počet</var></s>. Programovací jazyky vznikaly v anglickém prostředí, kde se diakritika nepoužívá, takže si s ní většina jazyků neporadí.</li>
+<li>Víceslovné proměnné nesmí obsahovat mezeru, např. <s><var>pocet hodin</var></s>.
+ To by si JavaScript myslel, že to jsou dvě proměnné za sebou a nevěděl 
+by co s tím. Pokud chcete proměnnou s více slovy, použijte takzvanou 
+          <span class="term">
+            <span class="term__cs">velbloudí notaci<span class="term__icon"></span></span>
+            <span class="term__en">camel case</span>
+          </span>
+         <var>pocetHodin</var> nebo 
+          <span class="term">
+            <span class="term__cs">hadí notaci<span class="term__icon"></span></span>
+            <span class="term__en">snake case</span>
+          </span>
+         <var>pocet_hodin</var>.</li>
+<li>Vždy proměnnou pojmenujte tak, aby její název jasně napovídal, co se uvnitř ní nachází. Například proměnná <var>pocet_hodin</var> jasně říká, že v ní bude uložen asi nějaký počet hodin. Můžeme podlehnout touze název proměnné zkrátit například na <var>pcthdn</var>,
+ aby se nám lépe psala. Až ovšem někdo další bude takový program číst, 
+bude mlátit hlavou do stolu, cože proboha znamená zkratka <var>pcthdn</var>.</li>
+<li>Naposledy je dobré si uvědomit, že programy i programátoři se téměř 
+vždy pohybují v mezinárodním prostředí. Takže je vždycky lepší 
+pojmenovávat proměnné anglicky. V tomto kurzu ještě tohle pravidlo 
+trošku rozvolníme, ale i tak si můžete začít zvykat na proměnné s názvem
+ <var>number_of_hours</var>.</li>
+</ol>
+</section> <!----><!----> <section class="article-section exercises-section"><h2 id="cviceni-hodnoty-a-promenne" class="exrc-section-title"><a href="#cviceni-hodnoty-a-promenne" class="anchor">¶</a>
+          Cvičení - hodnoty a proměnné
+        </h2> <!----> <div class="exercise"><div class="exercise__head"><div class="exercise__title"><div class="exercise__num">2</div> <h3 id="cvi-vyplata"><a href="#cvi-vyplata" class="anchor">¶</a>
+        Výplata
+      </h3></div> <div class="exercise__demand"><div class="demand demand--1"></div> <div class="demand-text">pohodička</div></div></div> <div class="exercise__body">
+<ol>
+<li>Spočítejte svůj měsíční příjem víte-li, že pracujete 7 hodin denně 
+se mzdou 250 Kč na hodinu. Řekněme, že měsíc má 21 pracovních dní.</li>
+<li>Uložte si počet pracovních hodin za den do proměnné <var>hodin</var>, hodinovou mzdu do proměnné <var>mzda</var> a počet pracovních dní do proměnné <var>dni</var>. Spočítejte svou výplatu s použitím těchto proměnných.</li>
+<li>Pokud pracujete na živnostenský list, můžete si odečíst 60% příjmů 
+jako paušál a ze zbytku zaplatíte 15% daň. Uložte si tyto hodnoty do 
+proměnných <var>pausal</var> a <var>dan</var> a spočítejte svůj příjem po zdanění.</li>
+</ol>
+</div></div><div class="exercise"><div class="exercise__head"><div class="exercise__title"><div class="exercise__num">3</div> <h3 id="cvi-ultramaraton"><a href="#cvi-ultramaraton" class="anchor">¶</a>
+        Ultramaraton
+      </h3></div> <div class="exercise__demand"><div class="demand demand--2"></div> <div class="demand-text">to dáš</div></div></div> <div class="exercise__body">
+<p>Představme si, že jste pořadatelé ultramaratonského závodu. Závod 
+začiná ve tři hodiny odpoledne, což ve 24-hodinovém formátu zapíšeme 
+jako 15. Nejlepší běžec zvládne vaši brutální trasu za 10 hodin. Doběhne
+ tedy v jednu hodinu ráno, v našem formátu zapsáno jako 1.</p>
+<p>Uložte si čas startu závodu do proměnné <var>start</var>. Do proměnné <var>delka</var> si uložte délku závodu pro nějakého běžce. Klidně může být pomalejší než náš šampion. Do proměnné <var>konec</var> spočítejte, v kolik hodin závod pro našeho běžce skončí. Vyzkoušejte různé délky a ověřte, že váš postup funguje.</p>
+</div></div><div class="exercise"><div class="exercise__head"><div class="exercise__title"><div class="exercise__num">4</div> <h3 id="cvi-prijem-divadla"><a href="#cvi-prijem-divadla" class="anchor">¶</a>
+        Příjem divadla
+      </h3></div> <div class="exercise__demand"><div class="demand demand--2"></div> <div class="demand-text">to dáš</div></div></div> <div class="exercise__body">
+<ol>
+<li>Jeden lístek do divadla <i>Pěst na oko</i> stojí 12 euro. Spočítejte
+ měsíční příjem divadla ze vstupného přichází-li průměrně 174 
+návštěvníků na jedno představení a divadlo hraje 15 představení měsíčně.
+ Uložte výsledek do proměnné <var>prijem</var>.</li>
+<li>Divadlo se rozhodlo prodávat studentské vstupné ve výši 65% plného 
+vstupného. Jak se změní měsíční příjem divadla pokud víme, že 40% 
+návštěvníků jsou studenti?</li>
+</ol>
+</div></div></section><!----> <section class="article-section exercises-section"><!----> <div class="exrc-bonuses"><div class="exrc-bonuses__head">Bonusová cvičení</div> <div class="exrc-bonuses__body">
+            Nepovinné úložky, které můžete řešit pokud máte chuť na větší
+            výzvu nebo si chcete látku procvičit víc do hloubky.
+          </div></div> <div class="exercise"><div class="exercise__head"><div class="exercise__title"><div class="exercise__num">5</div> <h3 id="cvi-uroky"><a href="#cvi-uroky" class="anchor">¶</a>
+        Úroky
+      </h3></div> <div class="exercise__demand"><div class="demand demand--2"></div> <div class="demand-text">to dáš</div></div></div> <div class="exercise__body">
+<p>Fíha banka a.s. nabízí na svých stránkách spořící účet s úrokem 2,4%.
+ Když si na takový účet uložíte 1 000 000 kč, kolik peněz nastřádáte za 
+10 let?</p>
+</div></div><div class="exercise"><div class="exercise__head"><div class="exercise__title"><div class="exercise__num">6</div> <h3 id="cvi-novy-koberec"><a href="#cvi-novy-koberec" class="anchor">¶</a>
+        Nový koberec
+      </h3></div> <div class="exercise__demand"><div class="demand demand--2"></div> <div class="demand-text">to dáš</div></div></div> <div class="exercise__body">
+<p>Do pokoje o tvaru čtverce a rozloze 30m<sup>2</sup> potřebujeme 
+koupit nový koberec. Jakou délku má mít strana koberce? Vejde se nám 
+srolovaný do dodávky s nákladovým prostorem dlouhým 5m?</p>
+</div></div></section><section class="article-section text-section"><h2 id="volani-funkci"><a class="anchor" href="#volani-funkci">¶</a> Volání funkcí</h2>
+<p>Pouze s proměnnými, hodnotami a operátory bychom se v programování 
+daleko nedostali. Často budeme potřeboval vykonat nějakou složitější 
+operaci než jen matematický výpočet. Pokud takovou operaci programátoři 
+potřebují často, šance je, že pro ni existuje 
+          <span class="term">
+            <span class="term__cs">funkce<span class="term__icon"></span></span>
+            <span class="term__en">function</span>
+          </span>
+        .</p>
+<p>Funkce je kousek programu řešící nějakou konkrétní úlohu, která se 
+často opakuje. Příkladem může být například zaokrouhlování desetinných 
+čísel na celá čísla. To je operace, která se hodí velmi často a bylo by 
+zbyteční ji programovat pořád znova. V JavaScriptu proto máme k 
+dispozici funkci jménem <code>Math.round</code>. Pokud chceme funkci použít, napíšeme její jméno a do kulatých závorek vložíme hodnotu.</p>
+<pre><code class="language-jscon"><span class="hljs-meta">&gt;</span><span class="javascript"> <span class="hljs-built_in">Math</span>.round(<span class="hljs-number">3.14</span>)</span>
+3
+</code></pre>
+<p>Hodnotě uvnitř kulatých závorek říkáme 
+          <span class="term">
+            <span class="term__cs">vstup<span class="term__icon"></span></span>
+            <span class="term__en">input</span>
+          </span>
+         funkce. Spuštění funkce se říká 
+          <span class="term">
+            <span class="term__cs">volání<span class="term__icon"></span></span>
+            <span class="term__en">call</span>
+          </span>
+        . Jakmile funkce dokončí operaci, 
+          <span class="term">
+            <span class="term__cs">vrátí<span class="term__icon"></span></span>
+            <span class="term__en">return</span>
+          </span>
+         nám takzvaný 
+          <span class="term">
+            <span class="term__cs">výstup<span class="term__icon"></span></span>
+            <span class="term__en">output</span>
+          </span>
+        . V programátorském žargonu tedy říkáme, že když zavoláme funkci
+ s nějakým vstupem, ona nám vrátí výstup. Podobně jako operace s 
+hodnotami a proměnnými, volání funkce je také výraz. Volání funkce také 
+můžeme použít uvnitř libovolného jiného výrazu. Navíc vstup pro funkci 
+taky můžeme vytvořit pomocí výrazu. Nabízí se tedy mnoho způsobů, jak 
+vytvářet složitější výrazy, jak například tento.</p>
+<pre><code class="language-jscon"><span class="hljs-meta">&gt;</span><span class="javascript"> <span class="hljs-number">17</span> % <span class="hljs-built_in">Math</span>.round(<span class="hljs-number">30</span> ** <span class="hljs-number">0.5</span>)</span>
+2
+</code></pre>
+<h3 id="dalsi-uzitecne-funkce"><a class="anchor" href="#dalsi-uzitecne-funkce">¶</a> Další užitečné funkce</h3>
+<p>JavaScript obsahuje spousty a spousty funkcí, díky kterým můžeme 
+provádět mnoho užitěčných a zajímavých věcí. Budeme je postupně společně
+ objevovat během celého kurzu. Takto z kraje si ukážeme jen ty 
+nejzákladnější.</p>
+<p>Pokud bychom místo klasického zaokrouhlování chtěli zaokrouhlovat vždy dolů nebo vždy nahoru, můžeme použít funkce <code>Math.floor</code> a <code>Math.ceil</code>.</p>
+<pre><code class="language-jscon"><span class="hljs-meta">&gt;</span><span class="javascript"> <span class="hljs-built_in">Math</span>.floor(<span class="hljs-number">3.9</span>)</span>
+3
+<span class="hljs-meta">&gt;</span><span class="javascript"> <span class="hljs-built_in">Math</span>.ceil(<span class="hljs-number">3.1</span>)</span>
+4
+</code></pre>
+<p>Funkce, se kterou si lze užít více zábavy je <code>Math.random</code>. Ta při každém zavolání vrátí náhodné desetinné číslo mezi 0 a 1.</p>
+<pre><code class="language-jscon"><span class="hljs-meta">&gt;</span><span class="javascript"> <span class="hljs-built_in">Math</span>.random()</span>
+0.3533144240115158
+<span class="hljs-meta">&gt;</span><span class="javascript"> <span class="hljs-built_in">Math</span>.random()</span>
+0.30269146855422213
+<span class="hljs-meta">&gt;</span><span class="javascript"> <span class="hljs-built_in">Math</span>.random()</span>
+0.3730206392247666
+</code></pre>
+<p>Chytrým použitím zaokrouhlování a trochou matematiky můžeme pomocí 
+této funkce generovat náhodná celá čísla například v rozmezí 0 až 9.</p>
+<pre><code class="language-jscon"><span class="hljs-meta">&gt;</span><span class="javascript"> <span class="hljs-built_in">Math</span>.floor(<span class="hljs-built_in">Math</span>.random() * <span class="hljs-number">10</span>)</span>
+8
+<span class="hljs-meta">&gt;</span><span class="javascript"> <span class="hljs-built_in">Math</span>.floor(<span class="hljs-built_in">Math</span>.random() * <span class="hljs-number">10</span>)</span>
+2
+<span class="hljs-meta">&gt;</span><span class="javascript"> <span class="hljs-built_in">Math</span>.floor(<span class="hljs-built_in">Math</span>.random() * <span class="hljs-number">10</span>)</span>
+5
+</code></pre>
+</section> <!----><!----> <section class="article-section exercises-section"><h2 id="doporucene-ulozky-na-doma" class="exrc-section-title"><a href="#doporucene-ulozky-na-doma" class="anchor">¶</a>
+          Doporučené úložky na doma
+        </h2> <!----> <div class="exercise"><div class="exercise__head"><div class="exercise__title"><div class="exercise__num">7</div> <h3 id="cvi-delka-filmu"><a href="#cvi-delka-filmu" class="anchor">¶</a>
+        Délka filmu
+      </h3></div> <div class="exercise__demand"><div class="demand demand--2"></div> <div class="demand-text">to dáš</div></div></div> <div class="exercise__body">
+<ol>
+<li>
+<p>V programu kin se často uvádí délka filmu v minutách. Například rozšířená verze filmu <i>Pán prstenů: Dvě věže</i>
+ trvá 223 minut. My bychom ovšem délku filmu raději věděli v hodinách a 
+minutách. Za použití funkcí a operátorů z této lekce spočítejte, kolik 
+hodin a minut trvá film <i>Pán prstenů: Dvě věže</i>.</p>
+</li>
+<li>
+<p>Uložte si vypočtené minuty a hodiny do rozumě pojmenovaných 
+proměnných. Za pomocí těchto proměnných sestavte řetězec, který bude 
+vypada takto</p>
+<pre><code>'Pán prstenů: 2h 30min'
+</code></pre>
+<p>Počet hodin a minut je zde pouze jako příklad.</p>
+</li>
+</ol>
+</div></div><div class="exercise"><div class="exercise__head"><div class="exercise__title"><div class="exercise__num">8</div> <h3 id="cvi-schopnejsi-zaokrouhlovani"><a href="#cvi-schopnejsi-zaokrouhlovani" class="anchor">¶</a>
+        Schopnější zaokrouhlování
+      </h3></div> <div class="exercise__demand"><div class="demand demand--2"></div> <div class="demand-text">to dáš</div></div></div> <div class="exercise__body">
+<p>Představte si, že máme v proměnné se jménem <code>x</code> uloženo nějaké desetinné číslo. Pomocí funkce <code>Math.round</code> jej můžeme zaokrouhlit na celá čísla takto.</p>
+<pre><code class="language-jscon"><span class="hljs-meta">&gt;</span><span class="javascript"> <span class="hljs-built_in">Math</span>.round(x)</span>
+</code></pre>
+<p>Co kdybychom však chtěli zaokrouhlit na desetiny, setiny nebo třeba celé stovky?</p>
+<ol>
+<li>Sestavte s pomocí funkce <code>Math.round</code> výraz, který zaokrouhlí číslo <code>x</code> s přesností na desetiny.</li>
+<li>Sestavte výraz, který zaokrouhlí číslo <code>x</code> s přesností na setiny.</li>
+<li>Sestavte výraz, který zaokrouhlí číslo <code>x</code> s přesností na celé stovky.</li>
+</ol>
+</div></div><div class="exercise"><div class="exercise__head"><div class="exercise__title"><div class="exercise__num">9</div> <h3 id="cvi-hazeni-kostkou"><a href="#cvi-hazeni-kostkou" class="anchor">¶</a>
+        Házení kostkou
+      </h3></div> <div class="exercise__demand"><div class="demand demand--3"></div> <div class="demand-text">zapni hlavu</div></div></div> <div class="exercise__body">
+<p>Vymyslete jak použít funkce probírané v této lekci k simulování hodu 
+klasickou šestistěnnou kostkou. Sestavte výraz, který vygeneruje náhodné
+ celé číslo mezi 1 a 6. Zajistěte, že všechna čísla mají skutečně 
+stejnou pravděpodobnost padnutí.</p>
+</div></div></section><section class="article-section text-section"><h2 id="povinne-cteni-na-doma"><a class="anchor" href="#povinne-cteni-na-doma">¶</a> Povinné čtení na doma</h2>
+<p>JavaScript je programovací jazyk s dlouhou historií. Ta se píše už od roku 1995, kdy jistý pán jménem <a href="https://cs.wikipedia.org/wiki/Brendan_Eich">Brendan Eich</a>
+ vytvořil první verzi JavaScriptu tak, že spojil koncepty ze tří různých
+ jazyků: Scheme, Self a Java. Od té doby si JavaScript s sebou nese 
+některé zajímavé a užitečné koncepty, které v jiných mainstreamových 
+jazycích moc nenajdete. Zároveň však obsahuje myšlenky, jež programování
+ spíše komplikují. Na obojí, dobré i zlé, budeme v tomto kurzu často 
+narážet.</p>
+<h3 id="ecmascript"><a class="anchor" href="#ecmascript">¶</a> ECMAScript</h3>
+<p>Podobně jako má čeština <i>Pravidla českého pravopisu</i>, má i JavaScript svoje standardizovaná pravidla, kterým se říká <em>ECMAScript</em>.
+ Podobně jako pravidla češtiny i ECMAScript se v čase vyvíjí a 
+proměňuje. Aby se vždy vědělo o jaké verzi ECMAScript pravidel se mluví,
+ používají se čísla verzí jako ECMAScript 1, ECMAScript 2 apod. Ke 
+dnešnímu dni je aktuálně nejpoužívanější JavaScript ve verzi ECMAScript 
+6, zkráceně ES6. Je to poměrně mladá verze z roku 2015, takže často 
+ještě narazíte na kód, který je napsaný ve verzi ES5 z roku 2009 nebo 
+ještě starší.</p>
+<p>Ve verzi ES5 se například proměnné nevytvářejí pomocí <code>let</code> a <code>const</code> nýbrž pomocí <code>var</code>. Náš příklad s výplatou by tedy ve verzi ES5 vypadal takto.</p>
+<pre><code class="language-jscon"><span class="hljs-meta">&gt;</span><span class="javascript"> <span class="hljs-keyword">var</span> celkem = <span class="hljs-number">1</span> + <span class="hljs-number">2</span> + <span class="hljs-number">4</span> + <span class="hljs-number">1</span> + <span class="hljs-number">6</span></span>
+<span class="hljs-meta">&gt;</span><span class="javascript"> <span class="hljs-keyword">var</span> prumer = celkem / <span class="hljs-number">5</span></span>
+</code></pre>
+<p>Proměnné vytvořené pomocí <code>var</code> se dají měnit podobně jako proměnné vytvořené pomocí <code>let</code>.
+ Platí pro ně ovšem trochu jiná pravidla a ta jsou právě často na 
+překážku dobrému programátorskému stylu. To je důvod, proč toto klíčové 
+slovo bylo v ES6 nahrazeno klíčovými slovy <code>let</code> a <code>const</code>. Klíčové slovo <code>var</code> už je tedy zastaralé a není žádný důvod jej používat. My v tomto kurzu budeme striktně používat <code>let</code> a <code>const</code>. Pokud v nějakém starším online kurzu nebo knize narazíte na <code>var</code>, použíjte místo něj vždy <code>let</code> nebo <code>const</code>.</p>
+<h3 id="vytvareni-promennych"><a class="anchor" href="#vytvareni-promennych">¶</a> Vytváření proměnných</h3>
+<p>V JavaScriptu se ukrývá mnoho různých pastí, ve kterých je možné 
+snadno uvíznout. Jedna z opravdu záludných věci je, že k vytvoření 
+proměnné ve skutečnosti nepotřebujete ani <code>let</code>, ani <code>const</code>, ani <code>var</code>.
+ Pokud přiřadíte hodnotu do proměnné, která ještě neexistuje, JavaScript
+ runtime ji pro vás vytvoří automaticky. To však otvírá velký prostor 
+pro chyby vzniklé překlepem. Uvažte například tento kód.</p>
+<pre><code class="language-jscon"><span class="hljs-meta">&gt;</span><span class="javascript"> <span class="hljs-keyword">let</span> mzda = <span class="hljs-number">500</span></span>
+<span class="hljs-meta">&gt;</span><span class="javascript"> nzda = <span class="hljs-number">350</span></span>
+</code></pre>
+<p>JavaScript runtime si zde neuvědomí, že jsme udělali překlep a vytvoří novou proměnnou <var>nzda</var>
+ s hodnotou 350. Původní proměnná tedy zůstane nezměněná a už máme 
+zaděláno na problém. Naštěstí se tento zdroj chyb dá odstranit tím, že 
+JavaScript runtimu zakážeme vytvářet proměnné bez uvedení <code>let</code>, <code>const</code> nebo <code>var</code>. Jak se toto zařídí si ukážeme v následující lekci.</p>
+</section> <!----><!----> <section class="article-section exercises-section"><h2 id="volitelne-ulozky-na-doma" class="exrc-section-title"><a href="#volitelne-ulozky-na-doma" class="anchor">¶</a>
+          Volitelné úložky na doma
+        </h2> <!----> <div class="exercise"><div class="exercise__head"><div class="exercise__title"><div class="exercise__num">10</div> <h3 id="cvi-schopnejsi-zaokrouhlovani-2"><a href="#cvi-schopnejsi-zaokrouhlovani-2" class="anchor">¶</a>
+        Schopnější zaokrouhlování 2
+      </h3></div> <div class="exercise__demand"><div class="demand demand--3"></div> <div class="demand-text">zapni hlavu</div></div></div> <div class="exercise__body">
+<p>Představte si, že máme v proměnné se jménem <code>x</code> uloženo nějaké desetinné číslo a v proměnné <code>k</code> údaj na kolik cifer chceme zaokrouhlovat. Například <code>k=3</code> znamená, že chceme zaokrouhlit na tisíciny. Naopak <code>k=-2</code> znamená, že zaokrouhlujeme na celé stovky. Hodnota <code>k=0</code> tedy znamená běžné zaokrouhlování na jednotky.</p>
+<p>Sestavte s pomocí funkce <code>Math.round</code> výraz, který zaokrouhlí číslo <code>x</code> na zadaný počet cifer <code>k</code>.</p>
+</div></div></section></div></article></div></main> <footer class="footer"><div class="container">Martin Podloucký</div></footer></div>
+  
+
+</body></html>

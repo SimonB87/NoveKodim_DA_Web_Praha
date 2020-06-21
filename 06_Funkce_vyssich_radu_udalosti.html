@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="cz"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>kodim.cz</title>
+  <style data-vue-ssr-id="499c037c:0">@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700,900|Roboto+Mono:400,700&display=fallback&subset=latin-ext);</style><style data-vue-ssr-id="499c037c:1">*{box-sizing:border-box}html{font-family:"Montserrat", sans-serif;font-size:15px}body{margin:0;color:#444;background-color:#f9f9f9}.container{width:100%;margin-left:auto;margin-right:auto}@media only screen and (min-width: 576px){.container{width:540px}}@media only screen and (min-width: 768px){.container{width:720px}}@media only screen and (min-width: 992px){.container{width:960px}}.btn{border:none;outline:none;border-radius:1rem;padding:0.5rem 1rem;text-align:center;text-decoration:none;color:black;box-shadow:0 0 10px #ddd;transition:400ms}.btn:hover{transform:scale(1.1)}.btn-open{background-color:#ffec88}
+</style><style data-vue-ssr-id="54541dba:0">.hljs{display:block;overflow-x:auto;padding:0.5em;background:#222222;color:#C0C0C0}.hljs-keyword{color:#FFB871;font-weight:bold}.hljs-built_in{color:#FFB871}.hljs-literal{color:#FF8080}.hljs-symbol{color:#58E55A}.hljs-comment{color:#5B995B}.hljs-string{color:#FFFF00}.hljs-number{color:#FF8080}.hljs-attribute,.hljs-selector-tag,.hljs-doctag,.hljs-name,.hljs-bullet,.hljs-code,.hljs-addition,.hljs-regexp,.hljs-variable,.hljs-template-variable,.hljs-link,.hljs-selector-attr,.hljs-selector-pseudo,.hljs-type,.hljs-selector-id,.hljs-selector-class,.hljs-quote,.hljs-template-tag,.hljs-deletion,.hljs-title,.hljs-section,.hljs-function,.hljs-meta-keyword,.hljs-meta,.hljs-subst{color:#C0C0C0}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:bold}.article-outline{margin:2rem 3rem 0 0}.arrow-left{background-color:#ffec88;background-size:contain;width:2.5rem;height:2.5rem;border-radius:1.25rem;box-shadow:0 0 10px #ddd;background-image:url(/assets/img/arrow-left-5d2511.svg)}.arrow-right{background-color:#ffec88;background-size:contain;width:2.5rem;height:2.5rem;border-radius:1.25rem;box-shadow:0 0 10px #ddd;background-image:url(/assets/img/arrow-right-b02d21.svg)}.chapter-link{padding-left:1rem}.chapter-link a{text-decoration:none;color:black;font-size:1.2rem;font-weight:bold}.chapter-link a:hover{text-decoration:underline}.article-links{display:flex;margin-top:1rem}.article-links-filler{flex:1}.article-link{display:flex;align-items:center}.article-link a{text-decoration:none;color:black}.article-link a:hover{text-decoration:underline}.article-link--backward{margin-left:-1.25rem}.article-link--backward a{margin-left:2.75rem}.article-link--forward{margin-right:-1.25rem}.article-link--forward a{margin-right:2.75rem}.toc-link{display:block;width:100%;text-decoration:none;color:black;padding:0.5rem 1rem}.toc-link:hover{background-color:#f6f6f6}.exrc-section-title{margin-top:1rem !important;margin-bottom:0rem !important}.exrc-bonuses{padding:2rem 4rem;color:white;background-color:orange;margin-bottom:1rem}.exrc-bonuses__head{font-size:1.2rem;font-weight:bold;margin-bottom:1rem}.article-section{padding:2rem 0}.warn-section{background-color:#e2252b;color:white}.text-section table tr:nth-child(even){background-color:#e8e8e8}.exercises-section{background-color:#ffec88}.block-image{margin:3rem 0}.block-image img{display:block;width:100%;height:auto}.fig{display:block;margin:2rem auto;height:auto}li>.fig{margin:1rem auto}.fig-100{width:100%}.fig-90{width:90%}.fig-80{width:80%}.fig-70{width:70%}.fig-60{width:60%}.fig-50{width:50%}table{margin:2rem auto}table thead{border-bottom:2px solid #333}table td{padding:0.5rem}
+</style><style data-vue-ssr-id="34f8141e:0">.article-head{padding:0 4rem}.article-head__title{display:flex;align-items:baseline;font-size:1.8rem;font-weight:bold;margin-left:-6rem}.article-head__title h1{font-size:100%}.article-head__num{width:4rem;height:4rem;line-height:4rem;text-align:center;background-color:#ffec88;box-shadow:0 0 10px #ddd;border-radius:2rem;margin-right:2rem}.aside{display:none;width:320px;position:fixed;z-index:1;overflow-x:hidden;padding-top:20px}@media only screen and (min-width: 992px){.aside{display:block}}.article{margin:0rem 0 6rem 0;background-color:white;padding-top:2rem;box-shadow:0 0 10px #ddd;line-height:150%;border-radius:1rem}@media only screen and (min-width: 992px){.article{margin:0rem 0 6rem 320px}}.article .text-section>p,.article .text-section>ul,.article .text-section>ol,.article .text-section>dl{margin-left:4rem;margin-right:4rem}.article dt,.article dd{margin-bottom:0.5rem}.article h2,.article h3,.article h4{padding:1rem 4rem}.article .anchor{opacity:0;transition:250ms;text-decoration:none;color:#869af5;margin-left:-1.7rem}.article h2{margin-top:3rem;margin-bottom:1rem;font-size:1.6rem;font-weight:900}.article h2 .anchor{margin-left:-1.7rem}.article h3{margin-top:1rem;margin-bottom:0rem}.article h3 .anchor{margin-left:-1.2rem}.article h2:hover .anchor,.article h3:hover .anchor{opacity:1;margin-left:0}.article p{margin-top:0;margin-bottom:1rem;hyphens:manual}.article li{margin-bottom:0.5rem}.article .text-section:first-child p:first-child:first-letter{float:left;font-size:5rem;line-height:4rem;padding-top:0.3rem;padding-right:0.5rem}.article em{background-color:#d1ebf1;padding:0rem 0.5rem;border-radius:10px}.article pre,.article code,.article var{font-family:"Roboto Mono"}.article pre{background-color:#555;color:white;padding:1rem 4rem;margin:2rem 0;overflow-x:auto}.article var{font-style:normal;color:blue}.article kbd{font-family:"Montserrat";background-color:#fff;border:1px solid #888;border-radius:4px;padding:0rem 0.5rem}.term{display:inline;position:relative;font-style:italic;overflow:visible}.term__icon{display:inline-block;vertical-align:middle;width:15px;height:15px;margin-left:0.5rem;margin-bottom:2px;margin-right:0;background-image:url(/assets/img/english-9a71e2.png);background-size:contain;background-repeat:no-repeat}.term__cs{background-color:#d1ebf1;padding:0rem 0rem 0rem 0.5rem;border-radius:10px;white-space:pre;cursor:default}.term__en{position:absolute;top:-2rem;left:0rem;background-color:#444;color:white;padding:0rem 0.5rem;border-radius:5px;opacity:0;visibility:hidden;z-index:1;white-space:pre;transition:500ms}.term:hover .term__en{visibility:visible;opacity:1}
+</style><style data-vue-ssr-id="3c9796f4:0">.page{display:grid;grid-template-columns:auto;grid-template-rows:auto 1fr auto;min-height:100vh}.footer{padding:2rem 0;background-color:#dce7f4}
+</style><style data-vue-ssr-id="2fdd37c8:0">.page-logo{display:flex;align-items:center;text-decoration:none;color:black}.page-logo__icon{width:2rem;height:2rem;background-image:url(/assets/img/kodim-icon-d3361c.svg);background-size:contain}.page-logo__title{font-size:1.2rem;font-weight:bold;margin-left:0.5rem}.navbar{padding:1rem 0}
+</style><style data-vue-ssr-id="6f27289b:0">.exercise__head{display:flex;margin-left:-1.5rem}.exercise__num{width:3rem;height:3rem;line-height:3rem;background-color:white;box-shadow:0 0 10px #ddd;border-radius:1.5rem;text-align:center}.exercise__title{display:flex;align-items:baseline;flex:1;font-size:1.2rem;font-weight:bold;margin-left:0rem}.exercise__title h3{font-size:100%;padding-left:2.5rem;margin-bottom:0.5rem}.exercise__demand{margin-top:2rem;padding-right:4rem;text-align:right}.exercise__body>p,.exercise__body>ul,.exercise__body>ol,.exercise__body>dl{margin-left:4rem;margin-right:4rem}.exercise table tr:nth-child(even){background-color:#ffe664}.demand{min-width:70px;height:14px;background-size:contain;background-position-x:right;background-repeat:no-repeat;background-size:70px 14px}.demand--1{background-image:url(/assets/img/demand1-32b0be.svg)}.demand--2{background-image:url(/assets/img/demand2-3d6156.svg)}.demand--3{background-image:url(/assets/img/demand3-6ddf4a.svg)}.demand--4{background-image:url(/assets/img/demand4-377dc5.svg)}.demand--5{background-image:url(/assets/img/demand5-9e0206.svg)}.demand-text{font-size:0.8rem;font-weight:bold}
+</style></head>
+  <body data-gr-c-s-loaded="true">
+    <div data-server-rendered="true" class="page"><header><div class="navbar container"><a href="http://nove.kodim.cz/" class="page-logo router-link-active"><div class="page-logo__icon"></div> <div class="page-logo__title">Kódím.cz</div></a></div> </header> <main class="main"><div class="container"><aside class="aside"><div class="chapter-link"><a href="http://nove.kodim.cz/czechitas/daweb" class="router-link-active">Základy JavaScriptu</a></div> <nav class="article-outline"><a href="#funkce-vyssiho-radu" class="toc-link">Funkce vyššího řádu</a><a href="#cviceni-funkce-vyssiho-radu" class="toc-link">Cvičení - funkce vyššího řádu</a><a href="#udalosti" class="toc-link">Události</a><a href="#dalsi-druhy-udalosti" class="toc-link">Další druhy událostí</a><a href="#cviceni-udalosti" class="toc-link">Cvičení - Události</a><a href="#povinne-cteni-a-doma" class="toc-link">Povinné čtení a doma</a><a href="#doporucene-ulozky-na-doma" class="toc-link">Doporučené úložky na doma</a><a href="#volitelne-ulozky-na-doma" class="toc-link">Volitelné úložky na doma</a></nav></aside> <article class="article"><div class="article-head"><div class="article-head__title"><div class="article-head__num">4</div> <h1>Funkce vyšších řádů, události</h1></div> <div class="article-head__brief">Naučíme
+ naše stránky reagovat na události jako je kliknutí, stisknutí klávesy 
+nebo scrollování. K tomu budeme potřebovat porozumět funkcím vyššího 
+řádu.</div></div> <div class="article-links"><div class="article-link article-link--backward"><div class="arrow-left"></div> <a href="http://nove.kodim.cz/czechitas/daweb/zaklady-js/dom-funkce">
+        DOM a vlastní funkce
+      </a></div> <div class="article-links-filler"></div> <div class="article-link article-link--forward"><a href="http://nove.kodim.cz/czechitas/daweb/zaklady-js/debug-scope">
+        Ladění a obory platnosti
+      </a> <div class="arrow-right"></div></div></div> <div class="article-body"><!-- base href="http://nove.kodim.cz/czechitas/daweb/zaklady-js/hof-udalosti/" --> <section class="article-section text-section"><p>Předchozí 
+          <span class="term">
+            <span class="term__cs">jak to jde<span class="term__icon"></span></span>
+            <span class="term__en">nazdarek</span>
+          </span>
+         lekce nám ukázala, jak můžeme pomocí JavaScriptu měnit obsah 
+stránky. K plně interaktivním stránkám však potřebujeme také reagovat na
+ akce uživatele. Chceme například něco zobrazit, když uživatel klikne na
+ tlačítko, umožnit mu vložit nějaký vstup do textového políčka a tak 
+dále. K tomu potřebujeme porozumět takzvaným událostem. K tomu, abychom 
+uměli dobře používat události se však také potřebujeme dozvědět něco 
+málo více o tom, jak fungují funkce.</p>
+<h2 id="funkce-vyssiho-radu"><a class="anchor" href="#funkce-vyssiho-radu">¶</a> Funkce vyššího řádu</h2>
+<p>Z předchozí lekce už víme, že funkce jsou hodnoty podobně jako čísla,
+ řetězce nebo DOM elementy a viděli jsme, že je díky tomu můžeme ukládat
+ do proměnných. To je však pouze začátek toho, co je možné s funkcemi 
+dělat a nyní se pustíme králičí norou malinko hlouběji. Funkce je totiž 
+zcela rovnoprávná hodnota, a tak ji můžeme nejen uložit do proměnné, ale
+ také předat jiné funkci na vstup. Můžeme tedy funkci předat jinou 
+funkci. Taková myšlenka může ze začátku působit dost odvážně a možná až 
+děsivě. Postupujme tedy pomaličku a s rozvahou.</p>
+<h3 id="chytrejsi-kalkulacka"><a class="anchor" href="#chytrejsi-kalkulacka">¶</a> Chytřejší kalkulačka</h3>
+<p>Vraťme s na chvíli k příkladu <a href="http://nove.kodim.cz/czechitas/daweb/zaklady-js/dom-funkce/#cvi-kalkulacka">kalkulačka</a> z minulé lekce. Zadání bylo vytvořit funkci <code>calc</code>, která spočítá výsledek operace zadané jako řetězec. Přímočaré řešení mohlo vypadat například takto.</p>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> calc = <span class="hljs-function">(<span class="hljs-params">num1, op, num2</span>) =&gt;</span> {
+  <span class="hljs-keyword">if</span> (op === <span class="hljs-string">'+'</span>) {
+    <span class="hljs-keyword">return</span> num1 + num2;
+  }
+  <span class="hljs-keyword">if</span> (op === <span class="hljs-string">'-'</span>) {
+    <span class="hljs-keyword">return</span> num1 - num2;
+  }
+  <span class="hljs-keyword">if</span> (op === <span class="hljs-string">'*'</span>) {
+    <span class="hljs-keyword">return</span> num1 * num2;
+  }
+  <span class="hljs-keyword">if</span> (op === <span class="hljs-string">'/'</span>) {
+    <span class="hljs-keyword">return</span> num1 / num2;
+  }
+};
+</code></pre>
+<p>Možná si říkáte, jestli by tato funkce nešla napsat nějak šikovněji a
+ úsporněji. Například předat funkci operaci tak nějak přímo a naše 
+funkce by ji jen vykonala. Něco ve stylu</p>
+<pre><code class="language-jscon"><span class="hljs-meta">&gt;</span><span class="javascript"> calc(<span class="hljs-number">2</span>, +, <span class="hljs-number">3</span>)</span>
+5
+</code></pre>
+<p>Pokud přemýšlíte tímto směrem, jste na správné stopě. Jen na to 
+musíme jít trošku od lesa. Nejprve si vyrobíme funkce, které provádějí 
+jednotlivé operace.</p>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> plus = <span class="hljs-function">(<span class="hljs-params">num1, num2</span>) =&gt;</span> num1 + num2;
+<span class="hljs-keyword">const</span> minus = <span class="hljs-function">(<span class="hljs-params">num1, num2</span>) =&gt;</span> num1 - num2;
+<span class="hljs-keyword">const</span> times = <span class="hljs-function">(<span class="hljs-params">num1, num2</span>) =&gt;</span> num1 * num2;
+<span class="hljs-keyword">const</span> divide = <span class="hljs-function">(<span class="hljs-params">num1, num2</span>) =&gt;</span> num1 / num2;
+</code></pre>
+<p>Jelikož každá takováto funkce je hodnota, můžeme ji předat jako vstup do funkce <code>calc</code>. Ta pak obdrženou funkci pouze zavolá.</p>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> calc = <span class="hljs-function">(<span class="hljs-params">num1, op, num2</span>) =&gt;</span> op(num1, num2);
+</code></pre>
+<p>Funkci <code>calc</code> pak použijeme velmi přímočaře.</p>
+<pre><code class="language-jscon"><span class="hljs-meta">&gt;</span><span class="javascript"> calc(<span class="hljs-number">2</span>, plus, <span class="hljs-number">3</span>)</span>
+5
+<span class="hljs-meta">&gt;</span><span class="javascript"> calc(<span class="hljs-number">4</span>, times, <span class="hljs-number">5</span>)</span>
+20
+</code></pre>
+<p>Ze začátku se vám možná z takovýchto triků malinko točí hlava. 
+Projděme si proto následující fakta, abychom získali zpět ztracenou 
+rovnováhu.</p>
+<ol>
+<li>V parametru <code>op</code> nyní není řetězec, jako tomu bylo dříve, nýbrž funkce.</li>
+<li>Funkce <code>calc</code> funkci <code>op</code> zavolá, aniž by věděla, co je tato funkce vlastně zač. Prostě vezme cokoliv, co jí dáme na vstup, a zavolá to.</li>
+<li>Když voláme funkci <code>calc</code> a na vstupu je například funkce <code>plus</code>, všimněte si, že funkci <code>plus</code> nevoláme. Za proměnnou <code>plus</code> nejsou kulaté závorky. Funkci pouze předáváme jako hodnotu, podobně, jako bychom předávali číslo, řetězec apod.</li>
+</ol>
+<p>Funkcím, které berou jiné funkce jako vstup nebo vracejí funkce jako svůj výstup, se v teorii programování říká 
+          <span class="term">
+            <span class="term__cs">funkce vyšších řádů<span class="term__icon"></span></span>
+            <span class="term__en">higher order functions</span>
+          </span>
+        . Je to velmi důležitý koncept, který má spoustu využítí a budeme jej používat v mnoha různých situacích.</p>
+<h3 id="male-cviceni"><a class="anchor" href="#male-cviceni">¶</a> Malé cvičení</h3>
+<p>Abychom byli mezi funkcemi vyšších řádů jako ryba ve vodě, je potřeba
+ trošku procvičit tento nový styl přemýšlení. Projděte si následující 
+výrazy a zkuste předpovědět, jaký bude výsledek.</p>
+<pre><code class="language-jscon"><span class="hljs-meta">&gt;</span><span class="javascript"> <span class="hljs-keyword">const</span> foo = <span class="hljs-function">(<span class="hljs-params">f, x</span>) =&gt;</span> <span class="hljs-number">3</span> * f(x + <span class="hljs-number">2</span>);</span>
+<span class="hljs-meta">&gt;</span><span class="javascript"> foo(<span class="hljs-built_in">Math</span>.round, <span class="hljs-number">3.74</span>)</span>
+?
+<span class="hljs-meta">&gt;</span><span class="javascript"> foo(<span class="hljs-function">(<span class="hljs-params">a</span>) =&gt;</span> a ** <span class="hljs-number">2</span>, <span class="hljs-number">3</span>)</span>
+?
+<span class="hljs-meta">&gt;</span><span class="javascript"> foo(<span class="hljs-function">(<span class="hljs-params">x</span>) =&gt;</span> <span class="hljs-number">17</span> % x, <span class="hljs-number">5</span>)</span>
+?
+</code></pre>
+<pre><code class="language-jscon"><span class="hljs-meta">&gt;</span><span class="javascript"> <span class="hljs-keyword">const</span> foo = <span class="hljs-function">(<span class="hljs-params">g, x, y</span>) =&gt;</span> g(x, y) + g(y, x);</span>
+<span class="hljs-meta">&gt;</span><span class="javascript"> foo(<span class="hljs-built_in">Math</span>.max, <span class="hljs-number">5</span>, <span class="hljs-number">10</span>)</span>
+?
+<span class="hljs-meta">&gt;</span><span class="javascript"> foo(<span class="hljs-function">(<span class="hljs-params">a, b</span>) =&gt;</span> <span class="hljs-number">2</span> * (a - b), <span class="hljs-number">2</span>, <span class="hljs-number">5</span>)</span>
+?
+<span class="hljs-meta">&gt;</span><span class="javascript"> foo(<span class="hljs-function">(<span class="hljs-params">x, y</span>) =&gt;</span> x + <span class="hljs-string">' '</span> + y, <span class="hljs-string">'petr'</span>, <span class="hljs-string">'pavel'</span>)</span>
+?
+</code></pre>
+<h3 id="zpozdeni-a-casovace"><a class="anchor" href="#zpozdeni-a-casovace">¶</a> Zpoždění a časovače</h3>
+<p>Jedna ze situací, kdy se nám velmi hodí funkce vyššího řádu, je 
+chvíle, kdy chceme v JavaScriptu provedení nějaké funkce pozdržet nebo 
+její volání pravidelně opakovat. Vzpomeňte si na příklad <a href="http://nove.kodim.cz/czechitas/daweb/zaklady-js/dom-funkce/#cvi-kviz">kvíz</a>
+ z minulé lekce. Představme si, že chceme, aby uživatel měl na každou 
+odpověď nějaký časový limit. Po zobrazení otázky chceme počkat 5 vteřin a
+ poté vypsat něco jako “čas vypršel”. Vyrobíme si tedy funkci, která 
+vypisuje naši zprávu, zatím pro jednoduchost pouze do konzole.</p>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> timeIsUp = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Čas vypršel'</span>);
+};
+</code></pre>
+<p>Tuto funkci chceme spustit pět vteřin poté, co se otevře naše stránka. K takovému účelu JavaScript poskytuje funkci <code>setTimeout</code>.
+ Ta jako svůj vstup bere funkci a počet milisekund, které mají uplynout 
+před tím, než se tato funkce zavolá. Použití tak vypadá následovně.</p>
+<pre><code class="language-js">setTimeout(timeIsUp, <span class="hljs-number">5000</span>);
+</code></pre>
+<p>Všimněte si, že <code>setTimeout</code> je funkce vyššího řádu, neboť bere jako svůj první vstup funkci. Opět vidíme, že funkci <code>timeIsUp</code> nevoláme my, ale zavolá ji až JavaScript runtime po uplynutí 5000 milisekund. Celý program pak vypadá takto.</p>
+<pre><code class="language-js"><span class="hljs-meta">'use strict'</span>;
+
+<span class="hljs-keyword">const</span> timeIsUp = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Čas vypršel'</span>);
+};
+
+setTimeout(timeIsUp, <span class="hljs-number">5000</span>);
+</code></pre>
+<p>Pokud chceme, aby se nějaká funkce volala opakovaně, například každých pět vteřín, stačí místo <code>setTimeout</code> použít <code>setInterval</code>.</p>
+<pre><code class="language-js">setInterval(timeIsUp, <span class="hljs-number">5000</span>);
+</code></pre>
+<h3 id="anonymni-funkce"><a class="anchor" href="#anonymni-funkce">¶</a> Anonymní funkce</h3>
+<p>V předchozíme programu je vidět, že funkci <code>timesIsUp</code> 
+používáme pouze jednou. Je proto trochu zbytečné pro ni vytvářet 
+proměnnou. Funkci můžeme vytvořit přímo na místě, kdy ji používáme.</p>
+<pre><code class="language-js"><span class="hljs-meta">'use strict'</span>;
+
+setTimeout(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Čas vypršel'</span>);
+}, <span class="hljs-number">5000</span>);
+</code></pre>
+<p>Pokud nějakou funkci vytváříme přímo takto na místě místo toho, 
+abychom ji nejdříve uložili do proměné, říkáme, že taková funkce je 
+takzvaně 
+          <span class="term">
+            <span class="term__cs">anonymní<span class="term__icon"></span></span>
+            <span class="term__en">anonymous</span>
+          </span>
+        . V teorii programování se místo pojmu anonymní funkce používá pojem 
+          <span class="term">
+            <span class="term__cs">lambda funkce<span class="term__icon"></span></span>
+            <span class="term__en">lambda functions</span>
+          </span>
+        . V JavaScriptu se tento pojem až tolik nepoužívá, zato v jazyce Python je to zažitý termín.</p>
+<p>Program napsaný pomocí lambda funkcí vám možná přijde hůř k přečtení.
+ Anonymní funkce se ovšem v JavaScriptu používají zcela běžně a jakmile 
+si na tento způsob zapisu zvyknete, budete jej radostně používat také.</p>
+<p>Podobně jako u funkce <code>setTimout</code>, anonymní funkci můžeme předat i naší známé funkci <code>calc</code>. Schválně zkuste odhanout, co bude výsledkem následujícího výrazu a proč.</p>
+<pre><code class="language-jscon"><span class="hljs-meta">&gt;</span><span class="javascript"> calc(<span class="hljs-number">13</span>, (x, y) =&gt; x % y, <span class="hljs-number">7</span>)</span>
+?
+</code></pre>
+</section> <!----><!----> <section class="article-section exercises-section"><h2 id="cviceni-funkce-vyssiho-radu" class="exrc-section-title"><a href="#cviceni-funkce-vyssiho-radu" class="anchor">¶</a>
+          Cvičení - funkce vyššího řádu
+        </h2> <!----> <div class="exercise"><div class="exercise__head"><div class="exercise__title"><div class="exercise__num">1</div> <h3 id="cvi-jednoduche-funkce-vyssich-radu"><a href="#cvi-jednoduche-funkce-vyssich-radu" class="anchor">¶</a>
+        Jednoduché funkce vyšších řádů
+      </h3></div> <div class="exercise__demand"><div class="demand demand--2"></div> <div class="demand-text">to dáš</div></div></div> <div class="exercise__body">
+<ol>
+<li>Vytvořte funkci jménem <code>apply</code>, která jako svoje parametry bere funkci <code>f</code> a vstup <code>x</code>. Funkce <code>apply</code> vrátí výsledek funkce <code>f</code> zavolané na vstup <code>x</code>. Zavolejte funkci <code>apply</code> s více různými vstupy a sledujte výsledky.</li>
+<li>Napište funkci <code>max</code>, která jako svoje parametry bere dvě funkce <code>f</code>, <code>g</code> a vstup <code>y</code>. Funkce <code>max</code> zavolá obě tyto funkce se vstupem <code>y</code> a vrátí větší z obou výsledků.</li>
+</ol>
+</div></div><div class="exercise"><div class="exercise__head"><div class="exercise__title"><div class="exercise__num">2</div> <h3 id="cvi-minutka"><a href="#cvi-minutka" class="anchor">¶</a>
+        Minutka
+      </h3></div> <div class="exercise__demand"><div class="demand demand--2"></div> <div class="demand-text">to dáš</div></div></div> <div class="exercise__body">
+<p>Stáhněte si <a href="http://nove.kodim.cz/czechitas/daweb/zaklady-js/hof-udalosti/assets/minutka-zadani.zip">základ aplikace</a> pro kuchyňskou minutku. Využijte funkci <code>setTimeout</code> ke splnění následujících úkolů.</p>
+<ol>
+<li>Zařiďte, aby minutka začala zvonit za pět vteřin po otevření 
+stránky. Zvonění zařídíte tak, že k elementu budíku přídáte CSS třídu <code>alarm--ring</code>.</li>
+<li>Nechte uživatele skrze <code>prompt</code> zadat kolik vteřin má uplynout než minutka začne zvonit.</li>
+<li>Můžete zařídit i spuštění zvuku. Stačí ze stránky vybrat <code>audio</code> element a zavolat na něm metodu <code>play</code>.
+ Abyste zvuk slyšeli, musíte po zadání času na stránku kliknout. Prohlíč
+ Chrome totiž brání stránkam přehrávat audio či video dokud uživatel se 
+stránkou nějak neinteragoval. Tento nedostatek odstraníme na konci 
+lekce.</li>
+</ol>
+</div></div></section><section class="article-section text-section"><h2 id="udalosti"><a class="anchor" href="#udalosti">¶</a> Události</h2>
+<p>Aby naše stránky mohly být skutečně interaktivní, potřebujeme být 
+schopni reagovat na akce, které uživatel na stránce provádí - klikání na
+ tlačíka, stiknutí kláves, scrollování, pohyb myší apod. Vždy, když 
+některá z těcho akcí na stránce nastane, říkáme, že nastala určitá 
+          <span class="term">
+            <span class="term__cs">událost<span class="term__icon"></span></span>
+            <span class="term__en">event</span>
+          </span>
+        . JavaScript reprezentuje takovou událost jako speciální typ 
+hodnoty podobně jako číslo, řetězec nebo funkci. Událost tedy můžeme 
+uložit do proměnné nebo poslat nějaké funkci jako vstup. Událost 
+obsahuje vlastnosti a metody, které popisují co se přesně stalo, 
+například jaká klávesa byla zrovna stisknuta, kde na obrazovce bylo 
+kliknuto a spoustu dalších užitenčných informací.</p>
+<p>Abychom mohli na události reagovat, JavaScriptu nám umožňuje ke každé
+ události, která nás zajímá, připojit funkci, která se zavolá ve chvíli,
+ kdy daná událost nastane. Takové funkci často říkáme 
+          <span class="term">
+            <span class="term__cs">posluchač události<span class="term__icon"></span></span>
+            <span class="term__en">event listener</span>
+          </span>
+        . Můžeme si představit, že JavaScirpt runtime pečlivě naslouchá 
+všem možným událostem a volá k nim přiřazené funkce. Ve chvíli, kdy 
+JavaScript runtimu tuto funkcí volá, předá jí na vstup událost, která 
+zrovna nastala. Taková funkce tedy může vypadat například takto.</p>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> changeTitle = <span class="hljs-function">(<span class="hljs-params">event</span>) =&gt;</span> {
+  <span class="hljs-keyword">const</span> h1Elm = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'h1'</span>);
+  h1Elm.textContent = <span class="hljs-string">'Baf!'</span>;
+};
+</code></pre>
+<p>Nyní zařídíme, aby se tato funkce zavolala ve chvíli, kdy stiskneme 
+tlačítko. Vytvoříme si tedy jedndouchou stránku s tlačítkem a nadpisem.</p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Nadpis<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span>&gt;</span>Zmáčkni mě<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"index.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+</code></pre>
+<p>Nejdříve tlačítko z dokumentu vybereme a poté na něm zavoláme speciální metodu <code>addEventListener</code>. Ta očekává název události a funkci, která se má spustit, když událost nastane. V našem případě se událost jmenuje <code>click</code> a naše funkce je <code>changeTitle</code>. Celý program tedy bude vypadat takto.</p>
+<pre><code class="language-js"><span class="hljs-meta">'use strict'</span>;
+
+<span class="hljs-keyword">const</span> changeTitle = <span class="hljs-function">(<span class="hljs-params">event</span>) =&gt;</span> {
+  <span class="hljs-keyword">const</span> h1Elm = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'h1'</span>);
+  h1Elm.textContent = <span class="hljs-string">'Baf!'</span>;
+};
+
+<span class="hljs-keyword">const</span> btnElm = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'button'</span>);
+btnElm.addEventListener(<span class="hljs-string">'click'</span>, changeTitle);
+</code></pre>
+<h3 id="nastrahy"><a class="anchor" href="#nastrahy">¶</a> Nástrahy</h3>
+<p>S událostmi přichází několik nástrah, na které když si nedáme pozor, 
+naše stránka nejen že nebude fungovat, ale nevyhodí ani žádnou chybu. V 
+takové situací může být těžké odhalit, v čem přesně je zakopaný pes. 
+Tyto nástrahy se často rády objevjí těsně před deadlinem odevzdání 
+projektu a jejich hektické řešení pak má neblahý vliv na naše zdraví a 
+zdraví našich kolegů.</p>
+<p>Nástraha první spočítá v předávání funkce <code>changeTitle</code>. Všimněte si opět toho, že používáme funkci <code>changeTitle</code> jeko hodnotu a předáváme ji jako vstup metodě <code>addEventListener</code>. Nikde v našem kódu funkci sami nevoláme. Zavolá ji až JavaScript runtime ve chvíli, kdy na tlačíku nastane událost <code>click</code>. Častou začátečnickou chybou je pokušet se funkci zavolat sami.</p>
+<pre><code class="language-js">btnElm.addEventListener(<span class="hljs-string">'click'</span>, changeTitle());
+</code></pre>
+<p>V tomto případě se funkce <code>changeTitle</code> zavolá už ve chvíli, kdy voláme metodu <code>addEventListener</code>. Té se pak jako druhý vstup předá <strong>výsledek</strong> volání funkce <code>changeTitle</code>, nikoliv funkce samotná. Jelikož <code>changeTitle</code> nic nevrací (přesněji řečeno, vrací <code>undefined</code>), k události <code>click</code>
+ se žádný posluchač nepřipojí. Naše tlačítko tedy nebude fungovat. Co 
+nás může zmást je to, že takováto stránka nevyhodí žádnou chybu. Náš 
+JavaScript kód totiž funguje jak má. Jen jsme ho napsali tak, že dělá 
+něco jiného než chceme. JavaScript runtime však nemůže telepaticky 
+nahlížet do našich hlav aby věděl, co doopravdy chceme. Prostě dělá to, 
+co jsme mu řekli.</p>
+<p>Nástraha druhá spočívá v názvech událostí. To jsou obyčejné řetězce 
+jak je známe už z první lekce. Není vůbec těžké udělat v názvu události 
+překlep, obzvlášť, pokud je název delší, nebo nejsme tolik zdatní v 
+angličtině.</p>
+<pre><code class="language-js">btnElm.addEventListener(<span class="hljs-string">'clik'</span>, changeTitle());
+btnElm.addEventListener(<span class="hljs-string">'keypres'</span>, changeTitle());
+</code></pre>
+<p>JavaScript runtime bohužel nekontroluje, zda událost <code>clik</code> nebo <code>keypres</code>
+ může skutečně nastat nebo nikoliv. Jenoduše k tomuto názvu připojí 
+posluchače a o nic dalšího se nestará. Jelikož takto pojmenované 
+události nikdy nenastanou, naše stránka nebude fungovat a opět také 
+nenastane žádná chyba. Z hlediska runtimu je jako v předchozím případě 
+všechno v naprostém pořádku.</p>
+<p>Když tedy pracujete s událostmi, vždy si dobře zkontrolujte, že jste 
+jméno události napsali správně a že také správným způsobem předáváte 
+posluchače.</p>
+<h3 id="vlastnosti-udalosti"><a class="anchor" href="#vlastnosti-udalosti">¶</a> Vlastnosti událostí</h3>
+<p>Všimněte si, že jsme parametr <code>event</code> uvnitř naší funkce <code>changeTitle</code>
+ zatím k ničemu nepoužili. V tomto parametru je uložena hodnota, která 
+obsahuje informace o události, která nastala. Najdeme zde například tyto
+ vlastnosti</p>
+<dl>
+<dt><code>event.target</code></dt>
+<dd>DOM element, na kterém událost nastala. V našem případě je to element tlačítka.</dd>
+<dt><code>event.shiftKey</code>, <code>event.altKey</code>, <code>event.ctrlKey</code></dt>
+<dd>Tyto vlastnosti obsahují pravdivostní hodnoty, které udávají, zda byla při kliknutí stisknuta klávesa <kbd>Alt</kbd>, <kbd>Shift</kbd> nebo <kbd>Ctrl</kbd>.</dd>
+</dl>
+<h3 id="kalkulacka"><a class="anchor" href="#kalkulacka">¶</a> Kalkulačka</h3>
+<p>Vlastnost <code>target</code> je jedna z vůbec nejdůležitějších. Díky
+ ní se můžeme dostat z mnoha jinak svízelných situací. Představte si 
+například, že chceme naprogramovat jednoduchou webovou kalkulačku. 
+Pravděpodobně bychom začali s číselníkem jako na obrázku.</p>
+<p><img src="06_Funkce_vyssich_radu_udalosti_soubory/numpad.png" alt="Číselník" class="fig"></p>
+<p>Nejdříve budeme potřebovat HTML část naší malé aplikace.</p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"numpad"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"display"</span>&gt;</span>0<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"btn7"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"num-btn"</span>&gt;</span>7<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"btn8"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"num-btn"</span>&gt;</span>8<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"btn9"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"num-btn"</span>&gt;</span>9<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"btn4"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"num-btn"</span>&gt;</span>4<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"btn5"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"num-btn"</span>&gt;</span>5<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"btn6"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"num-btn"</span>&gt;</span>6<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"btn1"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"num-btn"</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"btn2"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"num-btn"</span>&gt;</span>2<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"btn3"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"num-btn"</span>&gt;</span>3<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"btn0"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"num-btn num-btn--wide"</span>&gt;</span>0<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
+<p>Nyní budeme chtít, aby při stisku každého tlačíka přibyla na displaji
+ kalkulačky správná cifra. První řešení, které nás může napadnout, je 
+dát každému tlačíku na kliknutí jinou funkci, která nastaví správnou 
+cifru.</p>
+<pre><code class="language-js"><span class="hljs-meta">'use strict'</span>;
+
+<span class="hljs-keyword">const</span> displayElm = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'.display'</span>);
+
+<span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'#btn0'</span>).addEventListener(<span class="hljs-string">'click'</span>, (event) =&gt; {
+  displayElm.textContent += <span class="hljs-string">'0'</span>;
+});
+<span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'#btn1'</span>).addEventListener(<span class="hljs-string">'click'</span>, (event) =&gt; {
+  displayElm.textContent += <span class="hljs-string">'1'</span>;
+});
+<span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'#btn2'</span>).addEventListener(<span class="hljs-string">'click'</span>, (event) =&gt; {
+  displayElm.textContent += <span class="hljs-string">'2'</span>;
+});
+<span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'#btn3'</span>).addEventListener(<span class="hljs-string">'click'</span>, (event) =&gt; {
+  displayElm.textContent += <span class="hljs-string">'3'</span>;
+});
+<span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'#btn3'</span>).addEventListener(<span class="hljs-string">'click'</span>, (event) =&gt; {
+  displayElm.textContent += <span class="hljs-string">'3'</span>;
+});
+<span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'#btn4'</span>).addEventListener(<span class="hljs-string">'click'</span>, (event) =&gt; {
+  displayElm.textContent += <span class="hljs-string">'4'</span>;
+});
+<span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'#btn5'</span>).addEventListener(<span class="hljs-string">'click'</span>, (event) =&gt; {
+  displayElm.textContent += <span class="hljs-string">'5'</span>;
+});
+<span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'#btn6'</span>).addEventListener(<span class="hljs-string">'click'</span>, (event) =&gt; {
+  displayElm.textContent += <span class="hljs-string">'6'</span>;
+});
+<span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'#btn7'</span>).addEventListener(<span class="hljs-string">'click'</span>, (event) =&gt; {
+  displayElm.textContent += <span class="hljs-string">'7'</span>;
+});
+<span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'#btn8'</span>).addEventListener(<span class="hljs-string">'click'</span>, (event) =&gt; {
+  displayElm.textContent += <span class="hljs-string">'8'</span>;
+});
+<span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'#btn9'</span>).addEventListener(<span class="hljs-string">'click'</span>, (event) =&gt; {
+  displayElm.textContent += <span class="hljs-string">'9'</span>;
+});
+</code></pre>
+<p>Tento kód sice bude fungovat, ale už od pohledu je strašlivě ukecaný.
+ Všech naších deset funkcí dělá v podstatě totéž. Liší se pouze v jednom
+ znaku. Mnohem šikovnější by bylo mít pouze jednu funkci, která se 
+připojí na každé tlačítko. Tato funkce ale musí nějak zjistit, jakou 
+cifru má na displej připojit. Zde můžeme mazaně využít toho, že kýženou 
+cifru má každé tlačíko jako svůj <code>textContent</code>. A díky vlastnosti <code>event.target</code> může naše funkce snadno zjistit, na které tlačíko bylo zrovna kliknuto. Výsledný kód pak bude vypadat takto.</p>
+<pre><code class="language-js"><span class="hljs-meta">'use strict'</span>;
+
+<span class="hljs-keyword">const</span> btnClick = <span class="hljs-function">(<span class="hljs-params">event</span>) =&gt;</span> {
+  <span class="hljs-keyword">const</span> displayElm = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'.display'</span>);
+  displayElm.textContent += event.target.textContent;
+};
+
+<span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'#btn0'</span>).addEventListener(<span class="hljs-string">'click'</span>, btnClick);
+<span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'#btn1'</span>).addEventListener(<span class="hljs-string">'click'</span>, btnClick);
+<span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'#btn2'</span>).addEventListener(<span class="hljs-string">'click'</span>, btnClick);
+<span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'#btn3'</span>).addEventListener(<span class="hljs-string">'click'</span>, btnClick);
+<span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'#btn4'</span>).addEventListener(<span class="hljs-string">'click'</span>, btnClick);
+<span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'#btn5'</span>).addEventListener(<span class="hljs-string">'click'</span>, btnClick);
+<span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'#btn6'</span>).addEventListener(<span class="hljs-string">'click'</span>, btnClick);
+<span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'#btn7'</span>).addEventListener(<span class="hljs-string">'click'</span>, btnClick);
+<span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'#btn8'</span>).addEventListener(<span class="hljs-string">'click'</span>, btnClick);
+<span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'#btn9'</span>).addEventListener(<span class="hljs-string">'click'</span>, btnClick);
+</code></pre>
+<p>Takový kód už je mnohem hezčí. Kdybychom ještě navíc uměli cykly, 
+které nás již brzo čekají, dokázali bychom jej zkrátit ještě výrazněji.</p>
+<h2 id="dalsi-druhy-udalosti"><a class="anchor" href="#dalsi-druhy-udalosti">¶</a> Další druhy událostí</h2>
+<p>Jak už bylo řečeno, událostí je mnoho typů a mohou nastat na různých 
+elementech. My jsme zatím reagovali na kliknutí na tlačítko. Kliknutí 
+však může nastat na jakémkoliv elementu. Takto například zareagujeme na 
+kliknutí na celé stránce.</p>
+<pre><code class="language-js"><span class="hljs-built_in">document</span>.addEventListener(<span class="hljs-string">'click'</span>, (e) =&gt; <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'klik'</span>));
+</code></pre>
+<p>Takto přidáme posluchače události k celé naší stránce. Na celé stránce také můžeme použít událost <code>scroll</code>, která nastave pokaždé, když uživatel na stránce zascrolluje.</p>
+<pre><code class="language-js"><span class="hljs-built_in">document</span>.addEventListener(<span class="hljs-string">'scroll'</span>, (e) =&gt; <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'skrol'</span>));
+</code></pre>
+<p>Často se nám tako mohou hodit události <code>keydown</code> a <code>keyup</code>. Událost <code>keydown</code> nastane, když uživatel stiskne nějakou klávesu. Událost <code>keyup</code> nastane, když uživatel klávesu uvolní. To je velmi šikovné, protože pokud uživatel drží zmáčknutou nějakou klávesu, událost <code>keydown</code> nám bude chodit pořád dokola. Naopak událost <code>keyup</code> přijde vždy pouze jednou ve chvíli, kdy uživatel klávesu uvolní.</p>
+<p>Pokud chceme zjistit, jaká klávesa byla stisknuta, musíme znát její kód. Kódy kláves snadno najdete na <a href="http://keycode.info/">keycode.info</a>. Zjistíme tak například, že klávesa <kbd>Enter</kbd> má kód 13. Takto pak na stránce můžeme zareagovat na stisknutí <kbd>Enter</kbd>.</p>
+<pre><code class="language-js"><span class="hljs-built_in">document</span>.addEventListener(<span class="hljs-string">'keyup'</span>, (event) =&gt; {
+  <span class="hljs-keyword">if</span> (event.keyCode === <span class="hljs-number">13</span>) {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'enter'</span>);
+  }
+});
+</code></pre>
+<p>Nebo na stisknutí <kbd>Ctrl</kbd>+<kbd>C</kbd>.</p>
+<pre><code class="language-js"><span class="hljs-built_in">document</span>.addEventListener(<span class="hljs-string">'keyup'</span>, (event) =&gt; {
+  <span class="hljs-keyword">if</span> (event.keyCode === <span class="hljs-number">67</span> &amp;&amp; event.ctrlKey) {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Ctrl+C'</span>);
+  }
+});
+</code></pre>
+<p>Událostí, na které můžete na stránce reagovat je nepřeberné množství. Seznam všech událostí si můžete pro inspiraci prohlédnout <a href="https://developer.mozilla.org/en-US/docs/Web/Events">na stránkách MDN</a>.</p>
+</section> <!----><!----> <section class="article-section exercises-section"><h2 id="cviceni-udalosti" class="exrc-section-title"><a href="#cviceni-udalosti" class="anchor">¶</a>
+          Cvičení - Události
+        </h2> <!----> <div class="exercise"><div class="exercise__head"><div class="exercise__title"><div class="exercise__num">3</div> <h3 id="cvi-zarovka"><a href="#cvi-zarovka" class="anchor">¶</a>
+        Žárovka
+      </h3></div> <div class="exercise__demand"><div class="demand demand--2"></div> <div class="demand-text">to dáš</div></div></div> <div class="exercise__body">
+<p>Stáhněte si <a href="http://nove.kodim.cz/czechitas/daweb/zaklady-js/hof-udalosti/assets/zarovka-zadani.zip">základ stránky</a>, která zobrazuje obyčejnou žárovku.</p>
+<ol>
+<li>Pomocí JavaScriptu zařiďte, aby se při kliknutí na element žárovky k tomuto elementu přidala CSS třída <code>bulb--on</code>. Žárovka by se takto měla rozsvítit.</li>
+<li>Vylepšete program tak, aby na druhé kliknutí žárovka opět zhasnula. 
+Opětovným klikáním na žárovku ji tak můžeme rozsvěcovat a zhasínat.</li>
+</ol>
+</div></div><div class="exercise"><div class="exercise__head"><div class="exercise__title"><div class="exercise__num">4</div> <h3 id="cvi-kostka"><a href="#cvi-kostka" class="anchor">¶</a>
+        Kostka
+      </h3></div> <div class="exercise__demand"><div class="demand demand--2"></div> <div class="demand-text">to dáš</div></div></div> <div class="exercise__body">
+<p>Stáhněte si <a href="http://nove.kodim.cz/czechitas/daweb/zaklady-js/hof-udalosti/assets/kostka-zadani.zip">základ stránky</a>,
+ která zobrazuje hrací kostku. Doplňte do stránky JavaScriptový program,
+ který zařídí, že když uživatel zmáčkne na stránce mezerník, na kostce 
+se zobrazí číslo o jedna vyšší. Po šestce zobrazte opět jedničku.</p>
+<p>Rozumným postupem je vytvořit si proměnnou <code>side</code>, která 
+bude obsahovat číslo strany kostky. Tuto proměnnou můžete vždy při 
+stisknutí mezerníku navýšit o jedna a z této hodnoty zkonstruovat 
+řetězec pro atribut <code>src</code>.</p>
+</div></div></section><section class="article-section text-section"><h2 id="povinne-cteni-a-doma"><a class="anchor" href="#povinne-cteni-a-doma">¶</a> Povinné čtení a doma</h2>
+<h3 id="ruseni-casovacu"><a class="anchor" href="#ruseni-casovacu">¶</a> Rušení časovačů</h3>
+<p>Pokud spustímě nějaký časovač, často jej také chceme po určité době 
+zrušit. Vyrobme například časovač, který každé 3 vteřiny řekne ‘ahoj’.</p>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> timerId = setInterval(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'ahoj'</span>), <span class="hljs-number">3000</span>);
+</code></pre>
+<p>Všimněte si, že tentokrát jsme si uložili hodnotu, kterou funkce <code>setInterval</code>
+ vrací. Tato hodnota je číslo, které identifikuje náš časovač. Pokud 
+kdykoliv chceme, aby časovač přestal běžet, stačí zavolat funkci <code>clearInterval</code> s identifikátorem našeho časovače.</p>
+<pre><code class="language-js">clearInterval(timerId);
+</code></pre>
+<p>Takto se dá předčasně zrušit i časovač vyrobený pomocí <code>setTimeout</code>. Musíme však použít metodu <code>clearTimeout</code>.</p>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> timerId = setTimeout(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'ahoj'</span>), <span class="hljs-number">5000</span>);
+setTimeout(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> clearTimeout(timerId), <span class="hljs-number">2000</span>);
+</code></pre>
+<p>Tento kód zařídí, že první časovač vůbec neproběhne. Jeho čas je 
+nastaven na 5 vteřin. Už za dvě vteřiny se však spustí druhý časovač, 
+který jej nekompromisně vypne dřív, než stačí cokoli udělat.</p>
+<h3 id="vstup-pomoci-textovych-policek"><a class="anchor" href="#vstup-pomoci-textovych-policek">¶</a> Vstup pomocí textových políček</h3>
+<p>Poslední věc, která nám chybí pro příjemnou interakci s uživatelem, je získávat vstup jinak, než pomnocí funkce <code>prompt</code>. Naštěstí se vším, co už umíme je to už jen malý krůček. Stačí kdekoliv na stránce použít textové políčko, například takto.</p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"my-input"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> /&gt;</span>
+</code></pre>
+<p>Kdykoliv chceme získat text, který uživatel do políčka vepsal, stačí nám toto políčko vybrat pomocí <code>querySelector</code> a použít vlastnost <code>value</code>.</p>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> inputElm = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'#my-input'</span>);
+<span class="hljs-keyword">const</span> text = inputElm.value;
+</code></pre>
+<p>Stejně jako vlastnost <code>textContent</code>, i vlastnost <code>value</code>
+ je jak pro čtení, tak pro zápis. Můžeme tak řetězec z políčka přečíst, 
+ale také jej políčku nastavit. Všimněte si, že schválně používám slovo 
+řetězec. Stejně jako u funkce <code>prompt</code> i zde platí, že vlastnost <code>value</code> je vždy řetězec. Je tedy opět nutné mít se na pozoru, chceme-li od uživatele například číslo, a provést nezbytnou konverzi.</p>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> inputElm = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'#my-input'</span>);
+<span class="hljs-keyword">const</span> num = <span class="hljs-built_in">Number</span>(inputElm.value);
+</code></pre>
+<p>Od této chvíle navždy se vzdáváme funkce <code>prompt</code> a budeme už používat pouze textová políčka. Ta můžeme hezky nastylovat, aby dobře zapadla do grafiky našich stránek.</p>
+</section> <!----><!----> <section class="article-section exercises-section"><h2 id="doporucene-ulozky-na-doma" class="exrc-section-title"><a href="#doporucene-ulozky-na-doma" class="anchor">¶</a>
+          Doporučené úložky na doma
+        </h2> <!----> <div class="exercise"><div class="exercise__head"><div class="exercise__title"><div class="exercise__num">5</div> <h3 id="cvi-hledani-pomoci-predikatu"><a href="#cvi-hledani-pomoci-predikatu" class="anchor">¶</a>
+        Hledání pomocí predikátu
+      </h3></div> <div class="exercise__demand"><div class="demand demand--3"></div> <div class="demand-text">zapni hlavu</div></div></div> <div class="exercise__body">
+<p>Napište funkci <code>find</code>, která jako svůj první parametr očekává funkci <code>pred</code> mající jeden vstup a vracející <code>boolean</code>. Takovým funkcím se občas říká <em>predikáty</em>. Nechť funkce <code>find</code> dále má tři další parametry <code>x</code>, <code>y</code>, <code>z</code>. Funkce <code>find</code> postupně volá funkci <code>pred</code> s těmito parametry a vrátí tu hodnotu, u které funkce <code>pred</code> poprvé vrátí <code>true</code>. Pokud funkce <code>pred</code> nevrátí <code>true</code> ani na jednom z parametrů <code>x</code>, <code>y</code>, <code>z</code>, funkce <code>find</code> nechť vrátí hodnotu <code>null</code>. Tato hodnota se často použivá jako synonymum pro slovo “nic”.</p>
+<p>Příklad použití:</p>
+<pre><code class="language-jscon"><span class="hljs-meta">&gt;</span><span class="javascript"> find(<span class="hljs-function">(<span class="hljs-params">a</span>) =&gt;</span> a % <span class="hljs-number">2</span> === <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">4</span>, <span class="hljs-number">-5</span>)</span>
+4
+<span class="hljs-meta">&gt;</span><span class="javascript"> find(<span class="hljs-function">(<span class="hljs-params">a</span>) =&gt;</span> a &lt; <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">4</span>, <span class="hljs-number">-5</span>)</span>
+-5
+<span class="hljs-meta">&gt;</span><span class="javascript"> find(<span class="hljs-function">(<span class="hljs-params">a</span>) =&gt;</span> a.length &gt; <span class="hljs-number">5</span>, <span class="hljs-string">'petr'</span>, <span class="hljs-string">'pavel'</span>, <span class="hljs-string">'jana'</span>)</span>
+null
+</code></pre>
+</div></div><div class="exercise"><div class="exercise__head"><div class="exercise__title"><div class="exercise__num">6</div> <h3 id="cvi-minutka-2"><a href="#cvi-minutka-2" class="anchor">¶</a>
+        Minutka 2
+      </h3></div> <div class="exercise__demand"><div class="demand demand--3"></div> <div class="demand-text">zapni hlavu</div></div></div> <div class="exercise__body">
+<p>Stáhněte si <a href="http://nove.kodim.cz/czechitas/daweb/zaklady-js/hof-udalosti/assets/minutka2-zadani.zip">základ aplikace</a> pro vylepšenou kuchyňskou minutku.</p>
+<p>Umožněte uživateli zadat počet vteřin skrze připravené textové poličko. K získání hodnoty z políčka použijte vlastnost <code>value</code>. Nezapomeňte obsah políčka zkonvertovat na číslo. Minutku spusťte tlačítkem <i>Start</i>.</p>
+<p>Zařiďte, aby minutka správně odpočítávala vteřiny a začala zvonit ve 
+chvíli, kdy dosáhne nuly. Pokud si věříte, zkuste celý program napsat 
+rovnou bez nápovědy. Pokud malinko ztrácíte půdu pod nohama, následujte 
+tyto kroky.</p>
+<ol>
+<li>Vytvořte si proměnou <code>time</code>, do které uložíte počáteční počet vteřin zadaný uživatelem.</li>
+<li>Při kliknutí na <i>Start</i> nastavte časovač pomocí <code>setInterval</code>. Ten se bude opakovat každou vteřinu a pokaždé sníží hodnotu v proměnné <code>time</code> o jedna.</li>
+<li>Jakmile proměnná <code>time</code> dosáhne nuly, zapněte zvonění a zrušte časovač aby nezačal počítat do mínusu.</li>
+</ol>
+</div></div><div class="exercise"><div class="exercise__head"><div class="exercise__title"><div class="exercise__num">7</div> <h3 id="cvi-kalkulacka"><a href="#cvi-kalkulacka" class="anchor">¶</a>
+        Kalkulačka
+      </h3></div> <div class="exercise__demand"><div class="demand demand--4"></div> <div class="demand-text">zavařovačka</div></div></div> <div class="exercise__body">
+<p>Naše úvodní povídání o funkcích vyššího řádu přímo vybízí k tomu, 
+abychom dotáhli do konce aplikaci kalkulačka. Naprogramovat kalkulačku, 
+aby skutečně fungovala dle běžných očekávání není tak přímočaré, jak by 
+se na první pohled mohlo zdát. Prohlédněte si <a href="http://nove.kodim.cz/czechitas/daweb/zaklady-js/hof-udalosti/assets/kalkulacka.mp4">toto video</a>, které ukazuje, jak klasická kalkulačka skutečně funguje. Povšimněte si především následujících funkčností.</p>
+<ol>
+<li>Displej kalkulačky slouži pro vstup i výstup. Musíme si tedy dávat pozor, kdy jej používáme pro vstup a kdy pro výstup.</li>
+<li>Všechne matematické operace se dají řetězit. Můžeme tedy napsat například <kbd>2</kbd><kbd>5</kbd><kbd>+</kbd><kbd>4</kbd><kbd>-</kbd><kbd>1</kbd><kbd>6</kbd> a displej nám bude ukazovat mezivýsledky. Konečnou hodnotu se dozvíme po stisknutí <kbd>=</kbd>.</li>
+</ol>
+<p>Abychom dostáli těmto požadavkům, musíme si strukturu kódu zatraceně 
+dobře rozmyslet dopředu. Z takové věci by vám v tuto chvíli mohla ještě 
+vybuchnout hlava. Proto si zde můžete stáhnout <a href="http://nove.kodim.cz/czechitas/daweb/zaklady-js/hof-udalosti/assets/kalkulacka-zadani.zip">předpřipravenou strukturu</a>
+ projektu se všemi funkcemi, které budou potřeba. Na vás je jen do 
+těchto funkcí doplnit odpovídající kód. Pokud však cítíte chuť a 
+sebedůvěru, můžete zkusit kalkulačku napsat zcela od začátku podle sebe a
+ pořádně tím procvičit svoje mozkové závity.</p>
+<p><strong>Struktura programu</strong></p>
+<p>Náš program obsahuje funkci <code>calc</code> a funkce pro jednotlivé operátory tak, jak jsme je vymysleli v této lekci.</p>
+<p>Dále máme tři hlavní proměnné:</p>
+<dl>
+<dt><code>acc</code></dt>
+<dd>Takzvaný akumulátor, který obsahuje výsledek naposledy provedené operace.</dd>
+<dt><code>op</code></dt>
+<dd>Operace, která se má provést s následujícím vstupem. Sem uložíme jednu z operátorových funkcí nebo hodnotu <code>null</code>, která říká, že žádná operace zatím není zadána.</dd>
+<dt><code>diplay</code></dt>
+<dd>Obsahuje řetězec <code>output</code> nebo <code>input</code> podle toho, za jakým účelem zrovna používáme display kalkulačky.</dd>
+</dl>
+<p>Vaším úkolem je doplnit kód do následujicích funkcí:</p>
+<dl>
+<dt><code>numClick</code></dt>
+<dd>Funkce, která se spustí při stisknutí tlačítka s číslicí. Pokud je zrovna na displeji zobrazen výstup, tedy proměnná <code>display</code> obsahuje řetězec <code>'output'</code>, stisknutá cifra nahradí celý obsah displeje a přepne displej do stavu <code>'input'</code>. Pokud je displej ve stavu <code>'input'</code>,
+ znamená to, že jsme v procesu zadávání čísla. Cifra se tedy přidá na 
+konec všech cifer, které už na displeji svítí. Pozor na cifru 0, které 
+se nepřídává na konec, pokud na displeji svítí jen nula. To je proto, 
+abychom nemohli zadat čísla jako 00007.</dd>
+<dt><code>getValue</code></dt>
+<dd>Získá hodnotu z displeje kalkulačky. Hodnotu vrátí jako datový typ číslo.</dd>
+<dt><code>setAccumulator</code></dt>
+<dd>Tuto funkci používáme ve chvíli, kdy chceme do akumulátoru uložit nějakou hodnotu (parametr <code>value</code>) a zároveň ji zobrazit na displeji. Pozor, že v tuto chvíli používáme displej jako výstup, takže kromě nastavení proměnné <code>acc</code> a zobrazení na displeji musíme také proměnnou <code>display</code> nastavit na hodnotu <code>'output'</code>.</dd>
+<dt><code>equalsClick</code></dt>
+<dd>Toto je nejdůležitejší funkce celé kalkulačky, protože provádí skutečný výpočet výsledku. Mačkáme-li <kbd>=</kbd>, chceme vzít hodnotu z akumulátoru (proměnná <code>acc</code>), hodnotu z displeje (funkce <code>getValue</code>) a provést na nich operaci uloženou v proměnné <code>op</code>. Výsledek uložíme do akumulátoru a zobrazíme jej na display pomocí funkce <code>setAccumulator</code>. Může se stát, že v proměnné <code>op</code> je zrovna uložena hodnota <code>null</code>. To znamená, že jsme stiskli <kbd>=</kbd>
+ dříve, než jsme zadali nějakou operaci. V takovém případě hodnotu z 
+displeje rovnou vložíme do akumulátoru. V každém případě však musíme na 
+konci nastavit <code>op</code> na <code>null</code>, aby se při opakováném stisku <kbd>=</kbd> neprováděla poslední operace pořád dokola.</dd>
+<dt><code>clearClick</code></dt>
+<dd>Tlačítko <kbd>=</kbd> restartuje kalkulačku do počátečního stavu. Nastaví tedy akumulátor na 0, poslední operaci na <code>null</code> a displej do stavu <code>output</code>.</dd>
+<dt><code>plusClick</code>, <code>minusClick</code>, <code>timesClick</code>, <code>divideClick</code></dt>
+<dd>Tyto funkce reagují na stiskl tlačítek s operátory. Samy však nic 
+nepočítají. Pouze zařídí zavolání předchozí zaznamenané operace pomocí 
+funkce <code>equalsClick</code> a nastaví aktuální operaci na příslušnou funkci <code>plus</code>, <code>minus</code>
+ atp. V tomto spočívá celý trik toho, jak kalkulačka vnitřně funguje. Na
+ začátku je totiž nutné si uvědomit, že při každém stisku nějaké operace
+ se tváříme, jako bychom automaticky před ní stisknuli <kbd>=</kbd> a tím vlastně provedeme předchozí zaznamenanou operaci.</dd>
+</dl>
+<p>Pokud jste funkce naprogramovali podle zadání, kalkulačka by měla 
+fungovat. Pokud se podíváte na výsledný program, nejspíše zjistíte, že 
+na to, kolik se toho děje pod kapotou, je docela krátký. V tomto spočívá
+ největší umění programování, tedy umět i pro obtížný problém navhrnout 
+strukturu programu tak, aby působil přímočaře a čitelně. Toto umění se 
+programátoři učí celý život a nikdy nelze dojít na konec. Čím jsou v 
+tomto programátoři lepší, tím jsou cennější členové týmu.</p>
+</div></div></section><!----> <section class="article-section exercises-section"><h2 id="volitelne-ulozky-na-doma" class="exrc-section-title"><a href="#volitelne-ulozky-na-doma" class="anchor">¶</a>
+          Volitelné úložky na doma
+        </h2> <!----> <div class="exercise"><div class="exercise__head"><div class="exercise__title"><div class="exercise__num">8</div> <h3 id="cvi-minutka-3"><a href="#cvi-minutka-3" class="anchor">¶</a>
+        Minutka 3
+      </h3></div> <div class="exercise__demand"><div class="demand demand--3"></div> <div class="demand-text">zapni hlavu</div></div></div> <div class="exercise__body">
+<p>Vylepšete program naší kuchyňské minutky tak, aby zobrazovala nejen 
+vteřiny, ale i minuty. Layout stránky je na to připraven. Nechejte 
+uživatele zadat minuty, nikoliv vteřiny, a správně odpočítávejte čas až k
+ nule.</p>
+<p>Dejte pozor na správné formátování, kdy jednociferné hodnoty je zvykem zobrazovat s nulou na začátku. Vytvořte si funkci <code>twoDigits</code>, která na vstupu dostane číslo a vrátí řetězec správně naformátovaný na dvě cifry.</p>
+<pre><code class="language-jscon"><span class="hljs-meta">&gt;</span><span class="javascript"> twoDigits(<span class="hljs-number">7</span>)</span>
+'07'
+<span class="hljs-meta">&gt;</span><span class="javascript"> twoDigits(<span class="hljs-number">23</span>)</span>
+'23'
+</code></pre>
+</div></div></section></div></article></div></main> <footer class="footer"><div class="container">Martin Podloucký</div></footer></div>
+  
+
+</body></html>

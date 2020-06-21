@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="cz"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>kodim.cz</title>
+  <style data-vue-ssr-id="499c037c:0">@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700,900|Roboto+Mono:400,700&display=fallback&subset=latin-ext);</style><style data-vue-ssr-id="499c037c:1">*{box-sizing:border-box}html{font-family:"Montserrat", sans-serif;font-size:15px}body{margin:0;color:#444;background-color:#f9f9f9}.container{width:100%;margin-left:auto;margin-right:auto}@media only screen and (min-width: 576px){.container{width:540px}}@media only screen and (min-width: 768px){.container{width:720px}}@media only screen and (min-width: 992px){.container{width:960px}}.btn{border:none;outline:none;border-radius:1rem;padding:0.5rem 1rem;text-align:center;text-decoration:none;color:black;box-shadow:0 0 10px #ddd;transition:400ms}.btn:hover{transform:scale(1.1)}.btn-open{background-color:#ffec88}
+</style><style data-vue-ssr-id="54541dba:0">.hljs{display:block;overflow-x:auto;padding:0.5em;background:#222222;color:#C0C0C0}.hljs-keyword{color:#FFB871;font-weight:bold}.hljs-built_in{color:#FFB871}.hljs-literal{color:#FF8080}.hljs-symbol{color:#58E55A}.hljs-comment{color:#5B995B}.hljs-string{color:#FFFF00}.hljs-number{color:#FF8080}.hljs-attribute,.hljs-selector-tag,.hljs-doctag,.hljs-name,.hljs-bullet,.hljs-code,.hljs-addition,.hljs-regexp,.hljs-variable,.hljs-template-variable,.hljs-link,.hljs-selector-attr,.hljs-selector-pseudo,.hljs-type,.hljs-selector-id,.hljs-selector-class,.hljs-quote,.hljs-template-tag,.hljs-deletion,.hljs-title,.hljs-section,.hljs-function,.hljs-meta-keyword,.hljs-meta,.hljs-subst{color:#C0C0C0}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:bold}.article-outline{margin:2rem 3rem 0 0}.arrow-left{background-color:#ffec88;background-size:contain;width:2.5rem;height:2.5rem;border-radius:1.25rem;box-shadow:0 0 10px #ddd;background-image:url(/assets/img/arrow-left-5d2511.svg)}.arrow-right{background-color:#ffec88;background-size:contain;width:2.5rem;height:2.5rem;border-radius:1.25rem;box-shadow:0 0 10px #ddd;background-image:url(/assets/img/arrow-right-b02d21.svg)}.chapter-link{padding-left:1rem}.chapter-link a{text-decoration:none;color:black;font-size:1.2rem;font-weight:bold}.chapter-link a:hover{text-decoration:underline}.article-links{display:flex;margin-top:1rem}.article-links-filler{flex:1}.article-link{display:flex;align-items:center}.article-link a{text-decoration:none;color:black}.article-link a:hover{text-decoration:underline}.article-link--backward{margin-left:-1.25rem}.article-link--backward a{margin-left:2.75rem}.article-link--forward{margin-right:-1.25rem}.article-link--forward a{margin-right:2.75rem}.toc-link{display:block;width:100%;text-decoration:none;color:black;padding:0.5rem 1rem}.toc-link:hover{background-color:#f6f6f6}.exrc-section-title{margin-top:1rem !important;margin-bottom:0rem !important}.exrc-bonuses{padding:2rem 4rem;color:white;background-color:orange;margin-bottom:1rem}.exrc-bonuses__head{font-size:1.2rem;font-weight:bold;margin-bottom:1rem}.article-section{padding:2rem 0}.warn-section{background-color:#e2252b;color:white}.text-section table tr:nth-child(even){background-color:#e8e8e8}.exercises-section{background-color:#ffec88}.block-image{margin:3rem 0}.block-image img{display:block;width:100%;height:auto}.fig{display:block;margin:2rem auto;height:auto}li>.fig{margin:1rem auto}.fig-100{width:100%}.fig-90{width:90%}.fig-80{width:80%}.fig-70{width:70%}.fig-60{width:60%}.fig-50{width:50%}table{margin:2rem auto}table thead{border-bottom:2px solid #333}table td{padding:0.5rem}
+</style><style data-vue-ssr-id="34f8141e:0">.article-head{padding:0 4rem}.article-head__title{display:flex;align-items:baseline;font-size:1.8rem;font-weight:bold;margin-left:-6rem}.article-head__title h1{font-size:100%}.article-head__num{width:4rem;height:4rem;line-height:4rem;text-align:center;background-color:#ffec88;box-shadow:0 0 10px #ddd;border-radius:2rem;margin-right:2rem}.aside{display:none;width:320px;position:fixed;z-index:1;overflow-x:hidden;padding-top:20px}@media only screen and (min-width: 992px){.aside{display:block}}.article{margin:0rem 0 6rem 0;background-color:white;padding-top:2rem;box-shadow:0 0 10px #ddd;line-height:150%;border-radius:1rem}@media only screen and (min-width: 992px){.article{margin:0rem 0 6rem 320px}}.article .text-section>p,.article .text-section>ul,.article .text-section>ol,.article .text-section>dl{margin-left:4rem;margin-right:4rem}.article dt,.article dd{margin-bottom:0.5rem}.article h2,.article h3,.article h4{padding:1rem 4rem}.article .anchor{opacity:0;transition:250ms;text-decoration:none;color:#869af5;margin-left:-1.7rem}.article h2{margin-top:3rem;margin-bottom:1rem;font-size:1.6rem;font-weight:900}.article h2 .anchor{margin-left:-1.7rem}.article h3{margin-top:1rem;margin-bottom:0rem}.article h3 .anchor{margin-left:-1.2rem}.article h2:hover .anchor,.article h3:hover .anchor{opacity:1;margin-left:0}.article p{margin-top:0;margin-bottom:1rem;hyphens:manual}.article li{margin-bottom:0.5rem}.article .text-section:first-child p:first-child:first-letter{float:left;font-size:5rem;line-height:4rem;padding-top:0.3rem;padding-right:0.5rem}.article em{background-color:#d1ebf1;padding:0rem 0.5rem;border-radius:10px}.article pre,.article code,.article var{font-family:"Roboto Mono"}.article pre{background-color:#555;color:white;padding:1rem 4rem;margin:2rem 0;overflow-x:auto}.article var{font-style:normal;color:blue}.article kbd{font-family:"Montserrat";background-color:#fff;border:1px solid #888;border-radius:4px;padding:0rem 0.5rem}.term{display:inline;position:relative;font-style:italic;overflow:visible}.term__icon{display:inline-block;vertical-align:middle;width:15px;height:15px;margin-left:0.5rem;margin-bottom:2px;margin-right:0;background-image:url(/assets/img/english-9a71e2.png);background-size:contain;background-repeat:no-repeat}.term__cs{background-color:#d1ebf1;padding:0rem 0rem 0rem 0.5rem;border-radius:10px;white-space:pre;cursor:default}.term__en{position:absolute;top:-2rem;left:0rem;background-color:#444;color:white;padding:0rem 0.5rem;border-radius:5px;opacity:0;visibility:hidden;z-index:1;white-space:pre;transition:500ms}.term:hover .term__en{visibility:visible;opacity:1}
+</style><style data-vue-ssr-id="3c9796f4:0">.page{display:grid;grid-template-columns:auto;grid-template-rows:auto 1fr auto;min-height:100vh}.footer{padding:2rem 0;background-color:#dce7f4}
+</style><style data-vue-ssr-id="2fdd37c8:0">.page-logo{display:flex;align-items:center;text-decoration:none;color:black}.page-logo__icon{width:2rem;height:2rem;background-image:url(/assets/img/kodim-icon-d3361c.svg);background-size:contain}.page-logo__title{font-size:1.2rem;font-weight:bold;margin-left:0.5rem}.navbar{padding:1rem 0}
+</style><style data-vue-ssr-id="6f27289b:0">.exercise__head{display:flex;margin-left:-1.5rem}.exercise__num{width:3rem;height:3rem;line-height:3rem;background-color:white;box-shadow:0 0 10px #ddd;border-radius:1.5rem;text-align:center}.exercise__title{display:flex;align-items:baseline;flex:1;font-size:1.2rem;font-weight:bold;margin-left:0rem}.exercise__title h3{font-size:100%;padding-left:2.5rem;margin-bottom:0.5rem}.exercise__demand{margin-top:2rem;padding-right:4rem;text-align:right}.exercise__body>p,.exercise__body>ul,.exercise__body>ol,.exercise__body>dl{margin-left:4rem;margin-right:4rem}.exercise table tr:nth-child(even){background-color:#ffe664}.demand{min-width:70px;height:14px;background-size:contain;background-position-x:right;background-repeat:no-repeat;background-size:70px 14px}.demand--1{background-image:url(/assets/img/demand1-32b0be.svg)}.demand--2{background-image:url(/assets/img/demand2-3d6156.svg)}.demand--3{background-image:url(/assets/img/demand3-6ddf4a.svg)}.demand--4{background-image:url(/assets/img/demand4-377dc5.svg)}.demand--5{background-image:url(/assets/img/demand5-9e0206.svg)}.demand-text{font-size:0.8rem;font-weight:bold}
+</style></head>
+  <body data-gr-c-s-loaded="true">
+    <div data-server-rendered="true" class="page"><header><div class="navbar container"><a href="http://nove.kodim.cz/" class="page-logo router-link-active"><div class="page-logo__icon"></div> <div class="page-logo__title">Kódím.cz</div></a></div> </header> <main class="main"><div class="container"><aside class="aside"><div class="chapter-link"><a href="http://nove.kodim.cz/czechitas/daweb" class="router-link-active">Příprava před kurzem</a></div> <nav class="article-outline"><a href="#navigovani-mezi-slozkami" class="toc-link">Navigování mezi složkami</a><a href="#loveni-specialnich-znaku" class="toc-link">Lovení speciálních znaků</a><a href="#shrnuti" class="toc-link">Shrnutí</a></nav></aside> <article class="article"><div class="article-head"><div class="article-head__title"><div class="article-head__num">2</div> <h1>Klávesnice a terminál</h1></div> <div class="article-head__brief">Pro všechny programátory je důležité umět psát na klávesnici speciální znaky a ovládat práci s terminálem.</div></div> <div class="article-links"><div class="article-link article-link--backward"><div class="arrow-left"></div> <a href="http://nove.kodim.cz/czechitas/daweb/priprava/instalace-nastroju">
+        Instalace nástrojů
+      </a></div> <div class="article-links-filler"></div> <!----></div> <div class="article-body"><!-- base href="http://nove.kodim.cz/czechitas/daweb/priprava/klavesnice-terminal/" --> <section class="article-section text-section"><p>V
+ této části si ukážeme, jakým způsobem budeme jako programátoři s 
+počítačem komunikovat. Zatím jste nejspíše zvyklí ovládat svůj počítač 
+pomocí různých okýnek, ikonek, grafických čudlíků apod. Takový způsob je
+ ovšem pro programátory mnohdy zbytečně omezující a zdlouhavý. Často je 
+mnohem jednodušíí s počítačem komunikovat textově pomocí takzvaného <em>terminálu</em>.</p>
+<p>Počítačový terminál je zařízení, které má počátky ve 40. a 50. 
+letech. Tehdy vypadal jako elektrický psací stroj a používal se k 
+posílání textových příkazů do počítače, který byl v těchto dobách velký 
+jako kuchyňská linka. Později terminály získaly obrazovky, podobně jako 
+ten na obrázku z roku 1978, takže už se výsledky počítače nemusely 
+tisknout přímo na papír.</p>
+<div class="block-image"><img src="02_kl%C3%A1vesnice_termin%C3%A1l_soubory/vt100.jpg" alt="VT100 Terminál"></div>
+<p>Možná vám to přijde neuvěřitelné, ale i v době, kdy se nám počítače 
+vejdou do kapsy a máme úžasné grafické dotykové obrazovky, pro 
+programátory je často nejrychlejší a nejpřehlednější zadávat příkazy 
+textově jako na starých terminálech. Jediný rozdíl je dnes v tom, že 
+terminál už není fyzické zařízení. Je to prostě program, který si 
+spustíte na svém počítači, a hned vypadáte jako hackeři z nějakého 
+béčkového filmu.</p>
+<p>V našem případě máme život jednoduchý, protože Visual Studio Code má 
+terminál zabudovaný přímo v sobě. Spustíte jej tak, že ve VS Code v 
+horním menu zvolíte <i>Terminal → New Terminal</i>.</p>
+<p><img src="02_kl%C3%A1vesnice_termin%C3%A1l_soubory/vscode-term.png" alt="VS Code Terminál" class="fig fig-100"></p>
+<p>Okno terminálu po otevření vypadá podobně, jako kdybyste používali 
+skutečný fyzický terminál ze sedmdesátých let. Vidíte v něm velký bílý 
+kurzor a před ním jakýsi kus textu, který ve vašem terminálu nejspíše 
+vypadá jinak než v tom na obrázku.</p>
+<p><img src="02_kl%C3%A1vesnice_termin%C3%A1l_soubory/terminal.png" alt="Terminál" class="fig fig-100"></p>
+<p>Po otevření terminálu se v něm ihned spustí takzvaný <em>shell</em>, 
+což je program, který vykonává vaše textové příkazy a vypisuje jejich 
+výsledky. Zde se opět dostáváme trochu do potíží, protože každý operační
+ systém má svůj vlastní shell. To je důvod proč před kurzorem nejspíše 
+vidíte něco jiného než na obrázku. Ve Windows se používá shell jménem <em>cmd</em>, na Linuxu máme <em>bash</em>, MacOS používal také bash, nedávno ale přesedlal na shell jménem <em>zsh</em>.
+ V horní liště mého terminálu vidíte, že můj shell je bash. Mám jej 
+nastavený tak, aby před kurzorem zobrazoval název složky, ve které se 
+zrovna nacházím. Vy tam pravděpodobně máte celou cestu ke složce, ve 
+které se vám terminál otevřel.</p>
+<h3 id="shell-prikazy"><a class="anchor" href="#shell-prikazy">¶</a> Shell příkazy</h3>
+<p>Pokud pracujete na Windows, možná v horní liště terminálu vidíte 
+název PowerShell. To je nový modernější shell od Microsoftu, my jej však
+ používat nebudeme. Zkuste proto z nabídky vybrat shell jménem cmd.</p>
+<p>Nyní můžeme zkusit našemu shellu poslat nějaký příkaz. Nejdříve 
+budeme chtít vidět obsah složky, ve které se právě nacházíme. Pokud jste
+ v shellu cmd, napište do termínálu <code>dir</code> a stiskněte <kbd>Enter</kbd>. Pokud máte bash nebo zsh, příkaz se jmenuje <code>ls</code>. V mém případě vypadá výsledek takto.</p>
+<p><img src="02_kl%C3%A1vesnice_termin%C3%A1l_soubory/terminal-ls.png" alt="Terminál" class="fig fig-100"></p>
+<p>Později v kurzu budeme psát příkazy i jinam než do shellu. Pokud tedy
+ bude potřeba zadat nějaký příkaz přímo v shellu, naznačíme to symbolem 
+dolaru, například takto:</p>
+<pre><code class="language-shell"><span class="hljs-meta">$</span><span class="bash"> dir</span>
+</code></pre>
+<p>Dolar se do shellu nepíše. Z toho důvodu je také barevně odlišen od 
+samotného příkazu. Často také budeme příkazy zobrazovat i s jejich 
+výsledky, které už dolarem nezačínají. To znamená, že je do terminálu 
+nepíšeme, jsou zde vypsány jen pro naši informaci. Výsledek příkazu <code>ls</code> pak může vypadat třeba takto.</p>
+<pre><code class="language-shell"><span class="hljs-meta">$</span><span class="bash"> ls</span>
+assets courses courses.json exercises
+</code></pre>
+<p>Pozor na to, že <code>ls</code> funguje jen v bashi, tedy pouze na Linuxu a MacOS, ve Windows je třeba psát <code>dir</code>.</p>
+<h2 id="navigovani-mezi-slozkami"><a class="anchor" href="#navigovani-mezi-slozkami">¶</a> Navigování mezi složkami</h2>
+<p>Každý shell má mnoho příkazů, pomocí kterých můžete dělat věci jako 
+kopírovat soubory, vytvářet složky, pracovat se sítí apod. My v tomto 
+kurzu budeme shell používat jen málo, protože si chceme povídat 
+především s JavaScriptem. V této části se tedy z shellu naučíme jen to 
+nejdůležitější a to je přecházení mezi složkami.</p>
+<p>Je dobré si zapamatovat, že shell je vždy otevřený uvnitř nějaké 
+složky. Cestu ke složce, ve které se právě nacházíte byste měli vidět 
+před kurzorem. Pokud se chcete přesunout do jiné složky, použijete 
+příkaz <code>cd</code>, který zrovna náhodou funguje úplně ve všech shellech.</p>
+<p>Já jsem si pro účely této lekce otevřel terminál ve složce <code>articles</code>. Pomocí příkazu <code>ls</code> nebo <code>dir</code> jsem zjistil, že uvnitř této složky je mimo jiné i složka <code>courses</code>. Přesunu se do ní tedy příkazem <code>cd</code> a nechám si vypsat její obsah.</p>
+<pre><code class="language-shell"><span class="hljs-meta">$</span><span class="bash"> ls</span>
+assets courses courses.json exercises
+<span class="hljs-meta">$</span><span class="bash"> <span class="hljs-built_in">cd</span> courses</span>
+<span class="hljs-meta">$</span><span class="bash"> ls</span>
+daweb python-data
+</code></pre>
+<p>Nyní se můžu příkazem <code>cd</code> přesunout opět do nějaké složky, kterou vidím na obrazovce, nebo se můžu rozhodnout vrátit do nadřazené složky takto</p>
+<pre><code class="language-shell"><span class="hljs-meta">$</span><span class="bash"> <span class="hljs-built_in">cd</span> ..</span>
+<span class="hljs-meta">$</span><span class="bash"> ls</span>
+assets courses courses.json exercises
+</code></pre>
+<p>Tímto způsobem se můžu zcela svobodně přesouvat mezi složkami na pevném disku.</p>
+<h3 id="tabulator-a-historie"><a class="anchor" href="#tabulator-a-historie">¶</a> Tabulátor a historie</h3>
+<p>Občas jsou názvy složek dlouhé a nechce se nám je celé vypisovat. Zkuste při použití příkazu <code>cd</code> napsat jen prvních pár písmenek z názvu složky a stiskněte klávesu <kbd>Tab</kbd>. Shell by měl sám doplnit zbytek názvu.</p>
+<p>Často se nám také hodí vrátit se k příkazům, které jsme napsali před chvíli. Pokud v terminálu stisknete šipku nahoru <kbd>↑</kbd>, můžete postupně procházet všechny příkazy, které jste do shellu napsali.</p>
+<p>Všechny výše zmíneně postupy budeme používat především proto, abychom
+ dokázali ovládat Git, případně interagovali s balíčkovacím systémem 
+NPM.</p>
+<h2 id="loveni-specialnich-znaku"><a class="anchor" href="#loveni-specialnich-znaku">¶</a> Lovení speciálních znaků</h2>
+<p>Při práci s terminálem ale především během programování budeme často 
+potřebovat napsat různé speciální znaky, které jste možná v životě nikdy
+ nepotřebovali, například složené závorky <code>{}</code>, roura <code>|</code>, dolar <code>$</code>
+ apod. Tyto znaky může být občas těžké na klávesnici najít v závislosti 
+na tom, jaké rozložení klávesnice používáte. V podstatě existují dvě 
+hlavní možnosti.</p>
+<h3 id="pouzivat-ceskou-klavesnici"><a class="anchor" href="#pouzivat-ceskou-klavesnici">¶</a> Používat českou klávesnici</h3>
+<p>Všechny důležité speciální znaky lze napsat na českém QWERTZ rozložení klávesnice za pomoci klávesy <kbd>Alt Gr</kbd> (pravý Alt). Například levá složená závorka se napíše jako <kbd>Alt Gr</kbd> + <kbd>B</kbd>. Následující <a href="http://nove.kodim.cz/czechitas/daweb/priprava/klavesnice-terminal/assets/keyboard-cs-en.pdf">plánek</a>
+ by vám měl pomoci najít na českém rozložení všechny znaky, které budete
+ potřebovat. Jen pozor, že pokud máte české rozložení ve variantě 
+QWERTY, zkratky používající <kbd>Alt Gr</kbd> vám pravděpodobně fungovat nebudou.</p>
+<h3 id="prepinat-mezi-ceskou-a-anglickou-klavesnici"><a class="anchor" href="#prepinat-mezi-ceskou-a-anglickou-klavesnici">¶</a> Přepínat mezi českou a anglickou klávesnicí</h3>
+<p>Druhá možnost je během programování přepínat mezi českou a anglickou 
+klávesnicí. Zde je výhoda v tom, že většina důležitých speciálních znaků
+ se na anglické klávesnici nachází v horní řadě tam, kde jsou běžně 
+písmenka s diakritikou, opět viz <a href="http://nove.kodim.cz/czechitas/daweb/priprava/klavesnice-terminal/assets/keyboard-cs-en.pdf">plánek</a>. Drobná potíž spočívá v tom, že na české a anglické klávesnizi se liší pozice písmen <kbd>Y</kbd> a <kbd>Z</kbd>.
+ Proto je lepší používat české rozložení ve variantě QWERTY. V takovémto
+ případě je také dobré naučit se zkratku pro přepínání mezi 
+klávesnicemi. Ve Windows to bývá většinou <kbd>Alt</kbd> + <kbd>Shift</kbd>.</p>
+</section> <!----><!----> <section class="article-section exercises-section"><!----> <!----> <div class="exercise"><div class="exercise__head"><div class="exercise__title"><div class="exercise__num">1</div> <h3 id="cvi-klavesova-zviratka"><a href="#cvi-klavesova-zviratka" class="anchor">¶</a>
+        Klávesová zvířátka
+      </h3></div> <div class="exercise__demand"><div class="demand demand--2"></div> <div class="demand-text">to dáš</div></div></div> <div class="exercise__body">
+<p>Nastavte si klávesnici na českou nebo anglickou podle toho, jak vám 
+osobně přijde nejpohodlnější. Procvičte si svoji orientaci ve spciálních
+ znacích a zkuste pomocí nich vyrobit alespoň některá z následujících 
+klávesových zvířátek.</p>
+<div class="block-image"><img src="02_kl%C3%A1vesnice_termin%C3%A1l_soubory/ascii-animals.png" alt="Klávesová zvířátka"></div>
+</div></div></section><section class="article-section text-section"><h2 id="shrnuti"><a class="anchor" href="#shrnuti">¶</a> Shrnutí</h2>
+<p>V této lekci jsme</p>
+<ul>
+<li>poznali co je to terminál a k čemu se nám hodí,</li>
+<li>naučili se základní příkazy v shellech jako cmd nebo bash,</li>
+<li>zorientovali se na klávesnici a naučili se psát spoustu divných ale užitečných znaků.</li>
+</ul>
+</section> <!----></div></article></div></main> <footer class="footer"><div class="container">Martin Podloucký</div></footer></div>
+  
+
+</body></html>

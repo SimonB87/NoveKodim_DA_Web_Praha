@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="cz"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>kodim.cz</title>
+  <style data-vue-ssr-id="499c037c:0">@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700,900|Roboto+Mono:400,700&display=fallback&subset=latin-ext);</style><style data-vue-ssr-id="499c037c:1">*{box-sizing:border-box}html{font-family:"Montserrat", sans-serif;font-size:15px}body{margin:0;color:#444;background-color:#f9f9f9}.container{width:100%;margin-left:auto;margin-right:auto}@media only screen and (min-width: 576px){.container{width:540px}}@media only screen and (min-width: 768px){.container{width:720px}}@media only screen and (min-width: 992px){.container{width:960px}}.btn{border:none;outline:none;border-radius:1rem;padding:0.5rem 1rem;text-align:center;text-decoration:none;color:black;box-shadow:0 0 10px #ddd;transition:400ms}.btn:hover{transform:scale(1.1)}.btn-open{background-color:#ffec88}
+</style><style data-vue-ssr-id="54541dba:0">.hljs{display:block;overflow-x:auto;padding:0.5em;background:#222222;color:#C0C0C0}.hljs-keyword{color:#FFB871;font-weight:bold}.hljs-built_in{color:#FFB871}.hljs-literal{color:#FF8080}.hljs-symbol{color:#58E55A}.hljs-comment{color:#5B995B}.hljs-string{color:#FFFF00}.hljs-number{color:#FF8080}.hljs-attribute,.hljs-selector-tag,.hljs-doctag,.hljs-name,.hljs-bullet,.hljs-code,.hljs-addition,.hljs-regexp,.hljs-variable,.hljs-template-variable,.hljs-link,.hljs-selector-attr,.hljs-selector-pseudo,.hljs-type,.hljs-selector-id,.hljs-selector-class,.hljs-quote,.hljs-template-tag,.hljs-deletion,.hljs-title,.hljs-section,.hljs-function,.hljs-meta-keyword,.hljs-meta,.hljs-subst{color:#C0C0C0}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:bold}.article-outline{margin:2rem 3rem 0 0}.arrow-left{background-color:#ffec88;background-size:contain;width:2.5rem;height:2.5rem;border-radius:1.25rem;box-shadow:0 0 10px #ddd;background-image:url(/assets/img/arrow-left-5d2511.svg)}.arrow-right{background-color:#ffec88;background-size:contain;width:2.5rem;height:2.5rem;border-radius:1.25rem;box-shadow:0 0 10px #ddd;background-image:url(/assets/img/arrow-right-b02d21.svg)}.chapter-link{padding-left:1rem}.chapter-link a{text-decoration:none;color:black;font-size:1.2rem;font-weight:bold}.chapter-link a:hover{text-decoration:underline}.article-links{display:flex;margin-top:1rem}.article-links-filler{flex:1}.article-link{display:flex;align-items:center}.article-link a{text-decoration:none;color:black}.article-link a:hover{text-decoration:underline}.article-link--backward{margin-left:-1.25rem}.article-link--backward a{margin-left:2.75rem}.article-link--forward{margin-right:-1.25rem}.article-link--forward a{margin-right:2.75rem}.toc-link{display:block;width:100%;text-decoration:none;color:black;padding:0.5rem 1rem}.toc-link:hover{background-color:#f6f6f6}.exrc-section-title{margin-top:1rem !important;margin-bottom:0rem !important}.exrc-bonuses{padding:2rem 4rem;color:white;background-color:orange;margin-bottom:1rem}.exrc-bonuses__head{font-size:1.2rem;font-weight:bold;margin-bottom:1rem}.article-section{padding:2rem 0}.warn-section{background-color:#e2252b;color:white}.text-section table tr:nth-child(even){background-color:#e8e8e8}.exercises-section{background-color:#ffec88}.block-image{margin:3rem 0}.block-image img{display:block;width:100%;height:auto}.fig{display:block;margin:2rem auto;height:auto}li>.fig{margin:1rem auto}.fig-100{width:100%}.fig-90{width:90%}.fig-80{width:80%}.fig-70{width:70%}.fig-60{width:60%}.fig-50{width:50%}table{margin:2rem auto}table thead{border-bottom:2px solid #333}table td{padding:0.5rem}
+</style><style data-vue-ssr-id="34f8141e:0">.article-head{padding:0 4rem}.article-head__title{display:flex;align-items:baseline;font-size:1.8rem;font-weight:bold;margin-left:-6rem}.article-head__title h1{font-size:100%}.article-head__num{width:4rem;height:4rem;line-height:4rem;text-align:center;background-color:#ffec88;box-shadow:0 0 10px #ddd;border-radius:2rem;margin-right:2rem}.aside{display:none;width:320px;position:fixed;z-index:1;overflow-x:hidden;padding-top:20px}@media only screen and (min-width: 992px){.aside{display:block}}.article{margin:0rem 0 6rem 0;background-color:white;padding-top:2rem;box-shadow:0 0 10px #ddd;line-height:150%;border-radius:1rem}@media only screen and (min-width: 992px){.article{margin:0rem 0 6rem 320px}}.article .text-section>p,.article .text-section>ul,.article .text-section>ol,.article .text-section>dl{margin-left:4rem;margin-right:4rem}.article dt,.article dd{margin-bottom:0.5rem}.article h2,.article h3,.article h4{padding:1rem 4rem}.article .anchor{opacity:0;transition:250ms;text-decoration:none;color:#869af5;margin-left:-1.7rem}.article h2{margin-top:3rem;margin-bottom:1rem;font-size:1.6rem;font-weight:900}.article h2 .anchor{margin-left:-1.7rem}.article h3{margin-top:1rem;margin-bottom:0rem}.article h3 .anchor{margin-left:-1.2rem}.article h2:hover .anchor,.article h3:hover .anchor{opacity:1;margin-left:0}.article p{margin-top:0;margin-bottom:1rem;hyphens:manual}.article li{margin-bottom:0.5rem}.article .text-section:first-child p:first-child:first-letter{float:left;font-size:5rem;line-height:4rem;padding-top:0.3rem;padding-right:0.5rem}.article em{background-color:#d1ebf1;padding:0rem 0.5rem;border-radius:10px}.article pre,.article code,.article var{font-family:"Roboto Mono"}.article pre{background-color:#555;color:white;padding:1rem 4rem;margin:2rem 0;overflow-x:auto}.article var{font-style:normal;color:blue}.article kbd{font-family:"Montserrat";background-color:#fff;border:1px solid #888;border-radius:4px;padding:0rem 0.5rem}.term{display:inline;position:relative;font-style:italic;overflow:visible}.term__icon{display:inline-block;vertical-align:middle;width:15px;height:15px;margin-left:0.5rem;margin-bottom:2px;margin-right:0;background-image:url(/assets/img/english-9a71e2.png);background-size:contain;background-repeat:no-repeat}.term__cs{background-color:#d1ebf1;padding:0rem 0rem 0rem 0.5rem;border-radius:10px;white-space:pre;cursor:default}.term__en{position:absolute;top:-2rem;left:0rem;background-color:#444;color:white;padding:0rem 0.5rem;border-radius:5px;opacity:0;visibility:hidden;z-index:1;white-space:pre;transition:500ms}.term:hover .term__en{visibility:visible;opacity:1}
+</style><style data-vue-ssr-id="3c9796f4:0">.page{display:grid;grid-template-columns:auto;grid-template-rows:auto 1fr auto;min-height:100vh}.footer{padding:2rem 0;background-color:#dce7f4}
+</style><style data-vue-ssr-id="2fdd37c8:0">.page-logo{display:flex;align-items:center;text-decoration:none;color:black}.page-logo__icon{width:2rem;height:2rem;background-image:url(/assets/img/kodim-icon-d3361c.svg);background-size:contain}.page-logo__title{font-size:1.2rem;font-weight:bold;margin-left:0.5rem}.navbar{padding:1rem 0}
+</style><style data-vue-ssr-id="6f27289b:0">.exercise__head{display:flex;margin-left:-1.5rem}.exercise__num{width:3rem;height:3rem;line-height:3rem;background-color:white;box-shadow:0 0 10px #ddd;border-radius:1.5rem;text-align:center}.exercise__title{display:flex;align-items:baseline;flex:1;font-size:1.2rem;font-weight:bold;margin-left:0rem}.exercise__title h3{font-size:100%;padding-left:2.5rem;margin-bottom:0.5rem}.exercise__demand{margin-top:2rem;padding-right:4rem;text-align:right}.exercise__body>p,.exercise__body>ul,.exercise__body>ol,.exercise__body>dl{margin-left:4rem;margin-right:4rem}.exercise table tr:nth-child(even){background-color:#ffe664}.demand{min-width:70px;height:14px;background-size:contain;background-position-x:right;background-repeat:no-repeat;background-size:70px 14px}.demand--1{background-image:url(/assets/img/demand1-32b0be.svg)}.demand--2{background-image:url(/assets/img/demand2-3d6156.svg)}.demand--3{background-image:url(/assets/img/demand3-6ddf4a.svg)}.demand--4{background-image:url(/assets/img/demand4-377dc5.svg)}.demand--5{background-image:url(/assets/img/demand5-9e0206.svg)}.demand-text{font-size:0.8rem;font-weight:bold}
+</style></head>
+  <body data-gr-c-s-loaded="true">
+    <div data-server-rendered="true" class="page"><header><div class="navbar container"><a href="http://nove.kodim.cz/" class="page-logo router-link-active"><div class="page-logo__icon"></div> <div class="page-logo__title">Kódím.cz</div></a></div> </header> <main class="main"><div class="container"><aside class="aside"><div class="chapter-link"><a href="http://nove.kodim.cz/czechitas/daweb" class="router-link-active">Základy JavaScriptu</a></div> <nav class="article-outline"><a href="#pole" class="toc-link">Pole</a><a href="#cviceni-prace-s-poli" class="toc-link">Cvičení - práce s poli</a><a href="#cykly" class="toc-link">Cykly</a><a href="#slozitejsi-cykly" class="toc-link">Složitejší cykly</a><a href="#cviceni-cykly" class="toc-link">Cvičení - Cykly</a><a href="#povinne-cteni-na-doma" class="toc-link">Povinné čtení na doma</a><a href="#doporucene-ulozky-na-doma" class="toc-link">Doporučené úložky na doma</a><a href="#nepovinne-ulozky-na-doma" class="toc-link">Nepovinné úložky na doma</a></nav></aside> <article class="article"><div class="article-head"><div class="article-head__title"><div class="article-head__num">6</div> <h1>Pole a cykly</h1></div> <div class="article-head__brief">Užitečnost
+ počítačů spočívá především v tom, že dokážou velmi rychle provádět 
+opakovaně nějakou činnost, tedy provádět takzvaný cyklus.</div></div> <div class="article-links"><div class="article-link article-link--backward"><div class="arrow-left"></div> <a href="http://nove.kodim.cz/czechitas/daweb/zaklady-js/debug-scope">
+        Ladění a obory platnosti
+      </a></div> <div class="article-links-filler"></div> <div class="article-link article-link--forward"><a href="http://nove.kodim.cz/czechitas/daweb/zaklady-js/opakovani-dry">
+        Opakování, princip DRY
+      </a> <div class="arrow-right"></div></div></div> <div class="article-body"><!-- base href="http://nove.kodim.cz/czechitas/daweb/zaklady-js/pole-cykly/" --> <section class="article-section text-section"><p>Do
+ této chvíle jsme uměli do nějaké proměnné uložit pouze jednu hodnotu, 
+například řetězec, DOM element nebo funkci. Počítače ale často potřebují
+ pracovat v mnohem větším objemem dat, než je několik čísel nebo 
+řetězců. V této lekci si ukážeme jak ukládat větší množství hodnot do 
+jedné proměnné a jak potom můžeme s takovými hodnotami zpracovávat 
+pomocí cyklů.</p>
+<h2 id="pole"><a class="anchor" href="#pole">¶</a> Pole</h2>
+<p>
+          <span class="term">
+            <span class="term__cs">Pole<span class="term__icon"></span></span>
+            <span class="term__en">Array</span>
+          </span>
+         nám umožňují do jedné proměnné uložit více hodnot. Pokud znáte 
+například jazyk Python, pole v JavaScriptu jsou totéž co seznamy v 
+Pythonu.</p>
+<p>Pole tvoříme pomocí hranatých závorek. Takto například do jedné 
+proměnné uložíme známky ze všech písemek psaných za jedno pololetí.</p>
+<pre><code class="language-jscon"><span class="hljs-meta">&gt;</span><span class="javascript"> <span class="hljs-keyword">const</span> marks = [<span class="hljs-number">3</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">4</span>]</span>
+</code></pre>
+<p>Uvnitř polí je možné mít zcela libovolné hodnoty, tedy například řetězce, DOM elementy apod.</p>
+<pre><code class="language-jscon"><span class="hljs-meta">&gt;</span><span class="javascript"> <span class="hljs-keyword">const</span> temperaturs = [<span class="hljs-number">13.5</span>, <span class="hljs-number">12.7</span>, <span class="hljs-number">11.2</span>, <span class="hljs-number">12.3</span>, <span class="hljs-number">15.1</span>]</span>
+<span class="hljs-meta">&gt;</span><span class="javascript"> <span class="hljs-keyword">const</span> users = [<span class="hljs-string">'john'</span>, <span class="hljs-string">'sue'</span>, <span class="hljs-string">'peter'</span>, <span class="hljs-string">'jane'</span>, <span class="hljs-string">'soji'</span>]</span>
+</code></pre>
+<p>Samotné pole je ovšem také hodnota. Není tedy problém mít například pole polí.</p>
+<pre><code class="language-jscon"><span class="hljs-meta">&gt;</span><span class="javascript"> <span class="hljs-keyword">const</span> expenses = [[<span class="hljs-string">'john'</span>, <span class="hljs-number">250</span>], [<span class="hljs-string">'sue'</span>, <span class="hljs-number">170</span>], [<span class="hljs-string">'peter'</span>, <span class="hljs-number">337</span>]]</span>
+</code></pre>
+<p>Pozor na to, že podobně jako existuje prázný řetězec <code>''</code>, existuje také prázdné pole <code>[]</code>. Je to zcela běžná hodnota, která se často velmi hodí.</p>
+<h3 id="indexy"><a class="anchor" href="#indexy">¶</a> Indexy</h3>
+<p>Hodnoty uvnitř polí sídlí na takzvaných indexech. Programátoři však 
+mají takový zvláštní fetiš, že všechno počítačí počínaje nulou, nikoliv 
+jedničkou. Má to svoje důvody, které však zatím nebudeme rozvádět. 
+Raději si rovnou ukážeme, jak přistupovat k hodnotám na jednotlivých 
+indexech.</p>
+<pre><code class="language-jscon"><span class="hljs-meta">&gt;</span><span class="javascript"> <span class="hljs-keyword">const</span> marks = [<span class="hljs-number">3</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">4</span>]</span>
+undefined
+<span class="hljs-meta">&gt;</span><span class="javascript"> marks[<span class="hljs-number">0</span>]</span>
+3
+<span class="hljs-meta">&gt;</span><span class="javascript"> marks[<span class="hljs-number">3</span>]</span>
+4
+</code></pre>
+<p>Pomocí indexů také můžeme hodnoty uvnitř pole měnit. Dejme tomu, že si poslední nehezkou čtyřku opravíme na dvojku.</p>
+<pre><code class="language-jscon"><span class="hljs-meta">&gt;</span><span class="javascript"> marks[<span class="hljs-number">3</span>] = <span class="hljs-number">2</span></span>
+2
+<span class="hljs-meta">&gt;</span><span class="javascript"> marks</span>
+[ 3, 1, 2, 2 ]
+</code></pre>
+<p>U polí, která obsahují další pole, se k jednotlivým prvkům dostaneme 
+pomocí vícenásobného indexování. Takto například zjistíme, kolik utratil
+ Petr v našem polí výdajů.</p>
+<pre><code class="language-jscon"><span class="hljs-meta">&gt;</span><span class="javascript"> <span class="hljs-keyword">const</span> expenses = [[<span class="hljs-string">'john'</span>, <span class="hljs-number">250</span>], [<span class="hljs-string">'sue'</span>, <span class="hljs-number">170</span>], [<span class="hljs-string">'peter'</span>, <span class="hljs-number">337</span>]]</span>
+undefined
+<span class="hljs-meta">&gt;</span><span class="javascript"> expenses[<span class="hljs-number">2</span>][<span class="hljs-number">1</span>]</span>
+337
+</code></pre>
+<h3 id="vlastnosti-a-metody"><a class="anchor" href="#vlastnosti-a-metody">¶</a> Vlastnosti a metody</h3>
+<p>Pole také mají zajímavé vlastnosti a metody. Vlastnost <code>length</code> už známe z řetězců.</p>
+<pre><code class="language-jscon"><span class="hljs-meta">&gt;</span><span class="javascript"> marks.length</span>
+4
+</code></pre>
+<p>Pomocí metody <code>push</code> můžeme přidat novou hodnotu na konec pole.</p>
+<pre><code class="language-jscon"><span class="hljs-meta">&gt;</span><span class="javascript"> marks.push(<span class="hljs-number">1</span>)</span>
+5
+<span class="hljs-meta">&gt;</span><span class="javascript"> marks</span>
+[ 3, 1, 2, 2, 1]
+</code></pre>
+<p>Naopak pomocí metody <code>pop</code> poslení prvek pole smažeme.</p>
+<pre><code class="language-jscon"><span class="hljs-meta">&gt;</span><span class="javascript"> marks.pop()</span>
+1
+<span class="hljs-meta">&gt;</span><span class="javascript"> marks</span>
+[ 3, 1, 2, 2 ]
+</code></pre>
+<p>Pokud chceme odebrat prvek ze začátku pole, použijeme metodu <code>shift</code>.</p>
+<pre><code class="language-jscon"><span class="hljs-meta">&gt;</span><span class="javascript"> marks.shift()</span>
+3
+<span class="hljs-meta">&gt;</span><span class="javascript"> marks</span>
+[ 1, 2, 2 ]
+</code></pre>
+<p>Chceme-li přidat prvek na začátek pole, je to vlastně opačná operace k <code>shift</code>. Metoda pro přidání prvku na začátek pole ma tedy trochu zláštní jméno <code>unshift</code>.</p>
+<pre><code class="language-jscon"><span class="hljs-meta">&gt;</span><span class="javascript"> marks.unshift(<span class="hljs-number">1</span>)</span>
+4
+<span class="hljs-meta">&gt;</span><span class="javascript"> marks</span>
+[ 1, 1, 2, 2 ]
+</code></pre>
+<p>Pomocí metody <code>includes</code> můžeme zjistit, jestli se unvitř pole nechází zadaný prvek.</p>
+<pre><code class="language-jscon"><span class="hljs-meta">&gt;</span><span class="javascript"> marks</span>
+[ 1, 1, 2, 2 ]
+<span class="hljs-meta">&gt;</span><span class="javascript"> marks.includes(<span class="hljs-number">1</span>)</span>
+true
+<span class="hljs-meta">&gt;</span><span class="javascript"> marks.includes(<span class="hljs-number">3</span>)</span>
+false
+</code></pre>
+<p>Metoda <code>indexOf</code> nám přímo řekne první index, na kterém se zadaný prvek v poli nachází. Pokud prvek v poli není, obdržíme -1.</p>
+<pre><code class="language-jscon"><span class="hljs-meta">&gt;</span><span class="javascript"> marks</span>
+[ 1, 1, 2, 2 ]
+<span class="hljs-meta">&gt;</span><span class="javascript"> marks.indexOf(<span class="hljs-number">2</span>)</span>
+2
+<span class="hljs-meta">&gt;</span><span class="javascript"> marks.indexOf(<span class="hljs-number">3</span>)</span>
+-1
+</code></pre>
+<h3 id="retezce-versus-pole"><a class="anchor" href="#retezce-versus-pole">¶</a> Řetězce versus pole</h3>
+<p>Řetězce jsme v tomto kurzu potkali na samém začátku. Nyní si však 
+můžeme ukázat, že řetězce mají s poli hodně společného. V některých 
+situacích se totiž chovají jako pole znaků. Už víme, že pole i řetězce 
+mají vlastno <code>length</code>. Můžete však také přistupovat k jednotlivých znakům skrze indexy.</p>
+<pre><code class="language-jscon"><span class="hljs-meta">&gt;</span><span class="javascript"> <span class="hljs-keyword">const</span> name = <span class="hljs-string">'Ernest'</span></span>
+undefined
+<span class="hljs-meta">&gt;</span><span class="javascript"> name.length</span>
+6
+<span class="hljs-meta">&gt;</span><span class="javascript"> name[<span class="hljs-number">1</span>]</span>
+'r'
+<span class="hljs-meta">&gt;</span><span class="javascript"> name[<span class="hljs-number">5</span>]</span>
+'t'
+</code></pre>
+<p>Na řetězcích také najdeme metody <code>includes</code> a <code>indexOf</code>. Tentokrát však můžeme vyhledávat nejen písmenka, ale celé podřetězce.</p>
+<pre><code class="language-jscon"><span class="hljs-meta">&gt;</span><span class="javascript"> <span class="hljs-keyword">const</span> text = <span class="hljs-string">'Kobyla má malý bok'</span></span>
+undefined
+<span class="hljs-meta">&gt;</span><span class="javascript"> text.includes(<span class="hljs-string">'b'</span>)</span>
+true
+<span class="hljs-meta">&gt;</span><span class="javascript"> text.includes(<span class="hljs-string">'malý'</span>)</span>
+true
+<span class="hljs-meta">&gt;</span><span class="javascript"> text.indexOf(<span class="hljs-string">'malý'</span>)</span>
+10
+<span class="hljs-meta">&gt;</span><span class="javascript"> text.indexOf(<span class="hljs-string">'velký'</span>)</span>
+-1
+</code></pre>
+<h3 id="pouziti-poli"><a class="anchor" href="#pouziti-poli">¶</a> Použití polí</h3>
+<p>Pole v programování potkáme na každém kroku. Můžeme je například 
+použít pro reprezentaci dat. Takto například pomocí reprezentujeme 
+tabulku výdajů z našeho úplně prvního příkladu se spolubydlením.</p>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> expenses = [
+  [<span class="hljs-string">'Petr'</span>, <span class="hljs-string">'Prací prášek'</span>, <span class="hljs-number">240</span>],
+  [<span class="hljs-string">'Ondra'</span>, <span class="hljs-string">'Savo'</span>, <span class="hljs-number">80</span>],
+  [<span class="hljs-string">'Pavla'</span>, <span class="hljs-string">'Toaleťák'</span>, <span class="hljs-number">65</span>],
+  [<span class="hljs-string">'Zuzka'</span>, <span class="hljs-string">'Mýdlo'</span>, <span class="hljs-number">50</span>],
+  [<span class="hljs-string">'Pavla'</span>, <span class="hljs-string">'Závěs do koupelny'</span>, <span class="hljs-number">350</span>],
+  [<span class="hljs-string">'Libor'</span>, <span class="hljs-string">'Pivka na kolaudačku'</span>, <span class="hljs-number">124</span>],
+  [<span class="hljs-string">'Petr'</span>, <span class="hljs-string">'Pytle na odpadky'</span>, <span class="hljs-number">75</span>],
+  [<span class="hljs-string">'Míša'</span>, <span class="hljs-string">'Utěrky na nádobí'</span>, <span class="hljs-number">130</span>],
+  [<span class="hljs-string">'Ondra'</span>, <span class="hljs-string">'Toaleťák'</span>, <span class="hljs-number">120</span>],
+  [<span class="hljs-string">'Míša'</span>, <span class="hljs-string">'Pečící papír'</span>, <span class="hljs-number">30</span>],
+  [<span class="hljs-string">'Zuzka'</span>, <span class="hljs-string">'Savo'</span>, <span class="hljs-number">80</span>],
+  [<span class="hljs-string">'Petr'</span>, <span class="hljs-string">'Tapeta na záchod'</span>, <span class="hljs-number">315</span>],
+  [<span class="hljs-string">'Ondra'</span>, <span class="hljs-string">'Toaleťák'</span>, <span class="hljs-number">64</span>],
+];
+</code></pre>
+<p>Pomocí pole polí můžeme také reprezentovat herní plány v různých 
+počítačovách hrách. Takto například mohou vypadat rozehrané piškvorky 
+3x3.</p>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> tictactoe = [
+  [<span class="hljs-string">'o'</span>, <span class="hljs-string">' '</span>, <span class="hljs-string">' '</span>],
+  [<span class="hljs-string">' '</span>, <span class="hljs-string">'x'</span>, <span class="hljs-string">' '</span>],
+  [<span class="hljs-string">' '</span>, <span class="hljs-string">'o'</span>, <span class="hljs-string">'x'</span>],
+];
+</code></pre>
+<p>Vidíme, že na tahu je zrovna křížek. Můžeme tak snadno provést nějaký chytrý tah.</p>
+<pre><code class="language-jscon"><span class="hljs-meta">&gt;</span><span class="javascript"> tictactoe[<span class="hljs-number">0</span>][<span class="hljs-number">2</span>] = <span class="hljs-string">'x'</span></span>
+<span class="hljs-meta">&gt;</span><span class="javascript"> tictactoe</span>
+[
+  ['o', ' ', 'x'],
+  [' ', 'x', ' '],
+  [' ', 'o', 'x'],
+];
+</code></pre>
+</section> <!----><!----> <section class="article-section exercises-section"><h2 id="cviceni-prace-s-poli" class="exrc-section-title"><a href="#cviceni-prace-s-poli" class="anchor">¶</a>
+          Cvičení - práce s poli
+        </h2> <!----> <div class="exercise"><div class="exercise__head"><div class="exercise__title"><div class="exercise__num">1</div> <h3 id="cvi-pole-v-divadle"><a href="#cvi-pole-v-divadle" class="anchor">¶</a>
+        Pole v divadle
+      </h3></div> <div class="exercise__demand"><div class="demand demand--1"></div> <div class="demand-text">pohodička</div></div></div> <div class="exercise__body">
+<p>Celé toto cvičení prováďejte v JavaScript konzoli.</p>
+<ol>
+<li>Vytvořte nějaké pole celých čísel, například počty diváků na 
+několika po sobě jdoucích divadelních představeních. Použije metodu <code>push</code> a přidejte do pole počet diváků na novém představení.</li>
+<li>Vytvořte nějaké pole desetinných čísel, například zaplněnost divadla v několika po sobě jdoucích představeních.</li>
+<li>Vytvořte nějaké pole řetězců, například seznam názvů několika 
+divadelních představení, která divadlo hraje. Uložte tento seznam do 
+proměnné <code>plays</code>. Uložte do nějaké proměnné druhou položku tohoto pole. Pomocí metody <code>shift</code> odstraňte z pole první představení, které už divadlo nehraje.</li>
+<li>Do proměnné <code>reviews</code> uložte pole hodnocení, které obdržela divadelní hra <i>Plyšáci na útěku</i>
+ v různých recenzních časopisech. Hodnocení je vždy dvouprvkové pole 
+obsahující název recenzního časopisu jako řetězec a samotné hodnocení 
+jako číslo mezi 1 až 10. Pomocí metody <code>unshift</code> přidejte na začátek nové hodnocení z časopisu <i>Divadelní oběžník</i>.</li>
+</ol>
+</div></div><div class="exercise"><div class="exercise__head"><div class="exercise__title"><div class="exercise__num">2</div> <h3 id="cvi-sachovnice"><a href="#cvi-sachovnice" class="anchor">¶</a>
+        Šachovnice
+      </h3></div> <div class="exercise__demand"><div class="demand demand--2"></div> <div class="demand-text">to dáš</div></div></div> <div class="exercise__body">
+<p>Založte JavaScriptový program a vytvořte v něm pole, které bude reprezentavat rozehranou šachovou partii jako na obrázku.</p>
+<p><img src="08_Pole_a_cykly_soubory/sachovnice.png" alt="Šachovnice" class="fig fig-60"></p>
+<ol>
+<li>Šachovnici reprezentujte jako pole polí, kde každý řádek je 
+reprezentován jako jedno pole. Políčka reprerezentujte jako čísla dle 
+následujícího klíče.
+<ul>
+<li>0 - prázné políčko</li>
+<li>1 - pěšec</li>
+<li>2 - věž</li>
+<li>3 - kůň</li>
+<li>4 - střelec</li>
+<li>5 - dáma</li>
+<li>6 - král</li>
+</ul>
+</li>
+<li>Otevřete tento program v konzoli a napište příkaz, který přesune bílého koně z pozice f3 na pozici e5.</li>
+</ol>
+<!--
+Šachové pozice: https://chessfox.com/how-to-play-in-chess-positions-that-feature-material-imbalances/
+-->
+</div></div></section><section class="article-section text-section"><h2 id="cykly"><a class="anchor" href="#cykly">¶</a> Cykly</h2>
+<p>Pole a cykly jsou jakýmsi svatým grálem začátečníckého programování. 
+Otvírají cestu k mnohem zajímavějším a komplexnějším programům a 
+aplikacím. Cykly slouží k tomu, abychom mohli nějaký kus kódu provádět 
+opakovaně. Síla počítačů spočívá právě v tom, že dokážou extrémně rychle
+ provádět opakovanou činnost a tím nám ušetřit mnoho práce. V 
+JavaScriptu existuje vícero typů cyklů a v této lekci se zatím 
+představíme pouze ty hlavní a základní.</p>
+<h3 id="cyklus-while"><a class="anchor" href="#cyklus-while">¶</a> Cyklus WHILE</h3>
+<p>Na nejpřímočařejší použití cyklu narazíme ve chvíli, kdy chceme 
+provést nějaký kus kódu vícekrát po sobě. Pro jednoduchost zečněme tím, 
+že budeme chtít do konzole vypsat čísla od 1 do 10. Toho dosáhneme 
+následujícím kódem.</p>
+<pre><code class="language-js"><span class="hljs-keyword">let</span> num = <span class="hljs-number">1</span>;
+<span class="hljs-keyword">while</span> (num &lt;= <span class="hljs-number">10</span>) {
+  <span class="hljs-built_in">console</span>.log(num);
+  num += <span class="hljs-number">1</span>;
+}
+</code></pre>
+<p>Na začátku si vytváříme proměnnou <code>num</code>, která bude obsahovat naše čísla. Poté následuje cyklus, který vypadá velmi podobně jako podmínka <code>if</code>. Podobně jaku u podmínek, i zde se do kulatých závorkách píše výraz, který vrací pravdivostní hodnotu. Pokud tento výraz vrátí <code>true</code>, vykoná se zadaný blok kódu. Jakmile však blok kódu skončí, výraz v kulatých závorkách se vyhodnotí znovu. Pokud opět vrátí <code>true</code>, blok kódu se vykoná znova. Takto se cyklus opakuje tak dlouho, dokud výraz v závorkách nevrátí <code>false</code>.</p>
+<p>Protože v bloku kódu vždy přičteme k proměnné <code>num</code> jedničku, cyklus se nám zopakuje dohromady desetkrát.</p>
+<p>Cyklus nemusíme použít jen k počítání. Můžeme například nechat uživatele zadávat heslo tak, dlouho, dokud nezadá to správné.</p>
+<pre><code class="language-js"><span class="hljs-keyword">let</span> pass = prompt(<span class="hljs-string">'Enter your password:'</span>);
+<span class="hljs-keyword">while</span> (pass !== <span class="hljs-string">'fatboyslim'</span>) {
+  pass = prompt(<span class="hljs-string">'Wrong password. Try again:'</span>);
+}
+</code></pre>
+<p>Tento program je na uživatele zbytečně zlý. Lepší by nejspíš bylo, kdybychom počet opakování omezili například na maximálně pět.</p>
+<pre><code class="language-js"><span class="hljs-keyword">let</span> attempt = <span class="hljs-number">1</span>;
+<span class="hljs-keyword">let</span> pass = prompt(<span class="hljs-string">'Enter your password:'</span>);
+<span class="hljs-keyword">while</span> (pass !== <span class="hljs-string">'fatboyslim'</span> &amp;&amp; attempt &lt; <span class="hljs-number">6</span>) {
+  pass = prompt(<span class="hljs-string">'Wrong password. Try again:'</span>);
+  attempt += <span class="hljs-number">1</span>;
+}
+</code></pre>
+<p>Pozor na to, že stačí malá nepozornost a vyrobíme cyklus, který se opakuje do nekonečna.</p>
+<pre><code class="language-js"><span class="hljs-keyword">let</span> num = <span class="hljs-number">1</span>;
+<span class="hljs-keyword">while</span> (num &lt;= <span class="hljs-number">10</span>) {
+  <span class="hljs-built_in">console</span>.log(num);
+  num + <span class="hljs-number">1</span>;
+}
+</code></pre>
+<p>V praxi se nám občas nekonečný cyklus hodí, ale většinou vzníká jako 
+chyba v programu. Jistě se vám již mnohokrát stalo, že počítač takzvaně 
+zamrznul. Většinou je to právě proto, že nějaký program se omylem dostal
+ do nekonečné smyčky.</p>
+<h3 id="prochazeni-pole"><a class="anchor" href="#prochazeni-pole">¶</a> Procházení pole</h3>
+<p>Velmi často budeme používat cyklus k tomu, abychom prošli nejaké pole
+ porvek po prvku a s každým prvkem něco udělali. V takovém případě si 
+vyrobíme cyklus, který prochází jednotlivé indexy pole a tyto indexy pak
+ používáme k přístupu k jednotlivým prvkům. Zkusme například vypsat na 
+obrazovku naše pole známek.</p>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> marks = [<span class="hljs-number">2</span>, <span class="hljs-number">4</span>, <span class="hljs-number">1</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">3</span>];
+
+<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>;
+<span class="hljs-keyword">while</span> (i &lt; marks.length) {
+  <span class="hljs-built_in">console</span>.log(marks[i]);
+  i += <span class="hljs-number">1</span>;
+}
+</code></pre>
+<p>Aby cyklus správně fungoval, musíme si dát dobrý pozor jednak na to, abychom s indexm <code>i</code> začínali od nuly a bychom nepřekročili délku pole.</p>
+<p>Všimněte si, že už po několikáté vidíme cyklus, kde používáme nějakou
+ proměnnou, kterou postupně navyšujeme dokud nedojdeme k nějakému 
+limitu. Protože tato proměnná vlastně řídí, jak dlouho se celý cyklus 
+bude opakovat, říkáme jí <em>řídící proměnná</em>.</p>
+<h3 id="cyklus-for"><a class="anchor" href="#cyklus-for">¶</a> Cyklus FOR</h3>
+<p>Cyklus s řídící proměnnou je v programování tak častý, že si pro něj 
+programátoři vytvořili speciální syntaxi, která se jmenuje FOR cyklus. V
+ cyklech FOR jsou všechny příkazy s řídící proměnnou na jednom místě a 
+kód je pak lépe čitelný.</p>
+<p>Ukažme si ještě jednou cyklus WHILE pro výpis známek do konzole.</p>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> marks = [<span class="hljs-number">2</span>, <span class="hljs-number">4</span>, <span class="hljs-number">1</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">3</span>];
+
+<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>;
+<span class="hljs-keyword">while</span> (i &lt; marks.length) {
+  <span class="hljs-built_in">console</span>.log(marks[i]);
+  i += <span class="hljs-number">1</span>;
+}
+</code></pre>
+<p>Nyní pohlédněte na tutéž funkčnost zapsanou pomocí cyklu FOR.</p>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> marks = [<span class="hljs-number">2</span>, <span class="hljs-number">4</span>, <span class="hljs-number">1</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">3</span>];
+
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; marks.length; i += <span class="hljs-number">1</span>) {
+  <span class="hljs-built_in">console</span>.log(marks[i]);
+}
+</code></pre>
+<p>Vidíte že, že nyní všechny příkazy pro práci s řídící proměnnou pěkně
+ na začátku cyklu a nemusíme se rozlížet po celém kódu, abychom je 
+našli.</p>
+<h2 id="slozitejsi-cykly"><a class="anchor" href="#slozitejsi-cykly">¶</a> Složitejší cykly</h2>
+<p>K zajímavějším programům se dostaneme ve chvíli, kdy uvnitř cyklů 
+začneme pracovat s proměnnými mimo cyklus. Takto například spočítáme 
+průměrnou známku.</p>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> marks = [<span class="hljs-number">2</span>, <span class="hljs-number">4</span>, <span class="hljs-number">1</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">3</span>];
+
+<span class="hljs-keyword">let</span> sum = <span class="hljs-number">0</span>;
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; marks.length; i += <span class="hljs-number">1</span>) {
+  sum += marks[i];
+}
+
+<span class="hljs-keyword">const</span> averageMark = sum / marks.length;
+</code></pre>
+<p>Tímto způsobem se můžeme propracovat až k velmi složitým algoritmům, 
+cyklům uvnitř cyklů apod. V této lekci se však budeme zatím držet při 
+zemi.</p>
+</section> <!----><!----> <section class="article-section exercises-section"><h2 id="cviceni-cykly" class="exrc-section-title"><a href="#cviceni-cykly" class="anchor">¶</a>
+          Cvičení - Cykly
+        </h2> <!----> <div class="exercise"><div class="exercise__head"><div class="exercise__title"><div class="exercise__num">3</div> <h3 id="cvi-suda-cisla"><a href="#cvi-suda-cisla" class="anchor">¶</a>
+        Sudá čísla
+      </h3></div> <div class="exercise__demand"><div class="demand demand--2"></div> <div class="demand-text">to dáš</div></div></div> <div class="exercise__body">
+<p>Následující úkoly řešte uvnitř JavaScriptového programu.</p>
+<ol>
+<li>Napište cyklus WHILE, který vypíše do konzole prvních deset sudých čísel počínaje nulou.</li>
+<li>Přepište váš kód jako cyklus FOR.</li>
+<li>Vypište sudá čísla pozpátku, tedy tak, abychom nulou skončili.</li>
+</ol>
+</div></div><div class="exercise"><div class="exercise__head"><div class="exercise__title"><div class="exercise__num">4</div> <h3 id="cvi-uzivatele"><a href="#cvi-uzivatele" class="anchor">¶</a>
+        Uživatelé
+      </h3></div> <div class="exercise__demand"><div class="demand demand--2"></div> <div class="demand-text">to dáš</div></div></div> <div class="exercise__body">
+<p>Založte JavaScriptový program s následujícím seznamem uživatelů.</p>
+<pre><code>const users = ['paja', 'kaja', 'vlasta', 'peta', 'alex', 'misa'];
+</code></pre>
+<ol>
+<li>Pomocí cyklu FOR vypište všechna tato jména do konzole.</li>
+<li>Do konzole vypište všechna jména jako emailové adresy z domény <code>gmail.com</code>. Uživatel ‘paja’ tak bude ‘paja@gmail.com’.</li>
+<li>Vypište do konzole emaily pouze těch uživatelů, jejichž jméno má nejvýše 4 znaky.</li>
+</ol>
+</div></div><div class="exercise"><div class="exercise__head"><div class="exercise__title"><div class="exercise__num">5</div> <h3 id="cvi-pohyby-na-uctu"><a href="#cvi-pohyby-na-uctu" class="anchor">¶</a>
+        Pohyby na účtu
+      </h3></div> <div class="exercise__demand"><div class="demand demand--3"></div> <div class="demand-text">zapni hlavu</div></div></div> <div class="exercise__body">
+<p>Založe JavaScriptový program s následujícím s záznamem vkladů a výběrů na nějakém bankovním účtu.</p>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> amounts = [<span class="hljs-number">2500</span>, <span class="hljs-number">-550</span>, <span class="hljs-number">1000</span>, <span class="hljs-number">-1200</span>, <span class="hljs-number">-3000</span>, <span class="hljs-number">1270</span>, <span class="hljs-number">2300</span>];
+</code></pre>
+<ol>
+<li>Napište cyklus FOR, který spočítá výsledný zůstatek na účtu za předpokladu, že na účtu byla na začátku nula.</li>
+<li>Napište cyklus WHILE, který zjistí číslo pohybu, ve kterém se účet 
+dostal poprvé do mínusu. Vypište jak číslo pohybu, tak výši záporného 
+zůstatku.</li>
+</ol>
+</div></div></section><section class="article-section text-section"><h2 id="povinne-cteni-na-doma"><a class="anchor" href="#povinne-cteni-na-doma">¶</a> Povinné čtení na doma</h2>
+<p>Díky tomu, že už rozumíme polím, si můžeme představit funkci <code>document.querySelectorAll</code>. Tato funguje podobně jako už známá funkce <code>document.querySelector</code>. Vrátí nám však <strong>všechny</strong>
+ elementy, které najde pomocí zadaného selektoru. Výsledek obdržíme jako
+ pole DOM elementů, které pak můžeme zpracovat v nějakém cyklu.</p>
+<p>V lekci o událostech jsme si slíbili, že díky cyklům dokážeme 
+zjednodušít kód číselníku naší kalkulačky. Ten nejprve vypadal takto.</p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"numpad"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"display"</span>&gt;</span>0<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"btn7"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"num-btn"</span>&gt;</span>7<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"btn8"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"num-btn"</span>&gt;</span>8<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"btn9"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"num-btn"</span>&gt;</span>9<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"btn4"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"num-btn"</span>&gt;</span>4<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"btn5"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"num-btn"</span>&gt;</span>5<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"btn6"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"num-btn"</span>&gt;</span>6<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"btn1"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"num-btn"</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"btn2"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"num-btn"</span>&gt;</span>2<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"btn3"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"num-btn"</span>&gt;</span>3<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"btn0"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"num-btn num-btn--wide"</span>&gt;</span>0<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
+<pre><code class="language-js"><span class="hljs-meta">'use strict'</span>;
+
+<span class="hljs-keyword">const</span> btnClick = <span class="hljs-function">(<span class="hljs-params">event</span>) =&gt;</span> {
+  <span class="hljs-keyword">const</span> displayElm = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'.display'</span>);
+  displayElm.textContent += event.target.textContent;
+};
+
+<span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'#btn0'</span>).addEventListener(<span class="hljs-string">'click'</span>, btnClick);
+<span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'#btn1'</span>).addEventListener(<span class="hljs-string">'click'</span>, btnClick);
+<span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'#btn2'</span>).addEventListener(<span class="hljs-string">'click'</span>, btnClick);
+<span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'#btn3'</span>).addEventListener(<span class="hljs-string">'click'</span>, btnClick);
+<span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'#btn4'</span>).addEventListener(<span class="hljs-string">'click'</span>, btnClick);
+<span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'#btn5'</span>).addEventListener(<span class="hljs-string">'click'</span>, btnClick);
+<span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'#btn6'</span>).addEventListener(<span class="hljs-string">'click'</span>, btnClick);
+<span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'#btn7'</span>).addEventListener(<span class="hljs-string">'click'</span>, btnClick);
+<span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'#btn8'</span>).addEventListener(<span class="hljs-string">'click'</span>, btnClick);
+<span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'#btn9'</span>).addEventListener(<span class="hljs-string">'click'</span>, btnClick);
+</code></pre>
+<p>Díky <code>document.querySelectorAll</code> můžeme posluchače <code>btnClick</code> nasadit na všechna tlačítka jedním cyklem.</p>
+<pre><code class="language-js"><span class="hljs-meta">'use strict'</span>;
+
+<span class="hljs-keyword">const</span> btnClick = <span class="hljs-function">(<span class="hljs-params">event</span>) =&gt;</span> {
+  <span class="hljs-keyword">const</span> displayElm = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'.display'</span>);
+  displayElm.textContent += event.target.textContent;
+};
+
+<span class="hljs-keyword">const</span> buttons = <span class="hljs-built_in">document</span>.querySelectorAll(<span class="hljs-string">'.num-btn'</span>);
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; button.length; i += <span class="hljs-number">1</span>) {
+  buttons[i].addEventListener(<span class="hljs-string">'click'</span>, btnClick);
+}
+</code></pre>
+<h3 id="datove-atributy"><a class="anchor" href="#datove-atributy">¶</a> Datové atributy</h3>
+<p>Všimněte si, že funkce <code>btnClick</code> používá <code>textContent</code>
+ k tomu, aby získala číslo, které má tlačítko vlažit na displej. Snadno 
+bychom se však mohli ocitnout v situaci, kdy by naše tlačítka 
+neobsahovala ten správný <code>textContent</code>. Například bychom mohli chtít mít tlačítka jako obrázky, které žádný <code>textContent</code>
+ nemají. I tak bychom si ale potřebovali někam uložit cifru, která k 
+tlačítku patří. K tomu můžeme použít takzvané datové atributy.</p>
+<p>Do jakéhokoliv HTML elementu můžeme přídat libovolný atribut, jehož jméno začíná předponou <code>data-</code>. Cifry si tak můžeme uložit například do atributu <code>data-digit</code>.</p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"numpad"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"display"</span>&gt;</span>0<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"btn7"</span> <span class="hljs-attr">data-digit</span>=<span class="hljs-string">"7"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"num-btn"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"img/digit7.png"</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"btn8"</span> <span class="hljs-attr">data-digit</span>=<span class="hljs-string">"8"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"num-btn"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"img/digit8.png"</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"btn9"</span> <span class="hljs-attr">data-digit</span>=<span class="hljs-string">"9"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"num-btn"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"img/digit9.png"</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"btn4"</span> <span class="hljs-attr">data-digit</span>=<span class="hljs-string">"4"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"num-btn"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"img/digit4.png"</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"btn5"</span> <span class="hljs-attr">data-digit</span>=<span class="hljs-string">"5"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"num-btn"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"img/digit5.png"</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"btn6"</span> <span class="hljs-attr">data-digit</span>=<span class="hljs-string">"6"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"num-btn"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"img/digit6.png"</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"btn1"</span> <span class="hljs-attr">data-digit</span>=<span class="hljs-string">"1"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"num-btn"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"img/digit1.png"</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"btn2"</span> <span class="hljs-attr">data-digit</span>=<span class="hljs-string">"2"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"num-btn"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"img/digit2.png"</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"btn3"</span> <span class="hljs-attr">data-digit</span>=<span class="hljs-string">"3"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"num-btn"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"img/digit3.png"</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">img</span>
+    <span class="hljs-attr">id</span>=<span class="hljs-string">"btn0"</span>
+    <span class="hljs-attr">data-digit</span>=<span class="hljs-string">"0"</span>
+    <span class="hljs-attr">class</span>=<span class="hljs-string">"num-btn num-btn--wide"</span>
+    <span class="hljs-attr">src</span>=<span class="hljs-string">"img/digit0.png"</span>
+  /&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
+<p>K datovým atributům se pak v JavaScriptu snadno dostaneme pomocí vlastnosti <code>dataset</code>. Funkci <code>btnClick</code> bychom tak mohli přepsat takto.</p>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> btnClick = <span class="hljs-function">(<span class="hljs-params">event</span>) =&gt;</span> {
+  <span class="hljs-keyword">const</span> displayElm = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'.display'</span>);
+  displayElm.textContent += event.target.dataset.digit;
+};
+</code></pre>
+<p>Pomocí datových atributů si můžeme k elementům uložit libovolné informace, se kterými pak můžeme v JavaScriptu snadno pracovat.</p>
+</section> <!----><!----> <section class="article-section exercises-section"><h2 id="doporucene-ulozky-na-doma" class="exrc-section-title"><a href="#doporucene-ulozky-na-doma" class="anchor">¶</a>
+          Doporučené úložky na doma
+        </h2> <!----> <div class="exercise"><div class="exercise__head"><div class="exercise__title"><div class="exercise__num">6</div> <h3 id="cvi-cekani-na-sestku"><a href="#cvi-cekani-na-sestku" class="anchor">¶</a>
+        Čekání na šestku
+      </h3></div> <div class="exercise__demand"><div class="demand demand--2"></div> <div class="demand-text">to dáš</div></div></div> <div class="exercise__body">
+<p>Založte JavaScriptový program a splňte následující úkoly.</p>
+<ol>
+<li>Napište funkci <code>roll</code>, která simuluje hod kostkou. Vrátí tedy náhodné číslo od 1 do 6 tak, že všechna čísla mají stejnou pravděpodobnost.</li>
+<li>Váš program nechť hází kostkou tak dlouho, až poprvé padne šestka. Vypište na výstup na kolikátý pokus šestka padla.</li>
+<li>Spusťte váš program desetkrát za sebou a zaznamenejte výsledky. 
+Sdílejte vaše výsledky s ostatními abychom nasbírali co nejvíce dat.</li>
+</ol>
+</div></div><div class="exercise"><div class="exercise__head"><div class="exercise__title"><div class="exercise__num">7</div> <h3 id="cvi-male-algoritmy"><a href="#cvi-male-algoritmy" class="anchor">¶</a>
+        Malé algoritmy
+      </h3></div> <div class="exercise__demand"><div class="demand demand--2"></div> <div class="demand-text">to dáš</div></div></div> <div class="exercise__body">
+<p>Založte si nový JavaScriptový program a na jeho začátek vložte 
+následující seznam čísel. Budeme jej používat ve všech následujících 
+úlohách.</p>
+<!-- prettier-ignore -->
+<pre><code class="language-js"><span class="hljs-keyword">const</span> numbers = [
+  <span class="hljs-number">-24</span>, <span class="hljs-number">-11</span>, <span class="hljs-number">27</span>, <span class="hljs-number">29</span>, <span class="hljs-number">-4</span>, <span class="hljs-number">-28</span>, <span class="hljs-number">-21</span>, <span class="hljs-number">-14</span>, <span class="hljs-number">3</span>, <span class="hljs-number">-8</span>, <span class="hljs-number">24</span>, <span class="hljs-number">19</span>, <span class="hljs-number">-25</span>, <span class="hljs-number">-2</span>, <span class="hljs-number">-1</span>, <span class="hljs-number">11</span>, <span class="hljs-number">32</span>, <span class="hljs-number">-31</span>, <span class="hljs-number">5</span>
+];
+</code></pre>
+<ol>
+<li>Vypište na výstup všechna čísla.</li>
+<li>Vypište na výstup druhé mocniny všech čísel.</li>
+<li>Vypište na výstup pouze záporná čísla.</li>
+<li>Vypište na výstup absolutní hodnotu všech čísel.</li>
+<li>Vypište na výstup pouze ta čísla, jejíchž absolutní hodnota je dělitelná třemi.</li>
+<li>Vypište na výstup pouze sudá čísla.</li>
+<li>Vypište na výstup jak daleko je každé číslo v seznamu od čísla 5.</li>
+<li>Vypište na výstup druhé mocnicny vzdáleností všech čísel od čísla 5.</li>
+<li>Spočítejte, kolik je v seznamu záporných čísel.</li>
+<li>Spočítejte součet všech čísel v poli.</li>
+<li>Spočítejte průměr všech čísel v poli.</li>
+<li>Spočítejte součet všech pozitivních čísel v poli.</li>
+</ol>
+</div></div><div class="exercise"><div class="exercise__head"><div class="exercise__title"><div class="exercise__num">8</div> <h3 id="cvi-piskvorky-zaklad"><a href="#cvi-piskvorky-zaklad" class="anchor">¶</a>
+        Piškvorky základ
+      </h3></div> <div class="exercise__demand"><div class="demand demand--2"></div> <div class="demand-text">to dáš</div></div></div> <div class="exercise__body">
+<p>Hrát piškvorky 3x3 rychle přestane být zábava, neboť brzy objevíme, 
+že pokud oba hráči hrají dobře, nemůže žádný z nich vyhrát. Pokud však 
+herní plán zvětšíme na 4x4 a přidáme dvě nová pravidla, začínající hráč 
+může vždy vyhrát. A pokud zrovna první hráč nehraje dokonalou hru, i 
+druhý hráč má slušnou naději na vítězství.</p>
+<p>V našich piškvorkách vyhraje ten hráč, který na libovolném místě 
+hracího plánu vytvoří ze svých symbolů jeden z následujících vzorů.</p>
+<p><img src="08_Pole_a_cykly_soubory/piskvorky.svg" alt="Piškvorky" class="fig fig-80"></p>
+<p><strong>Reprezentace hracího plánu</strong></p>
+<p>Než vůbec začneme programovat, je třeba si rozmyslet, jak budeme 
+reprezentovat hrací plán. Inspirováni myšlenkou popsanou v této lekci 
+bychom mohli plán reprezentovat jako pole polí například takto.</p>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> gamePlan = [
+  [<span class="hljs-string">' '</span>, <span class="hljs-string">' '</span>, <span class="hljs-string">' '</span>, <span class="hljs-string">' '</span>],
+  [<span class="hljs-string">'o'</span>, <span class="hljs-string">'x'</span>, <span class="hljs-string">'x'</span>, <span class="hljs-string">'x'</span>],
+  [<span class="hljs-string">' '</span>, <span class="hljs-string">' '</span>, <span class="hljs-string">'o'</span>, <span class="hljs-string">' '</span>],
+  [<span class="hljs-string">' '</span>, <span class="hljs-string">'o'</span>, <span class="hljs-string">' '</span>, <span class="hljs-string">' '</span>],
+];
+</code></pre>
+<p>Když však začneme aplikaci skutečně psát, po čase zjistíme, že se nám
+ mnohem více hodí reprezentace, která nepoužívá pole polí, nýbrž pouze 
+jedno dlouhé pole čísel. Křížek pak reprezentujeme jako 1, prázdné 
+políčko jako 0 a kolečko jako -1. Hrací plán uvedený výše pak bude 
+vypadat takto.</p>
+<!-- prettier-ignore -->
+<pre><code class="language-js"><span class="hljs-keyword">const</span> gamePlan = [
+   <span class="hljs-number">0</span>,  <span class="hljs-number">0</span>,  <span class="hljs-number">0</span>,  <span class="hljs-number">0</span>,
+  <span class="hljs-number">-1</span>,  <span class="hljs-number">1</span>,  <span class="hljs-number">1</span>,  <span class="hljs-number">1</span>,
+   <span class="hljs-number">0</span>,  <span class="hljs-number">0</span>, <span class="hljs-number">-1</span>,  <span class="hljs-number">0</span>,
+   <span class="hljs-number">0</span>, <span class="hljs-number">-1</span>,  <span class="hljs-number">0</span>,  <span class="hljs-number">0</span>,
+];
+</code></pre>
+<p>Pozor na to, že bílé znaky jako mezery a nové řádky jsme sem vložili 
+pouze pro lepší čitelnost kódu. Z hlediska JavaScriptu náš hrací plán 
+vypadá takto.</p>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> gamePlan = [<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">-1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">-1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">-1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>];
+</code></pre>
+<p>Nyní už jsme připravení začít psát naši aplikaci.</p>
+<p><strong>Aplikace piškvorky</strong></p>
+<p>Stáhněte si <a href="http://nove.kodim.cz/czechitas/daweb/zaklady-js/pole-cykly/assets/piskvorky-zadani.zip">základ webové aplikace</a> pro naše piškvorky a postupujte dle následujících kroků.</p>
+<ol>
+<li>Vytvořte funkci <code>squareClick</code>, která bude reagovat na 
+kliknutí na čtverec na hracím plánu. Uvnitř této funkce získejte odkaz 
+na element, na který bylo kliknuto, a vypište do konzole hodnotu 
+atributu <code>data-index</code>.</li>
+<li>Vyberte z dokumentu všechny elementy s třídou <code>square</code> a na každý z nich pověste funkci <code>squareClick</code>
+ jako reakci na kliknutí. Po spuštení aplikace pozorujte, zda se v 
+konzoli po kliknutí na jeden čtverec zobrazí jeho správný index.</li>
+<li>Zařiďte, aby funkce <code>squareClick</code> kromě zobrazení indexu přidala na element čtverce CSS třídu <code>square--cross</code>. Po kliknutí na čtverec byste měli uvidět křížek.</li>
+<li>Vytvořte globální proměnnou <code>onTurn</code>, která obsahuje 
+číslo 1 nebo -1 podle toho, zda je zrovna na tahu křížek nebo kolečku. 
+Při kliknutí na čtverec zobrazte symbol, který je zrovna na tahu a 
+nastavte proměnnou <code>onTurn</code> na opačný symbol. CSS Třída pro kolečko se jmenuje <code>square--circle</code>.</li>
+<li>Všimněte si, že nyní je možné táhnout na poličko, na které už bylo 
+před tím taženo. Abyste tomu zabránili, vytvořte globální proměnnou <code>gamePlan</code>
+ obsahující hrací plán nastavený na samé nuly. Pokaždé, když uživatel 
+klikne na políčko, nastavte příslušnou hodnotu v hracím plánu na správný
+ symbol. Dovolte táhnout pouze na ta políčka, pro které je v hracím 
+plánu uložena nula.</li>
+</ol>
+<p>Nyní už si piškvorky můžete zahrát. Hurá!! Chybí nám však možnost, 
+aby program sám poznal, kdo vyhrál. Zkuste se zamyslet nad tím, jak 
+byste podle toho, co je zrovna uloženo v proměnné <code>gamePlan</code> rozhodli, kdo vyhrál.</p>
+<p>Vymyslet program tak, aby korektně rozpoznal všechny možné výherní 
+kombinace, a zároveň neobsahoval obrovské nepřehledné množství podmínek,
+ není jednoduchý úkol. S trochou vedení lze však vyřešt poměrně 
+elegantně. Tuto číst si však necháme do nepovinné sekce, abychom 
+netrápili ty, komu po tomto úkolu již piškvorky lezou i ušima.</p>
+</div></div></section><!----> <section class="article-section exercises-section"><h2 id="nepovinne-ulozky-na-doma" class="exrc-section-title"><a href="#nepovinne-ulozky-na-doma" class="anchor">¶</a>
+          Nepovinné úložky na doma
+        </h2> <!----> <div class="exercise"><div class="exercise__head"><div class="exercise__title"><div class="exercise__num">9</div> <h3 id="cvi-registrace"><a href="#cvi-registrace" class="anchor">¶</a>
+        Registrace
+      </h3></div> <div class="exercise__demand"><div class="demand demand--3"></div> <div class="demand-text">zapni hlavu</div></div></div> <div class="exercise__body">
+<p>Stáhněte se <a href="http://nove.kodim.cz/czechitas/daweb/zaklady-js/pole-cykly/assets/registrace-zadani.zip">připravenou stránku</a>
+ s registračním formulářem pro nového uživatele. Doplňte do stránky 
+JavaScriptový kód tak, aby byly splněny následující požadavky.</p>
+<ol>
+<li>Pokud uživatel zadá uživatelské jméno, které je již obsaženo v poli <code>users</code>, vypište do prvku s třídou <code>reg-form__error</code> chybovou hlášku ve smyslu, že zadané uživatelské jméno je již zabráno.</li>
+<li>Zkontrolujte, že heslo zadané do prvního políčka je dostatečně 
+bezpečené. Heslo považujeme za bezpečné, pokud má alespoň 10 znaků nebo 
+obsahuje alespoň jeden ze znaků pomlčka <code>-</code>, podtržítko <code>_</code> nebo dvojtečka <code>:</code>.</li>
+</ol>
+</div></div><div class="exercise"><div class="exercise__head"><div class="exercise__title"><div class="exercise__num">10</div> <h3 id="cvi-skalarni-soucin"><a href="#cvi-skalarni-soucin" class="anchor">¶</a>
+        Skalární součin
+      </h3></div> <div class="exercise__demand"><div class="demand demand--3"></div> <div class="demand-text">zapni hlavu</div></div></div> <div class="exercise__body">
+<p>Toto zadání může stát samo o sobě jako užitečný příklad na procvičení
+ cyklů. Zároveň nám však pomůže dotáhnout do konce naše 4x4 piškvorky.</p>
+<p>Vaším úkolem je napsat funkci, která dělá takzvaný skalární součin dvou polí. Mějme dvě stejně dlouhá pole čísel <code>arr1</code> a <code>arr2</code>. Skalární součin se spočítá tak, že vynásobíme první prvek pole <code>arr1</code> s prvním prvkem pole <code>arr2</code>. Poté vynásobíme druhý prvek pole <code>arr1</code> druhým prvkem pole <code>arr2</code>. Takto vynásobíme všechny dvojice čísel na odpovídajících indexech. Všechny výsledky pak sečteme dohromady.</p>
+<p>Mějme například tato dvě pole.</p>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> arr1 = [<span class="hljs-number">2</span>, <span class="hljs-number">-1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">3</span>];
+<span class="hljs-keyword">const</span> arr2 = [<span class="hljs-number">3</span>, <span class="hljs-number">2</span>, <span class="hljs-number">8</span>, <span class="hljs-number">1</span>];
+</code></pre>
+<p>Jejich skalární součin bychom ručně spočetli takto:</p>
+<pre><code class="language-jscon"><span class="hljs-meta">&gt;</span><span class="javascript"> <span class="hljs-number">2</span>*<span class="hljs-number">3</span> + (<span class="hljs-number">-1</span>)*<span class="hljs-number">2</span> + <span class="hljs-number">0</span>*<span class="hljs-number">8</span> + <span class="hljs-number">3</span>*<span class="hljs-number">1</span></span>
+7
+</code></pre>
+<p>Napište funkci <code>dotProduct</code>, která jako svoje vstupy dostane dvě stejně dlouhá pole a vrátí jejich skalární součin.</p>
+<pre><code class="language-jscon"><span class="hljs-meta">&gt;</span><span class="javascript"> <span class="hljs-keyword">const</span> arr1 = [<span class="hljs-number">2</span>, <span class="hljs-number">-1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">3</span>];</span>
+<span class="hljs-meta">&gt;</span><span class="javascript"> <span class="hljs-keyword">const</span> arr2 = [<span class="hljs-number">3</span>, <span class="hljs-number">2</span>, <span class="hljs-number">8</span>, <span class="hljs-number">1</span>];</span>
+<span class="hljs-meta">&gt;</span><span class="javascript"> dotProduct(arr1, arr2)</span>
+7
+</code></pre>
+<p>Vyzkoušejte si na vícero příkladech a polích různých délek, že vaše 
+funkce opravdu spolehlivě funguje. Pokud budete chtít dokončit hru 
+piškvorky, budete ji potřebovat.</p>
+</div></div><div class="exercise"><div class="exercise__head"><div class="exercise__title"><div class="exercise__num">11</div> <h3 id="cvi-piskvorky-dokonceni"><a href="#cvi-piskvorky-dokonceni" class="anchor">¶</a>
+        Piškvorky dokončení
+      </h3></div> <div class="exercise__demand"><div class="demand demand--3"></div> <div class="demand-text">zapni hlavu</div></div></div> <div class="exercise__body">
+<p>Nyní už si můžeme troufnout dokončit naši hru s piškvorkami. Zbývá 
+nám naučit náš program ropoznat situaci, kdy některý z hráčů vytvořil na
+ hracím plánu vyhrávací vzor. K tomu nám velmi pomůže kartézský součin 
+polí z předchozího příkladu. Představte si například takovýto hrací 
+plán.</p>
+<!-- prettier-ignore -->
+<pre><code class="language-js"><span class="hljs-keyword">const</span> gamePlan = [
+   <span class="hljs-number">1</span>, <span class="hljs-number">-1</span>,  <span class="hljs-number">1</span>,  <span class="hljs-number">1</span>,
+   <span class="hljs-number">0</span>,  <span class="hljs-number">1</span>,  <span class="hljs-number">0</span>, <span class="hljs-number">-1</span>,
+  <span class="hljs-number">-1</span>, <span class="hljs-number">-1</span>,  <span class="hljs-number">0</span>,  <span class="hljs-number">0</span>,
+  <span class="hljs-number">-1</span>,  <span class="hljs-number">0</span>,  <span class="hljs-number">0</span>,  <span class="hljs-number">0</span>,
+];
+</code></pre>
+<p>Vezměme nyní pole, které vypadá takto.</p>
+<!-- prettier-ignore -->
+<pre><code class="language-js"><span class="hljs-keyword">const</span> pattern = [
+   <span class="hljs-number">1</span>,  <span class="hljs-number">1</span>,  <span class="hljs-number">1</span>,  <span class="hljs-number">1</span>,
+   <span class="hljs-number">0</span>,  <span class="hljs-number">0</span>,  <span class="hljs-number">0</span>,  <span class="hljs-number">0</span>,
+   <span class="hljs-number">0</span>,  <span class="hljs-number">0</span>,  <span class="hljs-number">0</span>,  <span class="hljs-number">0</span>,
+   <span class="hljs-number">0</span>,  <span class="hljs-number">0</span>,  <span class="hljs-number">0</span>,  <span class="hljs-number">0</span>,
+];
+</code></pre>
+<p>Rozmysleme si, jak by dopadl kartézský součin polí <code>gamePlan</code> a <code>pattern</code>.
+ Ihned vidíme, že nás zajímají pouze první čtyri prvky. Násobení nulou 
+je vždy nula, zbylé prvky pole tedy výsledek nijak neovlivní.</p>
+<p>Všimněte si, že pokud jsou první čtyři prvky v poli <code>gamePlan</code>
+ jedničky, kartézský součin bude přesně 4. Pokud by byly první čtyři 
+prvky -1, výsledek bude -4. Ve všech ostatních případech bude výsledek 
+něco mezi -4 a 4. Takto jsme tedy rovnou získali test na to, jestli 
+někdo z hráčů má čtveřici na prvním řádku. Pokud kartézský součin vyjde 
+4, vyhrál hráč s křížkem. Pokud vyjde -4, vyhrál hráč s kolečkem. Pokud 
+vyjde něco jiného, žádný z hráčů nemá v prvním řádku čtveřici.</p>
+<p>Pomocí pole <code>pattern</code> jsem tak vyzkoušeli první řádek. 
+Zbývá nám vyzkoušet všechnyh ostatní možnosti, tedy ostatní řádky, 
+sloupce, diagonály a tak dále. Pro každou z těchto možností potřebujeme 
+jedno pole, které, podobně jako pole <code>pattern</code> výše, udává, na jaká políčka na hracím plánu zrovna kontrolujeme.</p>
+<p>K dokončení hry postupujte podle následujicích instrukcí.</p>
+<ol>
+<li>Sestavte pole <code>patterns</code>, které obsahuje všechny pole 
+udávající výherní kombinace ve hře. Nerad bych váš připravil a zábavu 
+při hledání všech možností. Pro kontrolu však vězte, že je jich 
+dohromady 23.</li>
+<li>Vytvořte funkci <code>score</code>, která jako svůj vstup dostane 
+hrací plán a vrátí v jakém stavu se zrovna hra nachází. Výsledek 1 
+znamená, že vyhrál křížek, výsledek -1, že vyhrálo kolečko, výsledek 0, 
+že nastala remíza a výsledek <code>null</code>, že hra se ještě hraje. Pokud si nejste jistí, jak funkci napsat, postupujte následujícím postupem.
+<ol>
+<li>Funkce nejprve zkontroluje, zda již někdo vyhrál. Musí tedy v cyklu 
+projít všechny výherní vzory a zkontrolovat, jestli skalární součin 
+herního plánu s nekterým vzorem vyjde 4 nebo -4. V takovém případě 
+vrátím z funkce rovnou 1 nebo -1.</li>
+<li>Pokud skalární součin ani jednou nevyšel 4 nebo -4, znamaná to, že 
+hra je ještě v běhu nebo že nastala remíza. Remíza nastala tehdy, když 
+na hracím plánu již není žádné volné políčko. V takovém případě vraťte 
+číslo 0.</li>
+<li>Pokud neplatí ani jedna z předešlých možností, hra je stále v běhu. Vraťte hodnotu <code>null</code>.</li>
+</ol>
+</li>
+<li>Po provedení každého tahu si nechte pomocí funkce <code>score</code>
+ zjistit stav hry. Podle výsledku buď nechte hru normálně pokračovat 
+nebo zobrazte uživateli zprávu že vyhrál, prohrál nebo nastala remíza.</li>
+</ol>
+<p>Hurá!! Napsali jste svoji možná úplně první počítačovou hru.</p>
+</div></div><div class="exercise"><div class="exercise__head"><div class="exercise__title"><div class="exercise__num">12</div> <h3 id="cvi-tezsi-algoritmy"><a href="#cvi-tezsi-algoritmy" class="anchor">¶</a>
+        Těžší algoritmy
+      </h3></div> <div class="exercise__demand"><div class="demand demand--3"></div> <div class="demand-text">zapni hlavu</div></div></div> <div class="exercise__body">
+<p>Založte si nový JavaScriptový program a na jeho začátek vložte 
+následující seznam čísel. Budeme jej používat ve všech následujících 
+úlohách.</p>
+<!-- prettier-ignore -->
+<pre><code class="language-js"><span class="hljs-keyword">const</span> numbers = [
+  <span class="hljs-number">-24</span>, <span class="hljs-number">-11</span>, <span class="hljs-number">27</span>, <span class="hljs-number">29</span>, <span class="hljs-number">-4</span>, <span class="hljs-number">-28</span>, <span class="hljs-number">-21</span>, <span class="hljs-number">-14</span>, <span class="hljs-number">3</span>, <span class="hljs-number">-8</span>, <span class="hljs-number">24</span>, <span class="hljs-number">19</span>, <span class="hljs-number">-25</span>, <span class="hljs-number">-2</span>, <span class="hljs-number">-1</span>, <span class="hljs-number">11</span>, <span class="hljs-number">32</span>, <span class="hljs-number">-31</span>, <span class="hljs-number">5</span>
+];
+</code></pre>
+<ol>
+<li>Vypište na výstup všechna čísla, která jsou větší než jejich předchůdce.</li>
+<li>Vypište na výstup všechny vrcholy v daném poli. Vrchol je číslo, které je větší než jeho předchůdce i jeho následovník.</li>
+<li>Nejprve spočítejte průměr čísel v poli a výsledek si ulože do proměnné <var>mean</var>. Poté spočítejte součet druhých mocnin vzdáleností všech čísel od průměru.</li>
+<li>Spočítejte směrodatnou odchylku čísel v poli. To provedete tak, že 
+nejprve spočítáte takzvaný rozptyl, což je průměr druhých mocnin 
+vzdáleností všech čísel od průměru. Rozptyl pak odmocníte pomocí funkce <code>Math.sqrt</code>.</li>
+<li>Najděte s seznamu největší prvek.</li>
+<li>Najděte s seznamu největší prvek, který je menší než číslo 16.</li>
+</ol>
+</div></div><div class="exercise"><div class="exercise__head"><div class="exercise__title"><div class="exercise__num">13</div> <h3 id="cvi-algoritmy-pro-fajnsmekry"><a href="#cvi-algoritmy-pro-fajnsmekry" class="anchor">¶</a>
+        Algoritmy pro fajnšmekry
+      </h3></div> <div class="exercise__demand"><div class="demand demand--4"></div> <div class="demand-text">zavařovačka</div></div></div> <div class="exercise__body">
+<p>Založte si nový JavaScriptový program a na jeho začátek vložte 
+následující seznam čísel. Budeme jej používat ve všech následujících 
+úlohách.</p>
+<!-- prettier-ignore -->
+<pre><code class="language-js"><span class="hljs-keyword">const</span> numbers = [
+  <span class="hljs-number">-24</span>, <span class="hljs-number">-11</span>, <span class="hljs-number">27</span>, <span class="hljs-number">29</span>, <span class="hljs-number">-4</span>, <span class="hljs-number">-28</span>, <span class="hljs-number">-21</span>, <span class="hljs-number">-14</span>, <span class="hljs-number">3</span>, <span class="hljs-number">-8</span>, <span class="hljs-number">24</span>, <span class="hljs-number">19</span>, <span class="hljs-number">-25</span>, <span class="hljs-number">-2</span>, <span class="hljs-number">-1</span>, <span class="hljs-number">11</span>, <span class="hljs-number">32</span>, <span class="hljs-number">-31</span>, <span class="hljs-number">5</span>
+];
+</code></pre>
+<ol>
+<li>Vypište na výstup délku nejdelší rostoucí sekvence čísel, které v poli následují přímo po sobě.</li>
+<li>Vypište na výstup délku nejdelší rostoucí nebo klesající sekvence čísel, které v seznamu následují přímo po sobě.</li>
+<li>Najděte druhý největší prvek v seznamu.</li>
+<li>Najděte nejnižší vrchol a nejvyšší údolí. Údolí je číslo, které je menší než jeho předchůdce i následovník.</li>
+</ol>
+</div></div></section></div></article></div></main> <footer class="footer"><div class="container">Martin Podloucký</div></footer></div>
+  
+
+</body></html>

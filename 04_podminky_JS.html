@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="cz"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>kodim.cz</title>
+  <style data-vue-ssr-id="499c037c:0">@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700,900|Roboto+Mono:400,700&display=fallback&subset=latin-ext);</style><style data-vue-ssr-id="499c037c:1">*{box-sizing:border-box}html{font-family:"Montserrat", sans-serif;font-size:15px}body{margin:0;color:#444;background-color:#f9f9f9}.container{width:100%;margin-left:auto;margin-right:auto}@media only screen and (min-width: 576px){.container{width:540px}}@media only screen and (min-width: 768px){.container{width:720px}}@media only screen and (min-width: 992px){.container{width:960px}}.btn{border:none;outline:none;border-radius:1rem;padding:0.5rem 1rem;text-align:center;text-decoration:none;color:black;box-shadow:0 0 10px #ddd;transition:400ms}.btn:hover{transform:scale(1.1)}.btn-open{background-color:#ffec88}
+</style><style data-vue-ssr-id="54541dba:0">.hljs{display:block;overflow-x:auto;padding:0.5em;background:#222222;color:#C0C0C0}.hljs-keyword{color:#FFB871;font-weight:bold}.hljs-built_in{color:#FFB871}.hljs-literal{color:#FF8080}.hljs-symbol{color:#58E55A}.hljs-comment{color:#5B995B}.hljs-string{color:#FFFF00}.hljs-number{color:#FF8080}.hljs-attribute,.hljs-selector-tag,.hljs-doctag,.hljs-name,.hljs-bullet,.hljs-code,.hljs-addition,.hljs-regexp,.hljs-variable,.hljs-template-variable,.hljs-link,.hljs-selector-attr,.hljs-selector-pseudo,.hljs-type,.hljs-selector-id,.hljs-selector-class,.hljs-quote,.hljs-template-tag,.hljs-deletion,.hljs-title,.hljs-section,.hljs-function,.hljs-meta-keyword,.hljs-meta,.hljs-subst{color:#C0C0C0}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:bold}.article-outline{margin:2rem 3rem 0 0}.arrow-left{background-color:#ffec88;background-size:contain;width:2.5rem;height:2.5rem;border-radius:1.25rem;box-shadow:0 0 10px #ddd;background-image:url(/assets/img/arrow-left-5d2511.svg)}.arrow-right{background-color:#ffec88;background-size:contain;width:2.5rem;height:2.5rem;border-radius:1.25rem;box-shadow:0 0 10px #ddd;background-image:url(/assets/img/arrow-right-b02d21.svg)}.chapter-link{padding-left:1rem}.chapter-link a{text-decoration:none;color:black;font-size:1.2rem;font-weight:bold}.chapter-link a:hover{text-decoration:underline}.article-links{display:flex;margin-top:1rem}.article-links-filler{flex:1}.article-link{display:flex;align-items:center}.article-link a{text-decoration:none;color:black}.article-link a:hover{text-decoration:underline}.article-link--backward{margin-left:-1.25rem}.article-link--backward a{margin-left:2.75rem}.article-link--forward{margin-right:-1.25rem}.article-link--forward a{margin-right:2.75rem}.toc-link{display:block;width:100%;text-decoration:none;color:black;padding:0.5rem 1rem}.toc-link:hover{background-color:#f6f6f6}.exrc-section-title{margin-top:1rem !important;margin-bottom:0rem !important}.exrc-bonuses{padding:2rem 4rem;color:white;background-color:orange;margin-bottom:1rem}.exrc-bonuses__head{font-size:1.2rem;font-weight:bold;margin-bottom:1rem}.article-section{padding:2rem 0}.warn-section{background-color:#e2252b;color:white}.text-section table tr:nth-child(even){background-color:#e8e8e8}.exercises-section{background-color:#ffec88}.block-image{margin:3rem 0}.block-image img{display:block;width:100%;height:auto}.fig{display:block;margin:2rem auto;height:auto}li>.fig{margin:1rem auto}.fig-100{width:100%}.fig-90{width:90%}.fig-80{width:80%}.fig-70{width:70%}.fig-60{width:60%}.fig-50{width:50%}table{margin:2rem auto}table thead{border-bottom:2px solid #333}table td{padding:0.5rem}
+</style><style data-vue-ssr-id="34f8141e:0">.article-head{padding:0 4rem}.article-head__title{display:flex;align-items:baseline;font-size:1.8rem;font-weight:bold;margin-left:-6rem}.article-head__title h1{font-size:100%}.article-head__num{width:4rem;height:4rem;line-height:4rem;text-align:center;background-color:#ffec88;box-shadow:0 0 10px #ddd;border-radius:2rem;margin-right:2rem}.aside{display:none;width:320px;position:fixed;z-index:1;overflow-x:hidden;padding-top:20px}@media only screen and (min-width: 992px){.aside{display:block}}.article{margin:0rem 0 6rem 0;background-color:white;padding-top:2rem;box-shadow:0 0 10px #ddd;line-height:150%;border-radius:1rem}@media only screen and (min-width: 992px){.article{margin:0rem 0 6rem 320px}}.article .text-section>p,.article .text-section>ul,.article .text-section>ol,.article .text-section>dl{margin-left:4rem;margin-right:4rem}.article dt,.article dd{margin-bottom:0.5rem}.article h2,.article h3,.article h4{padding:1rem 4rem}.article .anchor{opacity:0;transition:250ms;text-decoration:none;color:#869af5;margin-left:-1.7rem}.article h2{margin-top:3rem;margin-bottom:1rem;font-size:1.6rem;font-weight:900}.article h2 .anchor{margin-left:-1.7rem}.article h3{margin-top:1rem;margin-bottom:0rem}.article h3 .anchor{margin-left:-1.2rem}.article h2:hover .anchor,.article h3:hover .anchor{opacity:1;margin-left:0}.article p{margin-top:0;margin-bottom:1rem;hyphens:manual}.article li{margin-bottom:0.5rem}.article .text-section:first-child p:first-child:first-letter{float:left;font-size:5rem;line-height:4rem;padding-top:0.3rem;padding-right:0.5rem}.article em{background-color:#d1ebf1;padding:0rem 0.5rem;border-radius:10px}.article pre,.article code,.article var{font-family:"Roboto Mono"}.article pre{background-color:#555;color:white;padding:1rem 4rem;margin:2rem 0;overflow-x:auto}.article var{font-style:normal;color:blue}.article kbd{font-family:"Montserrat";background-color:#fff;border:1px solid #888;border-radius:4px;padding:0rem 0.5rem}.term{display:inline;position:relative;font-style:italic;overflow:visible}.term__icon{display:inline-block;vertical-align:middle;width:15px;height:15px;margin-left:0.5rem;margin-bottom:2px;margin-right:0;background-image:url(/assets/img/english-9a71e2.png);background-size:contain;background-repeat:no-repeat}.term__cs{background-color:#d1ebf1;padding:0rem 0rem 0rem 0.5rem;border-radius:10px;white-space:pre;cursor:default}.term__en{position:absolute;top:-2rem;left:0rem;background-color:#444;color:white;padding:0rem 0.5rem;border-radius:5px;opacity:0;visibility:hidden;z-index:1;white-space:pre;transition:500ms}.term:hover .term__en{visibility:visible;opacity:1}
+</style><style data-vue-ssr-id="3c9796f4:0">.page{display:grid;grid-template-columns:auto;grid-template-rows:auto 1fr auto;min-height:100vh}.footer{padding:2rem 0;background-color:#dce7f4}
+</style><style data-vue-ssr-id="2fdd37c8:0">.page-logo{display:flex;align-items:center;text-decoration:none;color:black}.page-logo__icon{width:2rem;height:2rem;background-image:url(/assets/img/kodim-icon-d3361c.svg);background-size:contain}.page-logo__title{font-size:1.2rem;font-weight:bold;margin-left:0.5rem}.navbar{padding:1rem 0}
+</style><style data-vue-ssr-id="6f27289b:0">.exercise__head{display:flex;margin-left:-1.5rem}.exercise__num{width:3rem;height:3rem;line-height:3rem;background-color:white;box-shadow:0 0 10px #ddd;border-radius:1.5rem;text-align:center}.exercise__title{display:flex;align-items:baseline;flex:1;font-size:1.2rem;font-weight:bold;margin-left:0rem}.exercise__title h3{font-size:100%;padding-left:2.5rem;margin-bottom:0.5rem}.exercise__demand{margin-top:2rem;padding-right:4rem;text-align:right}.exercise__body>p,.exercise__body>ul,.exercise__body>ol,.exercise__body>dl{margin-left:4rem;margin-right:4rem}.exercise table tr:nth-child(even){background-color:#ffe664}.demand{min-width:70px;height:14px;background-size:contain;background-position-x:right;background-repeat:no-repeat;background-size:70px 14px}.demand--1{background-image:url(/assets/img/demand1-32b0be.svg)}.demand--2{background-image:url(/assets/img/demand2-3d6156.svg)}.demand--3{background-image:url(/assets/img/demand3-6ddf4a.svg)}.demand--4{background-image:url(/assets/img/demand4-377dc5.svg)}.demand--5{background-image:url(/assets/img/demand5-9e0206.svg)}.demand-text{font-size:0.8rem;font-weight:bold}
+</style></head>
+  <body data-gr-c-s-loaded="true">
+    <div data-server-rendered="true" class="page"><header><div class="navbar container"><a href="http://nove.kodim.cz/" class="page-logo router-link-active"><div class="page-logo__icon"></div> <div class="page-logo__title">Kódím.cz</div></a></div> </header> <main class="main"><div class="container"><aside class="aside"><div class="chapter-link"><a href="http://nove.kodim.cz/czechitas/daweb" class="router-link-active">Základy JavaScriptu</a></div> <nav class="article-outline"><a href="#prvni-program" class="toc-link">První program</a><a href="#vstup-a-vystup" class="toc-link">Vstup a výstup</a><a href="#konverze-hodnot" class="toc-link">Konverze hodnot</a><a href="#metody-a-vlastnosti" class="toc-link">Metody a vlastnosti</a><a href="#cviceni-vstup-vystup-metody" class="toc-link">Cvičení - vstup, výstup, metody</a><a href="#pravdivostni-hodnoty" class="toc-link">Pravdivostní hodnoty</a><a href="#podminky" class="toc-link">Podmínky</a><a href="#cviceni-podminky" class="toc-link">Cvičení - podmínky</a><a href="#povinna-uloha-na-doma" class="toc-link">Povinná úloha na doma</a><a href="#doporucene-ulozky-na-doma" class="toc-link">Doporučené úložky na doma</a><a href="#povinne-cteni-na-doma-logicke-operatory" class="toc-link">Povinné čtení na doma - logické operátory</a><a href="#volitelne-ulozky-na-doma" class="toc-link">Volitelné úložky na doma</a></nav></aside> <article class="article"><div class="article-head"><div class="article-head__title"><div class="article-head__num">2</div> <h1>První programy a podmínky</h1></div> <div class="article-head__brief">Ukážeme si jak vytvářet JavaScriptové programy a naučíme je dělat rozhodnutí pomocí podmínek.</div></div> <div class="article-links"><div class="article-link article-link--backward"><div class="arrow-left"></div> <a href="http://nove.kodim.cz/czechitas/daweb/zaklady-js/uvod-do-js">
+        Úvod do JavaScriptu
+      </a></div> <div class="article-links-filler"></div> <div class="article-link article-link--forward"><a href="http://nove.kodim.cz/czechitas/daweb/zaklady-js/dom-funkce">
+        DOM a vlastní funkce
+      </a> <div class="arrow-right"></div></div></div> <div class="article-body"><!-- base href="http://nove.kodim.cz/czechitas/daweb/zaklady-js/programy-podminky/" --> <section class="article-section text-section"><p>Do
+ této chvíle jsme si s runtimem JavaScriptu povídali pouze skrze 
+konzoli. Vždy jsme posílali jeden příkaz a rovnou na něj dostali 
+odpověď. Nyní je čas začít psát programy, tedy nechat náš prohlížeč 
+spustit více příkazů najednou.</p>
+<h2 id="prvni-program"><a class="anchor" href="#prvni-program">¶</a> První program</h2>
+<p>Naše JavaScriptové programy budou vždy součástí nějaké webové 
+stránky. Založíme si proto složku s jedním HTML souborem, který prozatím
+ bude obsahovat jen nadpis.</p>
+<pre><code class="language-html"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">"en"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">"UTF-8"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"viewport"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"width=device-width, initial-scale=1.0"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">http-equiv</span>=<span class="hljs-string">"X-UA-Compatible"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"ie=edge"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>První program<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>První program<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<p>Podobně jako jste zvyklí u CSS stylů, pro JavaScriptový kód budeme také vždy vytvářet oddělený soubor. Nyní mu dáme název <code>index.js</code>. Jeho obsah bude vypadat takto.</p>
+<pre><code class="language-js"><span class="hljs-meta">'use strict'</span>;
+
+<span class="hljs-built_in">document</span>.write(<span class="hljs-string">'Moc nečum!'</span>);
+</code></pre>
+<p>Pokud chceme JavaScriptový program propojit se stránku, vložíme odkaz na konec značky <code>body</code>.</p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>První program<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"index.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+</code></pre>
+<p>Pokud nyní soubor <code>index.html</code> otevřete v prohlížeči, měli byste pod nadpisem vidět text, který jsme předali funkci <code>document.write</code>.
+ To je funkce, která dokáže na konec naší stránky vložit libovolný 
+řetězec. Takto může náš jednoduchý program komunikovat s uživatelem.</p>
+<p>Všimněte si, že náš program začíná direktivou <code>use strict</code>.
+ Ta je pro nás velmi důležitá obzvlášť na úplném začátku kurzu, protože 
+nás chrání před různými začátečníckými chybami. Zakazuje JavaScript 
+runtimu například vytvářet nové proměnné bez použití <code>let</code>, <code>const</code> nebo <code>var</code>.
+ Vždy, když přiřadíte hodnotu do neexistující proměnné, obdržíte 
+chybovou hlášku místo toho, aby runtime vytvořil novou proměnnou, jako 
+by se nechumelilo. Tuto direktivu budeme používat ve všech našich 
+programech, abychom si usnadnili lovení chyb.</p>
+<h3 id="stredniky"><a class="anchor" href="#stredniky">¶</a> Středníky</h3>
+<p>Další důležitá věc je, že téměř každý příkaz v JavaScriptu končí 
+středníkem. Tím JavaScript runtime pozná, kde končí jeden příkaz a 
+začíná jiný. Inu, ve skutečnosti by to JavaScript většinou poznal i bez 
+středníků a ve skutečnosti bychom je ani psát nemuseli. Zakopaný pes je 
+však ve slovíčku <i>většinou</i>. Pokud středníky nepíšeme, v některých 
+situacích se může stát, že runtime pochopí náš kód špatně. Abychom si 
+nepřidělávali takto ze začátku starosti, budeme vkládat středníky všude.</p>
+<h2 id="vstup-a-vystup"><a class="anchor" href="#vstup-a-vystup">¶</a> Vstup a výstup</h2>
+<p>Každý program musí být schopen nějakým způsobem komunikovat s 
+uživatelem. Zatím jsme viděli, jak může náš program provést jednoduchý 
+výstup pomocí funkce <code>document.write</code>. Později uvidíme mnohem
+ zajímavější způsoby jak uživateli něco sdělit. Nyní ale potřebujeme od 
+uživatele taky získat nějaký vstup. K tomu budeme pro tuto chvíli 
+používat funkci <code>prompt</code>. Zkusme napsat program, který bude řešit naši ultramaratonskou úlohu z minulé lekce.</p>
+<pre><code class="language-js"><span class="hljs-meta">'use strict'</span>;
+
+<span class="hljs-keyword">const</span> start = <span class="hljs-number">15</span>;
+<span class="hljs-keyword">const</span> delka = prompt(<span class="hljs-string">'Zadej délku závodu:'</span>);
+<span class="hljs-keyword">const</span> konec = (start + delka) % <span class="hljs-number">24</span>;
+<span class="hljs-built_in">document</span>.write(konec);
+</code></pre>
+<p>Tento program vypadá velmi přímočaře. Zadáme-li mu však v dobré víře 
+na vstup délku 10 dočkáme se odpovědi nesprávné odpovědi 22. Abychom 
+odhalili, kde je zakopaný pes, musíme si povědět něco o konverzi hodnot.</p>
+<h2 id="konverze-hodnot"><a class="anchor" href="#konverze-hodnot">¶</a> Konverze hodnot</h2>
+<p>Úplně na začátku je šikovné všimnout si rozdílu mezi hodnotami jako <code>12</code> a <code>'12'</code>.
+ Jedna představuje číslo dvanáct, druhá představuje řetězec obsahující 
+znaky 1 a 2. Proto můžeme čekat, že aritmetické operace s těmito 
+hodnotami dopadnou jinak podle toho zda jde o číslo nebo o řetězec.</p>
+<pre><code class="language-jscon"><span class="hljs-meta">&gt;</span><span class="javascript"> <span class="hljs-number">12</span> + <span class="hljs-number">5</span></span>
+17
+<span class="hljs-meta">&gt;</span><span class="javascript"> <span class="hljs-string">'12'</span> + <span class="hljs-string">'5'</span></span>
+'125'
+</code></pre>
+<p>JavaScript se nám (občas k naší škodě) snaží udělat život jednodušší a
+ tak za nás v určitých případech provádí automatickou konverzi.</p>
+<pre><code class="language-jscon"><span class="hljs-meta">&gt;</span><span class="javascript"> <span class="hljs-string">'12'</span> + <span class="hljs-number">5</span></span>
+'125'
+<span class="hljs-meta">&gt;</span><span class="javascript"> <span class="hljs-number">12</span> + <span class="hljs-string">'5'</span></span>
+'125'
+<span class="hljs-meta">&gt;</span><span class="javascript"> <span class="hljs-number">1</span> + <span class="hljs-number">2</span> + <span class="hljs-number">3</span> + <span class="hljs-string">'4'</span></span>
+'64'
+<span class="hljs-meta">&gt;</span><span class="javascript"> <span class="hljs-string">'1'</span> + <span class="hljs-number">2</span> + <span class="hljs-number">3</span> + <span class="hljs-number">4</span></span>
+'1234'
+</code></pre>
+<p>Tato konverze funguje i pro jiné operátory, napříkad násobení</p>
+<pre><code class="language-jscon"><span class="hljs-meta">&gt;</span><span class="javascript"> <span class="hljs-number">12</span> * <span class="hljs-number">5</span></span>
+60
+<span class="hljs-meta">&gt;</span><span class="javascript"> <span class="hljs-string">'12'</span> * <span class="hljs-number">5</span></span>
+60
+<span class="hljs-meta">&gt;</span><span class="javascript"> <span class="hljs-number">12</span> * <span class="hljs-string">'5'</span></span>
+60
+<span class="hljs-meta">&gt;</span><span class="javascript"> <span class="hljs-string">'12'</span> * <span class="hljs-string">'5'</span></span>
+60
+</code></pre>
+<p>nebo zbytek po dělení.</p>
+<pre><code class="language-jscon"><span class="hljs-meta">&gt;</span><span class="javascript"> <span class="hljs-number">12</span> % <span class="hljs-number">5</span></span>
+2
+<span class="hljs-meta">&gt;</span><span class="javascript"> <span class="hljs-string">'12'</span> % <span class="hljs-number">5</span></span>
+2
+<span class="hljs-meta">&gt;</span><span class="javascript"> <span class="hljs-number">12</span> % <span class="hljs-string">'5'</span></span>
+2
+<span class="hljs-meta">&gt;</span><span class="javascript"> <span class="hljs-string">'12'</span> % <span class="hljs-string">'5'</span></span>
+2
+</code></pre>
+<p>Vybaveni touto zkušeností můžeme začít rozplétat, co se nám pokazilo 
+na našem ultramaratonském programu. To nejdůležitější k zapamatování je,
+ že funkce <code>prompt</code> <strong>vždycky vrací vstup od uživatele jako řetězec</strong>. I když uživatel do políčka nakrásně napíše číslo, funkce <code>prompt</code>
+ pro nás žádnou konverzi automaticky nedělá. Pokud tedy uživatel zadal 
+jako délku závodu číslo 10, do proměnné délka se nám uložila hodnota <code>'10'</code>. V konzoli si pak můžeme vyzkoušet, co se dělo pak.</p>
+<pre><code class="language-jscon"><span class="hljs-meta">&gt;</span><span class="javascript"> <span class="hljs-keyword">const</span> start = <span class="hljs-number">15</span></span>
+<span class="hljs-meta">&gt;</span><span class="javascript"> <span class="hljs-keyword">const</span> delka = <span class="hljs-string">'10'</span></span>
+<span class="hljs-meta">&gt;</span><span class="javascript"> start + delka</span>
+'1510'
+<span class="hljs-meta">&gt;</span><span class="javascript"> <span class="hljs-string">'1510'</span> % <span class="hljs-number">24</span></span>
+22
+</code></pre>
+<p>Abychom si s touto situací poradili, budeme potřebovat možnost 
+provést konverzi hodnot sami, aniž by nám do toho JavaScript kecal.</p>
+<h3 id="explicitni-konverze"><a class="anchor" href="#explicitni-konverze">¶</a> Explicitní konverze</h3>
+<p>Pokud chceme konvertovat číslo na řetězec, použijeme funkci <code>String</code>.</p>
+<pre><code class="language-jscon"><span class="hljs-meta">&gt;</span><span class="javascript"> <span class="hljs-built_in">String</span>(<span class="hljs-number">12</span>)</span>
+'12'
+<span class="hljs-meta">&gt;</span><span class="javascript"> <span class="hljs-built_in">String</span>(<span class="hljs-number">-2.48</span>)</span>
+'-2.48'
+</code></pre>
+<p>Když potřebujeme obrácenou konverzi, tedy řetězec na číslo, použijeme funkci <code>Number</code>.</p>
+<pre><code class="language-jscon"><span class="hljs-meta">&gt;</span><span class="javascript"> <span class="hljs-built_in">Number</span>(<span class="hljs-string">'12'</span>)</span>
+12
+<span class="hljs-meta">&gt;</span><span class="javascript"> <span class="hljs-built_in">Number</span>(<span class="hljs-string">'-2.48'</span>)</span>
+-2.48
+<span class="hljs-meta">&gt;</span><span class="javascript"> <span class="hljs-built_in">Number</span>(<span class="hljs-string">'-2,48'</span>)</span>
+NaN
+</code></pre>
+<p>Všimněte si, co se stane, když se pokusíme zkonvertovat nějaký 
+řetězec, který na číslo převést nejde. V takovém případě obdržíme 
+speciální hodnotu <code>NaN</code>, což je zkratka pro Not a Number - Není číslo.</p>
+<p>Nyní už můžeme náš program přepracovat tak, aby fungoval správně.</p>
+<pre><code class="language-js"><span class="hljs-meta">'use strict'</span>;
+
+<span class="hljs-keyword">const</span> start = <span class="hljs-number">15</span>;
+<span class="hljs-keyword">const</span> delka = <span class="hljs-built_in">Number</span>(prompt(<span class="hljs-string">'Zadej délku závodu:'</span>));
+<span class="hljs-keyword">const</span> konec = (start + delka) % <span class="hljs-number">24</span>;
+<span class="hljs-built_in">document</span>.write(konec);
+</code></pre>
+<p>Z tohoto příklady plyne do budoucna velmi důležité poučení. Vždycky 
+si dávejte dobrý pozor na to, s jakými typy hodno pracujete. Pokud 
+například chcete s používat výstup funkce <code>prompt</code> jako 
+číslo, vždycky jej explicitně převeďte na číslo. Dáte tak i čtenářům 
+vašeho programu najevo, co je vaším záměrem a oni tak nebudou muset 
+smysl vašeho programu rozplétat jako detektivní zápletku.</p>
+<p>To, že JavaScript pro nás některé konverze dělá automaticky, můžeme 
+využít k tomu, abychom uživateli vypsali nějakou hezčí zprávu, než jen 
+holé číslo.</p>
+<pre><code class="language-js"><span class="hljs-built_in">document</span>.write(<span class="hljs-string">'Běžec dorazí v '</span> + konec + <span class="hljs-string">'h'</span>);
+</code></pre>
+<h2 id="metody-a-vlastnosti"><a class="anchor" href="#metody-a-vlastnosti">¶</a> Metody a vlastnosti</h2>
+<p>Než se vhrnete do víru psaní vlastních programů, ukážeme si ještě 
+jeden důležitý nástroj, který nám otevře mnoho zajímavých možností, a 
+tím jsou 
+          <span class="term">
+            <span class="term__cs">metody<span class="term__icon"></span></span>
+            <span class="term__en">methods</span>
+          </span>
+         a 
+          <span class="term">
+            <span class="term__cs">vlastnosti<span class="term__icon"></span></span>
+            <span class="term__en">properties</span>
+          </span>
+        . Metodu si můžeme představit jako speciální druh funkce, která 
+se používá pouze ve spojení s konkrétním typem hodnoty. Představme si, 
+že chcete například změnit všechna písmenka nějakého řetězce na velká. 
+Na něco takového by mohla existovat funkce například s názvem <code>toUpperCase</code>.</p>
+<pre><code class="language-jscon"><span class="hljs-meta">&gt;</span><span class="javascript"> toUpperCase(<span class="hljs-string">'martin'</span>)</span>
+'MARTIN'
+</code></pre>
+<p>Takováto funkce v JavaScriptu ve skutečnosti neexistuje. Když se ale 
+nad ní malinko zamyslíte, zjistíte, že by fungovala pouze na řetězcích. 
+Těžko si představit, co by taková funkce měla dělat například s číslem 
+-0.46. V takovém případě můžeme říct, že naše funkce je 
+          <span class="term">
+            <span class="term__cs">metodou na řetězcích<span class="term__icon"></span></span>
+            <span class="term__en">string method</span>
+          </span>
+         a zavoláme ji pomocí tečkové notace.</p>
+<pre><code class="language-jscon"><span class="hljs-meta">&gt;</span><span class="javascript"> <span class="hljs-string">'martin'</span>.toUpperCase()</span>
+'MARTIN'
+</code></pre>
+<p>Tento kód už v JavaScriptu funguje a dělá přesně to, co bychom čekali. Kromě <code>toUpperCase</code> mají řetězce mnoho dalších užitečných metod. Například metoda <code>toLowerCase</code>, která naopak převádí všechna písmenka na malá. Máme ale i metody, které vyžadují další vstupy. Například metoda <code>substring</code>, která umí vyříznout část řetězce podle zadaných mezí.</p>
+<pre><code class="language-jscon"><span class="hljs-meta">&gt;</span><span class="javascript"> <span class="hljs-string">'martin'</span>.substring(<span class="hljs-number">2</span>, <span class="hljs-number">4</span>)</span>
+'rt'
+<span class="hljs-meta">&gt;</span><span class="javascript"> <span class="hljs-string">'martin'</span>.substring(<span class="hljs-number">0</span>, <span class="hljs-number">5</span>)</span>
+'marti'
+</code></pre>
+<p>U metody <code>substring</code> poprvé narážíme na jednu programátorskou výstřednost, kterou budeme potkávat pořád znovu a znovu: <strong>programátoři vždy počítají od nuly</strong>, nikoliv od jedničky jako běžní lidé. V řetězci <code>'martin'</code> je tedy písmenko <code>'m'</code> na pozici nula, písmenko <code>'a'</code> na pozici 1 a tak dále. Metoda <code>substring</code> navíc bere dolní mez <strong>včetně</strong>, kdežto horní mez se bere <strong>vyjma</strong>.</p>
+<p>Na řetězcích i na dalších nám zatím neznámých hodnotách najdeme mnoho
+ a mnoho dalších metod, které budem postupně potkávat během celého 
+kurzu.</p>
+<p>Možná vám nyní vrtá hlavou, jestli funkce <code>Math.round</code> není také náhodou metoda, když používá tečkovou notaci. Je to skutečně tak. Nyní se ale budete chtít zeptat, co že teda je to <code>Math</code> za hodnotu a tady se dostáváme do úzkých, protože na zodpovězení této otázky ještě nemáme dost terminologie a znalostí. Takže <code>Math</code> pro nás na chvíli ještě zůstane tajemstvím.</p>
+<h3 id="vlastnosti"><a class="anchor" href="#vlastnosti">¶</a> Vlastnosti</h3>
+<p>Už víme, že metody jsou něco jako funkce, které přísluší k nějakému typu hodnoty, například řetězci. 
+          <span class="term">
+            <span class="term__cs">Vlastnosti<span class="term__icon"></span></span>
+            <span class="term__en">Properties</span>
+          </span>
+         jsou něco jako proměnné, které patří k určitému typu hodnoty. 
+Používá se u nich stejná tečková notace jako u metod. Řetězce například 
+mají vlastnost <code>length</code>, která udává délku řetězce.</p>
+<pre><code class="language-jscon"><span class="hljs-meta">&gt;</span><span class="javascript"> <span class="hljs-string">'martin'</span>.length</span>
+6
+<span class="hljs-meta">&gt;</span><span class="javascript"> <span class="hljs-string">'m'</span>.length</span>
+1
+<span class="hljs-meta">&gt;</span><span class="javascript"> <span class="hljs-string">''</span>.length</span>
+0
+</code></pre>
+<p>Všimněte si, že za názvem vlastnosti nejsou kulatá závorky, protože 
+vlastnosti nejsou metody, které bychom volali jako funkce. Vlastnost <code>length</code> je zatím jediná vlastnost, kterou poznáme. Později v kurzu jich však uvidíme více.</p>
+</section> <!----><!----> <section class="article-section exercises-section"><h2 id="cviceni-vstup-vystup-metody" class="exrc-section-title"><a href="#cviceni-vstup-vystup-metody" class="anchor">¶</a>
+          Cvičení - vstup, výstup, metody
+        </h2> <!----> <div class="exercise"><div class="exercise__head"><div class="exercise__title"><div class="exercise__num">1</div> <h3 id="cvi-vyplata-jako-stranka"><a href="#cvi-vyplata-jako-stranka" class="anchor">¶</a>
+        Výplata jako stránka
+      </h3></div> <div class="exercise__demand"><div class="demand demand--1"></div> <div class="demand-text">pohodička</div></div></div> <div class="exercise__body">
+<ol>
+<li>Vytvořte webovou stránku, která uživatele požádá o jeho hodinovou 
+sazbu v korunách a spočítá jeho hrubou mzdu za předpokladu, že pracuje 8
+ hodin denně 21 dní v měsíci. Do stránky vypište výsledek zabalený do 
+nějaké přívětivé formulace. Dbejte na to, abyste korektně převedli 
+uživatelem zadanou hodnotu na číslo.</li>
+<li>Nechte uživatele zadat nejen hodinovou sazbu, ale také počet hodin a dní v měsíci. Opět dejte pozor na správnou konverzi.</li>
+</ol>
+</div></div><div class="exercise"><div class="exercise__head"><div class="exercise__title"><div class="exercise__num">2</div> <h3 id="cvi-email"><a href="#cvi-email" class="anchor">¶</a>
+        Email
+      </h3></div> <div class="exercise__demand"><div class="demand demand--2"></div> <div class="demand-text">to dáš</div></div></div> <div class="exercise__body">
+<p>Pokud se přihlásíte jako student například na Fakultu Informačních 
+Technologí ČVUT, bude vám informačním systémem automaticky přidělen 
+email, který se vytvoří z vašeho jména a příjmení. Z vašeho příjmení se 
+vezme pět prvních znaků a z vašeho křestního jména první tři. Výsledek 
+se převede na malá písmena a připojí se doména <code>fit.cvut.cz</code>. Pro jméno Žaneta Procházková tak vznikne adresa <code>prochzan@fit.cvut.cz</code>.</p>
+<p>Vytvořte webovou stránku, která požádá uživatele nejdříve o jeho 
+křestní jméno a pak příjmení, obojí bez diakritiky. Stránka poté 
+vygeneruje emailovou adresu podle výše uvedených pravidel.</p>
+</div></div></section><section class="article-section text-section"><h2 id="pravdivostni-hodnoty"><a class="anchor" href="#pravdivostni-hodnoty">¶</a> Pravdivostní hodnoty</h2>
+<p>Ve zbývající části lekce se vrhneme na podmínky a umožníme naším 
+programům se rozhodovat. Před tím si ale musíme trošku připravit půdu a 
+ukázat si nový typ hodnoty. Zatím jsme viděli čísla a řetězce, nyní 
+přichází takzvané 
+          <span class="term">
+            <span class="term__cs">pravdivostní hodnoty<span class="term__icon"></span></span>
+            <span class="term__en">boolean values</span>
+          </span>
+        . Čísel a řetězců je nekonečně mnoho, pravdivostní hodnoty jsou však jen dvě: <code>true</code> a <code>false</code>. Používají se k tomu, abychom vyjádřili, zda je něco pravda nebo není. Například:</p>
+<pre><code class="language-jscon"><span class="hljs-meta">&gt;</span><span class="javascript"> <span class="hljs-keyword">const</span> pristupPovolen = <span class="hljs-literal">false</span></span>
+<span class="hljs-meta">&gt;</span><span class="javascript"> <span class="hljs-keyword">const</span> vstupJeCislo = <span class="hljs-literal">true</span></span>
+<span class="hljs-meta">&gt;</span><span class="javascript"> <span class="hljs-keyword">const</span> mobilniProhlizec = <span class="hljs-literal">true</span></span>
+</code></pre>
+<p>K tomu, abychom mohli v našich programech činit rozhodnutí budeme 
+také potřebovat výrazy, které vrací pravdivostní hodnoty. Ty můžeme 
+sestavit pomocí takzvaných 
+          <span class="term">
+            <span class="term__cs">porovnávacích operátorů<span class="term__icon"></span></span>
+            <span class="term__en">comparison operators</span>
+          </span>
+        .</p>
+<pre><code class="language-jscon"><span class="hljs-meta">&gt;</span><span class="javascript"> <span class="hljs-keyword">const</span> age = <span class="hljs-number">21</span></span>
+<span class="hljs-meta">&gt;</span><span class="javascript"> age &gt; <span class="hljs-number">18</span></span>
+true
+<span class="hljs-meta">&gt;</span><span class="javascript"> age &gt; <span class="hljs-number">21</span></span>
+false
+<span class="hljs-meta">&gt;</span><span class="javascript"> age &gt;= <span class="hljs-number">21</span></span>
+true
+<span class="hljs-meta">&gt;</span><span class="javascript"> age === <span class="hljs-number">21</span></span>
+true
+<span class="hljs-meta">&gt;</span><span class="javascript"> age !== <span class="hljs-number">21</span></span>
+true
+</code></pre>
+<p>Kompletní sada porovnávacích operátorů vypadá takto.</p>
+<table>
+  <thead>
+    <tr><th>Operátor</th>
+    <th>Popis</th>
+  </tr></thead>
+  <tbody>
+    <tr><td><strong><code>&gt;</code></strong></td><td>větší než</td></tr>
+    <tr><td><strong><code>&gt;=</code></strong></td><td>větší nebo rovno</td></tr>
+    <tr><td><strong><code>&lt;</code></strong></td><td>menší než</td></tr>
+    <tr><td><strong><code>&lt;=</code></strong></td><td>menší nebo rovno</td></tr>
+    <tr><td><strong><code>===</code></strong></td><td>rovno</td></tr>
+    <tr><td><strong><code>!==</code></strong></td><td>nerovno</td></tr>
+  </tbody>
+</table>
+<p>V JavaScriptu můžete narazit i na operátory <code>==</code> a <code>!=</code>. Ty však nebudeme nikdy používat, protože v některých případech mohou zanést do našeho programu nechtěné chyby.</p>
+<h2 id="podminky"><a class="anchor" href="#podminky">¶</a> Podmínky</h2>
+<p>Nyní se konečně dostáváme k tématu, na které jsme se tak dlouho 
+připravovali. Doposud všechny naše programy vypadaly jako sekvence 
+příkazů vykonávané jeden za druhým. Pro komplikovanější problémy ale 
+budeme potřebovat umožnit, aby se některé části programu vykonaly jen za
+ určitých podmínek.</p>
+<p>Pro jednoduchý příklad se opět vraťme k našemu ultramaratonskému 
+běhu. Závod začiná ve tři hodiny odpoledne a počítáme s tím, že 
+závodníci doběhnou někdy příští den ráno. Nebudeme ale v cíli čekat na 
+každého dědulu, který to celé poběží 20 hodin. Řekněme, že organizátoři 
+mají padla druhý den v poledne. Potřebujeme tedy do naší stránky 
+zakomponovat informaci o tom, jestli trasu dokážeme uběhnout do 12 
+hodin.</p>
+<pre><code class="language-js"><span class="hljs-meta">'use strict'</span>;
+
+<span class="hljs-keyword">const</span> start = <span class="hljs-number">15</span>;
+<span class="hljs-keyword">const</span> delka = <span class="hljs-built_in">Number</span>(prompt(<span class="hljs-string">'Zadej délku závodu:'</span>));
+<span class="hljs-keyword">const</span> konec = (start + delka) % <span class="hljs-number">24</span>;
+
+<span class="hljs-keyword">if</span> (konec &gt; <span class="hljs-number">12</span>) {
+  <span class="hljs-built_in">document</span>.write(<span class="hljs-string">'Překročena maximální délka závodu!'</span>);
+} <span class="hljs-keyword">else</span> {
+  <span class="hljs-built_in">document</span>.write(<span class="hljs-string">'Konec závodu ve '</span> + konec + <span class="hljs-string">' hodin'</span>);
+}
+</code></pre>
+<p>Toto je příklad velmi jednoduché podmínky se dvěm větvemi. V závorkách po klíčovém slovu <code>if</code> musí vždy být výraz, který vrací pravdivostní hodnotu. Podle toho, jestli je výsledek výrazu <code>true</code> nebo <code>false</code> se buď vykoná kód v prvních složených závorkách nebo kód v závorkách za slovem <code>else</code>. Tady se proprvé potkáváme s takzvanými <code>bloky kódu</code>, které jsou téměř nezbytnou ingrediencí všech programů.</p>
+<h3 id="bloky-kodu"><a class="anchor" href="#bloky-kodu">¶</a> Bloky kódu</h3>
+<p>Pokud nějaké řádky kódu uzavřeme do složených závorek, vytváříme 
+takzvaný blok. JavaScript každý blok chápe jako samostatnou jednotku, 
+která se vykoná za určité situace. Taková situace muže být například 
+splnění nebo nesplnění výrazu v podmínce. Později uvidíme další situace,
+ kde se spouštěnjí bloky kódu.</p>
+<p>Aby se nám kód dobře četl, odsazujeme řádky uvnitř bloku o kus 
+doprava. V tomto kurzu budeme používat dvě mezery. Pokud máte VS Code 
+nastavené podle naších doporučení, při psaní se vám řádky budou 
+automaticky odsazovat. Stisknutím tabulátoru <kbd>Tab</kbd> pak můžete odsazení vložit sami. Stisknutím <kbd>Shift</kbd>+<kbd>Tab</kbd> jej naopak zrušíte. To se hodí pokud chcete například odsadit velký kus kódu najednou. Stačí jej vybrat myší a stiknout <kbd>Tab</kbd> nebo <kbd>Shift</kbd>+<kbd>Tab</kbd>.</p>
+<p>Je dobré mít na paměti, že odsazování a obecně většina bílých znaků 
+je především pro nás lidi, tedy pro čtenáře kódu. Počítači, tedy 
+přesnějí JavaScript runtimu, jsou bílé znaky jedno. Můžeme si je tady 
+dávat kam chceme. Následující dva zápisy jsou z hlediska runtimu zcela 
+stejné.</p>
+<pre><code class="language-js"><span class="hljs-keyword">if</span> (age &gt;= <span class="hljs-number">18</span>) {
+  <span class="hljs-built_in">document</span>.write(<span class="hljs-string">'Nalej si'</span>);
+} <span class="hljs-keyword">else</span> {
+  <span class="hljs-built_in">document</span>.write(<span class="hljs-string">'Žádné chlastání!'</span>);
+}
+</code></pre>
+<pre><code class="language-js"><span class="hljs-keyword">if</span> (age &gt;= <span class="hljs-number">18</span>) {
+  <span class="hljs-built_in">document</span>.write(<span class="hljs-string">'Nalej si'</span>);
+} <span class="hljs-keyword">else</span> {
+  <span class="hljs-built_in">document</span>.write(<span class="hljs-string">'Žádné chlastání!'</span>);
+}
+</code></pre>
+<p>Věřím, že uznáte, že první varianta je mnohem čitelnější než druhá. 
+Způsobů, jak formátovat kód existuje vícero a můžete se tak účastnit 
+nekonečných hospodských disputací o tom, jestli odsazovat pomocí dvou 
+mezer nebo čtyř, jestli otvírací složenou závorku psát na konec řádku 
+nebo na začátek nového a tak dále.</p>
+<pre><code class="language-js"><span class="hljs-keyword">if</span> (age &gt;= <span class="hljs-number">18</span>) {
+  <span class="hljs-built_in">document</span>.write(<span class="hljs-string">'Nalej si u nás'</span>);
+} <span class="hljs-keyword">else</span> {
+  <span class="hljs-built_in">document</span>.write(<span class="hljs-string">'Žádné chlastání!'</span>);
+}
+</code></pre>
+<p>Nakonec je však důležité hlavně si nějaká pravidla stanovit a ta pak dodržovat. V tomto směru existuje <a href="https://codeburst.io/5-javascript-style-guides-including-airbnb-github-google-88cbc6b2b7aa">několik manuálů</a>, kterým se říká <em>style guide</em>.
+ Ty kodifikují určitá pravidla formátování kódu tak, abyste je nemuseli 
+vždy od nuly vymýšlet sami. Ve firmě nebo v programátorském týmu pak 
+stačí říct, že používáme takový nebo onaký style guide a předejít tak 
+nekonečným diskuzím o tom, kde mají být mezery a kde ne. V tomto kurzu 
+používáme <a href="https://github.com/airbnb/javascript">AirBnB style guide</a>.
+ Pokud máte dobře nastavený VS Code, při každém uložení souboru se váš 
+kód automaticky přeformátuje podle těchto pravidel. Můžete se tak místo 
+na počty mezer soustředit na to, aby váš program skutečně fungoval.</p>
+<h3 id="podminky-s-vice-vetvemi"><a class="anchor" href="#podminky-s-vice-vetvemi">¶</a> Podmínky s více větvemi</h3>
+<p>Zatím jsme viděli podmínky se dvěma větvemi. Není ovšem problém mít podmínku například jen s jednou větví.</p>
+<pre><code class="language-js"><span class="hljs-keyword">if</span> (age &gt;= <span class="hljs-number">18</span>) {
+  <span class="hljs-built_in">document</span>.write(<span class="hljs-string">'Nalej si'</span>);
+}
+</code></pre>
+<p>Pokud je výraz v podmínce <code>false</code>, blok kódu se prostě 
+přeskočí. Občas ale naopak potřebujeme podmínky s vícero větvemi. Uvažte
+ například situaci, kdy se snažíme ohodnotit písemku známkami A až F 
+podle dosaženého počtu budů.</p>
+<pre><code class="language-js"><span class="hljs-keyword">let</span> znamka = <span class="hljs-string">''</span>;
+<span class="hljs-keyword">if</span> (body &gt;= <span class="hljs-number">90</span>) {
+  znamka = <span class="hljs-string">'A'</span>;
+} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (body &gt;= <span class="hljs-number">80</span>) {
+  znamka = <span class="hljs-string">'B'</span>;
+} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (body &gt;= <span class="hljs-number">70</span>) {
+  znamka = <span class="hljs-string">'C'</span>;
+} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (body &gt;= <span class="hljs-number">60</span>) {
+  znamka = <span class="hljs-string">'D'</span>;
+} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (body &gt;= <span class="hljs-number">50</span>) {
+  znamka = <span class="hljs-string">'E'</span>;
+} <span class="hljs-keyword">else</span> {
+  znamka = <span class="hljs-string">'F'</span>;
+}
+</code></pre>
+<p>V takto rozvětvené podmínkce JavaScript runtime prochází jednotlivé výrazy dokud nenarazí na ten, který se vyhodnotí jako <code>true</code>. Vykoná příšlušný blok a kódu a <strong>zbylé větve přeskočí.</strong> Vykoná se tak pouze první větev, která se vyhodnotí jako <code>true</code>. Pokud by byly všechny výrazy <code>false</code>, vykoná se větev <code>else</code>. Jak už víme, větev <code>else</code> přítomná být nemusí. Výše udovedný kód bychom tedy mohli malinko zkrátit takto.</p>
+<pre><code class="language-js"><span class="hljs-keyword">let</span> znamka = <span class="hljs-string">'F'</span>;
+<span class="hljs-keyword">if</span> (body &gt;= <span class="hljs-number">90</span>) {
+  znamka = <span class="hljs-string">'A'</span>;
+} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (body &gt;= <span class="hljs-number">80</span>) {
+  znamka = <span class="hljs-string">'B'</span>;
+} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (body &gt;= <span class="hljs-number">70</span>) {
+  znamka = <span class="hljs-string">'C'</span>;
+} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (body &gt;= <span class="hljs-number">60</span>) {
+  znamka = <span class="hljs-string">'D'</span>;
+} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (body &gt;= <span class="hljs-number">50</span>) {
+  znamka = <span class="hljs-string">'E'</span>;
+}
+</code></pre>
+<h3 id="vnorene-podminky"><a class="anchor" href="#vnorene-podminky">¶</a> Vnořené podmínky</h3>
+<p>Každý blok kódu může obsahovat libovolné příkazy, tedy i další podmínky. Můžeme tak snadno vnořovat podmínky do sebe.</p>
+<pre><code class="language-js"><span class="hljs-keyword">if</span> (age &gt;= <span class="hljs-number">18</span>) {
+  <span class="hljs-built_in">document</span>.write(<span class="hljs-string">'Nalej si'</span>);
+} <span class="hljs-keyword">else</span> {
+  <span class="hljs-keyword">const</span> remains = <span class="hljs-number">18</span> - age;
+  <span class="hljs-keyword">if</span> (remains &lt; <span class="hljs-number">2</span>) {
+    <span class="hljs-built_in">document</span>.write(<span class="hljs-string">'Ještě si chvíli počkej'</span>);
+  } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (remains &lt; <span class="hljs-number">5</span>) {
+    <span class="hljs-built_in">document</span>.write(<span class="hljs-string">'Co to tady zkoušíš?'</span>);
+  } <span class="hljs-keyword">else</span> {
+    <span class="hljs-built_in">document</span>.write(<span class="hljs-string">'Utíkej za mamkou!'</span>);
+  }
+}
+</code></pre>
+<p>Takto můžeme vytvářet relativně komplikované rozhodování. Se 
+zanořováním podmínek je ale dobré to příliš nepřehánět. Málokdo se 
+dokáže snadno zorientovat v temných hlubínách pětkrát zanořené podmínky.
+ Později se naučímte strategie, jak se takovým hlubokým zanořením 
+vyhnout.</p>
+</section> <!----><!----> <section class="article-section exercises-section"><h2 id="cviceni-podminky" class="exrc-section-title"><a href="#cviceni-podminky" class="anchor">¶</a>
+          Cvičení - podmínky
+        </h2> <!----> <div class="exercise"><div class="exercise__head"><div class="exercise__title"><div class="exercise__num">3</div> <h3 id="cvi-prihlaseni"><a href="#cvi-prihlaseni" class="anchor">¶</a>
+        Přihlášení
+      </h3></div> <div class="exercise__demand"><div class="demand demand--2"></div> <div class="demand-text">to dáš</div></div></div> <div class="exercise__body">
+<ol>
+<li>Založte si webovou stránku, na které necháte uživatele zadat svoje 
+uživatelské jméno a poté heslo. Pokud se heslo shoduje s heslem <code>simsalabim</code>, vypište na výstup <code>Smíš vstoupit</code>.</li>
+<li>Upravte stránku tak, aby vypsala <code>Vstup nepovolen</code>, pokud uživatel zadá špatné heslo.</li>
+<li>Upravte dále program tak, že pokud uživatel zadá správné heslo, 
+stránka se ho ještě zeptá na věk a pustí jej dál pouze pokud je starší 
+18 let. Pokud uživatel zadá heslo špatně, už se ho na věk neptejte.</li>
+</ol>
+</div></div><div class="exercise"><div class="exercise__head"><div class="exercise__title"><div class="exercise__num">4</div> <h3 id="cvi-cena-vstupenky"><a href="#cvi-cena-vstupenky" class="anchor">¶</a>
+        Cena vstupenky
+      </h3></div> <div class="exercise__demand"><div class="demand demand--2"></div> <div class="demand-text">to dáš</div></div></div> <div class="exercise__body">
+<p>Pokusme se o základ jednoduchého rezervačního sestému pro vstupenky 
+do divadla. Nechte uživatele zadat svůj věk. Vytvořte si proměnnou <var>plnaCena</var>, do které uložte hodnotu 12. Vytvořte podmínku, která do proměnné <var>cena</var> uloží cenu spočítanou podle věku uživatele dle následujících pravidel</p>
+<ul>
+<li>0 euro pro návštěvníky mladší 6 let,</li>
+<li>65 % ze základní ceny pro návštěvníky 6 až 26 let (žák, student),</li>
+<li>100 % ze základní ceny pro návštěvníky 27 až 64 let (dospělý),</li>
+<li>50 % ze základní ceny pro ostatní (senior).</li>
+</ul>
+<p>Nezapomeňte na zaokrouhlování, ať nám cena vyjde v celých centech.</p>
+<p>Nakonec spočtenou cenu vypište s nějakou hezkou zprávou na výstup.</p>
+</div></div></section><!----> <section class="article-section exercises-section"><h2 id="povinna-uloha-na-doma" class="exrc-section-title"><a href="#povinna-uloha-na-doma" class="anchor">¶</a>
+          Povinná úloha na doma
+        </h2> <!----> <div class="exercise"><div class="exercise__head"><div class="exercise__title"><div class="exercise__num">5</div> <h3 id="cvi-superhruba-mzda"><a href="#cvi-superhruba-mzda" class="anchor">¶</a>
+        Superhrubá mzda
+      </h3></div> <div class="exercise__demand"><div class="demand demand--3"></div> <div class="demand-text">zapni hlavu</div></div></div> <div class="exercise__body">
+<p>Vytvořte webovou stránku, která pomůže zaměstnavatelům spočítat 
+náklady na jednoho zaměstnance, tedy takzvenou superhrubou mzdu. 
+Zaměstnavetel zadá na vstupu dvě hodnoty: hodinovou sazbu zaměstnance a 
+velikost úvazku v procentech. Tedy například 100% je plný úvazek (8 
+hodině denně), 50% poloviční apod. Stránka vypíše výši superhrubé mzdy, 
+výší hrubé mzdy a výší čisté mzdy, vše v korunách.</p>
+<p>Pravidla pro tyto výpočty se v čase mění. Aktuální pravidla v době vzniku tohoto cvičení platí od 1.7.2019 a jsou následující (<a href="https://www.vypocet.cz/popis-vypoctu-ciste-mzdy">zdroj</a>).</p>
+<p>Hrubou mzdu spočítáme z hodinové sazby a velikosti úvazku. 
+Předpokládejme, že každý měsíc má 21 pracovních dní. Výsledné číslo 
+zaokrouhlíme běžným způsobem na celé koruny.</p>
+<p>Superhrubá mzda se spočítá z hrubé mzdy takto:</p>
+<ol>
+<li>Přičteme náklady na zdravotní pojištění (9 % z hrubé mzdy)</li>
+<li>Přičteme náklady na sociální pojištění (24,8 % z hrubé mzdy)</li>
+<li>Výsledné číslo zaokrouhlíme <strong>nahoru</strong> na celé koruny.</li>
+</ol>
+<p>Čistá mzda se spočítá z hrubé mzdy takto:</p>
+<ol>
+<li>Odečteme 4,5 % hrubé mzdy jako zdravotní pojištění, které platí zaměstnanec,</li>
+<li>Odečteme 6,5 % hrubé mzdy jako sociální pojištění, které platí zaměstnanec,</li>
+<li>Spočítáme daňový základ tak, že superhrubou mzdu zaokrouhlíme na stovky nahoru…</li>
+<li>Odečteme daň z příjmu, která činí 15% z daňového základu.</li>
+<li>Přičteme 2070 jako základní slevu na dani, na kterou má nárok každý.</li>
+<li>Výsledek zaokrouhlíme <strong>dolů</strong> na celé koruny.</li>
+</ol>
+<p><strong>Příklad:</strong> Celkové náklady na mzdu zaměstnance z 
+hodinovou sazbou 450 Kč/h a 70% úvazkem jsou 70&nbsp;807 Kč. Hrubá mzda 
+činí 52&nbsp;920 Kč a čistá mzda 38&nbsp;533 Kč. Své výpočty můžete 
+ověřit například na <a href="https://www.vypocet.cz/cista-mzda">této stránce</a>. Bude nám stačit už pouze jedna lekce, abyste takovou stránku dokázali vyrobit úplně sami.</p>
+</div></div><div class="exercise"><div class="exercise__head"><div class="exercise__title"><div class="exercise__num">6</div> <h3 id="cvi-mnozstevni-slevy"><a href="#cvi-mnozstevni-slevy" class="anchor">¶</a>
+        Množstevní slevy
+      </h3></div> <div class="exercise__demand"><div class="demand demand--2"></div> <div class="demand-text">to dáš</div></div></div> <div class="exercise__body">
+<p>Firma nabízející trička s potiskem poskytuje množstevní slevy podle 
+počtu objednaný kusů. Při objednávce pod 50 kusů stojí jedno tričko 300 
+kč. Pokud si objednáme alespoň 50 kusů, je cena 250 kč za kus. Při 
+objednávce nad 200 kusů je cena 200 kč za tričko. Nad 500 kusů zaplatíme
+ 150 kč za tričko a nad 1000 kusů zaplatíme 120 korun za tričko.</p>
+<p>Napište program, který od uživatele obdrží počet kusů, které si chce objednat, a program odpoví celkovou ceny objednávky.</p>
+</div></div></section><!----> <section class="article-section exercises-section"><h2 id="doporucene-ulozky-na-doma" class="exrc-section-title"><a href="#doporucene-ulozky-na-doma" class="anchor">¶</a>
+          Doporučené úložky na doma
+        </h2> <!----> <div class="exercise"><div class="exercise__head"><div class="exercise__title"><div class="exercise__num">7</div> <h3 id="cvi-mnozstevni-slevy"><a href="#cvi-mnozstevni-slevy" class="anchor">¶</a>
+        Množstevní slevy
+      </h3></div> <div class="exercise__demand"><div class="demand demand--2"></div> <div class="demand-text">to dáš</div></div></div> <div class="exercise__body">
+<p>Firma nabízející trička s potiskem poskytuje množstevní slevy podle 
+počtu objednaný kusů. Při objednávce pod 50 kusů stojí jedno tričko 300 
+kč. Pokud si objednáme alespoň 50 kusů, je cena 250 kč za kus. Při 
+objednávce nad 200 kusů je cena 200 kč za tričko. Nad 500 kusů zaplatíme
+ 150 kč za tričko a nad 1000 kusů zaplatíme 120 korun za tričko.</p>
+<p>Napište program, který od uživatele obdrží počet kusů, které si chce objednat, a program odpoví celkovou ceny objednávky.</p>
+</div></div></section><section class="article-section text-section"><h2 id="povinne-cteni-na-doma-logicke-operatory"><a class="anchor" href="#povinne-cteni-na-doma-logicke-operatory">¶</a> Povinné čtení na doma - logické operátory</h2>
+<p>V matematice jsme zvyklí na takzvané aritmetické operátory, tedy 
+plus, mínus apod. Takové operátory obecně vyrábějí z čísel jiná čísla, 
+například</p>
+<pre><code class="language-jscon"><span class="hljs-meta">&gt;</span><span class="javascript"> <span class="hljs-number">2</span> + <span class="hljs-number">3</span></span>
+5
+</code></pre>
+<p>Logika má však také své operátory, kterým se (logicky) říká <em>logické operátory</em>. Tyto operátory místo čísel pracují s pravdivostními hodnotami. Můžeme tak použít například operátor <code>&amp;&amp;</code>.</p>
+<pre><code class="language-jscon"><span class="hljs-meta">&gt;</span><span class="javascript"> <span class="hljs-literal">true</span> &amp;&amp; <span class="hljs-literal">true</span></span>
+true
+<span class="hljs-meta">&gt;</span><span class="javascript"> <span class="hljs-literal">true</span> &amp;&amp; <span class="hljs-literal">false</span></span>
+false
+<span class="hljs-meta">&gt;</span><span class="javascript"> <span class="hljs-literal">false</span> &amp;&amp; <span class="hljs-literal">true</span></span>
+false
+<span class="hljs-meta">&gt;</span><span class="javascript"> <span class="hljs-literal">false</span> &amp;&amp; <span class="hljs-literal">false</span></span>
+false
+</code></pre>
+<p>Tento operátor v podstatě znamená <strong>a zároveň</strong>. Tedy pokud jsou obě hodnoty <code>true</code>, výsledek je také <code>true</code>. Jinak je výsledek <code>false</code>.</p>
+<p>Můžeme také použít operátor <strong>nebo</strong> který se píše jako dvě roury <code>||</code>.</p>
+<pre><code class="language-jscon"><span class="hljs-meta">&gt;</span><span class="javascript"> <span class="hljs-literal">true</span> || <span class="hljs-literal">true</span></span>
+true
+<span class="hljs-meta">&gt;</span><span class="javascript"> <span class="hljs-literal">true</span> || <span class="hljs-literal">false</span></span>
+true
+<span class="hljs-meta">&gt;</span><span class="javascript"> <span class="hljs-literal">false</span> || <span class="hljs-literal">true</span></span>
+true
+<span class="hljs-meta">&gt;</span><span class="javascript"> <span class="hljs-literal">false</span> || <span class="hljs-literal">false</span></span>
+false
+</code></pre>
+<p>Operátor <code>||</code> vrací <code>true</code> v případě, že alespoň jedna z hodnot je <code>true</code>. Jako poslední máme operátor negace, který se píše jako vykřičník <code>!</code>. Ten jen vrací opak zadané pravdivostní hodnoty.</p>
+<pre><code class="language-jscon"><span class="hljs-meta">&gt;</span><span class="javascript"> !<span class="hljs-literal">true</span></span>
+false
+<span class="hljs-meta">&gt;</span><span class="javascript"> !<span class="hljs-literal">false</span></span>
+true
+</code></pre>
+<p>Tyto logické operátory můžeme s výhodou využít v našich podmínkách. 
+Například bychom mohli chtít zkontrolovat, že věk uživatele je mezi 15 a
+ 18. Chceme tedy logicky říct že věk je <i>větší nebo roven 15</i> <strong>a zároveň</strong> <i>menší nebo roven 18</i>. Kombinujeme tak vlastně dva logické výrazy do jednoho.</p>
+<pre><code class="language-js"><span class="hljs-keyword">if</span> (age &gt;= <span class="hljs-number">15</span> &amp;&amp; age &lt;= <span class="hljs-number">18</span>) {
+  <span class="hljs-built_in">document</span>.write(<span class="hljs-string">'Jsi mladistvým intelektuálem'</span>);
+}
+</code></pre>
+<p>V jiném případě můžeme chtít zkontrolovat, že věk uživatele je menší než 18 nebo větší či roven 65.</p>
+<pre><code class="language-js"><span class="hljs-keyword">if</span> (age &lt; <span class="hljs-number">18</span> || age &gt;= <span class="hljs-number">65</span>) {
+  <span class="hljs-built_in">document</span>.write(<span class="hljs-string">'Nemusíš pracovat'</span>);
+}
+</code></pre>
+<p>Tutéž podmínku bychom mohli napsat pomocí negace.</p>
+<pre><code class="language-js"><span class="hljs-keyword">if</span> (!(age &gt;= <span class="hljs-number">18</span> &amp;&amp; age &lt; <span class="hljs-number">65</span>)) {
+  <span class="hljs-built_in">document</span>.write(<span class="hljs-string">'Nemusíš pracovat'</span>);
+}
+</code></pre>
+<p>Takovýto výraz už je však trochu hůře k přečtení. Logické operátory 
+jsou užiteční pomocníci, v praxi je však dobré s nimi šetřit. Pokud 
+výraz ve vaší podmínce obsahuje více než jeden logický operátor, váš kód
+ se stává těžko čitelným a pochopitelným. Držte se proto při používání 
+logickách operátor pri zemi. Vaši budoucí kolegová vás za to budou mít 
+rádi.</p>
+</section> <!----><!----> <section class="article-section exercises-section"><h2 id="volitelne-ulozky-na-doma" class="exrc-section-title"><a href="#volitelne-ulozky-na-doma" class="anchor">¶</a>
+          Volitelné úložky na doma
+        </h2> <!----> <div class="exercise"><div class="exercise__head"><div class="exercise__title"><div class="exercise__num">8</div> <h3 id="cvi-ruleta"><a href="#cvi-ruleta" class="anchor">¶</a>
+        Ruleta
+      </h3></div> <div class="exercise__demand"><div class="demand demand--2"></div> <div class="demand-text">to dáš</div></div></div> <div class="exercise__body">
+<p>Na obrázku vidíte rozložení čísel na klasické Francouzské ruletě. 
+Ruleta obsahuje čísla 0 - 36. Každé číslo s výjimkou nuly je buď sudé 
+nebo liché a zároveň červené nebo černé. Pro čísla 1 až 10 a 19 až 28 
+platí, že lichá čísla jsou červená a sudá jsou černá. Pro zbytek platí 
+obrácené pravidlo, tedy lichá jsou černá a sudá červená. Nula není ani 
+lichá ani sudá, ani černá ani červená.</p>
+<p><img src="04_podminky_JS_soubory/roulette.png" alt="Ruleta" class="fig fig-70"></p>
+<p>Vytvořte stránku, které uživatel zadá číslo a stránka odpoví jestli 
+jde o číslo sudé nebo liché, černé nebo červené, nebo je to nula.</p>
+</div></div><div class="exercise"><div class="exercise__head"><div class="exercise__title"><div class="exercise__num">9</div> <h3 id="cvi-prestupny-rok"><a href="#cvi-prestupny-rok" class="anchor">¶</a>
+        Přestupný rok
+      </h3></div> <div class="exercise__demand"><div class="demand demand--3"></div> <div class="demand-text">zapni hlavu</div></div></div> <div class="exercise__body">
+<p>Napište program, který po zadání kalendářního roku vypíše, zda jde o 
+rok přestupný, či nikoliv. Letopočet je přestupný, pokud je dělitelný 
+čtyřmi. Roky, které jsou dělitelné 100 jsou ovšem přestupné pouze tehdy,
+ jsou-li zároveň dělitelné 400.</p>
+</div></div><div class="exercise"><div class="exercise__head"><div class="exercise__title"><div class="exercise__num">10</div> <h3 id="cvi-prestupny-rok-2"><a href="#cvi-prestupny-rok-2" class="anchor">¶</a>
+        Přestupný rok 2
+      </h3></div> <div class="exercise__demand"><div class="demand demand--4"></div> <div class="demand-text">zavařovačka</div></div></div> <div class="exercise__body">
+<p>Napište program, který po zadání kalendářního roku vypíše, zda jde o rok přestupný, či nikoliv. Pro výpis použijte funkci <code>document.write</code>. Její volání se však ve vašem kódu smí objevit pouze dvakrát.</p>
+</div></div><div class="exercise"><div class="exercise__head"><div class="exercise__title"><div class="exercise__num">11</div> <h3 id="cvi-prestupny-rok-3"><a href="#cvi-prestupny-rok-3" class="anchor">¶</a>
+        Přestupný rok 3
+      </h3></div> <div class="exercise__demand"><div class="demand demand--5"></div> <div class="demand-text">smrt v přímém přenosu</div></div></div> <div class="exercise__body">
+<p>Napište program, který po zadání kalendářního roku vypíše, zda jde o rok přestupný, či nikoliv. Pro výpis použijte funkci <code>document.write</code>, jejíž volání seve vašem kódu smí objevit pouze dvakrát. Zároveň v kódu nesmíte použít víc než dva logické operátory.</p>
+</div></div></section></div></article></div></main> <footer class="footer"><div class="container">Martin Podloucký</div></footer></div>
+  
+
+</body></html>

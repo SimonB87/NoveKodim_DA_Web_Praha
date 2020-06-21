@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="cz"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>kodim.cz</title>
+  <style data-vue-ssr-id="499c037c:0">@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700,900|Roboto+Mono:400,700&display=fallback&subset=latin-ext);</style><style data-vue-ssr-id="499c037c:1">*{box-sizing:border-box}html{font-family:"Montserrat", sans-serif;font-size:15px}body{margin:0;color:#444;background-color:#f9f9f9}.container{width:100%;margin-left:auto;margin-right:auto}@media only screen and (min-width: 576px){.container{width:540px}}@media only screen and (min-width: 768px){.container{width:720px}}@media only screen and (min-width: 992px){.container{width:960px}}.btn{border:none;outline:none;border-radius:1rem;padding:0.5rem 1rem;text-align:center;text-decoration:none;color:black;box-shadow:0 0 10px #ddd;transition:400ms}.btn:hover{transform:scale(1.1)}.btn-open{background-color:#ffec88}
+</style><style data-vue-ssr-id="54541dba:0">.hljs{display:block;overflow-x:auto;padding:0.5em;background:#222222;color:#C0C0C0}.hljs-keyword{color:#FFB871;font-weight:bold}.hljs-built_in{color:#FFB871}.hljs-literal{color:#FF8080}.hljs-symbol{color:#58E55A}.hljs-comment{color:#5B995B}.hljs-string{color:#FFFF00}.hljs-number{color:#FF8080}.hljs-attribute,.hljs-selector-tag,.hljs-doctag,.hljs-name,.hljs-bullet,.hljs-code,.hljs-addition,.hljs-regexp,.hljs-variable,.hljs-template-variable,.hljs-link,.hljs-selector-attr,.hljs-selector-pseudo,.hljs-type,.hljs-selector-id,.hljs-selector-class,.hljs-quote,.hljs-template-tag,.hljs-deletion,.hljs-title,.hljs-section,.hljs-function,.hljs-meta-keyword,.hljs-meta,.hljs-subst{color:#C0C0C0}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:bold}.article-outline{margin:2rem 3rem 0 0}.arrow-left{background-color:#ffec88;background-size:contain;width:2.5rem;height:2.5rem;border-radius:1.25rem;box-shadow:0 0 10px #ddd;background-image:url(/assets/img/arrow-left-5d2511.svg)}.arrow-right{background-color:#ffec88;background-size:contain;width:2.5rem;height:2.5rem;border-radius:1.25rem;box-shadow:0 0 10px #ddd;background-image:url(/assets/img/arrow-right-b02d21.svg)}.chapter-link{padding-left:1rem}.chapter-link a{text-decoration:none;color:black;font-size:1.2rem;font-weight:bold}.chapter-link a:hover{text-decoration:underline}.article-links{display:flex;margin-top:1rem}.article-links-filler{flex:1}.article-link{display:flex;align-items:center}.article-link a{text-decoration:none;color:black}.article-link a:hover{text-decoration:underline}.article-link--backward{margin-left:-1.25rem}.article-link--backward a{margin-left:2.75rem}.article-link--forward{margin-right:-1.25rem}.article-link--forward a{margin-right:2.75rem}.toc-link{display:block;width:100%;text-decoration:none;color:black;padding:0.5rem 1rem}.toc-link:hover{background-color:#f6f6f6}.exrc-section-title{margin-top:1rem !important;margin-bottom:0rem !important}.exrc-bonuses{padding:2rem 4rem;color:white;background-color:orange;margin-bottom:1rem}.exrc-bonuses__head{font-size:1.2rem;font-weight:bold;margin-bottom:1rem}.article-section{padding:2rem 0}.warn-section{background-color:#e2252b;color:white}.text-section table tr:nth-child(even){background-color:#e8e8e8}.exercises-section{background-color:#ffec88}.block-image{margin:3rem 0}.block-image img{display:block;width:100%;height:auto}.fig{display:block;margin:2rem auto;height:auto}li>.fig{margin:1rem auto}.fig-100{width:100%}.fig-90{width:90%}.fig-80{width:80%}.fig-70{width:70%}.fig-60{width:60%}.fig-50{width:50%}table{margin:2rem auto}table thead{border-bottom:2px solid #333}table td{padding:0.5rem}
+</style><style data-vue-ssr-id="34f8141e:0">.article-head{padding:0 4rem}.article-head__title{display:flex;align-items:baseline;font-size:1.8rem;font-weight:bold;margin-left:-6rem}.article-head__title h1{font-size:100%}.article-head__num{width:4rem;height:4rem;line-height:4rem;text-align:center;background-color:#ffec88;box-shadow:0 0 10px #ddd;border-radius:2rem;margin-right:2rem}.aside{display:none;width:320px;position:fixed;z-index:1;overflow-x:hidden;padding-top:20px}@media only screen and (min-width: 992px){.aside{display:block}}.article{margin:0rem 0 6rem 0;background-color:white;padding-top:2rem;box-shadow:0 0 10px #ddd;line-height:150%;border-radius:1rem}@media only screen and (min-width: 992px){.article{margin:0rem 0 6rem 320px}}.article .text-section>p,.article .text-section>ul,.article .text-section>ol,.article .text-section>dl{margin-left:4rem;margin-right:4rem}.article dt,.article dd{margin-bottom:0.5rem}.article h2,.article h3,.article h4{padding:1rem 4rem}.article .anchor{opacity:0;transition:250ms;text-decoration:none;color:#869af5;margin-left:-1.7rem}.article h2{margin-top:3rem;margin-bottom:1rem;font-size:1.6rem;font-weight:900}.article h2 .anchor{margin-left:-1.7rem}.article h3{margin-top:1rem;margin-bottom:0rem}.article h3 .anchor{margin-left:-1.2rem}.article h2:hover .anchor,.article h3:hover .anchor{opacity:1;margin-left:0}.article p{margin-top:0;margin-bottom:1rem;hyphens:manual}.article li{margin-bottom:0.5rem}.article .text-section:first-child p:first-child:first-letter{float:left;font-size:5rem;line-height:4rem;padding-top:0.3rem;padding-right:0.5rem}.article em{background-color:#d1ebf1;padding:0rem 0.5rem;border-radius:10px}.article pre,.article code,.article var{font-family:"Roboto Mono"}.article pre{background-color:#555;color:white;padding:1rem 4rem;margin:2rem 0;overflow-x:auto}.article var{font-style:normal;color:blue}.article kbd{font-family:"Montserrat";background-color:#fff;border:1px solid #888;border-radius:4px;padding:0rem 0.5rem}.term{display:inline;position:relative;font-style:italic;overflow:visible}.term__icon{display:inline-block;vertical-align:middle;width:15px;height:15px;margin-left:0.5rem;margin-bottom:2px;margin-right:0;background-image:url(/assets/img/english-9a71e2.png);background-size:contain;background-repeat:no-repeat}.term__cs{background-color:#d1ebf1;padding:0rem 0rem 0rem 0.5rem;border-radius:10px;white-space:pre;cursor:default}.term__en{position:absolute;top:-2rem;left:0rem;background-color:#444;color:white;padding:0rem 0.5rem;border-radius:5px;opacity:0;visibility:hidden;z-index:1;white-space:pre;transition:500ms}.term:hover .term__en{visibility:visible;opacity:1}
+</style><style data-vue-ssr-id="3c9796f4:0">.page{display:grid;grid-template-columns:auto;grid-template-rows:auto 1fr auto;min-height:100vh}.footer{padding:2rem 0;background-color:#dce7f4}
+</style><style data-vue-ssr-id="2fdd37c8:0">.page-logo{display:flex;align-items:center;text-decoration:none;color:black}.page-logo__icon{width:2rem;height:2rem;background-image:url(/assets/img/kodim-icon-d3361c.svg);background-size:contain}.page-logo__title{font-size:1.2rem;font-weight:bold;margin-left:0.5rem}.navbar{padding:1rem 0}
+</style><style data-vue-ssr-id="6f27289b:0">.exercise__head{display:flex;margin-left:-1.5rem}.exercise__num{width:3rem;height:3rem;line-height:3rem;background-color:white;box-shadow:0 0 10px #ddd;border-radius:1.5rem;text-align:center}.exercise__title{display:flex;align-items:baseline;flex:1;font-size:1.2rem;font-weight:bold;margin-left:0rem}.exercise__title h3{font-size:100%;padding-left:2.5rem;margin-bottom:0.5rem}.exercise__demand{margin-top:2rem;padding-right:4rem;text-align:right}.exercise__body>p,.exercise__body>ul,.exercise__body>ol,.exercise__body>dl{margin-left:4rem;margin-right:4rem}.exercise table tr:nth-child(even){background-color:#ffe664}.demand{min-width:70px;height:14px;background-size:contain;background-position-x:right;background-repeat:no-repeat;background-size:70px 14px}.demand--1{background-image:url(/assets/img/demand1-32b0be.svg)}.demand--2{background-image:url(/assets/img/demand2-3d6156.svg)}.demand--3{background-image:url(/assets/img/demand3-6ddf4a.svg)}.demand--4{background-image:url(/assets/img/demand4-377dc5.svg)}.demand--5{background-image:url(/assets/img/demand5-9e0206.svg)}.demand-text{font-size:0.8rem;font-weight:bold}
+</style></head>
+  <body data-gr-c-s-loaded="true">
+    <div data-server-rendered="true" class="page"><header><div class="navbar container"><a href="http://nove.kodim.cz/" class="page-logo router-link-active"><div class="page-logo__icon"></div> <div class="page-logo__title">Kódím.cz</div></a></div> </header> <main class="main"><div class="container"><aside class="aside"><div class="chapter-link"><a href="http://nove.kodim.cz/czechitas/daweb" class="router-link-active">Základy JavaScriptu</a></div> <nav class="article-outline"><a href="#hodnoty-null-a-undefined" class="toc-link">Hodnoty null a undefined</a><a href="#porozumeni-chybam" class="toc-link">Porozumění chybám</a><a href="#ladeni-programu" class="toc-link">Ladění programů</a><a href="#cviceni-hledani-chyb" class="toc-link">Cvičení - hledání chyb</a><a href="#obor-platnosti-promennych" class="toc-link">Obor platnosti proměnných</a><a href="#zastinovani-promennych" class="toc-link">Zastiňování proměnných</a><a href="#obory-platnosti-a-funkce" class="toc-link">Obory platnosti a funkce</a><a href="#uzavery" class="toc-link">Uzávěry</a></nav></aside> <article class="article"><div class="article-head"><div class="article-head__title"><div class="article-head__num">5</div> <h1>Ladění a obory platnosti</h1></div> <div class="article-head__brief">V
+ této lekci se naučíte lovit chyby ve vašich programech a zjistíte jak 
+se lépe orientovat v tom, jak JavaScript runtime vaše programy provádí.</div></div> <div class="article-links"><div class="article-link article-link--backward"><div class="arrow-left"></div> <a href="http://nove.kodim.cz/czechitas/daweb/zaklady-js/hof-udalosti">
+        Funkce vyšších řádů, události
+      </a></div> <div class="article-links-filler"></div> <div class="article-link article-link--forward"><a href="http://nove.kodim.cz/czechitas/daweb/zaklady-js/pole-cykly">
+        Pole a cykly
+      </a> <div class="arrow-right"></div></div></div> <div class="article-body"><!-- base href="http://nove.kodim.cz/czechitas/daweb/zaklady-js/debug-scope/" --> <section class="article-section text-section"><p>Do
+ této chvíli jsme ohledně jazyka JavaScript učili mnoho a mnoho nových 
+věcí. Věcí, které často potřebují čas na strávení a zažití aby se v 
+hlavě dobře usadily na ta správná místa. Pokud se něco nového a 
+náročného snažíme naučit příliš rychle, snadno se stane, že nám v 
+hlavách nové pojmy lítají jak splašené a není jasné, co souvisí s čím a 
+co kam patří. V této lekci tedy vrhneme více světla na věci, které jste 
+už v minulých lekcích použili, ale možná ještě nebyl čas se nad nimi 
+pořádně zamyslet.</p>
+<h2 id="hodnoty-null-a-undefined"><a class="anchor" href="#hodnoty-null-a-undefined">¶</a> Hodnoty null a undefined</h2>
+<p>Občas se nám stane, že si potřebujeme nějakou proměnnou připravit, 
+ale zatím ještě nevíme, jaká v ní má být hodnota. Chceme tedy, aby na 
+začátku byla prázdná. To můžeme zařídit pomocí speciální hodnoty <code>null</code>. Toto je v postatě nový typ hodnoty vedle čísel, řetězců, funkcí apod. Můžeme si představit, že hodnota <code>null</code> znamená <i>nic</i>.</p>
+<pre><code class="language-js"><span class="hljs-meta">'use strict'</span>;
+
+<span class="hljs-keyword">const</span> submitClick = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+  <span class="hljs-keyword">const</span> passwordElm = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'#pass-input'</span>);
+  <span class="hljs-keyword">const</span> password = passwordElm.value;
+  <span class="hljs-keyword">let</span> message = <span class="hljs-literal">null</span>;
+
+  <span class="hljs-keyword">if</span> (password === <span class="hljs-string">'swordfish'</span>) {
+    message = <span class="hljs-string">'Access granted'</span>;
+  } <span class="hljs-keyword">else</span> {
+    message = <span class="hljs-string">'Access denied'</span>;
+  }
+
+  alert(message);
+};
+
+<span class="hljs-keyword">const</span> submitBtn = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'#submit-btn'</span>);
+submitBtn.addEventListener(<span class="hljs-string">'click'</span>, submitClick);
+</code></pre>
+<p>Explicitnímu ukládání hodnoty <code>null</code> do proměnných jako výše, bychom se měli spíše vyhýbat. Uvedený program se dá bez problému přepsat bez použití <code>null</code>.</p>
+<pre><code class="language-js"><span class="hljs-keyword">let</span> message = <span class="hljs-string">'Access denied'</span>;
+
+<span class="hljs-keyword">if</span> (password === <span class="hljs-string">'swordfish'</span>) {
+  message = <span class="hljs-string">'Access granted'</span>;
+}
+
+alert(message);
+</code></pre>
+<p>Často se však stane, že hodnotu <code>null</code> vrací nějaké funkce v situaci, kdy se něco nepovedlo. Velmi častý případ je to u funkce <code>document.querySelector</code>, která vrací <code>null</code>, pokud se jí na stránce nezdaří najít element podle zadaného selektoru.</p>
+<p>Pojďme zkusit omylem vybrat vstupní políčko pomocí CSS třídy, která však v HTML vůbec není.</p>
+<pre><code class="language-jscon"><span class="hljs-meta">&gt;</span><span class="javascript"> <span class="hljs-keyword">const</span> passwordElm = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'.pass-input'</span>)</span>
+<span class="hljs-meta">&gt;</span><span class="javascript"> passwordElm</span>
+null
+</code></pre>
+<p>Vidíte, že v proměnné <code>passwordElm</code> máme místo očekávaného elementu uloženo <code>null</code>.</p>
+<p>Otestovat proměnnou na hodnotu <code>null</code> můžeme provést jednoduchou podmínkou.</p>
+<pre><code class="language-js"><span class="hljs-keyword">if</span> (passwordElm === <span class="hljs-literal">null</span>) {
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Element nenalezen'</span>);
+}
+</code></pre>
+<h3 id="hodnota-undefined"><a class="anchor" href="#hodnota-undefined">¶</a> Hodnota undefined</h3>
+<p>Kromě celkem užitečné hodnoty <code>null</code> JavaScript také obsahuje zákeřnou hodnotu <code>undefined</code>.
+ Tato hodnota v podstatě znamená “ještě větší prázdno než nic”. Pokud 
+bychom přirovnali proměnné k šuplíkům, mohli bychom si představovat, že 
+hodnota <code>null</code> znamená prázdný šuplík. Hodnota <code>undefined</code> by pak znamenala, že ve skříni chybí i sám šuplík a zíráme jen na prázdnou díru ve skříni.</p>
+<p>Hodnotu <code>undefined</code> potkáme v mnoha situacích, ale 
+nejčastěji ve chvíli, kdy se snažíme přistoupit k vlastnosi, která 
+neexistuje. Je například velmi snadné udělat překlep v anglickém slově <code>length</code>.</p>
+<pre><code class="language-jscon"><span class="hljs-meta">&gt;</span><span class="javascript"> <span class="hljs-keyword">const</span> name = <span class="hljs-string">'martin'</span></span>
+<span class="hljs-meta">&gt;</span><span class="javascript"> name.lenght</span>
+undefined
+</code></pre>
+<p>Všimněte si, že JavaScript runtime vrací <code>undefined</code> také jako výsldek vytvoření proměnné. Kód uvedený výše tak ve skutečnosti vypadá v konzoli takto.</p>
+<pre><code class="language-jscon"><span class="hljs-meta">&gt;</span><span class="javascript"> <span class="hljs-keyword">const</span> name = <span class="hljs-string">'martin'</span></span>
+undefined
+<span class="hljs-meta">&gt;</span><span class="javascript"> name.lenght</span>
+undefined
+</code></pre>
+<p>Hodnotu <code>undefined</code> najdeme také v proměnných, do kterých 
+nepřiřadíme žádnout hodnotu. Toto je však možné provést pouze s 
+proměnnými vytvořenými pomocí <code>let</code>.</p>
+<pre><code class="language-jscon"><span class="hljs-meta">&gt;</span><span class="javascript"> <span class="hljs-keyword">let</span> name</span>
+undefined
+<span class="hljs-meta">&gt;</span><span class="javascript"> name</span>
+undefined
+</code></pre>
+<p>Podobně jako u hodnoty <code>null</code> můžeme přítomnost hodnoty <code>undefined</code> ověřit podmínkou.</p>
+<pre><code class="language-js"><span class="hljs-keyword">if</span> (name === <span class="hljs-literal">undefined</span>) {
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Něco se pokazilo'</span>);
+}
+</code></pre>
+<p>Hodnota <code>undefined</code> nám v budoucní způsobí ještě hodně nepříjemností, je tedy dobré se již teď obrnit trpělivostí.</p>
+<h2 id="porozumeni-chybam"><a class="anchor" href="#porozumeni-chybam">¶</a> Porozumění chybám</h2>
+<p>Každý programátor, začátečník i profesionál, dělá v programech chyby.
+ Nikdy se vám nepodaří dosáhout toho, že byste chyby přestali dělat. Jak
+ časem porostou vaše zkušenosti a dovednosti, tím také poroste 
+komplikovanost programů, které budete psát. Důležité je tedy naučit se 
+chybu co nejrychlej odhalit a opravit.</p>
+<p>Pokud máme v programu tak závažnou chybu, že JavaScript runtime vůbec nerozumí tomu, co po něm chceme, vypíše takzvanou 
+          <span class="term">
+            <span class="term__cs">chybovou hlášku<span class="term__icon"></span></span>
+            <span class="term__en">error message</span>
+          </span>
+        . Pokud náš program nefunguje, jak má, a obdržíme chybovou 
+hlášku, je to důved k velké radosti. Máme totiž rovnou informaci o tom, 
+kde je něco špatně.</p>
+<p>V následující částí si probereme nejčastější chyby, na které jako začátečníci jistě často narazíte.</p>
+<h3 id="pristup-k-neexistujicim-vecem"><a class="anchor" href="#pristup-k-neexistujicim-vecem">¶</a> Přístup k neexistujicím věcem</h3>
+<p>Často se nám může stát, že se pokoušíme použít proměnnou, funkci, metodu či vlastnost, která neexistuje. Uvažte funkci <code>submitClick</code> z předchozí části napsanou takto.</p>
+<pre><code class="language-js"><span class="hljs-meta">'use strict'</span>;
+
+<span class="hljs-keyword">const</span> submitClick = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+  <span class="hljs-keyword">const</span> passwordElm = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'#pass-input'</span>);
+  <span class="hljs-keyword">const</span> password = passwordElm.value;
+  <span class="hljs-keyword">let</span> message = <span class="hljs-string">'Access denied'</span>;
+
+  <span class="hljs-keyword">if</span> (pasword === <span class="hljs-string">'swordfish'</span>) {
+    message = <span class="hljs-string">'Access granted'</span>;
+  }
+
+  alart(message);
+};
+</code></pre>
+<p>Při pokusu o kliknutí na tlačítko <i>submit</i> obdržíme tuto chybovou hlášku</p>
+<pre><code>Uncaught ReferenceError: pasword is not defined
+    at HTMLButtonElement.submitClick (index.js:8)
+</code></pre>
+<p>JavaScript runtime se nám tímto snaží říct, že na řádku 8 v souboru <code>index.js</code> ve funkci <code>submitClick</code> přestal našemu programu rozumět. Dokonce nám i řekne proč. Říká, že <code>pasword</code> není definováno. Což je pravda, žádné taková proměnná v našem programu neexistuje. Nejspíš jsme měli na mysli proměnnou <code>password</code>. Opravit takovou chybu je tedy velmi jednoduché.</p>
+<p>Podobnou chybu však obdržíme i na řádku 11, kde se snažíme zavolat neexistující funkci.</p>
+<pre><code>Uncaught ReferenceError: alart is not defined
+    at HTMLButtonElement.submitClick (index.js:12)
+</code></pre>
+<p>Vzpomeňte si, že všechny funkce se volají tak, že použijeme 
+proměnnou, ve které je funkce uložena. Je tedy logické, že runtime 
+hlásí, že proměnnou <code>alart</code> nezná.</p>
+<p>Upravme nyní naši funkce <code>submitClick</code> takto.</p>
+<pre><code class="language-js"><span class="hljs-meta">'use strict'</span>;
+
+<span class="hljs-keyword">const</span> submitClick = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+  <span class="hljs-keyword">const</span> passwordElm = <span class="hljs-built_in">document</span>.querySelevtor(<span class="hljs-string">'.pass-input'</span>);
+  <span class="hljs-keyword">const</span> password = passwordElm.value;
+  <span class="hljs-keyword">let</span> message = <span class="hljs-string">'Insecure password'</span>;
+
+  <span class="hljs-keyword">if</span> (password.lenght &gt;= <span class="hljs-number">8</span>) {
+    message = <span class="hljs-string">'Secure password'</span>;
+  }
+
+  alert(message);
+};
+</code></pre>
+<p>Při jeho spuštění narazíme na následující hlášku.</p>
+<pre><code>Uncaught TypeError: document.querySelevtor is not a function
+    at HTMLButtonElement.submitClick (index.js:4)
+</code></pre>
+<p>Tímto nám JavaScript runtime říká, že <code>document.querySelevtor</code> není funkce, nemůže ji tedy zavolat. A má pravdu. Pokud zkusíme zjistit, co je uloženo ve vlastnosti <code>document.querySelevtor</code>, objevíme naši známou hodnotu.</p>
+<pre><code class="language-jscon"><span class="hljs-meta">&gt;</span><span class="javascript"> <span class="hljs-built_in">document</span>.querySelevtor</span>
+undefined
+</code></pre>
+<p>Pokoušíme se tedy zavolat hodnotu <code>undefined</code>, což se nám nepovede, protože to skutečně není funkce. Můžeme si to dokonce přímo vyzkoušet.</p>
+<pre><code class="language-jscon"><span class="hljs-meta">&gt;</span><span class="javascript"> <span class="hljs-literal">undefined</span>()</span>
+Uncaught TypeError: undefined is not a function
+    at &lt;anonymous&gt;:1:1
+</code></pre>
+<p>Opravíme tedy název funkce a doufáme, že už bude vše v pořádku. Do očí nás však uhodí další chyba.</p>
+<pre><code>Uncaught TypeError: Cannot read property 'value' of null
+    at HTMLButtonElement.submitClick (index.js:5)
+</code></pre>
+<p>Nyní náš čeká malé detektivní pátrání. Z chybové hlášky vyluštíme, že na řádku 5 se snažíme přistoupit k vlastnosti <code>value</code> na hodnotě <code>null</code>. Hodnota <code>null</code> žádné vlastnosti nemá, takže to je jistě chyba. Když se podíváme na řádek 5, vydedukujeme, že v proměnné <code>passwordElm</code> tedy musí být hodnota <code>null</code>. Tuto hodnotu tam jistě musela uložit funkce <code>document.querySelector</code>.
+ Aha!! To tedy znamená, že funkce nenašla element, který jsme hledali. 
+Máme totiž chybu v selektoru na řádku 4, kde jsme omylem vybírali podle 
+třídy a ne podle <code>id</code>.</p>
+<p>Tato situace je velmi častá. JavaScript přestal našemu programu 
+rozumět na řádku 5, ale problém vznikl už dříve na řádku 4. Ne vždy tedy
+ chyba vznikne tam, kde se JavaScirpt runtime ztratil. Občas musíme v 
+programu hledat chybu o několik řádků zpět.</p>
+<h3 id="kdyz-zadna-chyba-nenastane"><a class="anchor" href="#kdyz-zadna-chyba-nenastane">¶</a> Když žádná chyba nenastane</h3>
+<p>Selektor jsme tedy opravili a program spustíme. Dostaneme se však do 
+ještě svízelnější situace. Program se sice tváří, že funguje, ale ani po
+ zadání opravdu dlouhého hesla nám neřekne, že je dostatečně silné. Toto
+ je příklad té prekérní situace, kdy program nefunguje, nevyhazuje však 
+žádnou chybu, která by nám pomohla odhalit, kde je problém.</p>
+<p>Po pečlivé kontrole programu narazíme na to, že jsme špatně napsali název vlastnosti <code>length</code>. Proč nás na to však JavaScript neupozornil? Jak už víme, neexistující vlastnosti jsou <code>undefined</code>. Hodnota výrazu <code>password.lenght</code> je tedy <code>undefined</code>. Pojďme vyzkoušet, co se stane, když zkusíme hodnotu <code>undefined</code> porovnat s číslem 8.</p>
+<pre><code class="language-js">&gt; <span class="hljs-literal">undefined</span> &gt;= <span class="hljs-number">8</span>
+<span class="hljs-literal">false</span>
+</code></pre>
+<p>Výsledek je prostě <code>false</code>. Naše podmínka tedy vždy tiše 
+selže a náš program běží vesele dál. Na to, že ve skutečnosti 
+porovnáváme hrušky s jabkama, nás JavaScript runtime nijak neupozorní. 
+Toto je jeden z důvodů, proč mnoho programátorů nemá JavaScript rádo. 
+Většina ostatních programovacích jazyků by totiž v takovémto případě 
+vyhodila chybu. V JavaScriptu si však musíte obléknout svůj detektivní 
+plášť a vyrazit chybu hledat sami.</p>
+<h2 id="ladeni-programu"><a class="anchor" href="#ladeni-programu">¶</a> Ladění programů</h2>
+<p>Situace, kdy náš program napíšeme tak, že nedělá, co chceme, ale s 
+hlediska JavaScriptu je zcela v pořádku, budou náš denní chleba. Čím 
+jsou však naše programy větší a složitější, tím roste prostor pro stále 
+záludnější a húře odhalitelné chyby. Velmi brzy už je program tak dlouhý
+ a komplikovaný, že nejsme schopni chybu najít pouze tím, že si po sobě 
+čteme svůj kód. Nedej bože, pokud navíc před sebou nemáme kód vlastní, 
+nýbrž kód kolegy, který již dávno opustil firmu, a svému kódu rozuměl 
+pouze on. V takovou chvíli přichází na řadu takzvané 
+          <span class="term">
+            <span class="term__cs">ladění<span class="term__icon"></span></span>
+            <span class="term__en">debugging</span>
+          </span>
+        .</p>
+<p>Ladění kódu probíhá tak, že spustíme JavaScript runtime ve speciálním
+ ladícím módu. V tomto módu můžeme kód spouštět řádek po řádku a máme 
+tak čas si prohlédnout, co se v programu přesně děje. Ladění se také 
+velmi hodí v začátcích programování. To, že si můžete program krok po 
+kroku zastavovat a sledovat jak se doopravdy provádí, vám pomůže lépe si
+ představit, co runtime při spouštění kódu vlastně dělá a jak nad ním 
+“přemýšlí”,</p>
+</section> <!----><!----> <section class="article-section exercises-section"><h2 id="cviceni-hledani-chyb" class="exrc-section-title"><a href="#cviceni-hledani-chyb" class="anchor">¶</a>
+          Cvičení - hledání chyb
+        </h2> <!----> <div class="exercise"><div class="exercise__head"><div class="exercise__title"><div class="exercise__num">1</div> <h3 id="cvi-pocitadlo"><a href="#cvi-pocitadlo" class="anchor">¶</a>
+        Počítadlo
+      </h3></div> <div class="exercise__demand"><div class="demand demand--2"></div> <div class="demand-text">to dáš</div></div></div> <div class="exercise__body">
+<p>Stáhněte si <a href="http://nove.kodim.cz/czechitas/daweb/zaklady-js/debug-scope/assets/pocitadlo-zadani.zip">webovou stránku</a>, která má fungovat jako počítadlo. Při klikání na tlačítka <i>up</i> a <i>down</i>
+ by počítadlo správně mělo narůst nebo poklesnout o jedna. Nic takového 
+se však neděje, neboť v kódu stránky je mnoho chyb. Použijte znalosti 
+nabyté v této lekci ke splnění následujících úkolů.</p>
+<ol>
+<li>Bez použítí debugování opravte všechny chyby, které runtime vypisuje do konzole.</li>
+<li>Když vyřešíte všechna chybová hlášení, program stejně nebude 
+fungovat. Použije ladící nástroje a odhalte poslední problémy, které 
+brání programu ve správném fungování.</li>
+</ol>
+</div></div></section><section class="article-section text-section"><h2 id="obor-platnosti-promennych"><a class="anchor" href="#obor-platnosti-promennych">¶</a> Obor platnosti proměnných</h2>
+<p>Mějme následující podmínku, která kontroluje věk uživatele a vypisuje neurvalé hlášky.</p>
+<pre><code class="language-js"><span class="hljs-keyword">if</span> (age &lt; <span class="hljs-number">18</span>) {
+  <span class="hljs-keyword">const</span> remains = <span class="hljs-number">18</span> - age;
+
+  <span class="hljs-keyword">if</span> (remains &lt;= <span class="hljs-number">2</span>) {
+    alert(<span class="hljs-string">'Už to máš za pár'</span>);
+  } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (remains &lt;= <span class="hljs-number">5</span>) {
+    alert(<span class="hljs-string">`Ještě si počkáš <span class="hljs-subst">${remains}</span> let`</span>);
+  } <span class="hljs-keyword">else</span> {
+    alert(<span class="hljs-string">'Utíkej za mamkou'</span>);
+  }
+} <span class="hljs-keyword">else</span> {
+  alert(<span class="hljs-string">'Vítej mezi dospěláky'</span>);
+}
+</code></pre>
+<p>Zatím nebudeme řešit odkud se vzala proměnná <var>age</var>. 
+Především si všimneme, že celý program obsahuje dohromady pět různých 
+bloků kódu oddělených složenými závorkami. Pokud uvnitř nějakého bloku 
+vytvoříme proměnnou, například <var>remains</var>, tato proměnná je “vidět” pouze uvnitř tohoto bloku. Tento blok se stává jejím 
+          <span class="term">
+            <span class="term__cs">oborem platnosti<span class="term__icon"></span></span>
+            <span class="term__en">scope</span>
+          </span>
+        . Jakmile její blok kódu skončí, proměnná <var>remains</var> zanikne a již s ní není možné pracovat.</p>
+<p>Pokud se proměnnou pokusíme použít mimo její obor platnosti, 
+JavaScript runtime se bude tvářit jako kdyby tuto proměnnou nikdy 
+neviděl.</p>
+<pre><code class="language-js"><span class="hljs-keyword">if</span> (age &lt; <span class="hljs-number">18</span>) {
+  <span class="hljs-keyword">const</span> remains = <span class="hljs-number">18</span> - age;
+
+  <span class="hljs-keyword">if</span> (remains &gt;= <span class="hljs-number">2</span>) {
+    alert(<span class="hljs-string">'Už to máš za pár'</span>);
+  } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (remains &gt;= <span class="hljs-number">5</span>) {
+    alert(<span class="hljs-string">`Ještě si počkáš <span class="hljs-subst">${remains}</span> let`</span>);
+  } <span class="hljs-keyword">else</span> {
+    alert(<span class="hljs-string">'Utíkej za mamkou'</span>);
+  }
+} <span class="hljs-keyword">else</span> {
+  <span class="hljs-built_in">console</span>.log(remains); <span class="hljs-comment">// Zde vznikne chyba</span>
+  alert(<span class="hljs-string">'Vítej mezi dospěláky'</span>);
+}
+
+<span class="hljs-built_in">console</span>.log(remains); <span class="hljs-comment">// Zde vznikne chyba</span>
+</code></pre>
+<p>Naopak všechny bloky zanořené uvnitř bloku, ve kterém byla proměnná 
+vytvořene, k této proměnné přistupovat mohou. To můžeme v našem kódu 
+vidět v bloku <code>else if</code>, kde proměnnou <code>remains</code> normálně používáme, přestože je vytvořena o blok výše.</p>
+<p>Pokud tedy JavaScript runtime narazí uvnitř nějakého bloku na něco, 
+co vypadá jako jméno proměnné, zkusí tuto proměnnou najít uvnitř tohoto 
+bloku. Pokud se mu to nezdaří, podívá se do bloku a patro výš. Takto 
+postupně prochází všechny nadřezené bloky, dokud nenarazí na nejvyšší 
+patro – takzvaný 
+          <span class="term">
+            <span class="term__cs">globální obor platnosti<span class="term__icon"></span></span>
+            <span class="term__en">global scope</span>
+          </span>
+        .</p>
+<h3 id="globalni-obor-platnosti"><a class="anchor" href="#globalni-obor-platnosti">¶</a> Globální obor platnosti</h3>
+<p>Každý JavaScriptový program si můžeme představeit jako jeden velký 
+blok kódu, který v sobě obsahuje všechny příkazy. Takto vznikne globální
+ obor platnosti, ve kterém JavaScript runtime nakonec hledá všechny 
+proměnné, které nanašel nikde jinde. Ukažme si náš program kontrolující 
+věk v celé své kráse.</p>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> age = <span class="hljs-built_in">Number</span>(prompt(<span class="hljs-string">'Zadej svůj věk:'</span>));
+
+<span class="hljs-keyword">if</span> (age &lt; <span class="hljs-number">18</span>) {
+  <span class="hljs-keyword">const</span> remains = <span class="hljs-number">18</span> - age;
+
+  <span class="hljs-keyword">if</span> (remains &gt;= <span class="hljs-number">2</span>) {
+    alert(<span class="hljs-string">'Už to máš za pár'</span>);
+  } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (remains &gt;= <span class="hljs-number">5</span>) {
+    <span class="hljs-built_in">console</span>.log(age); <span class="hljs-comment">// V pořádku</span>
+    alert(<span class="hljs-string">`Ještě si počkáš <span class="hljs-subst">${remains}</span> let`</span>);
+  } <span class="hljs-keyword">else</span> {
+    alert(<span class="hljs-string">'Utíkej za mamkou'</span>);
+  }
+} <span class="hljs-keyword">else</span> {
+  <span class="hljs-built_in">console</span>.log(age); <span class="hljs-comment">// V pořádku</span>
+  alert(<span class="hljs-string">'Vítej mezi dospěláky'</span>);
+}
+
+<span class="hljs-built_in">console</span>.log(age); <span class="hljs-comment">// V pořádku</span>
+</code></pre>
+<p>V tomto programu vidíme, že proměnná <var>age</var> je vytvořená v globálním oboru platnosti. Takové proměnné říkáme prostě <em>globální</em>.
+ Globální proměnné jsou vidět v celém programu a můžeme je tedy použít 
+kdekoliv. Pokud proměnná není globální a je tedy vytvořena uvnitř 
+nějakého bloku, říkáme o ni, že je 
+          <span class="term">
+            <span class="term__cs">lokální<span class="term__icon"></span></span>
+            <span class="term__en">local</span>
+          </span>
+        .</p>
+<p>Obory platnosti nám pomáhají rodělit náš kód na menší samostatné 
+celky, které se navzájem neovlivňují. Můžete tak bez problému mít ve 
+dvou blocích stejně pojmenovavnou lokální proměnnou a význam bude zcela 
+jasný.</p>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> age = <span class="hljs-built_in">Number</span>(prompt(<span class="hljs-string">'Zadej svůj věk:'</span>));
+
+<span class="hljs-keyword">if</span> (age &lt; <span class="hljs-number">18</span>) {
+  <span class="hljs-keyword">const</span> message = <span class="hljs-string">'Utíkej za mamkou'</span>;
+  alert(message);
+} <span class="hljs-keyword">else</span> {
+  <span class="hljs-keyword">const</span> message = <span class="hljs-string">'Vítej mezi dospěláky'</span>;
+  alert(message);
+}
+</code></pre>
+<p>V tom příkladu máme dvě lokální proměnné <var>message</var>, které náhodou mají stejné jméno, jinak však spolu nemají nic společného.</p>
+<h2 id="zastinovani-promennych"><a class="anchor" href="#zastinovani-promennych">¶</a> Zastiňování proměnných</h2>
+<p>Uvažujíc nad příkladem výše vás možná napadne, co by se stalo, kdybychom proměnné <var>message</var> vytvořili takto.</p>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> age = <span class="hljs-built_in">Number</span>(prompt(<span class="hljs-string">'Zadej svůj věk:'</span>));
+<span class="hljs-keyword">const</span> message = <span class="hljs-string">'Utíkej za mamkou'</span>;
+
+<span class="hljs-keyword">if</span> (age &lt; <span class="hljs-number">18</span>) {
+  alert(message);
+} <span class="hljs-keyword">else</span> {
+  <span class="hljs-keyword">const</span> message = <span class="hljs-string">'Vítej mezi dospěláky'</span>;
+  alert(message);
+}
+</code></pre>
+<p>Pravidlo při hledání proměnných říká, že se použije ta deklarace, na 
+kterou runtime při procházení nadřazených bloků narazí nejdříve. Díky 
+tomu, že se prohledává vždy od nejnižšího patra k nejvyššímu, v bloku <code>if</code> narazíme nejdřív na globální proměnnou <var>message</var>. Naopak v bloku <code>else</code> dříve najdeme lokální proměnnou. Tomuto principu se říká 
+          <span class="term">
+            <span class="term__cs">zastínění<span class="term__icon"></span></span>
+            <span class="term__en">shadowing</span>
+          </span>
+        . Proměnná, která je z hlediska hierarchie bloků níže, takzvaně 
+zastíní stejně pojmenovou proměnnou, která se nachází výše.</p>
+<p>V praxi je nejlepší, když má náš program tak dobře pojmenované 
+proměnné, že se nevzájem nazastiňují. Zjednodušujeme tak práci všem 
+čtenářům, kteří tak mají o starost méně při louskání našeho kódu. 
+Rozhodně je ale dobré vědět, že zastínění může nastat a JavaScript 
+runtime se s ním snadno vypořádá.</p>
+<h2 id="obory-platnosti-a-funkce"><a class="anchor" href="#obory-platnosti-a-funkce">¶</a> Obory platnosti a funkce</h2>
+<p>Jak po předchozích lekcích už všichni víme, bloky kódu se používají 
+také k vytváření funkci. Zde do oborů platnosti vstupuje další hráč, a 
+to jsou parametry funkce. Ty se z hlediska hierarchie nacházejí jakoby 
+na rozhraní mezi blokem funkce a jeho nadřazeným blokem. Prohlédněte si 
+porozně následující kód.</p>
+<pre><code class="language-js"><span class="hljs-meta">'use strict'</span>;
+
+<span class="hljs-keyword">const</span> message = <span class="hljs-string">'Vítej ve světě slasti'</span>;
+
+<span class="hljs-keyword">const</span> checkAge = <span class="hljs-function">(<span class="hljs-params">age, message</span>) =&gt;</span> {
+  <span class="hljs-keyword">if</span> (age &lt; <span class="hljs-number">18</span>) {
+    <span class="hljs-keyword">return</span> message;
+  } <span class="hljs-keyword">else</span> {
+    <span class="hljs-keyword">const</span> message = <span class="hljs-string">'Vítej mezi dospěláky'</span>;
+    <span class="hljs-keyword">return</span> message;
+  }
+};
+</code></pre>
+<p>Vytváříme zde funkci <code>checkAge</code>, která má dva parametry <code>age</code> a <code>message</code>. Uvnitř této funkce parametr <code>message</code> zastíní globální proměnnou <code>message</code>. V bloku <code>else</code> je však tento parametr dále zastíněn lokální proměnnou <code>message</code>. Zkuste si rozmyslet, co pak bude výsledkem těchto volání.</p>
+<pre><code class="language-jscon"><span class="hljs-meta">&gt;</span><span class="javascript"> checkAge(<span class="hljs-number">15</span>, <span class="hljs-string">'Utři si sopel'</span>)</span>
+?
+<span class="hljs-meta">&gt;</span><span class="javascript"> checkAge(<span class="hljs-number">21</span>, <span class="hljs-string">'Oh yeah!'</span>)</span>
+?
+</code></pre>
+<p>Je dobré připomenout, že program výše je napsán obzvlášť zlovolně je 
+zde především ze vzdělávacích důvdodů. Pokud takový kód někady napíšete v
+ praxi, dostanete od vašich kolegů nejspíš pořádně za uši. Nikdo nechce 
+číst kód, nad kterým musí zbytečně hodinu přemýšlet.</p>
+<h2 id="uzavery"><a class="anchor" href="#uzavery">¶</a> Uzávěry</h2>
+<p>Když JavaScript runtime vykonává blok kódu, po celou dobu si pamatuje
+ všechny proměnné, které v něm byly vytvořeny. Jakmile vykonávání bloku 
+skončí, všechny takto zapamatované proměnné se z paměti uvolní. Toto 
+může představovat problém ve chvíli, kdy uvnitř nějakého bloku vytváříme
+ vlastní funkci. Prohlédněte si následující kód, který požádá uživatele o
+ počet vteřin a poté postupně odpočítává každou vteřinu směrem dolů.</p>
+<pre><code class="language-js"><span class="hljs-meta">'use strict'</span>;
+
+<span class="hljs-keyword">const</span> seconds = prompt(<span class="hljs-string">'Zadejte cas:'</span>);
+
+<span class="hljs-keyword">if</span> (seconds &gt; <span class="hljs-number">0</span>) {
+  <span class="hljs-keyword">const</span> timeElm = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'#name'</span>);
+
+  <span class="hljs-keyword">const</span> countDown = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+    seconds -= <span class="hljs-number">1</span>;
+    timeElm.textContent = seconds;
+  };
+
+  setInterval(countDown, <span class="hljs-number">1000</span>);
+}
+</code></pre>
+<p>Všimněte si lokální proměnné <code>timeElm</code>. Tato je vytvořena v bloku <code>if</code>. Její životnost je tak spjata s tímto blokem. Funkce <code>countDown</code> tuto proměnou používá k nastavení času na stránce. Blok této funkce se však poprvé spustí až za vteřinu. To už bude blok <code>if</code> dávno u konce a proměnná <code>timeElm</code> tak už bude dávno uvolněná z paměti. Funkce by se tak pokusila přistoupit k již neexistující proměnná a náš program by spadnul.</p>
+<p>JavaScript runtime však tuto prekérní situaci vyřeší za nás. Ve 
+chvíli, kdy nějaká funkce používá proměnnou z nadřazeného bloku, runtime
+ si zapamatuje, že takovou proměnnou nemá na konci jejího bloku mazat. 
+Funkce si potom tuto proměnnou nese s sebou po celý svůj život. Říkáme 
+pak, že proměnná se do funkce uzavře a vzniká tak 
+          <span class="term">
+            <span class="term__cs">uzávěr<span class="term__icon"></span></span>
+            <span class="term__en">closure</span>
+          </span>
+        . V našem případě se tedy proměnná <code>timeElm</code> uzavřela do funkce <code>countDown</code>.</p>
+<p>Uzávěr takto zkraje možná zní jako velmi technická záležitost. V 
+JavaScriptu ale budeme uzávěry používat na každém kroku. Je tedy dobré 
+vědět, co se v takovém případě děje. Občas také můžeme narazit na velmi 
+prekérní problémy způsobené nesprávným použitím uzávěru. Takovéto perly 
+si ukážeme, až budeme probírat cykly.</p>
+</section> <!----></div></article></div></main> <footer class="footer"><div class="container">Martin Podloucký</div></footer></div>
+  
+
+</body></html>

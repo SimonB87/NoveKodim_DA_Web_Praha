@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="cz"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>kodim.cz</title>
+  <style data-vue-ssr-id="499c037c:0">@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700,900|Roboto+Mono:400,700&display=fallback&subset=latin-ext);</style><style data-vue-ssr-id="499c037c:1">*{box-sizing:border-box}html{font-family:"Montserrat", sans-serif;font-size:15px}body{margin:0;color:#444;background-color:#f9f9f9}.container{width:100%;margin-left:auto;margin-right:auto}@media only screen and (min-width: 576px){.container{width:540px}}@media only screen and (min-width: 768px){.container{width:720px}}@media only screen and (min-width: 992px){.container{width:960px}}.btn{border:none;outline:none;border-radius:1rem;padding:0.5rem 1rem;text-align:center;text-decoration:none;color:black;box-shadow:0 0 10px #ddd;transition:400ms}.btn:hover{transform:scale(1.1)}.btn-open{background-color:#ffec88}
+</style><style data-vue-ssr-id="54541dba:0">.hljs{display:block;overflow-x:auto;padding:0.5em;background:#222222;color:#C0C0C0}.hljs-keyword{color:#FFB871;font-weight:bold}.hljs-built_in{color:#FFB871}.hljs-literal{color:#FF8080}.hljs-symbol{color:#58E55A}.hljs-comment{color:#5B995B}.hljs-string{color:#FFFF00}.hljs-number{color:#FF8080}.hljs-attribute,.hljs-selector-tag,.hljs-doctag,.hljs-name,.hljs-bullet,.hljs-code,.hljs-addition,.hljs-regexp,.hljs-variable,.hljs-template-variable,.hljs-link,.hljs-selector-attr,.hljs-selector-pseudo,.hljs-type,.hljs-selector-id,.hljs-selector-class,.hljs-quote,.hljs-template-tag,.hljs-deletion,.hljs-title,.hljs-section,.hljs-function,.hljs-meta-keyword,.hljs-meta,.hljs-subst{color:#C0C0C0}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:bold}.article-outline{margin:2rem 3rem 0 0}.arrow-left{background-color:#ffec88;background-size:contain;width:2.5rem;height:2.5rem;border-radius:1.25rem;box-shadow:0 0 10px #ddd;background-image:url(/assets/img/arrow-left-5d2511.svg)}.arrow-right{background-color:#ffec88;background-size:contain;width:2.5rem;height:2.5rem;border-radius:1.25rem;box-shadow:0 0 10px #ddd;background-image:url(/assets/img/arrow-right-b02d21.svg)}.chapter-link{padding-left:1rem}.chapter-link a{text-decoration:none;color:black;font-size:1.2rem;font-weight:bold}.chapter-link a:hover{text-decoration:underline}.article-links{display:flex;margin-top:1rem}.article-links-filler{flex:1}.article-link{display:flex;align-items:center}.article-link a{text-decoration:none;color:black}.article-link a:hover{text-decoration:underline}.article-link--backward{margin-left:-1.25rem}.article-link--backward a{margin-left:2.75rem}.article-link--forward{margin-right:-1.25rem}.article-link--forward a{margin-right:2.75rem}.toc-link{display:block;width:100%;text-decoration:none;color:black;padding:0.5rem 1rem}.toc-link:hover{background-color:#f6f6f6}.exrc-section-title{margin-top:1rem !important;margin-bottom:0rem !important}.exrc-bonuses{padding:2rem 4rem;color:white;background-color:orange;margin-bottom:1rem}.exrc-bonuses__head{font-size:1.2rem;font-weight:bold;margin-bottom:1rem}.article-section{padding:2rem 0}.warn-section{background-color:#e2252b;color:white}.text-section table tr:nth-child(even){background-color:#e8e8e8}.exercises-section{background-color:#ffec88}.block-image{margin:3rem 0}.block-image img{display:block;width:100%;height:auto}.fig{display:block;margin:2rem auto;height:auto}li>.fig{margin:1rem auto}.fig-100{width:100%}.fig-90{width:90%}.fig-80{width:80%}.fig-70{width:70%}.fig-60{width:60%}.fig-50{width:50%}table{margin:2rem auto}table thead{border-bottom:2px solid #333}table td{padding:0.5rem}
+</style><style data-vue-ssr-id="34f8141e:0">.article-head{padding:0 4rem}.article-head__title{display:flex;align-items:baseline;font-size:1.8rem;font-weight:bold;margin-left:-6rem}.article-head__title h1{font-size:100%}.article-head__num{width:4rem;height:4rem;line-height:4rem;text-align:center;background-color:#ffec88;box-shadow:0 0 10px #ddd;border-radius:2rem;margin-right:2rem}.aside{display:none;width:320px;position:fixed;z-index:1;overflow-x:hidden;padding-top:20px}@media only screen and (min-width: 992px){.aside{display:block}}.article{margin:0rem 0 6rem 0;background-color:white;padding-top:2rem;box-shadow:0 0 10px #ddd;line-height:150%;border-radius:1rem}@media only screen and (min-width: 992px){.article{margin:0rem 0 6rem 320px}}.article .text-section>p,.article .text-section>ul,.article .text-section>ol,.article .text-section>dl{margin-left:4rem;margin-right:4rem}.article dt,.article dd{margin-bottom:0.5rem}.article h2,.article h3,.article h4{padding:1rem 4rem}.article .anchor{opacity:0;transition:250ms;text-decoration:none;color:#869af5;margin-left:-1.7rem}.article h2{margin-top:3rem;margin-bottom:1rem;font-size:1.6rem;font-weight:900}.article h2 .anchor{margin-left:-1.7rem}.article h3{margin-top:1rem;margin-bottom:0rem}.article h3 .anchor{margin-left:-1.2rem}.article h2:hover .anchor,.article h3:hover .anchor{opacity:1;margin-left:0}.article p{margin-top:0;margin-bottom:1rem;hyphens:manual}.article li{margin-bottom:0.5rem}.article .text-section:first-child p:first-child:first-letter{float:left;font-size:5rem;line-height:4rem;padding-top:0.3rem;padding-right:0.5rem}.article em{background-color:#d1ebf1;padding:0rem 0.5rem;border-radius:10px}.article pre,.article code,.article var{font-family:"Roboto Mono"}.article pre{background-color:#555;color:white;padding:1rem 4rem;margin:2rem 0;overflow-x:auto}.article var{font-style:normal;color:blue}.article kbd{font-family:"Montserrat";background-color:#fff;border:1px solid #888;border-radius:4px;padding:0rem 0.5rem}.term{display:inline;position:relative;font-style:italic;overflow:visible}.term__icon{display:inline-block;vertical-align:middle;width:15px;height:15px;margin-left:0.5rem;margin-bottom:2px;margin-right:0;background-image:url(/assets/img/english-9a71e2.png);background-size:contain;background-repeat:no-repeat}.term__cs{background-color:#d1ebf1;padding:0rem 0rem 0rem 0.5rem;border-radius:10px;white-space:pre;cursor:default}.term__en{position:absolute;top:-2rem;left:0rem;background-color:#444;color:white;padding:0rem 0.5rem;border-radius:5px;opacity:0;visibility:hidden;z-index:1;white-space:pre;transition:500ms}.term:hover .term__en{visibility:visible;opacity:1}
+</style><style data-vue-ssr-id="3c9796f4:0">.page{display:grid;grid-template-columns:auto;grid-template-rows:auto 1fr auto;min-height:100vh}.footer{padding:2rem 0;background-color:#dce7f4}
+</style><style data-vue-ssr-id="2fdd37c8:0">.page-logo{display:flex;align-items:center;text-decoration:none;color:black}.page-logo__icon{width:2rem;height:2rem;background-image:url(/assets/img/kodim-icon-d3361c.svg);background-size:contain}.page-logo__title{font-size:1.2rem;font-weight:bold;margin-left:0.5rem}.navbar{padding:1rem 0}
+</style><style data-vue-ssr-id="6f27289b:0">.exercise__head{display:flex;margin-left:-1.5rem}.exercise__num{width:3rem;height:3rem;line-height:3rem;background-color:white;box-shadow:0 0 10px #ddd;border-radius:1.5rem;text-align:center}.exercise__title{display:flex;align-items:baseline;flex:1;font-size:1.2rem;font-weight:bold;margin-left:0rem}.exercise__title h3{font-size:100%;padding-left:2.5rem;margin-bottom:0.5rem}.exercise__demand{margin-top:2rem;padding-right:4rem;text-align:right}.exercise__body>p,.exercise__body>ul,.exercise__body>ol,.exercise__body>dl{margin-left:4rem;margin-right:4rem}.exercise table tr:nth-child(even){background-color:#ffe664}.demand{min-width:70px;height:14px;background-size:contain;background-position-x:right;background-repeat:no-repeat;background-size:70px 14px}.demand--1{background-image:url(/assets/img/demand1-32b0be.svg)}.demand--2{background-image:url(/assets/img/demand2-3d6156.svg)}.demand--3{background-image:url(/assets/img/demand3-6ddf4a.svg)}.demand--4{background-image:url(/assets/img/demand4-377dc5.svg)}.demand--5{background-image:url(/assets/img/demand5-9e0206.svg)}.demand-text{font-size:0.8rem;font-weight:bold}
+</style></head>
+  <body data-gr-c-s-loaded="true">
+    <div data-server-rendered="true" class="page"><header><div class="navbar container"><a href="http://nove.kodim.cz/" class="page-logo router-link-active"><div class="page-logo__icon"></div> <div class="page-logo__title">Kódím.cz</div></a></div> </header> <main class="main"><div class="container"><aside class="aside"><div class="chapter-link"><a href="http://nove.kodim.cz/czechitas/daweb" class="router-link-active">Pokročilý JavaScript</a></div> <nav class="article-outline"><a href="#sablony" class="toc-link">Šablony</a><a href="#cviceni-sablony" class="toc-link">Cvičení - šablony</a><a href="#sablony-uvnitr-html" class="toc-link">Šablony uvnitř HTML</a><a href="#cviceni-sablony-uvnitr-html" class="toc-link">Cvičení - šablony uvnitř HTML</a><a href="#struktura-projektu" class="toc-link">Struktura projektu</a><a href="#cviceni-struktura-projektu" class="toc-link">Cvičení - struktura projektu</a></nav></aside> <article class="article"><div class="article-head"><div class="article-head__title"><div class="article-head__num">5</div> <h1>Tvorba komponent</h1></div> <div class="article-head__brief">Předvedeme si způsob, jakým můžeme vytvářet znovupoužitelné prvky naších stránek, které mají vlastní HTML, CSS i JavaScript.</div></div> <div class="article-links"><div class="article-link article-link--backward"><div class="arrow-left"></div> <a href="http://nove.kodim.cz/czechitas/daweb/pokrocily-js/zaklady-oop">
+        Základy objektového programování
+      </a></div> <div class="article-links-filler"></div> <div class="article-link article-link--forward"><a href="http://nove.kodim.cz/czechitas/daweb/pokrocily-js/webpack">
+        Webpack
+      </a> <div class="arrow-right"></div></div></div> <div class="article-body"><!-- base href="http://nove.kodim.cz/czechitas/daweb/pokrocily-js/komponenty/" --> <section class="article-section text-section"><p>V
+ našem kurzu postupně směřujeme ke stále větším a složitějším aplikacím.
+ Jakmile velikost aplikace přesáhne určitou mez, začne být výhodné ji 
+rozsekat na menší kousky, jakési stavební bloky, ze kterých pak 
+výslednou aplikaci poskládáme jako z kostek lega. Takovým stavebním 
+blokům se často říká 
+          <span class="term">
+            <span class="term__cs">komponenty<span class="term__icon"></span></span>
+            <span class="term__en">components</span>
+          </span>
+        . V této lekci si ukážeme, jak postavit jednoduchou komponentu a jak ji použít v naší aplikaci.</p>
+<h2 id="sablony"><a class="anchor" href="#sablony">¶</a> Šablony</h2>
+<p>K tomu, abychom mohli postavit naši první komponentu budeme nejdříve 
+potřebovat větší flexibilitu pro tvorbu HTML pomocí JavaScriput. Do této
+ chvíle jsme naše elementy plnili obsahem pomocí vlastnosti <code>innerHTML</code> a interpolace řetězců. Připomeňme si, jak jsme vytvořili element epizody v naší podcastové aplikaci.</p>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> num = <span class="hljs-number">123</span>;
+<span class="hljs-keyword">const</span> title = <span class="hljs-string">'Robot, který snědl koblihu'</span>;
+<span class="hljs-keyword">const</span> guest = <span class="hljs-string">'Radovan Holátko'</span>;
+
+<span class="hljs-keyword">const</span> episodeElm = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">'div'</span>);
+episodeElm.className = <span class="hljs-string">'episode'</span>;
+episodeElm.innerHTML = <span class="hljs-string">`
+  &lt;div class="episode__num"&gt;<span class="hljs-subst">${num}</span>&lt;/div&gt;
+  &lt;div class="episode__body"&gt;
+    &lt;div class="episode__title"&gt;<span class="hljs-subst">${title}</span>&lt;/div&gt;
+    &lt;div class="episode__guest"&gt;<span class="hljs-subst">${guest}</span>&lt;/div&gt;
+  &lt;/div&gt;
+`</span>;
+</code></pre>
+<p>Tento zápis má jednu velkou nevýhodu. Řetězec obsahující naše HTML 
+lze vytvořit jedině ve chvíli, kdy už máme připravený obsah proměnných <code>num</code>, <code>title</code> a <code>guest</code>. Nemůžeme si jej proto nejdříve vytvořit a použít až později. Pokud proměnné <code>num</code>, <code>title</code> a <code>guest</code> ještě neexistují, následující kód vyhodí výjimku.</p>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> episodeHTML = <span class="hljs-string">`
+  &lt;div class="episode__num"&gt;<span class="hljs-subst">${num}</span>&lt;/div&gt;
+  &lt;div class="episode__body"&gt;
+    &lt;div class="episode__title"&gt;<span class="hljs-subst">${title}</span>&lt;/div&gt;
+    &lt;div class="episode__guest"&gt;<span class="hljs-subst">${guest}</span>&lt;/div&gt;
+  &lt;/div&gt;
+`</span>;
+</code></pre>
+<p>Z tohoto problému se dostaneme tak, že použijeme skutečnou šablonovací knihovnu.</p>
+<h3 id="handlebars"><a class="anchor" href="#handlebars">¶</a> Handlebars</h3>
+<p>Díky šablonám si můžeme náš řetězec s proměnnými připravit dopředu a 
+použít jej až ve chvíli, kdy už víme, jakou mají tyto proměnné mít 
+hodnotu. Šablonovacích knihoven existuje celá řada. My v tomto kurzu 
+použijeme systém <a href="https://handlebarsjs.com/">Handlebars</a>. Abychom mohli Handlebars šablony použít na naší stránce, musíme do hlavičky stránky vložit kód této knihovny.</p>
+<pre><code class="language-html"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">"en"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">"UTF-8"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"viewport"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"width=device-width, initial-scale=1.0"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Šablony<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"index.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<p>Pokud tuto stránku otevřeme v konzoli, můžeme si začít hrát se 
+šablonami. Každá šablona je obyčejný řetězec, který ve dvojitých 
+složených závorkách může obsahovat parametry šablony.</p>
+<pre><code class="language-jscon"><span class="hljs-meta">&gt;</span><span class="javascript"> <span class="hljs-keyword">const</span> msgTemp = <span class="hljs-string">'Film {{movie}} začne za {{time}} minut.'</span>;</span>
+</code></pre>
+<p>Každou takovou šablonu musím takzvaně <em>zkompilovat</em> pomocí funkce <code>Handlebars.compile</code>.
+ Tato funkce z našeho řetězce vytvoří novou funkci, kterou pak můžeme 
+kdykoliv zavolat s libovolnými hodnotami. Hodnoty pro šablonu se 
+specifikují jako objekt.</p>
+<pre><code class="language-jscon"><span class="hljs-meta">&gt;</span><span class="javascript"> <span class="hljs-keyword">const</span> template = Handlebars.compile(msgTemp);</span>
+undefined
+<span class="hljs-meta">&gt;</span><span class="javascript"> template({ <span class="hljs-attr">movie</span>: <span class="hljs-string">'Harry Potter'</span>, <span class="hljs-attr">time</span>: <span class="hljs-number">20</span> })</span>
+'Film Harry Potter začne za 20 minut.'
+<span class="hljs-meta">&gt;</span><span class="javascript"> template({ <span class="hljs-attr">movie</span>: <span class="hljs-string">'Román pro ženy'</span>, <span class="hljs-attr">time</span>: <span class="hljs-number">5</span> })</span>
+'Film Román pro ženy začne za 5 minut.'
+</code></pre>
+<p>Takto můžeme pomocí naší připravené šablony vyrobit řetězec s 
+libovolnými hodnotami parametrů. Takto si například můžeme dopředu 
+vytvořit šablony pro epizodu podcastu a pak ji použít pro vytvoření 
+našeho elementu.</p>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> episodeTemplate = Handlebars.compile(<span class="hljs-string">`
+  &lt;div class="episode__num"&gt;{{num}}&lt;/div&gt;
+  &lt;div class="episode__body"&gt;
+    &lt;div class="episode__title"&gt;{{title}}&lt;/div&gt;
+    &lt;div class="episode__guest"&gt;{{guest}}&lt;/div&gt;
+  &lt;/div&gt;
+`</span>);
+
+<span class="hljs-keyword">const</span> episodeElm = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">'div'</span>);
+episodeElm.className = <span class="hljs-string">'episode'</span>;
+episodeElm.innerHTML = episodeTemplate({
+  <span class="hljs-attr">num</span>: <span class="hljs-number">123</span>,
+  <span class="hljs-attr">title</span>: <span class="hljs-string">'Robot, který snědl koblihu'</span>,
+  <span class="hljs-attr">guest</span>: <span class="hljs-string">'Radovan Holátko'</span>,
+});
+</code></pre>
+</section> <!----><!----> <section class="article-section exercises-section"><h2 id="cviceni-sablony" class="exrc-section-title"><a href="#cviceni-sablony" class="anchor">¶</a>
+          Cvičení - šablony
+        </h2> <!----> <div class="exercise"><div class="exercise__head"><div class="exercise__title"><div class="exercise__num">1</div> <h3 id="cvi-sablony"><a href="#cvi-sablony" class="anchor">¶</a>
+        Šablony
+      </h3></div> <div class="exercise__demand"><div class="demand demand--1"></div> <div class="demand-text">pohodička</div></div></div> <div class="exercise__body">
+<p>Stáhněte si <a href="http://nove.kodim.cz/czechitas/daweb/pokrocily-js/komponenty/assets/program-kin.zip">připravenou stránku</a> se vloženými Handlebars šablonami. Prohlédněte si kód v souboru <code>index.js</code> a otevřete stránku v prohlížeči.</p>
+<ol>
+<li>V konzoli zavolejte funkci <code>movieTemplate</code> s objektem <code>movie1</code> a prohlédněte si výsledek.</li>
+<li>V souboru <code>index.js</code> vytvořte podle předchozího vzoru objekty <code>movie2</code> a <code>movie3</code> představující dva další filmy. V konzoli vyzkoušejte tyto objekty s vaší šablonou.</li>
+<li>Pomocí knihovny Handlebars vytvořte šablonu <code>cinemaTemplate</code>, která bude produkovat řetězce typu<pre><code>Kino Světozor, adresa: Vodičkova 41
+</code></pre>
+kde název kina a adresu specifikujete pomocí objektu s vlastnostmi <code>name</code> a <code>address</code>. Vytvořte tři objekty kin a pomocí šablony <code>cinemaTemplate</code> vypište do konzole následující řetězce.<pre><code>Kino Světozor, adresa: Vodičkova 41
+Kino Bio Oko, adresa: Františka Křížka 460/15
+Kino Aero, adresa: Biskupcova 31
+</code></pre>
+</li>
+</ol>
+</div></div><div class="exercise"><div class="exercise__head"><div class="exercise__title"><div class="exercise__num">2</div> <h3 id="cvi-nazev-kina"><a href="#cvi-nazev-kina" class="anchor">¶</a>
+        Název kina
+      </h3></div> <div class="exercise__demand"><div class="demand demand--2"></div> <div class="demand-text">to dáš</div></div></div> <div class="exercise__body">
+<p>Použijte kód z předchozího cvičení. Upravte vaši šablonu tak, aby z 
+jednotlivých kin generovala řetězce, které obsahují takovéto HTML:</p>
+<pre><code>&lt;span class="name"&gt;Světozor&lt;/span&gt;&lt;span class="address"&gt;Vodičkova 41, Praha 1&lt;/span&gt;
+</code></pre>
+<ol>
+<li>V konzoli vyzkoušejte, že vaše šablona skutečně generuje HTML podle zadaného kina.</li>
+<li>Ve vaší aplikaci ze stránky vyberte element s třídou <code>cinema__head</code> a nastavte mu <code>innerHTML</code> na text vygenerovaný vaší šablonou. Vyzkoušejte vygenerovat názvy pro různá kina.</li>
+</ol>
+</div></div><div class="exercise"><div class="exercise__head"><div class="exercise__title"><div class="exercise__num">3</div> <h3 id="cvi-program-kina"><a href="#cvi-program-kina" class="anchor">¶</a>
+        Program kina
+      </h3></div> <div class="exercise__demand"><div class="demand demand--3"></div> <div class="demand-text">zapni hlavu</div></div></div> <div class="exercise__body">
+<p>Pokračujte v řešení z předchozího cvičení. Pro jedno kino použije objekt, který vypadá následovně.</p>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> cinema1 = {
+  <span class="hljs-attr">name</span>: <span class="hljs-string">'Světozor'</span>,
+  <span class="hljs-attr">address</span>: <span class="hljs-string">'Vodičkova 41'</span>,
+  <span class="hljs-attr">movies</span>: [
+    {
+      <span class="hljs-attr">title</span>: <span class="hljs-string">'Casablanca'</span>,
+      <span class="hljs-attr">time</span>: <span class="hljs-string">'18:30'</span>,
+      <span class="hljs-attr">hall</span>: <span class="hljs-number">7</span>,
+    },
+    {
+      <span class="hljs-attr">title</span>: <span class="hljs-string">'Pán prstenů: Dvě věže'</span>,
+      <span class="hljs-attr">time</span>: <span class="hljs-string">'17:45'</span>,
+      <span class="hljs-attr">hall</span>: <span class="hljs-number">4</span>,
+    },
+  ],
+};
+</code></pre>
+<p>Vytvořte Handlebars šablonu, která bude pro každý film vytvářet HTML vypadající takto:</p>
+<pre><code>&lt;span class="movie__title"&gt;Casablanca&lt;/span&gt;
+&lt;span class="movie__time"&gt;18:30&lt;/span&gt;
+&lt;span class="movie__hall"&gt;sál č. 7&lt;/span&gt;
+</code></pre>
+<p>Vezměte první film a pomocí vaší šablony a funkce <code>document.createElement</code> pro něj vytvořte DOM element, který bude vypadat takto.</p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"movie"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"movie__title"</span>&gt;</span>Casablanca<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"movie__time"</span>&gt;</span>18:30<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"movie__hall"</span>&gt;</span>sál č. 7<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
+<p>Ze stránky vyberte element se třídou <code>cinema__movies</code> a pomocí metody <code>appendChild</code> do něj zapojte váš nový DOM element.</p>
+<p>Upravte váš předchozí kód tak, že vytvoříte funkci <code>renderMovie</code>, která jako svůj vstup bere jeden objekt filmu. Tato funkce bude vytvářet váš DOM element pro jeden film, který vrátí pomocí <code>return</code>.</p>
+<p>Přidejte do objektu s programem kina nějaké další filmy. Pomocí cyklu projděte seznam filmů, pro každý film pomocí <code>renderMovie</code> vytvořte příšlušný DOM element a vložte jej na stránku.</p>
+</div></div></section><section class="article-section text-section"><h2 id="sablony-uvnitr-html"><a class="anchor" href="#sablony-uvnitr-html">¶</a> Šablony uvnitř HTML</h2>
+<p>Je šikovné, že si můžeme šablony připravit takto dopředu. Pořád nám 
+však zbývá jedna nepříjemnost. Naše HTML musíme psát dovnitř řetězců a 
+tím přicházíme o zvýrazňování syntaxe. Navíc máme HTML kód rozházeny po 
+celém JavaScriptovém programu místo toho, abychom jej měli na jednom 
+místě tam, kde bychom jej čekali - uvnitř souboru <code>index.html</code>.</p>
+<p>Z této prekérie nám pomůže speciální HTML element s výmluvným názvem <code>template</code>. Tento element můžeme vložit kamkoliv do našich stránek, jeho obsah se však nikde nezobrazí. Element <code>template</code>
+ slouží jako určité místo, kam si můžeme odložit HTML kód, který 
+zobrazíme až pomocí JavaScriptu. Takto si můžeme si můžeme snadno 
+vytvořit šablonu pro naši podcastovou epizodu.</p>
+<pre><code class="language-html"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">"en"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">"UTF-8"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"viewport"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"width=device-width, initial-scale=1.0"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Šablony<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">template</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"episode-templ"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"episode"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"episode__num"</span>&gt;</span>{{num}}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"episode__body"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"episode__title"</span>&gt;</span>{{title}}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"episode__guest"</span>&gt;</span>{{guest}}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"episode-list"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"index.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<p>Element s šablonou epizody pak můžeme z dokumentu snadno vybrat a z jeho obsahu zkompilovat Handlebars šablonu.</p>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> episodeTemplate = Handlebars.compile(
+  <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'#episode-templ'</span>).innerHTML
+);
+</code></pre>
+<p>Pomocí této šablony pak zkonstruujeme DOM element naší epizody. Zde 
+náš čeká jeden technický zádrhel, který nám trochu kazí eleganci kód, 
+ale bohužel nejde nijak obejít.</p>
+<p>Všimněte si, že do šablony vkládáme i hlavní <code>div</code> celé epizody s třídou <code>episode</code>. To jsme v předchozích příkladech nedělali. Tento hlavní <code>div</code> jsme si vždy vyrobili pomocí <code>createElement</code> a pak jej jen naplnili obsahem pomocí <code>innerHTML</code>.
+ Tento postup se nám však při použití šablon nehodí. Chceme, aby naše 
+šablona obsahovala HTML celého elementu epizody, ne jen jeho vnitřek.</p>
+<p>Pokud však chceme z nějakého řetězce vyrobit DOM elementy, nezbývá nám jiná možnost než použít vlastnost <code>innerHTML</code> nějakého jiného elementu. Zařídíme se tedy tak, že vyrobíme dočasný <code>div</code>, kterému nastavíme <code>innerHTML</code>.
+ Tak uvnitř vyrobíme DOM strukturu naší epizody a pak ji z tohoto 
+dočasného elementu vyjmeme a přesuneme na naši stránku. Náš kód tedy 
+dopadne takto.</p>
+<pre><code class="language-js"><span class="hljs-meta">'use strict'</span>;
+
+<span class="hljs-keyword">const</span> episodeTemplate = Handlebars.compile(
+  <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'#episode-template'</span>).innerHTML
+);
+
+<span class="hljs-keyword">const</span> episode1 = {
+  <span class="hljs-attr">num</span>: <span class="hljs-number">123</span>,
+  <span class="hljs-attr">title</span>: <span class="hljs-string">'Robot, který snědl koblihu'</span>,
+  <span class="hljs-attr">guest</span>: <span class="hljs-string">'Radovan Holátko'</span>,
+};
+
+<span class="hljs-keyword">const</span> renderEpisode = <span class="hljs-function">(<span class="hljs-params">episode</span>) =&gt;</span> {
+  <span class="hljs-keyword">const</span> helperELm = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">'div'</span>);
+  helperELm.innerHTML = episodeTemplate(episode);
+  <span class="hljs-keyword">return</span> helperELm.children[<span class="hljs-number">0</span>];
+};
+
+<span class="hljs-keyword">const</span> episodesListElm = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'.episodes-list'</span>);
+<span class="hljs-keyword">const</span> elm = renderEpisode(episode1);
+episodesListElm.appendChild(elm);
+</code></pre>
+</section> <!----><!----> <section class="article-section exercises-section"><h2 id="cviceni-sablony-uvnitr-html" class="exrc-section-title"><a href="#cviceni-sablony-uvnitr-html" class="anchor">¶</a>
+          Cvičení - šablony uvnitř HTML
+        </h2> <!----> <div class="exercise"><div class="exercise__head"><div class="exercise__title"><div class="exercise__num">4</div> <h3 id="cvi-program-kina-2"><a href="#cvi-program-kina-2" class="anchor">¶</a>
+        Program kina 2
+      </h3></div> <div class="exercise__demand"><div class="demand demand--2"></div> <div class="demand-text">to dáš</div></div></div> <div class="exercise__body">
+<p>Pokračujte v řešení příkladu z cvičení Program kina.</p>
+<ol>
+<li>Uvnitř <code>index.html</code> vytvořte šablonu pro element představující jeden film. Nezapomeňte, že šablona musí obsahovat i hlavní <code>div</code> elementu s třídou <code>movie</code>.</li>
+<li>Upravte kód pro kompilaci Handlebars šablony tak, aby používal HTML kód vytažený z vašeho <code>template</code> elementu.</li>
+<li>Upravte funkci <code>renderMovie</code> tak, aby správně vytvořila element z vaší šablony. Vyhněte se zkládání zbytečného <code>divu</code> pomocí vlastnosti <code>children</code>.</li>
+</ol>
+</div></div><div class="exercise"><div class="exercise__head"><div class="exercise__title"><div class="exercise__num">5</div> <h3 id="cvi-kontakty"><a href="#cvi-kontakty" class="anchor">¶</a>
+        Kontakty
+      </h3></div> <div class="exercise__demand"><div class="demand demand--3"></div> <div class="demand-text">zapni hlavu</div></div></div> <div class="exercise__body">
+<p>Vytvořte webovou stránku, která zobrazuje seznam kontaktů. U každého 
+kontaktu bychom chtěli evidovat jméno, příjmení, email a telefonní 
+číslo.</p>
+<ol>
+<li>Založte webovou aplikaci se soubory <code>index.html</code>, <code>style.css</code> a <code>index.js</code>.</li>
+<li>Do hlavičky souboru <code>index.html</code> vložte odkaz na Handlebars šablony.<pre><code>&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js"&gt;&lt;/script&gt;
+</code></pre>
+</li>
+<li>Uvnitř <code>index.js</code> si vytvořte pole objektů, které bude obsahovat jednotlivé kontakty.</li>
+<li>Uvnitř <code>index.html</code> vytvořte šablonu pro jeden kontakt. Také vytvořte <code>div</code>, do kterého budeme později naše kontakty vkládat.</li>
+<li>V souboru <code>index.js</code> si zkompilujte Handlebars šablonu pro jeden kontakt.</li>
+<li>Vytvořte funkci <code>renderContact</code>, jejímž vstupem bude objekt kontaktu a výstupem DOM element vyrobený z vaší šablony.</li>
+<li>Pomocí cyklu projděte všechny kontakty a zapojte je do stránky.</li>
+<li>Nepovinně si můžete pohrát se stylováním. U každého kontaktu se vám například může hodit takováto hezká <a href="http://nove.kodim.cz/czechitas/daweb/pokrocily-js/komponenty/assets/contact.png">ikonka</a>.</li>
+</ol>
+</div></div></section><section class="article-section text-section"><h2 id="struktura-projektu"><a class="anchor" href="#struktura-projektu">¶</a> Struktura projektu</h2>
+</section> <!----><!----> <section class="article-section exercises-section"><h2 id="cviceni-struktura-projektu" class="exrc-section-title"><a href="#cviceni-struktura-projektu" class="anchor">¶</a>
+          Cvičení - struktura projektu
+        </h2> <!----> <div class="exercise"><div class="exercise__head"><div class="exercise__title"><div class="exercise__num">6</div> <h3 id="cvi-menu"><a href="#cvi-menu" class="anchor">¶</a>
+        Menu
+      </h3></div> <div class="exercise__demand"><div class="demand demand--2"></div> <div class="demand-text">to dáš</div></div></div> <div class="exercise__body">
+<p>Stáhněte si <a href="http://nove.kodim.cz/czechitas/daweb/pokrocily-js/komponenty/assets/menu.zip">webovou stránku</a> s jídelním lístkem restaurace.</p>
+<ol>
+<li>Prohlédněte si strukturu projektu.</li>
+<li>Vyčleňte z projektu komponentu <code>MenuItem</code>. Vytvořte pro ni speciální složku. Všechen JavaScript, který patří ke komponentě vložte do nového souboru <code>MenuItem/index.js</code> a vložte jej do vašeho HTML souboru.</li>
+<li>Všechny styly, které patří ke komponentě vyčleňte do souboru <code>MenuItem/style.js</code> a vložte jej do vašeho HTML souboru. Napozemeňte na složku s obrázkem.</li>
+<li>Zařiďte, aby aplikace opět správně fungovala.</li>
+</ol>
+</div></div></section><section class="article-section text-section"><!-- ## Hlavní komponentové funkce
+
+V terminologii komponentových frameworků jako React nebo Vue se používají ustálené termíny, které popisují jednotlivé fáze života nějaké komponenty.
+
+: render
+Vytvořit HTML strukturu komponenty.
+
+: mount
+Vložit HTML strukturu komonenty do stránky.
+
+: update
+Pokud se něco změnilo, aktualizovat HTML komponenty tak, aby zobrazovala aktuální stav.
+ -->
+<!-- ## Tvorba komponent
+
+Nástřel komponenty.
+
+```js
+'use strict';
+
+const clockTemplate = Handlebars.compile(
+  document.querySelector('#clock-templ').innerHTML
+);
+
+const Clock = {
+  constructor(hours, minutes) {
+    this.hours = hours;
+    this.minutes = minutes;
+  },
+
+  render() {
+    const element = document.createElement('div');
+    element.innerHTML = clockTemplate(this);
+
+    element.querySelector('button').addEventListener('click', () => {
+      this.hours++;
+      this.update();
+    });
+    return element.children[0];
+  },
+
+  mount(parent) {
+    this.element = this.render();
+    parent.appendChild(this.element);
+  },
+
+  update() {
+    const newElm = this.render();
+    this.element.replaceWith(newElm);
+    this.element = newElm;
+  },
+};
+``` -->
+</section> <!----></div></article></div></main> <footer class="footer"><div class="container">Martin Podloucký</div></footer></div>
+  
+
+</body></html>

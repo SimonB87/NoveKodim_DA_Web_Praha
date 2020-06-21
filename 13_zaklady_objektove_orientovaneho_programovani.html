@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="cz"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>kodim.cz</title>
+  <style data-vue-ssr-id="499c037c:0">@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700,900|Roboto+Mono:400,700&display=fallback&subset=latin-ext);</style><style data-vue-ssr-id="499c037c:1">*{box-sizing:border-box}html{font-family:"Montserrat", sans-serif;font-size:15px}body{margin:0;color:#444;background-color:#f9f9f9}.container{width:100%;margin-left:auto;margin-right:auto}@media only screen and (min-width: 576px){.container{width:540px}}@media only screen and (min-width: 768px){.container{width:720px}}@media only screen and (min-width: 992px){.container{width:960px}}.btn{border:none;outline:none;border-radius:1rem;padding:0.5rem 1rem;text-align:center;text-decoration:none;color:black;box-shadow:0 0 10px #ddd;transition:400ms}.btn:hover{transform:scale(1.1)}.btn-open{background-color:#ffec88}
+</style><style data-vue-ssr-id="54541dba:0">.hljs{display:block;overflow-x:auto;padding:0.5em;background:#222222;color:#C0C0C0}.hljs-keyword{color:#FFB871;font-weight:bold}.hljs-built_in{color:#FFB871}.hljs-literal{color:#FF8080}.hljs-symbol{color:#58E55A}.hljs-comment{color:#5B995B}.hljs-string{color:#FFFF00}.hljs-number{color:#FF8080}.hljs-attribute,.hljs-selector-tag,.hljs-doctag,.hljs-name,.hljs-bullet,.hljs-code,.hljs-addition,.hljs-regexp,.hljs-variable,.hljs-template-variable,.hljs-link,.hljs-selector-attr,.hljs-selector-pseudo,.hljs-type,.hljs-selector-id,.hljs-selector-class,.hljs-quote,.hljs-template-tag,.hljs-deletion,.hljs-title,.hljs-section,.hljs-function,.hljs-meta-keyword,.hljs-meta,.hljs-subst{color:#C0C0C0}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:bold}.article-outline{margin:2rem 3rem 0 0}.arrow-left{background-color:#ffec88;background-size:contain;width:2.5rem;height:2.5rem;border-radius:1.25rem;box-shadow:0 0 10px #ddd;background-image:url(/assets/img/arrow-left-5d2511.svg)}.arrow-right{background-color:#ffec88;background-size:contain;width:2.5rem;height:2.5rem;border-radius:1.25rem;box-shadow:0 0 10px #ddd;background-image:url(/assets/img/arrow-right-b02d21.svg)}.chapter-link{padding-left:1rem}.chapter-link a{text-decoration:none;color:black;font-size:1.2rem;font-weight:bold}.chapter-link a:hover{text-decoration:underline}.article-links{display:flex;margin-top:1rem}.article-links-filler{flex:1}.article-link{display:flex;align-items:center}.article-link a{text-decoration:none;color:black}.article-link a:hover{text-decoration:underline}.article-link--backward{margin-left:-1.25rem}.article-link--backward a{margin-left:2.75rem}.article-link--forward{margin-right:-1.25rem}.article-link--forward a{margin-right:2.75rem}.toc-link{display:block;width:100%;text-decoration:none;color:black;padding:0.5rem 1rem}.toc-link:hover{background-color:#f6f6f6}.exrc-section-title{margin-top:1rem !important;margin-bottom:0rem !important}.exrc-bonuses{padding:2rem 4rem;color:white;background-color:orange;margin-bottom:1rem}.exrc-bonuses__head{font-size:1.2rem;font-weight:bold;margin-bottom:1rem}.article-section{padding:2rem 0}.warn-section{background-color:#e2252b;color:white}.text-section table tr:nth-child(even){background-color:#e8e8e8}.exercises-section{background-color:#ffec88}.block-image{margin:3rem 0}.block-image img{display:block;width:100%;height:auto}.fig{display:block;margin:2rem auto;height:auto}li>.fig{margin:1rem auto}.fig-100{width:100%}.fig-90{width:90%}.fig-80{width:80%}.fig-70{width:70%}.fig-60{width:60%}.fig-50{width:50%}table{margin:2rem auto}table thead{border-bottom:2px solid #333}table td{padding:0.5rem}
+</style><style data-vue-ssr-id="34f8141e:0">.article-head{padding:0 4rem}.article-head__title{display:flex;align-items:baseline;font-size:1.8rem;font-weight:bold;margin-left:-6rem}.article-head__title h1{font-size:100%}.article-head__num{width:4rem;height:4rem;line-height:4rem;text-align:center;background-color:#ffec88;box-shadow:0 0 10px #ddd;border-radius:2rem;margin-right:2rem}.aside{display:none;width:320px;position:fixed;z-index:1;overflow-x:hidden;padding-top:20px}@media only screen and (min-width: 992px){.aside{display:block}}.article{margin:0rem 0 6rem 0;background-color:white;padding-top:2rem;box-shadow:0 0 10px #ddd;line-height:150%;border-radius:1rem}@media only screen and (min-width: 992px){.article{margin:0rem 0 6rem 320px}}.article .text-section>p,.article .text-section>ul,.article .text-section>ol,.article .text-section>dl{margin-left:4rem;margin-right:4rem}.article dt,.article dd{margin-bottom:0.5rem}.article h2,.article h3,.article h4{padding:1rem 4rem}.article .anchor{opacity:0;transition:250ms;text-decoration:none;color:#869af5;margin-left:-1.7rem}.article h2{margin-top:3rem;margin-bottom:1rem;font-size:1.6rem;font-weight:900}.article h2 .anchor{margin-left:-1.7rem}.article h3{margin-top:1rem;margin-bottom:0rem}.article h3 .anchor{margin-left:-1.2rem}.article h2:hover .anchor,.article h3:hover .anchor{opacity:1;margin-left:0}.article p{margin-top:0;margin-bottom:1rem;hyphens:manual}.article li{margin-bottom:0.5rem}.article .text-section:first-child p:first-child:first-letter{float:left;font-size:5rem;line-height:4rem;padding-top:0.3rem;padding-right:0.5rem}.article em{background-color:#d1ebf1;padding:0rem 0.5rem;border-radius:10px}.article pre,.article code,.article var{font-family:"Roboto Mono"}.article pre{background-color:#555;color:white;padding:1rem 4rem;margin:2rem 0;overflow-x:auto}.article var{font-style:normal;color:blue}.article kbd{font-family:"Montserrat";background-color:#fff;border:1px solid #888;border-radius:4px;padding:0rem 0.5rem}.term{display:inline;position:relative;font-style:italic;overflow:visible}.term__icon{display:inline-block;vertical-align:middle;width:15px;height:15px;margin-left:0.5rem;margin-bottom:2px;margin-right:0;background-image:url(/assets/img/english-9a71e2.png);background-size:contain;background-repeat:no-repeat}.term__cs{background-color:#d1ebf1;padding:0rem 0rem 0rem 0.5rem;border-radius:10px;white-space:pre;cursor:default}.term__en{position:absolute;top:-2rem;left:0rem;background-color:#444;color:white;padding:0rem 0.5rem;border-radius:5px;opacity:0;visibility:hidden;z-index:1;white-space:pre;transition:500ms}.term:hover .term__en{visibility:visible;opacity:1}
+</style><style data-vue-ssr-id="3c9796f4:0">.page{display:grid;grid-template-columns:auto;grid-template-rows:auto 1fr auto;min-height:100vh}.footer{padding:2rem 0;background-color:#dce7f4}
+</style><style data-vue-ssr-id="2fdd37c8:0">.page-logo{display:flex;align-items:center;text-decoration:none;color:black}.page-logo__icon{width:2rem;height:2rem;background-image:url(/assets/img/kodim-icon-d3361c.svg);background-size:contain}.page-logo__title{font-size:1.2rem;font-weight:bold;margin-left:0.5rem}.navbar{padding:1rem 0}
+</style><style data-vue-ssr-id="6f27289b:0">.exercise__head{display:flex;margin-left:-1.5rem}.exercise__num{width:3rem;height:3rem;line-height:3rem;background-color:white;box-shadow:0 0 10px #ddd;border-radius:1.5rem;text-align:center}.exercise__title{display:flex;align-items:baseline;flex:1;font-size:1.2rem;font-weight:bold;margin-left:0rem}.exercise__title h3{font-size:100%;padding-left:2.5rem;margin-bottom:0.5rem}.exercise__demand{margin-top:2rem;padding-right:4rem;text-align:right}.exercise__body>p,.exercise__body>ul,.exercise__body>ol,.exercise__body>dl{margin-left:4rem;margin-right:4rem}.exercise table tr:nth-child(even){background-color:#ffe664}.demand{min-width:70px;height:14px;background-size:contain;background-position-x:right;background-repeat:no-repeat;background-size:70px 14px}.demand--1{background-image:url(/assets/img/demand1-32b0be.svg)}.demand--2{background-image:url(/assets/img/demand2-3d6156.svg)}.demand--3{background-image:url(/assets/img/demand3-6ddf4a.svg)}.demand--4{background-image:url(/assets/img/demand4-377dc5.svg)}.demand--5{background-image:url(/assets/img/demand5-9e0206.svg)}.demand-text{font-size:0.8rem;font-weight:bold}
+</style></head>
+  <body data-gr-c-s-loaded="true">
+    <div data-server-rendered="true" class="page"><header><div class="navbar container"><a href="http://nove.kodim.cz/" class="page-logo router-link-active"><div class="page-logo__icon"></div> <div class="page-logo__title">Kódím.cz</div></a></div> </header> <main class="main"><div class="container"><aside class="aside"><div class="chapter-link"><a href="http://nove.kodim.cz/czechitas/daweb" class="router-link-active">Pokročilý JavaScript</a></div> <nav class="article-outline"><a href="#metody" class="toc-link">Metody</a><a href="#stare-dobre-funkce" class="toc-link">Staré dobré funkce</a><a href="#cviceni-metody-a-this" class="toc-link">Cvičení - Metody a this</a><a href="#prototypy" class="toc-link">Prototypy</a><a href="#cviceni-objekty-a-prototypy" class="toc-link">Cvičení - Objekty a prototypy</a><a href="#konstrukce-objektu" class="toc-link">Konstrukce objektů</a><a href="#cviceni-konstrukce-objektu" class="toc-link">Cvičení - konstrukce objektů</a></nav></aside> <article class="article"><div class="article-head"><div class="article-head__title"><div class="article-head__num">4</div> <h1>Základy objektového programování</h1></div> <div class="article-head__brief">Představíme si základní principy objektově orientovaného programování, které nám umožní lépe strukturovat naše aplikace.</div></div> <div class="article-links"><div class="article-link article-link--backward"><div class="arrow-left"></div> <a href="http://nove.kodim.cz/czechitas/daweb/pokrocily-js/volani-api">
+        JSON a volání API
+      </a></div> <div class="article-links-filler"></div> <div class="article-link article-link--forward"><a href="http://nove.kodim.cz/czechitas/daweb/pokrocily-js/komponenty">
+        Tvorba komponent
+      </a> <div class="arrow-right"></div></div></div> <div class="article-body"><!-- base href="http://nove.kodim.cz/czechitas/daweb/pokrocily-js/zaklady-oop/" --> <section class="article-section text-section"><p>Dnes
+ konečně pootevřeme Pandořinu skříňku a nahlédneme do tajů objektového 
+programování. Objektové nebo objektové orientované programování (OOP) je
+ takzvané <em>programovací paradigma</em>. Je to určitý specifický 
+pohled na to, jak strukturovat programy tak, aby se dobře spravovaly, i 
+když jejich velikost začne růst do obřích rozměrů. My si zde ukážeme 
+pouze nejnutější základy. Svět OOP je ohromný a opravdu dobře se naučit 
+tímto způsobem přemýšlet vyžaduje hodně studia a také praxe.</p>
+<h2 id="metody"><a class="anchor" href="#metody">¶</a> Metody</h2>
+<p>Začněme opravdu zvolna a jednoduše. Vytvoříme si objekt, představující jednoho člena jedné z nejznámějších seriálových rodinek.</p>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> homer = {
+  <span class="hljs-attr">firstName</span>: <span class="hljs-string">'Homer'</span>,
+  <span class="hljs-attr">middleName</span>: <span class="hljs-string">'Jay'</span>,
+  <span class="hljs-attr">lastName</span>: <span class="hljs-string">'Simpson'</span>,
+  <span class="hljs-attr">age</span>: <span class="hljs-number">39</span>,
+};
+</code></pre>
+<p>Běžně je zvykem psát prostřední jméno pouze pomocí iniciály, tedy 
+Homer J. Simpson. Napišme si funkci, která dělá přesně takovou věc.</p>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> personName = <span class="hljs-function">(<span class="hljs-params">person</span>) =&gt;</span> {
+  <span class="hljs-keyword">return</span> <span class="hljs-string">`<span class="hljs-subst">${person.firstName}</span> <span class="hljs-subst">${person.middleName[<span class="hljs-number">0</span>]}</span>. <span class="hljs-subst">${person.lastName}</span>`</span>;
+};
+</code></pre>
+<p>Můžeme pak psát</p>
+<pre><code class="language-jscon"><span class="hljs-meta">&gt;</span><span class="javascript"> personName(homer)</span>
+'Homer J. Simpson
+</code></pre>
+<p>Takováto funkce se nám bude často hodit. Vlastně by se nám hodilo, 
+kdyby tato funkce byla svázána a naším objektem jako jeho metoda. Zde 
+konečně odhalíme naše tajemství a použijeme naši funkci jako hodnotu 
+přímo v našem objektu.</p>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> homer = {
+  <span class="hljs-attr">firstName</span>: <span class="hljs-string">'Homer'</span>,
+  <span class="hljs-attr">middleName</span>: <span class="hljs-string">'Jay'</span>,
+  <span class="hljs-attr">lastName</span>: <span class="hljs-string">'Simpson'</span>,
+  <span class="hljs-attr">age</span>: <span class="hljs-number">39</span>,
+  <span class="hljs-attr">name</span>: <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+    <span class="hljs-keyword">return</span> <span class="hljs-string">`<span class="hljs-subst">${homer.firstName}</span> <span class="hljs-subst">${homer.middleName[<span class="hljs-number">0</span>]}</span>. <span class="hljs-subst">${homer.lastName}</span>`</span>;
+  },
+};
+</code></pre>
+<p>Všimněte si, že funkce nyní nemá žádné parametry, protože přímo pracuje s objektem <code>homer</code>. Můžeme pak psát</p>
+<pre><code class="language-jscon"><span class="hljs-meta">&gt;</span><span class="javascript"> homer.name()</span>
+'Homer J. Simpson
+</code></pre>
+<p>To vypadá daleko elegantněji. Co se týče funkcí jako hodnot v 
+objektech, nečeká nás zatím žádné velké překvapení. Dokonce si možná 
+někteří z vás hnání zvědavostí podobnou věc už zkusili na vlastní pěst. 
+Je tu však jedna drobnost, která je trochu nešikovná. Uvnitř metody se 
+musíme k našemu objektu odkazovat skrze proměnnou <code>homer</code>. Funkce je tak závislé na jedné konkrétní proměnné musíme ji tak pro každý další objekt vyrábět znova.</p>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> homer = {
+  <span class="hljs-attr">firstName</span>: <span class="hljs-string">'Homer'</span>,
+  <span class="hljs-attr">middleName</span>: <span class="hljs-string">'Jay'</span>,
+  <span class="hljs-attr">lastName</span>: <span class="hljs-string">'Simpson'</span>,
+  <span class="hljs-attr">age</span>: <span class="hljs-number">39</span>,
+  <span class="hljs-attr">name</span>: <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+    <span class="hljs-keyword">return</span> <span class="hljs-string">`<span class="hljs-subst">${homer.firstName}</span> <span class="hljs-subst">${homer.middleName[<span class="hljs-number">0</span>]}</span>. <span class="hljs-subst">${homer.lastName}</span>`</span>;
+  },
+};
+
+<span class="hljs-keyword">const</span> marge = {
+  <span class="hljs-attr">firstName</span>: <span class="hljs-string">'Marge'</span>,
+  <span class="hljs-attr">middleName</span>: <span class="hljs-string">'Jacqueline'</span>,
+  <span class="hljs-attr">lastName</span>: <span class="hljs-string">'Simpson'</span>,
+  <span class="hljs-attr">age</span>: <span class="hljs-number">36</span>,
+  <span class="hljs-attr">name</span>: <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+    <span class="hljs-keyword">return</span> <span class="hljs-string">`<span class="hljs-subst">${marge.firstName}</span> <span class="hljs-subst">${marge.middleName[<span class="hljs-number">0</span>]}</span>. <span class="hljs-subst">${marge.lastName}</span>`</span>;
+  },
+};
+</code></pre>
+<p>Život by nám ulehčilo, kdybychom se mohli uvnitř metody nějak odkázat
+ na objekt, jehož je tato metoda součástí. JavaScript runtime nám v tom 
+rád pomůže. Musíme mu však vyjít naproti a k tomu budeme potřebovat 
+malinko jiný způsob deklarace funkcí.</p>
+<h2 id="stare-dobre-funkce"><a class="anchor" href="#stare-dobre-funkce">¶</a> Staré dobré funkce</h2>
+<p>Způsob zápisu funkcí jako níže, který jsem doteď používali, je ve skutečnosti v JavaScriptu docela novinka.</p>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> personEmail = <span class="hljs-function">(<span class="hljs-params">person, domain</span>) =&gt;</span> {
+  <span class="hljs-keyword">const</span> username = <span class="hljs-string">`<span class="hljs-subst">${person.firstName}</span>.<span class="hljs-subst">${person.lastName}</span>`</span>;
+  <span class="hljs-keyword">return</span> username.toLowerCase() + domain;
+};
+</code></pre>
+<p>Tomuto zápisu se říká <em>arrow funkce</em> a v JavaScriptu přibyl až ve verzi ES6. Dříve bylo zvykem psát funkce takto.</p>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> personEmail = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">person, domain</span>) </span>{
+  <span class="hljs-keyword">const</span> username = <span class="hljs-string">`<span class="hljs-subst">${person.firstName}</span>.<span class="hljs-subst">${person.lastName}</span>`</span>;
+  <span class="hljs-keyword">return</span> username.toLowerCase() + domain;
+};
+</code></pre>
+<p>Takovýmto funkcím budeme říkat 
+          <span class="term">
+            <span class="term__cs">staré dobré funkce<span class="term__icon"></span></span>
+            <span class="term__en">old-fashioned functions</span>
+          </span>
+        . Není zde velký rozdíl co se týče zápisu. Staré dobré funkce 
+však mají jednu vlastnost, kterou arrow funkce nemají. Mají speciální 
+tajný parametr, který lze do této funkce propašovat jakýmisi zadními 
+vrátky. Tento parametr se jmenuje <code>this</code>. Jeho obsah závisí 
+na tom, jakým způsobem naši funkci voláme. Pojďme si rovnou napsat 
+jednoduchou testovací funkcí, abychom zjistili, jak <code>this</code> funguje.</p>
+<pre><code class="language-js"><span class="hljs-meta">'use strict'</span>;
+
+<span class="hljs-keyword">const</span> greet = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">name</span>) </span>{
+  <span class="hljs-keyword">return</span> <span class="hljs-string">`hello from <span class="hljs-subst">${<span class="hljs-keyword">this</span>}</span> and <span class="hljs-subst">${name}</span>`</span>;
+};
+</code></pre>
+<p>Tato funkce jednoduše vrátí řetězec obsahující cokoliv, co je zrovna uloženo v tajném parametru <code>this</code> a v parametru <code>name</code>. Pokud takovou funkci zavoláme ve strict módu běžným způsobem, parametr <code>this</code> je <code>undefined</code>.</p>
+<pre><code class="language-jscon"><span class="hljs-meta">&gt;</span><span class="javascript"> greet(<span class="hljs-string">'Martin'</span>)</span>
+"hello from undefined and Martin"
+</code></pre>
+<p>Pokud však funkci zavoláme pomocí metody <code>call</code>, můžeme si v prvním parametru určit, co bude uloženo v <code>this</code>.</p>
+<pre><code class="language-jscon"><span class="hljs-meta">&gt;</span><span class="javascript"> greet.call(<span class="hljs-string">'Petr'</span>, <span class="hljs-string">'Martin'</span>)</span>
+"hello from Petr and Martin"
+<span class="hljs-meta">&gt;</span><span class="javascript"> greet.call(<span class="hljs-number">5</span>, <span class="hljs-string">'Martin'</span>)</span>
+"hello from 5 and Martin"
+</code></pre>
+<p>K čemu nám takovéto podivné volání funkce je? Přímo nám programátorům
+ vlastně skoro k ničemu. Tento trik totiž použije především JavaScript 
+runtime při volání metod našich vlastních objektů. Pojďme výše uvedenou 
+vítací metodu přidat do našeho oblíbeního objektu.</p>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> homer = {
+  <span class="hljs-attr">firstName</span>: <span class="hljs-string">'Homer'</span>,
+  <span class="hljs-attr">middleName</span>: <span class="hljs-string">'Jay'</span>,
+  <span class="hljs-attr">lastName</span>: <span class="hljs-string">'Simpson'</span>,
+  <span class="hljs-attr">age</span>: <span class="hljs-number">39</span>
+  <span class="hljs-attr">greet</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">name</span>) </span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-string">`hello from <span class="hljs-subst">${<span class="hljs-keyword">this</span>.firstName}</span> and <span class="hljs-subst">${name}</span>`</span>;
+  }
+};
+</code></pre>
+<p>Ve chvíli, kdy metodu <code>greet</code> zavoláme takto</p>
+<pre><code class="language-jscon"><span class="hljs-meta">&gt;</span><span class="javascript"> homer.greet(<span class="hljs-string">'Martin'</span>)</span>
+"hello from Homer and Martin"
+</code></pre>
+<p>JavaScript použije stejný trik jako my dříve s <code>call</code> a parametr <code>this</code> v naší metodě nastaví na objekt, na kterém tuto metodu zrovna voláme. Díky tajnému parametru <code>this</code> tak mohou všechny naše metody mít v době volání přístup ke svému objektu. Hurá!</p>
+<p>Pozor na to, že takto fungují pouze staré dobré funkce. Arrow funkce žádný tajný parametr <code>this</code> nemají. Tento fakt nám pozdějí bude velmi ku prospěchu. Zaplatíme za to však tím, že arrow funkce nemůžeme použít jako metody.</p>
+<p>Díky všem komplikovaným hrátkám s <code>this</code> jsme se tak 
+posunuli o krok kupředu na naší cestě za elegantním objektovým 
+programováním. Díky starým dobrým funkcím se naše objekty Simpsonovic 
+rodinky o kus zpřehlední. Nemusíme už vytvářet nové metody pro každý 
+objekt zvlášt. Stačí nám vytvořit je všehny pouze jednout a pak je k 
+naším objektům jen připojit.</p>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> name = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">return</span> <span class="hljs-string">`<span class="hljs-subst">${<span class="hljs-keyword">this</span>.firstName}</span> <span class="hljs-subst">${<span class="hljs-keyword">this</span>.middleName[<span class="hljs-number">0</span>]}</span>. <span class="hljs-subst">${<span class="hljs-keyword">this</span>.lastName}</span>`</span>;
+};
+
+<span class="hljs-keyword">const</span> email = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">domain</span>) </span>{
+  <span class="hljs-keyword">const</span> username = <span class="hljs-string">`<span class="hljs-subst">${<span class="hljs-keyword">this</span>.firstName}</span>.<span class="hljs-subst">${<span class="hljs-keyword">this</span>.lastName}</span>`</span>;
+  <span class="hljs-keyword">return</span> username.toLowerCase() + domain;
+};
+
+<span class="hljs-keyword">const</span> homer = {
+  <span class="hljs-attr">firstName</span>: <span class="hljs-string">'Homer'</span>,
+  <span class="hljs-attr">middleName</span>: <span class="hljs-string">'Jay'</span>,
+  <span class="hljs-attr">lastName</span>: <span class="hljs-string">'Simpson'</span>,
+  <span class="hljs-attr">age</span>: <span class="hljs-number">39</span>,
+  <span class="hljs-attr">name</span>: name,
+  <span class="hljs-attr">email</span>: email,
+};
+
+<span class="hljs-keyword">const</span> marge = {
+  <span class="hljs-attr">firstName</span>: <span class="hljs-string">'Marge'</span>,
+  <span class="hljs-attr">middleName</span>: <span class="hljs-string">'Jacqueline'</span>,
+  <span class="hljs-attr">lastName</span>: <span class="hljs-string">'Simpson'</span>,
+  <span class="hljs-attr">age</span>: <span class="hljs-number">36</span>,
+  <span class="hljs-attr">name</span>: name,
+  <span class="hljs-attr">email</span>: email,
+};
+</code></pre>
+<p>Můžeme pak psát jako obvykle</p>
+<pre><code class="language-jscon"><span class="hljs-meta">&gt;</span><span class="javascript"> marge.email(<span class="hljs-string">'gmail.com'</span>)</span>
+"marge.simpson@gmail.com"
+</code></pre>
+</section> <!----><!----> <section class="article-section exercises-section"><h2 id="cviceni-metody-a-this" class="exrc-section-title"><a href="#cviceni-metody-a-this" class="anchor">¶</a>
+          Cvičení - Metody a this
+        </h2> <!----> <div class="exercise"><div class="exercise__head"><div class="exercise__title"><div class="exercise__num">1</div> <h3 id="cvi-pejsek"><a href="#cvi-pejsek" class="anchor">¶</a>
+        Pejsek
+      </h3></div> <div class="exercise__demand"><div class="demand demand--1"></div> <div class="demand-text">pohodička</div></div></div> <div class="exercise__body">
+<ol>
+<li>Vytvořte objekt pes. Pes má vlastnosti jméno, barva srsti a délka srsti. Dále má metody <code>stekej</code>, <code>zavrc</code> a <code>trhej</code>. Tyto metody jen vypisují do konzole vhodný text. (U metody <code>trhej</code> vymyslete nějakou vtipnou hlášku.) Pracujte v konzoli.</li>
+<li>Svého psa si v konzoli pořádně otestujte!</li>
+</ol>
+</div></div><div class="exercise"><div class="exercise__head"><div class="exercise__title"><div class="exercise__num">2</div> <h3 id="cvi-profil-na-seznamce"><a href="#cvi-profil-na-seznamce" class="anchor">¶</a>
+        Profil na seznamce
+      </h3></div> <div class="exercise__demand"><div class="demand demand--1"></div> <div class="demand-text">pohodička</div></div></div> <div class="exercise__body">
+<p>Pracujte v konzoli.</p>
+<ol>
+<li>Vytvořte objekt profil, který obsahuje data potřebná k seznamování 
+na seznamce. V našem případě to bude jméno, barva vlasů, barva očí a 
+oblíbený drink na prvním rande.</li>
+<li>Přidejte do objektu metodu, která do konzole vypíše text 
+seznamovacího inzerátu. Text bude obsahovat všechna data z objektu, tedy
+ jméno, obě barvy a oblíbený drink. Používejte klíčové slovo <code>this</code>. Udělejte to chytře, abyste se vyhnuli skloňování.</li>
+<li>Opět si to otestujte v konzoli!</li>
+</ol>
+</div></div></section><!----> <section class="article-section exercises-section"><!----> <div class="exrc-bonuses"><div class="exrc-bonuses__head">Bonusová cvičení</div> <div class="exrc-bonuses__body">
+            Nepovinné úložky, které můžete řešit pokud máte chuť na větší
+            výzvu nebo si chcete látku procvičit víc do hloubky.
+          </div></div> <div class="exercise"><div class="exercise__head"><div class="exercise__title"><div class="exercise__num">3</div> <h3 id="cvi-hledani-na-mdn"><a href="#cvi-hledani-na-mdn" class="anchor">¶</a>
+        Hledání na MDN
+      </h3></div> <div class="exercise__demand"><div class="demand demand--1"></div> <div class="demand-text">pohodička</div></div></div> <div class="exercise__body">
+<ol>
+<li>Na stránce Mozilla Developer Network najděte, co dělá metoda <code>startsWith</code> patřící všem řetězcům. Všimněte si klíčového slova <code>prototype</code> v titulku stránky (budeme o něm mluvit později).</li>
+<li>Stejným způsobem najděte, co dělá metoda <code>indexOf</code> patřící všem polím.</li>
+</ol>
+</div></div></section><section class="article-section text-section"><h2 id="prototypy"><a class="anchor" href="#prototypy">¶</a> Prototypy</h2>
+<p>Příklad výše už je trochu hezčí než vytváření nové metody pro každý objekt, pořád však naše metody <code>name</code> a <code>email</code>
+ musíme ručně vepisovat do každého objektu. To nás brzo přestane bavit. 
+JavaScript runtime nám však opět přispěchá na pomoc, tentokrát s něčím, 
+čemu se říká 
+          <span class="term">
+            <span class="term__cs">prototyp<span class="term__icon"></span></span>
+            <span class="term__en">prototype</span>
+          </span>
+        .</p>
+<p>Stejně jako mají staré dobré funkce tajný parametr <code>this</code>, maji i objekty jeden tajný klíč s trochu zlověstným názvem <code>__proto__</code>. Představte si, že máme e-shop a prodáváme v něm ledničky. Jednu ledničku bychom mohli reprezentovat takovýmto objektem.</p>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> fridge1 = {
+  <span class="hljs-attr">volume</span>: <span class="hljs-number">275</span>,
+  <span class="hljs-attr">freezer</span>: <span class="hljs-literal">false</span>,
+  <span class="hljs-attr">color</span>: <span class="hljs-string">'white'</span>,
+
+  <span class="hljs-attr">__proto__</span>: {
+    <span class="hljs-attr">name</span>: <span class="hljs-string">'SNAIGE CD290 1008'</span>,
+    <span class="hljs-attr">price</span>: <span class="hljs-number">7990</span>,
+  },
+};
+</code></pre>
+<p>Všimněte si, že pod klíčem <code>__proto__</code> je objekt s dalšími
+ parametry naší ledničky. Tomuto objektu říkáme prototyp. Pokud se 
+pokusíme přistoupit k nějaké vlastnosti naší ledničky například takto</p>
+<pre><code class="language-jscon"><span class="hljs-meta">&gt;</span><span class="javascript"> fridge1.price</span>
+7990
+</code></pre>
+<p>JavaScript runtime se podívá, jestli se klič <code>price</code> nachází v našem objektu. Pokud ne, podívá se do jeho prototypu uloženém v <code>__proto__</code>, zda se náhodou klíč nenachází tam. Pokud jej nenajde ani zde, zkouší prototyp prototypu a tak dál, dokud nenarazí na dno.</p>
+<p>Prototyp tedy můžeme využít k tomu, abychom v něm skladovali věci, 
+které jsou společné vícero objektům. Nejčastěji zde skladujeme metody, 
+které chceme mít na všech objektech stejného typu. Můžeme tak například 
+říct, že každý objekt představující osobu musí mít metody, která umí 
+zobrazit celé jméno a email této osoby. Vytvoříme si tak následující 
+prototyp.</p>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> Person = {
+  <span class="hljs-attr">name</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-string">`<span class="hljs-subst">${<span class="hljs-keyword">this</span>.firstName}</span> <span class="hljs-subst">${<span class="hljs-keyword">this</span>.middleName[<span class="hljs-number">0</span>]}</span>. <span class="hljs-subst">${<span class="hljs-keyword">this</span>.lastName}</span>`</span>;
+  }
+  <span class="hljs-attr">email</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">domain</span>) </span>{
+    <span class="hljs-keyword">const</span> username = <span class="hljs-string">`<span class="hljs-subst">${<span class="hljs-keyword">this</span>.firstName}</span>.<span class="hljs-subst">${<span class="hljs-keyword">this</span>.lastName}</span>`</span>;
+    <span class="hljs-keyword">return</span> username.toLowerCase() + domain;
+  }
+};
+</code></pre>
+<p>Proměnné obsahující prototypy je zvykem psát s velkým písmenem. Díky prototypu <code>Person</code> pak snadno vytvoříme naše Simpsonovic manžele.</p>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> homer = {
+  <span class="hljs-attr">__proto__</span>: Person,
+
+  <span class="hljs-attr">firstName</span>: <span class="hljs-string">'Homer'</span>,
+  <span class="hljs-attr">middleName</span>: <span class="hljs-string">'Jay'</span>,
+  <span class="hljs-attr">lastName</span>: <span class="hljs-string">'Simpson'</span>,
+  <span class="hljs-attr">age</span>: <span class="hljs-number">39</span>,
+};
+
+<span class="hljs-keyword">const</span> marge = {
+  <span class="hljs-attr">__proto__</span>: Person,
+
+  <span class="hljs-attr">firstName</span>: <span class="hljs-string">'Marge'</span>,
+  <span class="hljs-attr">middleName</span>: <span class="hljs-string">'Jacqueline'</span>,
+  <span class="hljs-attr">lastName</span>: <span class="hljs-string">'Simpson'</span>,
+  <span class="hljs-attr">age</span>: <span class="hljs-number">36</span>,
+};
+</code></pre>
+<p>Nyní když provedeme takovéto volání</p>
+<pre><code class="language-jscon"><span class="hljs-meta">&gt;</span><span class="javascript"> homer.name()</span>
+"Homer J. Simpson"
+</code></pre>
+<p>JavaScript runtime zkouší najit metodu <code>name</code> v objektu <code>homer</code>. Pokud tam není, zkouší ji najít v jeho prototypu <code>Person</code>. Tam už metoda je. Runtime tedy nastaví její <code>this</code> na objekt <code>homer</code> a zavolá ji. Tím se nám všchno hezky propojí a běží jako po másle.</p>
+</section> <!----><!----> <section class="article-section exercises-section"><h2 id="cviceni-objekty-a-prototypy" class="exrc-section-title"><a href="#cviceni-objekty-a-prototypy" class="anchor">¶</a>
+          Cvičení - Objekty a prototypy
+        </h2> <!----> <div class="exercise"><div class="exercise__head"><div class="exercise__title"><div class="exercise__num">4</div> <h3 id="cvi-pozemky"><a href="#cvi-pozemky" class="anchor">¶</a>
+        Pozemky
+      </h3></div> <div class="exercise__demand"><div class="demand demand--2"></div> <div class="demand-text">to dáš</div></div></div> <div class="exercise__body">
+<p>Představte si, že programujeme aplikaci, která spravuje inzeráty k 
+pronájmu pozemků. Každý pozemek budeme reprezentovat jak obdélník s 
+určitou šírkou a výškou v metrech. Pro každý pozemek také budeme chtít 
+určit jeho výměru v metrech čtverečních a obvod pozemku v metrech.</p>
+<p>Založte JavaScriptový program a vytvořte objekt s názvem <code>Estate</code> podle následujícího vzoru</p>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> Estate = {
+  <span class="hljs-attr">area</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-comment">// váš kód</span>
+  },
+  <span class="hljs-attr">border</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-comment">// váš kód</span>
+  },
+};
+</code></pre>
+<p>Tento objekt bude představovat prototyp pro všechny naše pozemky.</p>
+<ol>
+<li>Doplňte kód metody <code>area</code>, která na základě hodnot <code>this.width</code> a <code>this.height</code> vrátí výměru pozemku v metrech čtverečních.</li>
+<li>Doplňte kód metody <code>border</code>, která spočítá délku hranice pozemku v metrech.</li>
+<li>Vytvořte objekt <code>estate1</code> jako níže.<pre><code class="language-js"><span class="hljs-keyword">const</span> estate1 = {
+  <span class="hljs-attr">width</span>: <span class="hljs-number">120</span>,
+  <span class="hljs-attr">height</span>: <span class="hljs-number">50</span>,
+};
+</code></pre>
+</li>
+<li>Pomocí vlastnosti <code>__proto__</code> nastavte tomuto pozemku prototyp <code>Estate</code>. V konzoli vyzkoušejte následujicí příkazy.<pre><code class="language-jscon"><span class="hljs-meta">&gt;</span><span class="javascript"> estate1.area()</span>
+<span class="hljs-meta">&gt;</span><span class="javascript"> estate1.border()</span>
+</code></pre>
+</li>
+<li>Vytvořte pozemek <code>estate2</code> s nějakými rozměry a správným prototypem a v konzli vyzoušejte, že i tento správně funguje.</li>
+</ol>
+</div></div><div class="exercise"><div class="exercise__head"><div class="exercise__title"><div class="exercise__num">5</div> <h3 id="cvi-cena-pozemku"><a href="#cvi-cena-pozemku" class="anchor">¶</a>
+        Cena pozemku
+      </h3></div> <div class="exercise__demand"><div class="demand demand--2"></div> <div class="demand-text">to dáš</div></div></div> <div class="exercise__body">
+<p>Začněte s hotovým řešením předchozího příkladu.</p>
+<ol>
+<li>Do všech pozemků přidejte novou vlastnost <code>m2Price</code>, která udává cenu pozemku za jeden metr čtvereční.</li>
+<li>Do prototypu <code>Estate</code> přidejte metodu <code>price</code>, která spočítá cenu celého pozemku podle jeho výměry.</li>
+<li>Vyzkoušejte v konzoli zavolat metodu <code>price</code> na všech vašich pozemcích.</li>
+<li>Vyzkoušejte, co se stane, když do některého pozemku zapomenete vloži vlastnost <code>m2price</code> a zkusíte zavolat metodu <code>price</code>.</li>
+</ol>
+</div></div><div class="exercise"><div class="exercise__head"><div class="exercise__title"><div class="exercise__num">6</div> <h3 id="cvi-hodiny"><a href="#cvi-hodiny" class="anchor">¶</a>
+        Hodiny
+      </h3></div> <div class="exercise__demand"><div class="demand demand--2"></div> <div class="demand-text">to dáš</div></div></div> <div class="exercise__body">
+<p>Vytvořte prototyp <code>Clock</code>, který bude přestavovat digitální hodiny zobrazující hodiny a minuty. Metody prototypu pracují s vlastnostmi <code>this.hours</code> a <code>this.minutes</code>.</p>
+<ol>
+<li>Přidejte do prototypu metodu <code>hourUp</code>, která zvýší čas na hodinách o jednu hodinu. Hodiny používají 24-hodinový formát, pod hodině 23 tedy následuje hodina 0.</li>
+<li>Podobným způsobem vytvořte metodu <code>hourDown</code>, která sníží čas o jednu hodinu.</li>
+<li>Přidejte metodu <code>minuteUp</code>, která zvýší čas na hodinách o jednu minutu. Dejte dobrý pozor na časy jako 9:59 a hlavně 23:59.</li>
+<li>Přidejte metodu <code>minuteDown</code>, která sníží čas na hodinách o jednu minutu. Pozor na časy jako 9:00 a hlavně 0:00.</li>
+<li>Přidejte metodu <code>show</code>, která vrátí řetězec s aktuláním 
+časem na hodinách ve formátu H:MM, jedy alespoň jedna cifra pro hodinu a
+ přesně dvě cifry pro minutu.</li>
+<li>Vytvořte několik objektů hodin s různými časy a vyzkoušejte v konzoli svoje metody.</li>
+</ol>
+</div></div></section><section class="article-section text-section"><h2 id="konstrukce-objektu"><a class="anchor" href="#konstrukce-objektu">¶</a> Konstrukce objektů</h2>
+<p>Přechozí část této lekce sloužila k tomu, abychom si osahali jak 
+technicky fungují prototypy objektů. Způsob, jakým jsme vytvářeli naše 
+objekty je však pořád dost neohrabaný. V této části si ukážeme, jak 
+tento postup zkrátit díky různým JavaScriptovým vychytávkám.</p>
+<p>Na úvod je nutno zmínit, že vlastnost <code>__proto__</code> není 
+spolehlivá. Nejde totiž o standardizovanou část JavaScriptu. Na světě 
+existuje vícero JavaScriptových runtimů a každý může prototypy objektů 
+ukládat malinko jinak. Budeme proto potřebovat způsob, jak se vyhnout 
+přímému nastavování vlasnoti <code>__proto__</code>.</p>
+<p>Přesně k tomu slouží funkce s názvem <code>Object.create</code>. Tato funkce vytvoří prázdný objekt a jeho prototyp nastaví na hodnotu, kterou dostane v prvním parametru.</p>
+<p>Pokud tedy chceme vytvořit objekt, který ve výsledku bude vypadat takto</p>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> homer = {
+  <span class="hljs-attr">__proto__</span>: Person,
+
+  <span class="hljs-attr">firstName</span>: <span class="hljs-string">'Homer'</span>,
+  <span class="hljs-attr">middleName</span>: <span class="hljs-string">'Jay'</span>,
+  <span class="hljs-attr">lastName</span>: <span class="hljs-string">'Simpson'</span>,
+  <span class="hljs-attr">age</span>: <span class="hljs-number">39</span>,
+};
+</code></pre>
+<p>stačí napsat</p>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> homer = <span class="hljs-built_in">Object</span>.create(Person);
+homer.firstName = <span class="hljs-string">'Homer'</span>;
+homer.middleName = <span class="hljs-string">'Jay'</span>;
+homer.lastName = <span class="hljs-string">'Simpson'</span>;
+homer.age = <span class="hljs-number">39</span>;
+
+<span class="hljs-keyword">const</span> marge = <span class="hljs-built_in">Object</span>.create(Person);
+marge.firstName = <span class="hljs-string">'Marge'</span>;
+marge.middleName = <span class="hljs-string">'Jacqueline'</span>;
+marge.lastName = <span class="hljs-string">'Simpson'</span>;
+marge.age = <span class="hljs-number">36</span>;
+</code></pre>
+<p>Takto jsme se hezky zbavili nutnosti používat vlastnost <code>__proto__</code>
+ a nechali jsme nastavení prototypu na JavaScript runtimu. Chtěli bychom
+ se však také zbavit neustálého opakování nastavování hodnot 
+jednotlivých vlastností. K tomu si uvnitř prototypu vytvříme speciální 
+metodu s názvem <code>constructor</code>. Tato metoda bude brát všechna potřebná data jako vstupy nastaví je rovnou jako vlastností prototypu. Náš prototyp <code>Person</code> pak bude vypadat takto.</p>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> Person = {
+  <span class="hljs-attr">constructor</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">firstName, middleName, lastName, age</span>) </span>{
+    <span class="hljs-keyword">this</span>.firstName = <span class="hljs-string">'Marge'</span>;
+    <span class="hljs-keyword">this</span>.middleName = <span class="hljs-string">'Jacqueline'</span>;
+    <span class="hljs-keyword">this</span>.lastName = <span class="hljs-string">'Simpson'</span>;
+    <span class="hljs-keyword">this</span>.age = <span class="hljs-number">36</span>;
+  },
+  <span class="hljs-attr">name</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-string">`<span class="hljs-subst">${<span class="hljs-keyword">this</span>.firstName}</span> <span class="hljs-subst">${<span class="hljs-keyword">this</span>.middleName[<span class="hljs-number">0</span>]}</span>. <span class="hljs-subst">${<span class="hljs-keyword">this</span>.lastName}</span>`</span>;
+  },
+  <span class="hljs-attr">email</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">domain</span>) </span>{
+    <span class="hljs-keyword">const</span> username = <span class="hljs-string">`<span class="hljs-subst">${<span class="hljs-keyword">this</span>.firstName}</span>.<span class="hljs-subst">${<span class="hljs-keyword">this</span>.lastName}</span>`</span>;
+    <span class="hljs-keyword">return</span> username.toLowerCase() + domain;
+  },
+};
+</code></pre>
+<p>Při vytváření objektů nám pak stačí zavolat konstruktor se správnými hodnotami.</p>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> homer = <span class="hljs-built_in">Object</span>.create(Person);
+homer.constructor(<span class="hljs-string">'Homer'</span>, <span class="hljs-string">'Jay'</span>, <span class="hljs-string">'Simpson'</span>, <span class="hljs-number">39</span>);
+
+<span class="hljs-keyword">const</span> marge = <span class="hljs-built_in">Object</span>.create(Person);
+marge.constructor(<span class="hljs-string">'Marge'</span>, <span class="hljs-string">'Jacqueline'</span>, <span class="hljs-string">'Simpson'</span>, <span class="hljs-number">36</span>);
+</code></pre>
+<p>Vytváření objektů se tak významně zkrátilo díky tomu, že se všechna práce děje uvnitř prototypu.</p>
+<p>Vzhledem k tomu, že objekty se v JavaScriptu vytváří velmi často a 
+protože programátoři jsou pohodlní a nechce se jim psát ani písmenko 
+navíc, existuje způsob jak zápis prototypu ještě o kousek zkrátit. Vždy,
+ když v objektu vytváříme metodu, můžeme beztrestně vynechat dvojtečku a
+ klíčové slovo <code>function</code>. Prototyp potom bude vypadat takto.</p>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> Person = {
+  <span class="hljs-keyword">constructor</span>(firstName, middleName, lastName, age) {
+    <span class="hljs-keyword">this</span>.firstName = <span class="hljs-string">'Marge'</span>;
+    <span class="hljs-keyword">this</span>.middleName = <span class="hljs-string">'Jacqueline'</span>;
+    <span class="hljs-keyword">this</span>.lastName = <span class="hljs-string">'Simpson'</span>;
+    <span class="hljs-keyword">this</span>.age = <span class="hljs-number">36</span>;
+  },
+  name() {
+    <span class="hljs-keyword">return</span> <span class="hljs-string">`<span class="hljs-subst">${<span class="hljs-keyword">this</span>.firstName}</span> <span class="hljs-subst">${<span class="hljs-keyword">this</span>.middleName[<span class="hljs-number">0</span>]}</span>. <span class="hljs-subst">${<span class="hljs-keyword">this</span>.lastName}</span>`</span>;
+  },
+  email(domain) {
+    <span class="hljs-keyword">const</span> username = <span class="hljs-string">`<span class="hljs-subst">${<span class="hljs-keyword">this</span>.firstName}</span>.<span class="hljs-subst">${<span class="hljs-keyword">this</span>.lastName}</span>`</span>;
+    <span class="hljs-keyword">return</span> username.toLowerCase() + domain;
+  },
+};
+</code></pre>
+<p>Jde pouze o kosmetickou změnu, která nám ušetří ťukání na klávesnici.
+ Tento nový zápis znamená přesně totéž co předchozí zápis s funkcemi.</p>
+<p>Tento způsob vytváření objektů už je na chlup blízko tomu, jak se 
+objekty v praxi skutečně vytvářejí. Ještě nám chybí poslední drobnost, 
+kterou si však necháme na některou z dalších lekcí.</p>
+</section> <!----><!----> <section class="article-section exercises-section"><h2 id="cviceni-konstrukce-objektu" class="exrc-section-title"><a href="#cviceni-konstrukce-objektu" class="anchor">¶</a>
+          Cvičení - konstrukce objektů
+        </h2> <!----> <div class="exercise"><div class="exercise__head"><div class="exercise__title"><div class="exercise__num">7</div> <h3 id="cvi-pozemky-2"><a href="#cvi-pozemky-2" class="anchor">¶</a>
+        Pozemky 2
+      </h3></div> <div class="exercise__demand"><div class="demand demand--2"></div> <div class="demand-text">to dáš</div></div></div> <div class="exercise__body">
+<p>Převeďte prototyp <code>Estate</code> z předchozího cvičení na nový formát zápisu prototypů pomocí konstrukturu. Pomocí <code>Object.create</code> a volání konstruktoru vytvořte několik pozemků a v konzoli vyzkoušejte, že fungují.</p>
+</div></div><div class="exercise"><div class="exercise__head"><div class="exercise__title"><div class="exercise__num">8</div> <h3 id="cvi-hodiny-2"><a href="#cvi-hodiny-2" class="anchor">¶</a>
+        Hodiny 2
+      </h3></div> <div class="exercise__demand"><div class="demand demand--2"></div> <div class="demand-text">to dáš</div></div></div> <div class="exercise__body">
+<p>Převeďte prototyp <code>Clock</code> z předchozího cvičení na nový formát zápisu prototypů pomocí konstrukturu. Pomocí <code>Object.create</code> a volání konstruktoru vytvořte několik digitálních hodin a v konzoli vyzkoušejte, že fungují.</p>
+</div></div><div class="exercise"><div class="exercise__head"><div class="exercise__title"><div class="exercise__num">9</div> <h3 id="cvi-hodiny-3"><a href="#cvi-hodiny-3" class="anchor">¶</a>
+        Hodiny 3
+      </h3></div> <div class="exercise__demand"><div class="demand demand--3"></div> <div class="demand-text">zapni hlavu</div></div></div> <div class="exercise__body">
+<ol>
+<li>Přidejte do prototypu hodin metodu <code>render</code>, která vytvoří a vrátí DOM element hodin podle následujícího vzoru.<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"clock"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"clock__hours"</span>&gt;</span>12<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+  :
+  <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"clock__minutes"</span>&gt;</span>24<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
+</li>
+<li>Přidejte do prototypu metodu <code>mount</code> se vstupem <code>parent</code>, což bude nějaký DOM element. Pomocí metody <code>render</code> vytvořte v metodě <code>mount</code> DOM element hodin a pomocí <code>appendChild</code> jej zapojte na konec elementu <code>parent</code>.</li>
+<li>V koznoli vytvořte nějaké digitální hodiny a pomocí metody <code>mount</code> je zapojte do stránky. Zkuste do stránky zpojit více různých hodin za sebou.</li>
+</ol>
+</div></div></section></div></article></div></main> <footer class="footer"><div class="container">Martin Podloucký</div></footer></div>
+  
+
+</body></html>

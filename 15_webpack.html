@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="cz"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>kodim.cz</title>
+  <style data-vue-ssr-id="499c037c:0">@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700,900|Roboto+Mono:400,700&display=fallback&subset=latin-ext);</style><style data-vue-ssr-id="499c037c:1">*{box-sizing:border-box}html{font-family:"Montserrat", sans-serif;font-size:15px}body{margin:0;color:#444;background-color:#f9f9f9}.container{width:100%;margin-left:auto;margin-right:auto}@media only screen and (min-width: 576px){.container{width:540px}}@media only screen and (min-width: 768px){.container{width:720px}}@media only screen and (min-width: 992px){.container{width:960px}}.btn{border:none;outline:none;border-radius:1rem;padding:0.5rem 1rem;text-align:center;text-decoration:none;color:black;box-shadow:0 0 10px #ddd;transition:400ms}.btn:hover{transform:scale(1.1)}.btn-open{background-color:#ffec88}
+</style><style data-vue-ssr-id="54541dba:0">.hljs{display:block;overflow-x:auto;padding:0.5em;background:#222222;color:#C0C0C0}.hljs-keyword{color:#FFB871;font-weight:bold}.hljs-built_in{color:#FFB871}.hljs-literal{color:#FF8080}.hljs-symbol{color:#58E55A}.hljs-comment{color:#5B995B}.hljs-string{color:#FFFF00}.hljs-number{color:#FF8080}.hljs-attribute,.hljs-selector-tag,.hljs-doctag,.hljs-name,.hljs-bullet,.hljs-code,.hljs-addition,.hljs-regexp,.hljs-variable,.hljs-template-variable,.hljs-link,.hljs-selector-attr,.hljs-selector-pseudo,.hljs-type,.hljs-selector-id,.hljs-selector-class,.hljs-quote,.hljs-template-tag,.hljs-deletion,.hljs-title,.hljs-section,.hljs-function,.hljs-meta-keyword,.hljs-meta,.hljs-subst{color:#C0C0C0}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:bold}.article-outline{margin:2rem 3rem 0 0}.arrow-left{background-color:#ffec88;background-size:contain;width:2.5rem;height:2.5rem;border-radius:1.25rem;box-shadow:0 0 10px #ddd;background-image:url(/assets/img/arrow-left-5d2511.svg)}.arrow-right{background-color:#ffec88;background-size:contain;width:2.5rem;height:2.5rem;border-radius:1.25rem;box-shadow:0 0 10px #ddd;background-image:url(/assets/img/arrow-right-b02d21.svg)}.chapter-link{padding-left:1rem}.chapter-link a{text-decoration:none;color:black;font-size:1.2rem;font-weight:bold}.chapter-link a:hover{text-decoration:underline}.article-links{display:flex;margin-top:1rem}.article-links-filler{flex:1}.article-link{display:flex;align-items:center}.article-link a{text-decoration:none;color:black}.article-link a:hover{text-decoration:underline}.article-link--backward{margin-left:-1.25rem}.article-link--backward a{margin-left:2.75rem}.article-link--forward{margin-right:-1.25rem}.article-link--forward a{margin-right:2.75rem}.toc-link{display:block;width:100%;text-decoration:none;color:black;padding:0.5rem 1rem}.toc-link:hover{background-color:#f6f6f6}.exrc-section-title{margin-top:1rem !important;margin-bottom:0rem !important}.exrc-bonuses{padding:2rem 4rem;color:white;background-color:orange;margin-bottom:1rem}.exrc-bonuses__head{font-size:1.2rem;font-weight:bold;margin-bottom:1rem}.article-section{padding:2rem 0}.warn-section{background-color:#e2252b;color:white}.text-section table tr:nth-child(even){background-color:#e8e8e8}.exercises-section{background-color:#ffec88}.block-image{margin:3rem 0}.block-image img{display:block;width:100%;height:auto}.fig{display:block;margin:2rem auto;height:auto}li>.fig{margin:1rem auto}.fig-100{width:100%}.fig-90{width:90%}.fig-80{width:80%}.fig-70{width:70%}.fig-60{width:60%}.fig-50{width:50%}table{margin:2rem auto}table thead{border-bottom:2px solid #333}table td{padding:0.5rem}
+</style><style data-vue-ssr-id="34f8141e:0">.article-head{padding:0 4rem}.article-head__title{display:flex;align-items:baseline;font-size:1.8rem;font-weight:bold;margin-left:-6rem}.article-head__title h1{font-size:100%}.article-head__num{width:4rem;height:4rem;line-height:4rem;text-align:center;background-color:#ffec88;box-shadow:0 0 10px #ddd;border-radius:2rem;margin-right:2rem}.aside{display:none;width:320px;position:fixed;z-index:1;overflow-x:hidden;padding-top:20px}@media only screen and (min-width: 992px){.aside{display:block}}.article{margin:0rem 0 6rem 0;background-color:white;padding-top:2rem;box-shadow:0 0 10px #ddd;line-height:150%;border-radius:1rem}@media only screen and (min-width: 992px){.article{margin:0rem 0 6rem 320px}}.article .text-section>p,.article .text-section>ul,.article .text-section>ol,.article .text-section>dl{margin-left:4rem;margin-right:4rem}.article dt,.article dd{margin-bottom:0.5rem}.article h2,.article h3,.article h4{padding:1rem 4rem}.article .anchor{opacity:0;transition:250ms;text-decoration:none;color:#869af5;margin-left:-1.7rem}.article h2{margin-top:3rem;margin-bottom:1rem;font-size:1.6rem;font-weight:900}.article h2 .anchor{margin-left:-1.7rem}.article h3{margin-top:1rem;margin-bottom:0rem}.article h3 .anchor{margin-left:-1.2rem}.article h2:hover .anchor,.article h3:hover .anchor{opacity:1;margin-left:0}.article p{margin-top:0;margin-bottom:1rem;hyphens:manual}.article li{margin-bottom:0.5rem}.article .text-section:first-child p:first-child:first-letter{float:left;font-size:5rem;line-height:4rem;padding-top:0.3rem;padding-right:0.5rem}.article em{background-color:#d1ebf1;padding:0rem 0.5rem;border-radius:10px}.article pre,.article code,.article var{font-family:"Roboto Mono"}.article pre{background-color:#555;color:white;padding:1rem 4rem;margin:2rem 0;overflow-x:auto}.article var{font-style:normal;color:blue}.article kbd{font-family:"Montserrat";background-color:#fff;border:1px solid #888;border-radius:4px;padding:0rem 0.5rem}.term{display:inline;position:relative;font-style:italic;overflow:visible}.term__icon{display:inline-block;vertical-align:middle;width:15px;height:15px;margin-left:0.5rem;margin-bottom:2px;margin-right:0;background-image:url(/assets/img/english-9a71e2.png);background-size:contain;background-repeat:no-repeat}.term__cs{background-color:#d1ebf1;padding:0rem 0rem 0rem 0.5rem;border-radius:10px;white-space:pre;cursor:default}.term__en{position:absolute;top:-2rem;left:0rem;background-color:#444;color:white;padding:0rem 0.5rem;border-radius:5px;opacity:0;visibility:hidden;z-index:1;white-space:pre;transition:500ms}.term:hover .term__en{visibility:visible;opacity:1}
+</style><style data-vue-ssr-id="3c9796f4:0">.page{display:grid;grid-template-columns:auto;grid-template-rows:auto 1fr auto;min-height:100vh}.footer{padding:2rem 0;background-color:#dce7f4}
+</style><style data-vue-ssr-id="2fdd37c8:0">.page-logo{display:flex;align-items:center;text-decoration:none;color:black}.page-logo__icon{width:2rem;height:2rem;background-image:url(/assets/img/kodim-icon-d3361c.svg);background-size:contain}.page-logo__title{font-size:1.2rem;font-weight:bold;margin-left:0.5rem}.navbar{padding:1rem 0}
+</style><style data-vue-ssr-id="6f27289b:0">.exercise__head{display:flex;margin-left:-1.5rem}.exercise__num{width:3rem;height:3rem;line-height:3rem;background-color:white;box-shadow:0 0 10px #ddd;border-radius:1.5rem;text-align:center}.exercise__title{display:flex;align-items:baseline;flex:1;font-size:1.2rem;font-weight:bold;margin-left:0rem}.exercise__title h3{font-size:100%;padding-left:2.5rem;margin-bottom:0.5rem}.exercise__demand{margin-top:2rem;padding-right:4rem;text-align:right}.exercise__body>p,.exercise__body>ul,.exercise__body>ol,.exercise__body>dl{margin-left:4rem;margin-right:4rem}.exercise table tr:nth-child(even){background-color:#ffe664}.demand{min-width:70px;height:14px;background-size:contain;background-position-x:right;background-repeat:no-repeat;background-size:70px 14px}.demand--1{background-image:url(/assets/img/demand1-32b0be.svg)}.demand--2{background-image:url(/assets/img/demand2-3d6156.svg)}.demand--3{background-image:url(/assets/img/demand3-6ddf4a.svg)}.demand--4{background-image:url(/assets/img/demand4-377dc5.svg)}.demand--5{background-image:url(/assets/img/demand5-9e0206.svg)}.demand-text{font-size:0.8rem;font-weight:bold}
+</style></head>
+  <body data-gr-c-s-loaded="true">
+    <div data-server-rendered="true" class="page"><header><div class="navbar container"><a href="http://nove.kodim.cz/" class="page-logo router-link-active"><div class="page-logo__icon"></div> <div class="page-logo__title">Kódím.cz</div></a></div> </header> <main class="main"><div class="container"><aside class="aside"><div class="chapter-link"><a href="http://nove.kodim.cz/czechitas/daweb" class="router-link-active">Pokročilý JavaScript</a></div> <nav class="article-outline"><a href="#npm" class="toc-link">NPM</a><a href="#webpack" class="toc-link">Webpack</a><a href="#cviceni-zaklady-webpacku" class="toc-link">Cvičení - Základy Webpacku</a></nav></aside> <article class="article"><div class="article-head"><div class="article-head__title"><div class="article-head__num">6</div> <h1>Webpack</h1></div> <div class="article-head__brief">Ukážeme si, jak rozsekat zdrojový kód naší aplikace do logických celků a automaticky je sestavit v jeden výsledný program.</div></div> <div class="article-links"><div class="article-link article-link--backward"><div class="arrow-left"></div> <a href="http://nove.kodim.cz/czechitas/daweb/pokrocily-js/komponenty">
+        Tvorba komponent
+      </a></div> <div class="article-links-filler"></div> <div class="article-link article-link--forward"><a href="http://nove.kodim.cz/czechitas/daweb/pokrocily-js/opakovani">
+        Opakování
+      </a> <div class="arrow-right"></div></div></div> <div class="article-body"><!-- base href="http://nove.kodim.cz/czechitas/daweb/pokrocily-js/webpack/" --> <section class="article-section text-section"><h2 id="npm"><a class="anchor" href="#npm">¶</a> NPM</h2>
+<p>V lekci o komponentách jsme poprvé potkali takzvanou 
+          <span class="term">
+            <span class="term__cs">knihovnu<span class="term__icon"></span></span>
+            <span class="term__en">library</span>
+          </span>
+        . Knihovna je v podstatě ucelená sada funkcí, které řeší nějakou
+ konkrétni věc. Například šablonovací systém Handlebars je knihovna, 
+která nám umožňuje v naších programech používat pokřočilé šablony.</p>
+<p>Knihoven existuje obrovská spousta a každá řeší nějaký problém jako 
+jsou například pokročilé matematické výpočty, různé algoritmy, práce s 
+datem a časem, zpracování dat nebo práce s 2D i 3D grafikou.</p>
+<p>Aby byl v JavaScriptových knihovnách trochu pořádek a neválely se jen
+ tak všude možně po internetu, máme k dispozici takzvaný Node Package 
+Manager (NPM).</p>
+<h3 id="nastaveni-projektu"><a class="anchor" href="#nastaveni-projektu">¶</a> Nastavení projektu</h3>
+<p>Vytvoříme si pokusný projekt s názvem <code>pokusnik</code>.</p>
+<ol>
+<li>Někde na disku vytvořte novou složku s názvem <code>pokusnik</code>. Ta bude obsahovat náš projekt.</li>
+<li>Otevřete si tuto složku v terminálu a proveďte příkaz<pre><code class="language-sh">$ npm init
+</code></pre>
+Objeví se série otázek, na které můžete zatím odpovědět prostě stisknutím klávesy <kbd>Enter</kbd>.</li>
+<li>Ve vaší složce se objeví nový soubor s názvem <code>package.json</code>. Jeho obsah bude vypadat nějak takto.<pre><code class="language-json">{
+  <span class="hljs-attr">"name"</span>: <span class="hljs-string">"pokusnik"</span>,
+  <span class="hljs-attr">"version"</span>: <span class="hljs-string">"1.0.0"</span>,
+  <span class="hljs-attr">"description"</span>: <span class="hljs-string">""</span>,
+  <span class="hljs-attr">"main"</span>: <span class="hljs-string">"index.js"</span>,
+  <span class="hljs-attr">"scripts"</span>: {
+    <span class="hljs-attr">"test"</span>: <span class="hljs-string">"echo \"Error: no test specified\" &amp;&amp; exit 1"</span>
+  },
+  <span class="hljs-attr">"author"</span>: <span class="hljs-string">""</span>,
+  <span class="hljs-attr">"license"</span>: <span class="hljs-string">"ISC"</span>
+}
+</code></pre>
+</li>
+</ol>
+<p>V souboru <code>package.json</code> je uložena veškerá konfigurace 
+našeho projektu. Jsou zde uloženy informace o všech balíčcích, které náš
+ projekt použivá, jeho verze, název, autor a podobně.</p>
+<p>V našem projektu zatím žádný balíček nepoužíváme. Rovnou si tedy pojďme nainstalovat balíček <code>handlerbars</code>, který obsahuje dobře známé Handlebars šablony.</p>
+<pre><code class="language-sh">  $ npm install --save-dev handlebars
+</code></pre>
+<p>Všimněte si, že po spuštení tohoto příkazu nám ve složce projektu přibyly nějaké nové soubory a složky. Souboru <code>package-lock.json</code> si zatím všímat moc nebudeme. Přibyla nám však složka <code>node_modules</code>, ve které je stažný náš balíček <code>handlebars</code> spolu se všemi dalšími balíčky, které <code>handlebars</code> používají.</p>
+<p>Změnil se nám také soubor <code>package.json</code>.</p>
+<pre><code class="language-json">{
+  <span class="hljs-attr">"name"</span>: <span class="hljs-string">"pokusnik"</span>,
+  <span class="hljs-attr">"version"</span>: <span class="hljs-string">"1.0.0"</span>,
+  <span class="hljs-attr">"description"</span>: <span class="hljs-string">""</span>,
+  <span class="hljs-attr">"main"</span>: <span class="hljs-string">"index.js"</span>,
+  <span class="hljs-attr">"scripts"</span>: {
+    <span class="hljs-attr">"test"</span>: <span class="hljs-string">"echo \"Error: no test specified\" &amp;&amp; exit 1"</span>
+  },
+  <span class="hljs-attr">"author"</span>: <span class="hljs-string">""</span>,
+  <span class="hljs-attr">"license"</span>: <span class="hljs-string">"ISC"</span>,
+  <span class="hljs-attr">"devDependencies"</span>: {
+    <span class="hljs-attr">"handlebars"</span>: <span class="hljs-string">"^4.7.6"</span>
+  }
+}
+</code></pre>
+<p>Přibyla nám sekce <code>devDependencies</code>, která obsahuje seznam všech balíčků, které v projektu používáme, spolu s jejich verzemi.</p>
+<h3 id="struktura-slozek"><a class="anchor" href="#struktura-slozek">¶</a> Struktura složek</h3>
+<p>Aby byl náš projekt dobře organizovaný, je dobré respektovat určitou 
+strukturu složek, na kterou je většina programátorů z praxe zvyklá.</p>
+<p>Kód naší aplikace budeme vkládat do složky s názvem <code>src</code>. To je zkratka z anglického <it>sources</it>, nebo-li <it>zdrojový kód</it>. Pojďme si vytvořit následující soubory.</p>
+<p><code>src/index.html</code>:</p>
+<pre><code class="language-html"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">"en"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">"UTF-8"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"viewport"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"width=device-width, initial-scale=1.0"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"style.css"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Pokusník<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>
+      <span class="hljs-comment">&lt;!-- Nadpis stránky --&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"index.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<p><code>src/style.css</code></p>
+<pre><code class="language-css">* {
+  <span class="hljs-attribute">box-sizing</span>: border-box;
+}
+
+<span class="hljs-selector-tag">html</span> {
+  <span class="hljs-attribute">font-family</span>: sans-serif;
+}
+
+<span class="hljs-selector-tag">h1</span> {
+  <span class="hljs-attribute">color</span>: orange;
+}
+</code></pre>
+<p><code>src/index.js</code></p>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> titleElm = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'h1'</span>);
+titleElm.textContent = <span class="hljs-string">'Pokusník funguje'</span>;
+</code></pre>
+<p>Celá struktura našeho projektu tedy bude vypadat takto.</p>
+<pre><code>├──node_modules
+├──src
+│  ├──index.html
+│  ├──index.js
+│  └──style.css
+├──package-lock.json
+└──package.json
+</code></pre>
+<h2 id="webpack"><a class="anchor" href="#webpack">¶</a> Webpack</h2>
+<p>V minulé lekci jsme viděli, že větší projekty jako naše podcastová 
+aplikace obsahují mnoho JavaScriptových i CSS souborů. To se velmi hodí 
+nám lidem, abychom se v projektu vyznali. Pro naše výsledné stránky to 
+však je problém, protože stahovat velké množství malých souborů je 
+mnohem pomalejší než stahovat jeden velký soubor. Potřebujeme tedy 
+nástroj, který dokáže naše malé souboru spojit do jednoho. Tomuto 
+procesu se říká 
+          <span class="term">
+            <span class="term__cs">sestavení projektu<span class="term__icon"></span></span>
+            <span class="term__en">project building</span>
+          </span>
+        . Na sestavování projektů existuje mnoho nástrojů, mezi které 
+patří například Browserify, Gulp, Brunch, Webpack, Rollup, Parcel a 
+další. Jeden z nejpopulárnějších nástrojů je v dnešní době Webpack. 
+Budeme jej tedy používat ve zbytku našeho kurzu.</p>
+<h3 id="nastaveni-webpacku"><a class="anchor" href="#nastaveni-webpacku">¶</a> Nastavení Webpacku</h3>
+<p>Abychom mohli webpack v našem projektu požívat, musíme jej nejdříve nainstalovat příslušné balíčky.</p>
+<pre><code class="language-sh">$ npm install --save-dev webpack webpack-cli
+</code></pre>
+<p>V našem souboru <code>package.json</code> nám přibudou dva řádky.</p>
+<pre><code class="language-json">"devDependencies": {
+  "handlebars": "^4.7.6",
+  "webpack": "^4.43.0",
+  "webpack-cli": "^3.3.11"
+}
+</code></pre>
+<p>Aby se nám projekt dobře sestavoval, změníme obsah sekce <code>scripts</code> v <code>package.json</code> takto.</p>
+<pre><code class="language-json">"scripts": {
+  "build": "webpack -d",
+  "watch": "webpack -wd",
+  "build:prod": "webpack -p",
+}
+</code></pre>
+<p>Nakonec potřebujeme říct webpacku, co má s naším projektem dělat. K 
+tomu potřebujeme v hlavní složce projektu vytvořit configurační soubor <code>webpack.config.js</code>, který bude obsahovat následující kód.</p>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">'path'</span>);
+
+<span class="hljs-built_in">module</span>.exports = {
+  <span class="hljs-attr">entry</span>: <span class="hljs-string">'./src/index.js'</span>,
+  <span class="hljs-attr">output</span>: {
+    <span class="hljs-attr">path</span>: path.join(__dirname, <span class="hljs-string">'dist'</span>),
+    <span class="hljs-attr">filename</span>: <span class="hljs-string">'bundle.js'</span>,
+  },
+};
+</code></pre>
+<p>V tomto kódu v podstatě říkáme, že Webpack má zpracovat soubor <code>index.js</code> a vyrobit z něj soubor <code>bundle.js</code> ve složce <code>dist</code>.</p>
+<p>Nyní už můžeme zkusit náš projekt sestavit příkazem</p>
+<pre><code class="language-sh">$ npm run build
+</code></pre>
+<p>Pokud se všechno povedlo, měli byste v konzoli vidět výstup pobodný tomuto.</p>
+<pre><code>Version: webpack 4.43.0
+Time: 89ms
+Built at: 05/25/2020 9:56:40 AM
+    Asset      Size  Chunks             Chunk Names
+bundle.js  4.26 KiB    main  [emitted]  main
+Entrypoint main = bundle.js
+[./src/index.js] 90 bytes {main} [built]
+</code></pre>
+<p>Ve složce projektu by měla přibýt nová složka <code>dist</code> se souborem <code>bundle.js</code>.
+ To je náš výsledný sestvený soubor. Můžete do něj zkusit nahlédnout, 
+avšak pouze na vlastní nebezpečí, neboť obsahuje mnoho webackového kódu,
+ který se těžko čte a slabším povahám by mohl přivodit záchvat 
+tropického šílenství. Webový prohlížeč však z takového kódu má radost a 
+my zase máme radost z našeho hezky strukturovaného kódu uvnitř složky <code>src</code>.</p>
+<h3 id="soubory-css-a-html"><a class="anchor" href="#soubory-css-a-html">¶</a> Soubory CSS a HTML</h3>
+<p>Všimněte si, že výsledkem naše sestavovacího procesu je pouze jeden 
+JavaSciptový soubor. Žádné HTML ani CSS. Webpack totiž primárně pracuje s
+ JavaScriptem. Pokud chceme, aby zpracoval i HTML a CSS, musíme ho to 
+naučit pomocá takzvaných loaderů. Budeme potřebovat nainstalovat tři 
+loadery.</p>
+<pre><code class="language-sh">$ npm install --save-dev file-loader style-loader css-loader
+</code></pre>
+<p>Nyní musíme doplnit kus konfigurace do <code>webpack.config.js</code>, abychom webpacku řekli, co má dělat s jednotlivými souboru. Obsah souboru pak bude vypadat takto.</p>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">'path'</span>);
+
+<span class="hljs-built_in">module</span>.exports = {
+  <span class="hljs-attr">entry</span>: <span class="hljs-string">'./src/index.js'</span>,
+  <span class="hljs-attr">output</span>: {
+    <span class="hljs-attr">path</span>: path.join(__dirname, <span class="hljs-string">'dist'</span>),
+    <span class="hljs-attr">filename</span>: <span class="hljs-string">'bundle.js'</span>,
+  },
+  <span class="hljs-attr">module</span>: {
+    <span class="hljs-attr">rules</span>: [
+      {
+        <span class="hljs-attr">test</span>: <span class="hljs-regexp">/\.css$/</span>,
+        <span class="hljs-attr">use</span>: [<span class="hljs-string">'style-loader'</span>, <span class="hljs-string">'css-loader'</span>],
+      },
+      {
+        <span class="hljs-attr">test</span>: <span class="hljs-regexp">/\.html$/</span>,
+        <span class="hljs-attr">use</span>: [
+          {
+            <span class="hljs-attr">loader</span>: <span class="hljs-string">'file-loader'</span>,
+            <span class="hljs-attr">options</span>: {
+              <span class="hljs-attr">name</span>: <span class="hljs-string">'[name].[ext]'</span>,
+            },
+          },
+        ],
+      },
+      {
+        <span class="hljs-attr">test</span>: <span class="hljs-regexp">/\.(png|jpe?g|svg)$/</span>,
+        <span class="hljs-attr">use</span>: [
+          {
+            <span class="hljs-attr">loader</span>: <span class="hljs-string">'file-loader'</span>,
+            <span class="hljs-attr">options</span>: {
+              <span class="hljs-attr">name</span>: <span class="hljs-string">'[name]-[hash:6].[ext]'</span>,
+              <span class="hljs-attr">outputPath</span>: <span class="hljs-string">'img'</span>,
+            },
+          },
+        ],
+      },
+    ],
+  },
+};
+</code></pre>
+<p>Přibyla nám sekce <code>modules</code>, ve které říkáme, co si má Webpack počít s jednotlivými typy souborů.</p>
+<p>Webpack však naše CSS a HTML soubory nezpracuje jen tak sám od sebe. 
+Musíme mu přesně říct, které soubory má zpracovat. A protože Webpack 
+vždy začíná od souboru <code>index.js</code>, musíme do něj takzvaně importovat všechny soubory, které chceme v projektu mít.</p>
+<p>Náš <code>index.js</code> tak bude vypadat takto.</p>
+<pre><code class="language-js"><span class="hljs-keyword">import</span> <span class="hljs-string">'./index.html'</span>;
+<span class="hljs-keyword">import</span> <span class="hljs-string">'./style.css'</span>;
+
+<span class="hljs-keyword">const</span> titleElm = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'h1'</span>);
+titleElm.textContent = <span class="hljs-string">'Pokusník funguje'</span>;
+</code></pre>
+<p>Musíme taky malinko upravit náš <code>index.html</code>, protože náš výsledný skript se jmenuje <code>bundle.js</code>.</p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"bundle.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<p>Nyní už můžeme spustit sestavení.</p>
+<pre><code class="language-sh">$ npm run build
+</code></pre>
+<p>Pokud se vše povedlo správně, obdržíme následující výstup.</p>
+<pre><code>Hash: 56f005029328396e0902
+Version: webpack 4.43.0
+Time: 571ms
+Built at: 05/25/2020 10:36:39 AM
+     Asset       Size  Chunks             Chunk Names
+ bundle.js   35.6 KiB    main  [emitted]  main
+index.html  349 bytes          [emitted]
+Entrypoint main = bundle.js
+[./node_modules/css-loader/dist/cjs.js!./src/style.css] 337 bytes {main} [built]
+[./src/index.html] 54 bytes {main} [built]
+[./src/index.js] 136 bytes {main} [built]
+[./src/style.css] 519 bytes {main} [built]
+    + 2 hidden modules
+</code></pre>
+<p>Nyní stačí zajít do nově vytvořené složky <code>dist</code> a pomocí Live Serveru otevřít soubor <code>index.html</code>.</p>
+</section> <!----><!----> <section class="article-section exercises-section"><h2 id="cviceni-zaklady-webpacku" class="exrc-section-title"><a href="#cviceni-zaklady-webpacku" class="anchor">¶</a>
+          Cvičení - Základy Webpacku
+        </h2> <!----> <div class="exercise"><div class="exercise__head"><div class="exercise__title"><div class="exercise__num">1</div> <h3 id="cvi-schranka-zalozeni-projektu"><a href="#cvi-schranka-zalozeni-projektu" class="anchor">¶</a>
+        Schránka - založení projektu
+      </h3></div> <div class="exercise__demand"><div class="demand demand--2"></div> <div class="demand-text">to dáš</div></div></div> <div class="exercise__body">
+<p>Vyzkoušejte si založení vlastního Webpack projektu. Zkusíme vyrobit stránku pro příchozí poštu v emailové schránce.</p>
+<ol>
+<li>Vytvořte si složku s názvem <code>inbox</code>.</li>
+<li>Stáhněte si připravený soubor s balíčky <a href="http://nove.kodim.cz/czechitas/daweb/pokrocily-js/webpack/assets/package.json">package.json</a> a konfigurační soubor Webpacku <a href="http://nove.kodim.cz/czechitas/daweb/pokrocily-js/webpack/assets/webpack.config.js">webpack.config.js</a> a vložte je do vaší složky.</li>
+<li>Otevřete vaši složku ve VS Code a v terminálu nainstalujte všechny balíčky pomocí <code>npm install</code>.</li>
+<li>Unvitř vaší složky vytvořte složku <code>src</code> a v ní vytvořte soubory <code>index.html</code>, <code>style.css</code> a <code>index.js</code>.</li>
+<li>Do HTML souboru zatím vložte váš pouze <code>h1</code> nadpis <i>Inbox</i>. V CSS jej malinko nastylujte, abychom mohli později ověřit, že nám fungují styly. Nezapomeňte na konec <code>body</code> vložit odkaz na skript <code>bundle.js</code>. Ten sice ještě nemáme, ale Webpack nám jej vytvoří.</li>
+<li>V souboru <code>index.js</code> správně importujte soubory <code>index.html</code> a <code>style.css</code>.</li>
+<li>Sestavte váš projekt pomocí příkazu <code>npm run build</code>. Webpack by měl vytvořit složku <code>dist</code>. Otevřete ji a pomocí Live Serveru otevřete soubor <code>index.html</code>. Oveřte, že váš nadpis je správně nastylovaný.</li>
+</ol>
+</div></div><div class="exercise"><div class="exercise__head"><div class="exercise__title"><div class="exercise__num">2</div> <h3 id="cvi-schranka-zprava"><a href="#cvi-schranka-zprava" class="anchor">¶</a>
+        Schránka - zpráva
+      </h3></div> <div class="exercise__demand"><div class="demand demand--3"></div> <div class="demand-text">zapni hlavu</div></div></div> <div class="exercise__body">
+<p>Pokračujme v řešení předchozího příkladu.</p>
+<ol>
+<li>Ve vašem JavaScriptovém souboru vytvořte objekt představující jednu emailovou zprávu.<pre><code class="language-js"><span class="hljs-keyword">const</span> message = {
+  <span class="hljs-attr">sender</span>: <span class="hljs-string">'Milan Kouhoutek'</span>,
+  <span class="hljs-attr">subject</span>: <span class="hljs-string">'Nabídka spolupráce'</span>,
+  <span class="hljs-attr">date</span>: <span class="hljs-string">'po 13. března'</span>,
+  <span class="hljs-attr">time</span>: <span class="hljs-string">'8:45'</span>,
+};
+</code></pre>
+</li>
+<li>Ve vašem souboru <code>index.html</code> vytvořte šablonu pro vaši zprávu.</li>
+<li>Ve vašem JavaScriptovém souboru importuje Handlebars šablony.<pre><code class="language-js"><span class="hljs-keyword">import</span> Handlebars <span class="hljs-keyword">from</span> <span class="hljs-string">'handlebars'</span>;
+</code></pre>
+</li>
+<li>Šablonu zkompilujte způsobem, který už znáte.<pre><code class="language-js"><span class="hljs-keyword">const</span> messageTemplate = Handlebars.compile(<span class="hljs-comment">/* obsah vaší šablony */</span>);
+</code></pre>
+</li>
+<li>Vytvořte funkci <code>renderMessage</code>, která z objektu zprávy vytvoří DOM element. Do HTML souboru přidejte nějaký hlavní <code>div</code> a pomocí vaší funkce do něj zapojte svoji zprávu.</li>
+<li>Pomocí <code>npm run build</code> sestavte výš projekt a vyzkoušejte, že se zpráva správně zobrazí na obrazovce.</li>
+</ol>
+</div></div></section></div></article></div></main> <footer class="footer"><div class="container">Martin Podloucký</div></footer></div>
+  
+
+</body></html>
